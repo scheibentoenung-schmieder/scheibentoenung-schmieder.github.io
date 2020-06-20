@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"scheibentoenung-schmieder-home":"scheibentoenung-schmieder-home"}[chunkId]||chunkId) + "-es2015.js"
+/******/ 		return __webpack_require__.p + "" + ({"scheibentoenung-schmieder-contact":"scheibentoenung-schmieder-contact","scheibentoenung-schmieder-home":"scheibentoenung-schmieder-home","scheibentoenung-schmieder-static-pages":"scheibentoenung-schmieder-static-pages"}[chunkId]||chunkId) + "-es2015.js"
 /******/ 	}
 /******/
 /******/ 	// The require function

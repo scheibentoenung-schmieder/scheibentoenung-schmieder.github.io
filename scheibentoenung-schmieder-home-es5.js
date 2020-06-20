@@ -92,27 +92,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _angular_material_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var _angular_material_card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/material/card */
+    "../../node_modules/@angular/material/__ivy_ngcc__/fesm2015/card.js");
+    /* harmony import */
+
+
+    var _angular_material_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/material/button */
     "../../node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
     /* harmony import */
 
 
-    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "../../node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-    /* harmony import */
-
-
-    var _angular_material_icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @angular/material/icon */
-    "../../node_modules/@angular/material/__ivy_ngcc__/fesm2015/icon.js");
-    /* harmony import */
-
-
-    var _angular_material_card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! @angular/material/card */
-    "../../node_modules/@angular/material/__ivy_ngcc__/fesm2015/card.js");
 
     var HomeComponent = function HomeComponent() {
       _classCallCheck(this, HomeComponent);
@@ -125,22 +119,48 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: HomeComponent,
       selectors: [["scheibentoenung-schmieder-home"]],
-      decls: 48,
+      decls: 42,
       vars: 0,
-      consts: [[1, "cover"], [1, "container"], ["mat-flat-button", "", "routerLink", "/", 1, "call"], [1, "list"], [1, "card"], ["mat-card-image", "", "src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/20200305_173405.jpg", "alt", "Photo of a Shiba Inu"], ["mat-button", "", "routerLink", "/", "color", "primary"], ["mat-card-avatar", "", 1, "example-header-image"], ["mat-card-image", "", "src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/kind.jpg", "alt", "Photo of a Shiba Inu"], ["mat-card-image", "", "src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/buissnes.jpg", "alt", "Photo of a Shiba Inu"]],
+      consts: [[1, "list"], [1, "card"], ["mat-card-image", "", "src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/20200305_173405.jpg", "alt", "Photo of a Shiba Inu"], ["mat-flat-button", "", "routerLink", "/folien", "color", "primary"], ["mat-card-avatar", "", 1, "example-header-image"], ["mat-card-image", "", "src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/kind.jpg", "alt", "Photo of a Shiba Inu"], ["mat-card-image", "", "src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/buissnes.jpg", "alt", "Photo of a Shiba Inu"]],
       template: function HomeComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-card", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-card-header");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Jetzt Termin vereinbaren ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "mat-card-title");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "mat-icon");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Ab sofort haben wir die Regular Titan ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "calendar_today");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "mat-card-subtitle");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "Scheibent\xF6nungsfolie mit 35% Lichtdurchl\xE4ssigkeit");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](7, "img", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "mat-card-content");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, " Unserer Service.... ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "mat-card-actions");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "a", 3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "weiterlesen");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -148,89 +168,43 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "mat-card", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "mat-card-header");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "mat-card", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](16, "div", 4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "mat-card-header");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "mat-card-title");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "mat-card-title");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Ab sofort haben wir die Regular Titan ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Professioneller Einbau");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "mat-card-subtitle");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "mat-card-subtitle");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Scheibent\xF6nungsfolie mit 35% Lichtdurchl\xE4ssigkeit");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "img", 5);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "mat-card-content");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "p");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, " Unserer Service.... ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "zum kleinen Preis!");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "mat-card-actions");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "img", 5);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "a", 6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "mat-card-content");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "weiterlesen");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "p");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "mat-card", 4);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "mat-card-header");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](22, "div", 7);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "mat-card-title");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, "Professioneller Einbau");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "mat-card-subtitle");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "zum kleinen Preis!");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, " Diese Folie brilliert mit Ihrem sanften Schwarzton und kommt den heutigen Werkst\xF6nungen am n\xE4chsten. ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "img", 8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "mat-card-actions");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "mat-card-content");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "a", 3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "p");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, " Diese Folie brilliert mit Ihrem sanften Schwarzton und kommt den heutigen Werkst\xF6nungen am n\xE4chsten. ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "mat-card-actions");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "a", 6);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "weiterlesen");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "weiterlesen");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -238,43 +212,43 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "mat-card", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "mat-card", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "mat-card-header");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "mat-card-header");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](36, "div", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](30, "div", 4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "mat-card-title");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "mat-card-title");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, "H\xE4ufige Fragen");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "mat-card-subtitle");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, "rund ums Thema Folien");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, "H\xE4ufige Fragen");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "mat-card-subtitle");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](41, "img", 9);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "mat-card-content");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "p");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](44, " Wie lang dauer eine T\xF6nung ? ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, "rund ums Thema Folien");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "mat-card-actions");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](35, "img", 6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "a", 6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "mat-card-content");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](47, "weiterlesen");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, " Wie lang dauer eine T\xF6nung ? ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "mat-card-actions");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "a", 3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](41, "weiterlesen");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -285,8 +259,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
       },
-      directives: [_angular_material_button__WEBPACK_IMPORTED_MODULE_1__["MatAnchor"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLinkWithHref"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_3__["MatIcon"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardHeader"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardSubtitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardContent"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardActions"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardAvatar"]],
-      styles: [".cover[_ngcontent-%COMP%] {\n  background-image: url(/assets/img/background-2.jpg);\n  height: 90vh;\n  background-position: 50%;\n  background-size: cover;\n  transform: translate3d(0px, 0px, 0px);\n}\n\n.call[_ngcontent-%COMP%] {\n  margin-top: 20%;\n  margin-left: 15%;\n}\n\n.list[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-around;\n  margin-left: 2%;\n  margin-right: 2%;\n  flex-direction: row;\n  align-items: stretch;\n  width: 100%;\n  flex-wrap: wrap;\n  margin-top: -76px;\n}\n\n.list[_ngcontent-%COMP%]   .card[_ngcontent-%COMP%] {\n  margin-bottom: 20px;\n  flex-direction: column;\n  align-items: center;\n  max-width: 400px;\n}\n\n.list[_ngcontent-%COMP%]   .card[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  background-size: cover;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9sYXJzd2llZGVtYW5uL3JlcG9zL2dlcm5zZG9yZmVyL3NjaGVpYmVudG9lbnVuZy1zY2htaWVkZXIvbGlicy9ob21lL3NyYy9saWIvY29tcG9uZW50cy9ob21lL2hvbWUuY29tcG9uZW50LnNjc3MiLCJsaWJzL2hvbWUvc3JjL2xpYi9jb21wb25lbnRzL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1EQUFBO0VBQ0EsWUFBQTtFQUNBLHdCQUFBO0VBQ0Esc0JBQUE7RUFDQSxxQ0FBQTtBQ0NGOztBREVBO0VBQ0UsZUFBQTtFQUNBLGdCQUFBO0FDQ0Y7O0FESUE7RUFDRSxhQUFBO0VBQ0EsNkJBQUE7RUFDQSxlQUFBO0VBQ0EsZ0JBQUE7RUFFQSxtQkFBQTtFQUNBLG9CQUFBO0VBQ0EsV0FBQTtFQUVBLGVBQUE7RUFDQSxpQkFBQTtBQ0hGOztBRElFO0VBQ0UsbUJBQUE7RUFDQSxzQkFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7QUNGSjs7QURHSTtFQUNFLHNCQUFBO0FDRE4iLCJmaWxlIjoibGlicy9ob21lL3NyYy9saWIvY29tcG9uZW50cy9ob21lL2hvbWUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY292ZXIge1xuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoL2Fzc2V0cy9pbWcvYmFja2dyb3VuZC0yLmpwZyk7XG4gIGhlaWdodDogOTB2aDtcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogNTAlO1xuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZTNkKDBweCwgMHB4LCAwcHgpO1xufVxuXG4uY2FsbCB7XG4gIG1hcmdpbi10b3A6IDIwJTtcbiAgbWFyZ2luLWxlZnQ6IDE1JTtcbn1cblxuaDEge1xufVxuLmxpc3Qge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWFyb3VuZDtcbiAgbWFyZ2luLWxlZnQ6IDIlO1xuICBtYXJnaW4tcmlnaHQ6IDIlO1xuXG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gIGFsaWduLWl0ZW1zOiBzdHJldGNoO1xuICB3aWR0aDogMTAwJTtcblxuICBmbGV4LXdyYXA6IHdyYXA7XG4gIG1hcmdpbi10b3A6IC03NnB4O1xuICAuY2FyZCB7XG4gICAgbWFyZ2luLWJvdHRvbTogMjBweDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgbWF4LXdpZHRoOiA0MDBweDtcbiAgICBpbWcge1xuICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICB9XG4gIH1cbn1cbiIsIi5jb3ZlciB7XG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybCgvYXNzZXRzL2ltZy9iYWNrZ3JvdW5kLTIuanBnKTtcbiAgaGVpZ2h0OiA5MHZoO1xuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiA1MCU7XG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlM2QoMHB4LCAwcHgsIDBweCk7XG59XG5cbi5jYWxsIHtcbiAgbWFyZ2luLXRvcDogMjAlO1xuICBtYXJnaW4tbGVmdDogMTUlO1xufVxuXG4ubGlzdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xuICBtYXJnaW4tbGVmdDogMiU7XG4gIG1hcmdpbi1yaWdodDogMiU7XG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gIGFsaWduLWl0ZW1zOiBzdHJldGNoO1xuICB3aWR0aDogMTAwJTtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBtYXJnaW4tdG9wOiAtNzZweDtcbn1cbi5saXN0IC5jYXJkIHtcbiAgbWFyZ2luLWJvdHRvbTogMjBweDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgbWF4LXdpZHRoOiA0MDBweDtcbn1cbi5saXN0IC5jYXJkIGltZyB7XG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG59Il19 */"]
+      directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardHeader"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardSubtitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardContent"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardActions"], _angular_material_button__WEBPACK_IMPORTED_MODULE_2__["MatAnchor"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkWithHref"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardAvatar"]],
+      styles: [".mat-card-header[_ngcontent-%COMP%] {\n  flex-shrink: 0;\n}\n\n.mat-card-content[_ngcontent-%COMP%] {\n  flex-grow: 1;\n  overflow: auto;\n}\n\n.list[_ngcontent-%COMP%] {\n  flex-flow: row wrap;\n  display: flex;\n  justify-content: space-around;\n  padding: 0 0px 0 0px;\n}\n\n.list[_ngcontent-%COMP%]   .card[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-around;\n  flex: 1 1 auto;\n  margin: 0 20px 20px;\n}\n\n.list[_ngcontent-%COMP%]   .card[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  background-size: cover;\n}\n\n@media only screen and (max-width: 768px) {\n  .list[_ngcontent-%COMP%]   .card[_ngcontent-%COMP%] {\n    margin: 0;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9sYXJzd2llZGVtYW5uL3JlcG9zL2dlcm5zZG9yZmVyL3NjaGVpYmVudG9lbnVuZy1zY2htaWVkZXIvbGlicy9ob21lL3NyYy9saWIvY29tcG9uZW50cy9ob21lL2hvbWUuY29tcG9uZW50LnNjc3MiLCJsaWJzL2hvbWUvc3JjL2xpYi9jb21wb25lbnRzL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGNBQUE7QUNDRjs7QURFQTtFQUNFLFlBQUE7RUFDQSxjQUFBO0FDQ0Y7O0FERUE7RUFDRSxtQkFBQTtFQUNBLGFBQUE7RUFDQSw2QkFBQTtFQUNBLG9CQUFBO0FDQ0Y7O0FEQ0U7RUFDRSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSxtQkFBQTtFQUNBLDZCQUFBO0VBQ0EsY0FBQTtFQUNBLG1CQUFBO0FDQ0o7O0FEQUk7RUFDRSxzQkFBQTtBQ0VOOztBREFJO0VBVkY7SUFXSSxTQUFBO0VDR0o7QUFDRiIsImZpbGUiOiJsaWJzL2hvbWUvc3JjL2xpYi9jb21wb25lbnRzL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYXQtY2FyZC1oZWFkZXIge1xuICBmbGV4LXNocmluazogMDtcbn1cblxuLm1hdC1jYXJkLWNvbnRlbnQge1xuICBmbGV4LWdyb3c6IDE7XG4gIG92ZXJmbG93OiBhdXRvO1xufVxuXG4ubGlzdCB7XG4gIGZsZXgtZmxvdzogcm93IHdyYXA7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xuICBwYWRkaW5nOiAwIDBweCAwIDBweDtcblxuICAuY2FyZCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1hcm91bmQ7XG4gICAgZmxleDogMSAxIGF1dG87XG4gICAgbWFyZ2luOiAwIDIwcHggMjBweDtcbiAgICBpbWcge1xuICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICB9XG4gICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgICAgbWFyZ2luOiAwO1xuICAgIH1cbiAgfVxufVxuIiwiLm1hdC1jYXJkLWhlYWRlciB7XG4gIGZsZXgtc2hyaW5rOiAwO1xufVxuXG4ubWF0LWNhcmQtY29udGVudCB7XG4gIGZsZXgtZ3JvdzogMTtcbiAgb3ZlcmZsb3c6IGF1dG87XG59XG5cbi5saXN0IHtcbiAgZmxleC1mbG93OiByb3cgd3JhcDtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1hcm91bmQ7XG4gIHBhZGRpbmc6IDAgMHB4IDAgMHB4O1xufVxuLmxpc3QgLmNhcmQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWFyb3VuZDtcbiAgZmxleDogMSAxIGF1dG87XG4gIG1hcmdpbjogMCAyMHB4IDIwcHg7XG59XG4ubGlzdCAuY2FyZCBpbWcge1xuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAubGlzdCAuY2FyZCB7XG4gICAgbWFyZ2luOiAwO1xuICB9XG59Il19 */"]
     });
     /*@__PURE__*/
 
@@ -344,10 +318,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var routes = [{
       path: '',
-      component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"]
-    }, {
-      path: '**',
-      component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"]
+      component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"],
+      data: {
+        cover: 'home.jpg',
+        fullSize: true
+      }
     }];
 
     var HomeRoutingModule = function HomeRoutingModule() {
