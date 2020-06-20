@@ -432,7 +432,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       path: '',
       component: _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_8__["ContactComponent"],
       data: {
-        cover: 'contact.jpg'
+        cover: 'contact.jpg',
+        title: 'Kontakt',
+        description: 'Anfrage für Tönnung der Scheibe'
       }
     }];
 

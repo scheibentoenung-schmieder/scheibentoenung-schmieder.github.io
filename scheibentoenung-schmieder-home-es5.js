@@ -321,7 +321,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"],
       data: {
         cover: 'home.jpg',
-        fullSize: true
+        fullSize: true,
+        title: 'Scheibentönung Schmieder',
+        description: 'Scheibentönung in Chemnitz, Limbach und Umgebung'
       }
     }];
 

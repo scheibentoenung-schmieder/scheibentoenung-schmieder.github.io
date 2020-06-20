@@ -168,6 +168,9 @@ const routes = [
     {
         path: ':id',
         component: _components_staticpages_component__WEBPACK_IMPORTED_MODULE_2__["StaticpagesComponent"],
+        data: {
+            markdown: true,
+        },
     },
 ];
 class StaticpagesRoutingModule {

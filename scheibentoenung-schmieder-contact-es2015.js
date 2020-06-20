@@ -193,6 +193,8 @@ const contactRoutes = [
         component: _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_8__["ContactComponent"],
         data: {
             cover: 'contact.jpg',
+            title: 'Kontakt',
+            description: 'Anfrage für Tönnung der Scheibe',
         },
     },
 ];

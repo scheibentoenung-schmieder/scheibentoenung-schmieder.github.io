@@ -145,6 +145,8 @@ const routes = [
         data: {
             cover: 'home.jpg',
             fullSize: true,
+            title: 'Scheibentönung Schmieder',
+            description: 'Scheibentönung in Chemnitz, Limbach und Umgebung',
         },
     },
 ];

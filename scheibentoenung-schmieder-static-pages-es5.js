@@ -329,7 +329,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var routes = [{
       path: ':id',
-      component: _components_staticpages_component__WEBPACK_IMPORTED_MODULE_2__["StaticpagesComponent"]
+      component: _components_staticpages_component__WEBPACK_IMPORTED_MODULE_2__["StaticpagesComponent"],
+      data: {
+        markdown: true
+      }
     }];
 
     var StaticpagesRoutingModule = function StaticpagesRoutingModule() {
