@@ -667,27 +667,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/material/toolbar */
-    "../../node_modules/@angular/material/__ivy_ngcc__/fesm2015/toolbar.js");
+    var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/material/sidenav */
+    "../../node_modules/@angular/material/__ivy_ngcc__/fesm2015/sidenav.js");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @angular/common */
-    "../../node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-    /* harmony import */
-
-
-    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "../../node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
     /* harmony import */
 
 
-    var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! @angular/material/sidenav */
-    "../../node_modules/@angular/material/__ivy_ngcc__/fesm2015/sidenav.js");
+    var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/material/toolbar */
+    "../../node_modules/@angular/material/__ivy_ngcc__/fesm2015/toolbar.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @angular/common */
+    "../../node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
     /* harmony import */
 
 
@@ -763,26 +763,68 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }
     }
 
-    var NavbarComponent = function NavbarComponent(changeDetectorRef, media) {
-      _classCallCheck(this, NavbarComponent);
+    var NavbarComponent = /*#__PURE__*/function () {
+      function NavbarComponent(eRef, changeDetectorRef, media, router) {
+        _classCallCheck(this, NavbarComponent);
 
-      this.media = media;
-      this.isMobile = this.media.matchMedia('(max-width: 600px)');
+        this.eRef = eRef;
+        this.media = media;
+        this.router = router;
+        this.isMobile = this.media.matchMedia('(max-width: 600px)');
 
-      this._mobileQueryListener = function () {
-        return changeDetectorRef.detectChanges();
-      };
+        this._mobileQueryListener = function () {
+          return changeDetectorRef.detectChanges();
+        };
 
-      this.isMobile.addListener(this._mobileQueryListener);
-    };
+        this.isMobile.addListener(this._mobileQueryListener);
+      }
+
+      _createClass(NavbarComponent, [{
+        key: "clickout",
+        value: function clickout(event) {
+          if (!this.eRef.nativeElement.contains(event.target)) {
+            this.sidenavContainer.close();
+          }
+        }
+      }, {
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          var _this3 = this;
+
+          this.router.events.subscribe(function (event) {
+            _this3.sidenavContainer.close();
+          });
+        }
+      }]);
+
+      return NavbarComponent;
+    }();
 
     NavbarComponent.ɵfac = function NavbarComponent_Factory(t) {
-      return new (t || NavbarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_0__["MediaMatcher"]));
+      return new (t || NavbarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_0__["MediaMatcher"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]));
     };
 
     NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
       type: NavbarComponent,
       selectors: [["scheibentoenung-schmieder-navbar"]],
+      viewQuery: function NavbarComponent_Query(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_angular_material_sidenav__WEBPACK_IMPORTED_MODULE_2__["MatSidenavContainer"], true);
+        }
+
+        if (rf & 2) {
+          var _t;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.sidenavContainer = _t.first);
+        }
+      },
+      hostBindings: function NavbarComponent_HostBindings(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function NavbarComponent_click_HostBindingHandler($event) {
+            return ctx.clickout($event);
+          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵresolveDocument"]);
+        }
+      },
       decls: 18,
       vars: 4,
       consts: [[1, "toolbar"], ["color", "primary", 1, "toolbar"], [1, "brand"], ["mat-icon-button", "", 3, "click", 4, "ngIf"], ["routerLink", "/"], ["src", "/assets/img/logo.png", 1, "logo"], ["class", "links", 4, "ngIf"], ["color", "primary", "mode", "over", "position", "start", "fixedTopGap", "56", 3, "fixedInViewport"], ["snav", ""], [2, "width", "50vw"], ["mat-list-item", "", "routerLink", "/kontakt", 3, "disableRipple"], ["matListIcon", ""], ["mat-line", ""], ["mat-icon-button", "", 3, "click"], [1, "links"], ["mat-button", "", "routerLink", "/kontakt"], [1, "text"]],
@@ -863,7 +905,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("disableRipple", true);
         }
       },
-      directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_2__["MatToolbar"], _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_2__["MatToolbarRow"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterLinkWithHref"], _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_5__["MatSidenavContainer"], _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_5__["MatSidenav"], _angular_material_list__WEBPACK_IMPORTED_MODULE_6__["MatNavList"], _angular_material_list__WEBPACK_IMPORTED_MODULE_6__["MatListItem"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_7__["MatIcon"], _angular_material_list__WEBPACK_IMPORTED_MODULE_6__["MatListIconCssMatStyler"], _angular_material_core__WEBPACK_IMPORTED_MODULE_8__["MatLine"], _angular_material_button__WEBPACK_IMPORTED_MODULE_9__["MatButton"], _angular_material_button__WEBPACK_IMPORTED_MODULE_9__["MatAnchor"]],
+      directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_4__["MatToolbar"], _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_4__["MatToolbarRow"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkWithHref"], _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_2__["MatSidenavContainer"], _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_2__["MatSidenav"], _angular_material_list__WEBPACK_IMPORTED_MODULE_6__["MatNavList"], _angular_material_list__WEBPACK_IMPORTED_MODULE_6__["MatListItem"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_7__["MatIcon"], _angular_material_list__WEBPACK_IMPORTED_MODULE_6__["MatListIconCssMatStyler"], _angular_material_core__WEBPACK_IMPORTED_MODULE_8__["MatLine"], _angular_material_button__WEBPACK_IMPORTED_MODULE_9__["MatButton"], _angular_material_button__WEBPACK_IMPORTED_MODULE_9__["MatAnchor"]],
       styles: [".logo[_ngcontent-%COMP%] {\n  height: 26px;\n  vertical-align: middle;\n}\n\n.links[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]   .text[_ngcontent-%COMP%] {\n  padding-left: 10px;\n}\n\n.brand[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  color: white;\n  text-decoration: none;\n}\n\n.toolbar[_ngcontent-%COMP%] {\n  height: 100%;\n}\n\nmat-toolbar[_ngcontent-%COMP%]   .brand[_ngcontent-%COMP%] {\n  min-width: 60%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL2NvZGUvY29kZS9hcHBzL3NjaGVpYmVudG9lbnVuZy9zcmMvYXBwL2NvbXBvbmVudHMvbmF2YmFyL25hdmJhci5jb21wb25lbnQuc2NzcyIsImFwcHMvc2NoZWliZW50b2VudW5nL3NyYy9hcHAvY29tcG9uZW50cy9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBQTtFQUNBLHNCQUFBO0FDQ0Y7O0FEQ0E7RUFDRSxrQkFBQTtBQ0VGOztBRENFO0VBQ0UsWUFBQTtFQUNBLHFCQUFBO0FDRUo7O0FEQ0E7RUFDRSxZQUFBO0FDRUY7O0FEQ0U7RUFDRSxjQUFBO0FDRUoiLCJmaWxlIjoiYXBwcy9zY2hlaWJlbnRvZW51bmcvc3JjL2FwcC9jb21wb25lbnRzL25hdmJhci9uYXZiYXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubG9nbyB7XG4gIGhlaWdodDogMjZweDtcbiAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcbn1cbi5saW5rcyBhIC50ZXh0IHtcbiAgcGFkZGluZy1sZWZ0OiAxMHB4O1xufVxuLmJyYW5kIHtcbiAgYSB7XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgfVxufVxuLnRvb2xiYXIge1xuICBoZWlnaHQ6IDEwMCU7XG59XG5tYXQtdG9vbGJhciB7XG4gIC5icmFuZCB7XG4gICAgbWluLXdpZHRoOiA2MCU7XG4gIH1cbn1cbiIsIi5sb2dvIHtcbiAgaGVpZ2h0OiAyNnB4O1xuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xufVxuXG4ubGlua3MgYSAudGV4dCB7XG4gIHBhZGRpbmctbGVmdDogMTBweDtcbn1cblxuLmJyYW5kIGEge1xuICBjb2xvcjogd2hpdGU7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbn1cblxuLnRvb2xiYXIge1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbm1hdC10b29sYmFyIC5icmFuZCB7XG4gIG1pbi13aWR0aDogNjAlO1xufSJdfQ== */"]
     });
     /*@__PURE__*/
@@ -878,11 +920,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }]
       }], function () {
         return [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+        }, {
           type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
         }, {
           type: _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_0__["MediaMatcher"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
         }];
-      }, null);
+      }, {
+        sidenavContainer: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
+          args: [_angular_material_sidenav__WEBPACK_IMPORTED_MODULE_2__["MatSidenavContainer"]]
+        }],
+        clickout: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
+          args: ['document:click', ['$event']]
+        }]
+      });
     })();
     /***/
 
@@ -943,13 +998,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(RouterHelperService, [{
         key: "getDeepSnapshot",
         value: function getDeepSnapshot() {
-          var _this3 = this;
+          var _this4 = this;
 
           var activatedRoute = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.activatedRoute;
           return this.onNavigationEnd().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(null);
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["startWith"])(this.getDeepCurrentSnapshot(activatedRoute.snapshot)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function () {
-            return _this3.getDeepCurrentSnapshot(activatedRoute.snapshot);
+            return _this4.getDeepCurrentSnapshot(activatedRoute.snapshot);
           }));
         }
       }, {
