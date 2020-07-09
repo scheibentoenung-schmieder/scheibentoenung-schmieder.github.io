@@ -140,7 +140,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["scheibentoenung-schmieder-contact"]],
       decls: 10,
       vars: 3,
-      consts: [[1, "card"], ["mat-button", "", "color", "primary", "target", "_blank", "href", "https://www.google.com/maps/dir//Scheibent%C3%B6nung-Schmieder/@50.8504602,12.769376,17z/"], [3, "latitude", "longitude", "maxZoom"]],
+      consts: [[1, "card"], ["mat-button", "", "color", "primary", "target", "_blank", "href", "https://www.google.com/maps/dir//Scheibent%C3%B6nung-Schmieder/@50.8504602,12.769376,17z/"], [3, "latitude", "longitude", "minZoom"]],
       template: function ContactComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-card", 0);
@@ -179,7 +179,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         if (rf & 2) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("latitude", ctx.lat)("longitude", ctx.lng)("maxZoom", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("latitude", ctx.lat)("longitude", ctx.lng)("minZoom", 15);
         }
       },
       directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardHeader"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardContent"], _angular_material_button__WEBPACK_IMPORTED_MODULE_2__["MatAnchor"], _agm_core__WEBPACK_IMPORTED_MODULE_3__["AgmMap"]],
