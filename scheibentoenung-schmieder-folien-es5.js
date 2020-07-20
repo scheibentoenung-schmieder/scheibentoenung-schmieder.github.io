@@ -493,7 +493,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["scheibentoenung-schmieder-folien"]],
       decls: 11,
       vars: 4,
-      consts: [[1, "list"], ["mat-tab-nav-bar", ""], ["mat-tab-link", "", "routerLink", "/folien/regular", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/premium", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/superior", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/special", 3, "active"]],
+      consts: [[1, "folien-selection"], ["mat-tab-nav-bar", ""], ["mat-tab-link", "", "routerLink", "/folien/regular", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/premium", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/superior", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/special", 3, "active"]],
       template: function FolienSelectionComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -550,7 +550,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       },
       directives: [_angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__["MatTabNav"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__["MatTabLink"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterOutlet"]],
-      styles: [".list {\n  margin: 80px 0 80px;\n}\n\n.mat-tab-links {\n  display: flex;\n  justify-content: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL2NvZGUvY29kZS9saWJzL2ZvbGllbi9zcmMvbGliL2NvbXBvbmVudHMvZm9saWVuLXNlbGVjdGlvbi9mb2xpZW4tc2VsZWN0aW9uLmNvbXBvbmVudC5zY3NzIiwibGlicy9mb2xpZW4vc3JjL2xpYi9jb21wb25lbnRzL2ZvbGllbi1zZWxlY3Rpb24vZm9saWVuLXNlbGVjdGlvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1CQUFBO0FDQ0Y7O0FEQ0E7RUFDRSxhQUFBO0VBQ0EsdUJBQUE7QUNFRiIsImZpbGUiOiJsaWJzL2ZvbGllbi9zcmMvbGliL2NvbXBvbmVudHMvZm9saWVuLXNlbGVjdGlvbi9mb2xpZW4tc2VsZWN0aW9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxpc3Qge1xuICBtYXJnaW46IDgwcHggMCA4MHB4O1xufVxuLm1hdC10YWItbGlua3Mge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn1cbiIsIi5saXN0IHtcbiAgbWFyZ2luOiA4MHB4IDAgODBweDtcbn1cblxuLm1hdC10YWItbGlua3Mge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn0iXX0= */"],
+      styles: [".folien-selection {\n  margin: 80px 0 80px;\n}\n\n.mat-tab-links {\n  display: flex;\n  justify-content: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL2NvZGUvY29kZS9saWJzL2ZvbGllbi9zcmMvbGliL2NvbXBvbmVudHMvZm9saWVuLXNlbGVjdGlvbi9mb2xpZW4tc2VsZWN0aW9uLmNvbXBvbmVudC5zY3NzIiwibGlicy9mb2xpZW4vc3JjL2xpYi9jb21wb25lbnRzL2ZvbGllbi1zZWxlY3Rpb24vZm9saWVuLXNlbGVjdGlvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1CQUFBO0FDQ0Y7O0FEQ0E7RUFDRSxhQUFBO0VBQ0EsdUJBQUE7QUNFRiIsImZpbGUiOiJsaWJzL2ZvbGllbi9zcmMvbGliL2NvbXBvbmVudHMvZm9saWVuLXNlbGVjdGlvbi9mb2xpZW4tc2VsZWN0aW9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZvbGllbi1zZWxlY3Rpb24ge1xuICBtYXJnaW46IDgwcHggMCA4MHB4O1xufVxuLm1hdC10YWItbGlua3Mge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn1cbiIsIi5mb2xpZW4tc2VsZWN0aW9uIHtcbiAgbWFyZ2luOiA4MHB4IDAgODBweDtcbn1cblxuLm1hdC10YWItbGlua3Mge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn0iXX0= */"],
       encapsulation: 2
     });
     /*@__PURE__*/
