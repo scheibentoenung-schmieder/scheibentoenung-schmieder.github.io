@@ -415,10 +415,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | scheibentoenung-schmieder-contact */
-          [__webpack_require__.e("default~scheibentoenung-schmieder-contact~scheibentoenung-schmieder-static-pages"), __webpack_require__.e("scheibentoenung-schmieder-contact")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~scheibentoenung-schmieder-contact~scheibentoenung-schmieder-folien"), __webpack_require__.e("scheibentoenung-schmieder-contact")]).then(__webpack_require__.bind(null,
           /*! @scheibentoenung-schmieder/contact */
           "../../libs/contact/src/index.ts")).then(function (m) {
             return m.ContactModule;
+          });
+        }
+      }, {
+        path: 'folien',
+        loadChildren: function loadChildren() {
+          return Promise.all(
+          /*! import() | scheibentoenung-schmieder-folien */
+          [__webpack_require__.e("default~scheibentoenung-schmieder-contact~scheibentoenung-schmieder-folien"), __webpack_require__.e("scheibentoenung-schmieder-folien")]).then(__webpack_require__.bind(null,
+          /*! @scheibentoenung-schmieder/folien */
+          "../../libs/folien/src/index.ts")).then(function (m) {
+            return m.FolienModule;
           });
         }
       }, {
@@ -436,9 +447,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         path: '',
         loadChildren: function loadChildren() {
-          return Promise.all(
+          return __webpack_require__.e(
           /*! import() | scheibentoenung-schmieder-static-pages */
-          [__webpack_require__.e("default~scheibentoenung-schmieder-contact~scheibentoenung-schmieder-static-pages"), __webpack_require__.e("scheibentoenung-schmieder-static-pages")]).then(__webpack_require__.bind(null,
+          "scheibentoenung-schmieder-static-pages").then(__webpack_require__.bind(null,
           /*! @scheibentoenung-schmieder/static-pages */
           "../../libs/static-pages/src/index.ts")).then(function (m) {
             return m.StaticPagesModule;
@@ -469,10 +480,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             loadChildren: function loadChildren() {
               return Promise.all(
               /*! import() | scheibentoenung-schmieder-contact */
-              [__webpack_require__.e("default~scheibentoenung-schmieder-contact~scheibentoenung-schmieder-static-pages"), __webpack_require__.e("scheibentoenung-schmieder-contact")]).then(__webpack_require__.bind(null,
+              [__webpack_require__.e("default~scheibentoenung-schmieder-contact~scheibentoenung-schmieder-folien"), __webpack_require__.e("scheibentoenung-schmieder-contact")]).then(__webpack_require__.bind(null,
               /*! @scheibentoenung-schmieder/contact */
               "../../libs/contact/src/index.ts")).then(function (m) {
                 return m.ContactModule;
+              });
+            }
+          }, {
+            path: 'folien',
+            loadChildren: function loadChildren() {
+              return Promise.all(
+              /*! import() | scheibentoenung-schmieder-folien */
+              [__webpack_require__.e("default~scheibentoenung-schmieder-contact~scheibentoenung-schmieder-folien"), __webpack_require__.e("scheibentoenung-schmieder-folien")]).then(__webpack_require__.bind(null,
+              /*! @scheibentoenung-schmieder/folien */
+              "../../libs/folien/src/index.ts")).then(function (m) {
+                return m.FolienModule;
               });
             }
           }, {
@@ -490,9 +512,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           }, {
             path: '',
             loadChildren: function loadChildren() {
-              return Promise.all(
+              return __webpack_require__.e(
               /*! import() | scheibentoenung-schmieder-static-pages */
-              [__webpack_require__.e("default~scheibentoenung-schmieder-contact~scheibentoenung-schmieder-static-pages"), __webpack_require__.e("scheibentoenung-schmieder-static-pages")]).then(__webpack_require__.bind(null,
+              "scheibentoenung-schmieder-static-pages").then(__webpack_require__.bind(null,
               /*! @scheibentoenung-schmieder/static-pages */
               "../../libs/static-pages/src/index.ts")).then(function (m) {
                 return m.StaticPagesModule;
