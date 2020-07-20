@@ -15064,1428 +15064,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
-  "../../node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/portal.js":
-  /*!*********************************************************************************************!*\
-    !*** /home/runner/work/code/code/node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/portal.js ***!
-    \*********************************************************************************************/
-
-  /*! exports provided: BasePortalHost, BasePortalOutlet, CdkPortal, CdkPortalOutlet, ComponentPortal, DomPortal, DomPortalHost, DomPortalOutlet, Portal, PortalHostDirective, PortalInjector, PortalModule, TemplatePortal, TemplatePortalDirective */
-
-  /***/
-  function node_modulesAngularCdk__ivy_ngcc__Fesm2015PortalJs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "BasePortalHost", function () {
-      return BasePortalHost;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "BasePortalOutlet", function () {
-      return BasePortalOutlet;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "CdkPortal", function () {
-      return CdkPortal;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "CdkPortalOutlet", function () {
-      return CdkPortalOutlet;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "ComponentPortal", function () {
-      return ComponentPortal;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "DomPortal", function () {
-      return DomPortal;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "DomPortalHost", function () {
-      return DomPortalHost;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "DomPortalOutlet", function () {
-      return DomPortalOutlet;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "Portal", function () {
-      return Portal;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "PortalHostDirective", function () {
-      return PortalHostDirective;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "PortalInjector", function () {
-      return PortalInjector;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "PortalModule", function () {
-      return PortalModule;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "TemplatePortal", function () {
-      return TemplatePortal;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "TemplatePortalDirective", function () {
-      return TemplatePortalDirective;
-    });
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! @angular/core */
-    "../../node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-    /* harmony import */
-
-
-    var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/common */
-    "../../node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-    /**
-     * @fileoverview added by tsickle
-     * Generated from: src/cdk/portal/portal-errors.ts
-     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
-     */
-
-    /**
-     * @license
-     * Copyright Google LLC All Rights Reserved.
-     *
-     * Use of this source code is governed by an MIT-style license that can be
-     * found in the LICENSE file at https://angular.io/license
-     */
-
-    /**
-     * Throws an exception when attempting to attach a null portal to a host.
-     * \@docs-private
-     * @return {?}
-     */
-
-
-    function throwNullPortalError() {
-      throw Error('Must provide a portal to attach');
-    }
-    /**
-     * Throws an exception when attempting to attach a portal to a host that is already attached.
-     * \@docs-private
-     * @return {?}
-     */
-
-
-    function throwPortalAlreadyAttachedError() {
-      throw Error('Host already has a portal attached');
-    }
-    /**
-     * Throws an exception when attempting to attach a portal to an already-disposed host.
-     * \@docs-private
-     * @return {?}
-     */
-
-
-    function throwPortalOutletAlreadyDisposedError() {
-      throw Error('This PortalOutlet has already been disposed');
-    }
-    /**
-     * Throws an exception when attempting to attach an unknown portal type.
-     * \@docs-private
-     * @return {?}
-     */
-
-
-    function throwUnknownPortalTypeError() {
-      throw Error('Attempting to attach an unknown Portal type. BasePortalOutlet accepts either ' + 'a ComponentPortal or a TemplatePortal.');
-    }
-    /**
-     * Throws an exception when attempting to attach a portal to a null host.
-     * \@docs-private
-     * @return {?}
-     */
-
-
-    function throwNullPortalOutletError() {
-      throw Error('Attempting to attach a portal to a null PortalOutlet');
-    }
-    /**
-     * Throws an exception when attempting to detach a portal that is not attached.
-     * \@docs-private
-     * @return {?}
-     */
-
-
-    function throwNoPortalAttachedError() {
-      throw Error('Attempting to detach a portal that is not attached to a host');
-    }
-    /**
-     * @fileoverview added by tsickle
-     * Generated from: src/cdk/portal/portal.ts
-     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
-     */
-
-    /**
-     * Interface that can be used to generically type a class.
-     * @record
-     * @template T
-     */
-
-
-    function ComponentType() {}
-    /**
-     * A `Portal` is something that you want to render somewhere else.
-     * It can be attach to / detached from a `PortalOutlet`.
-     * @abstract
-     * @template T
-     */
-
-
-    var Portal = /*#__PURE__*/function () {
-      function Portal() {
-        _classCallCheck(this, Portal);
-      }
-
-      _createClass(Portal, [{
-        key: "attach",
-
-        /**
-         * Attach this portal to a host.
-         * @param {?} host
-         * @return {?}
-         */
-        value: function attach(host) {
-          if (host == null) {
-            throwNullPortalOutletError();
-          }
-
-          if (host.hasAttached()) {
-            throwPortalAlreadyAttachedError();
-          }
-
-          this._attachedHost = host;
-          return (
-            /** @type {?} */
-            host.attach(this)
-          );
-        }
-        /**
-         * Detach this portal from its host
-         * @return {?}
-         */
-
-      }, {
-        key: "detach",
-        value: function detach() {
-          /** @type {?} */
-          var host = this._attachedHost;
-
-          if (host == null) {
-            throwNoPortalAttachedError();
-          } else {
-            this._attachedHost = null;
-            host.detach();
-          }
-        }
-        /**
-         * Whether this portal is attached to a host.
-         * @return {?}
-         */
-
-      }, {
-        key: "setAttachedHost",
-
-        /**
-         * Sets the PortalOutlet reference without performing `attach()`. This is used directly by
-         * the PortalOutlet when it is performing an `attach()` or `detach()`.
-         * @param {?} host
-         * @return {?}
-         */
-        value: function setAttachedHost(host) {
-          this._attachedHost = host;
-        }
-      }, {
-        key: "isAttached",
-        get: function get() {
-          return this._attachedHost != null;
-        }
-      }]);
-
-      return Portal;
-    }();
-
-    if (false) {}
-    /**
-     * A `ComponentPortal` is a portal that instantiates some Component upon attachment.
-     * @template T
-     */
-
-
-    var ComponentPortal = /*#__PURE__*/function (_Portal) {
-      _inherits(ComponentPortal, _Portal);
-
-      var _super3 = _createSuper(ComponentPortal);
-
-      /**
-       * @param {?} component
-       * @param {?=} viewContainerRef
-       * @param {?=} injector
-       * @param {?=} componentFactoryResolver
-       */
-      function ComponentPortal(component, viewContainerRef, injector, componentFactoryResolver) {
-        var _this101;
-
-        _classCallCheck(this, ComponentPortal);
-
-        _this101 = _super3.call(this);
-        _this101.component = component;
-        _this101.viewContainerRef = viewContainerRef;
-        _this101.injector = injector;
-        _this101.componentFactoryResolver = componentFactoryResolver;
-        return _this101;
-      }
-
-      return ComponentPortal;
-    }(Portal);
-
-    if (false) {}
-    /**
-     * A `TemplatePortal` is a portal that represents some embedded template (TemplateRef).
-     * @template C
-     */
-
-
-    var TemplatePortal = /*#__PURE__*/function (_Portal2) {
-      _inherits(TemplatePortal, _Portal2);
-
-      var _super4 = _createSuper(TemplatePortal);
-
-      /**
-       * @param {?} template
-       * @param {?} viewContainerRef
-       * @param {?=} context
-       */
-      function TemplatePortal(template, viewContainerRef, context) {
-        var _this102;
-
-        _classCallCheck(this, TemplatePortal);
-
-        _this102 = _super4.call(this);
-        _this102.templateRef = template;
-        _this102.viewContainerRef = viewContainerRef;
-        _this102.context = context;
-        return _this102;
-      }
-      /**
-       * @return {?}
-       */
-
-
-      _createClass(TemplatePortal, [{
-        key: "attach",
-
-        /**
-         * Attach the portal to the provided `PortalOutlet`.
-         * When a context is provided it will override the `context` property of the `TemplatePortal`
-         * instance.
-         * @param {?} host
-         * @param {?=} context
-         * @return {?}
-         */
-        value: function attach(host) {
-          var context = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.context;
-          this.context = context;
-          return _get(_getPrototypeOf(TemplatePortal.prototype), "attach", this).call(this, host);
-        }
-        /**
-         * @return {?}
-         */
-
-      }, {
-        key: "detach",
-        value: function detach() {
-          this.context = undefined;
-          return _get(_getPrototypeOf(TemplatePortal.prototype), "detach", this).call(this);
-        }
-      }, {
-        key: "origin",
-        get: function get() {
-          return this.templateRef.elementRef;
-        }
-      }]);
-
-      return TemplatePortal;
-    }(Portal);
-
-    if (false) {}
-    /**
-     * A `DomPortal` is a portal whose DOM element will be taken from its current position
-     * in the DOM and moved into a portal outlet, when it is attached. On detach, the content
-     * will be restored to its original position.
-     * @template T
-     */
-
-
-    var DomPortal = /*#__PURE__*/function (_Portal3) {
-      _inherits(DomPortal, _Portal3);
-
-      var _super5 = _createSuper(DomPortal);
-
-      /**
-       * @param {?} element
-       */
-      function DomPortal(element) {
-        var _this103;
-
-        _classCallCheck(this, DomPortal);
-
-        _this103 = _super5.call(this);
-        _this103.element = element instanceof _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] ? element.nativeElement : element;
-        return _this103;
-      }
-
-      return DomPortal;
-    }(Portal);
-
-    if (false) {}
-    /**
-     * A `PortalOutlet` is an space that can contain a single `Portal`.
-     * @record
-     */
-
-
-    function PortalOutlet() {}
-
-    if (false) {}
-    /**
-     * Partial implementation of PortalOutlet that handles attaching
-     * ComponentPortal and TemplatePortal.
-     * @abstract
-     */
-
-
-    var BasePortalOutlet = /*#__PURE__*/function () {
-      function BasePortalOutlet() {
-        _classCallCheck(this, BasePortalOutlet);
-
-        /**
-         * Whether this host has already been permanently disposed.
-         */
-        this._isDisposed = false; // @breaking-change 10.0.0 `attachDomPortal` to become a required abstract method.
-
-        this.attachDomPortal = null;
-      }
-      /**
-       * Whether this host has an attached portal.
-       * @return {?}
-       */
-
-
-      _createClass(BasePortalOutlet, [{
-        key: "hasAttached",
-        value: function hasAttached() {
-          return !!this._attachedPortal;
-        }
-        /**
-         * Attaches a portal.
-         * @param {?} portal
-         * @return {?}
-         */
-
-      }, {
-        key: "attach",
-        value: function attach(portal) {
-          if (!portal) {
-            throwNullPortalError();
-          }
-
-          if (this.hasAttached()) {
-            throwPortalAlreadyAttachedError();
-          }
-
-          if (this._isDisposed) {
-            throwPortalOutletAlreadyDisposedError();
-          }
-
-          if (portal instanceof ComponentPortal) {
-            this._attachedPortal = portal;
-            return this.attachComponentPortal(portal);
-          } else if (portal instanceof TemplatePortal) {
-            this._attachedPortal = portal;
-            return this.attachTemplatePortal(portal); // @breaking-change 10.0.0 remove null check for `this.attachDomPortal`.
-          } else if (this.attachDomPortal && portal instanceof DomPortal) {
-            this._attachedPortal = portal;
-            return this.attachDomPortal(portal);
-          }
-
-          throwUnknownPortalTypeError();
-        }
-        /**
-         * Detaches a previously attached portal.
-         * @return {?}
-         */
-
-      }, {
-        key: "detach",
-        value: function detach() {
-          if (this._attachedPortal) {
-            this._attachedPortal.setAttachedHost(null);
-
-            this._attachedPortal = null;
-          }
-
-          this._invokeDisposeFn();
-        }
-        /**
-         * Permanently dispose of this portal host.
-         * @return {?}
-         */
-
-      }, {
-        key: "dispose",
-        value: function dispose() {
-          if (this.hasAttached()) {
-            this.detach();
-          }
-
-          this._invokeDisposeFn();
-
-          this._isDisposed = true;
-        }
-        /**
-         * \@docs-private
-         * @param {?} fn
-         * @return {?}
-         */
-
-      }, {
-        key: "setDisposeFn",
-        value: function setDisposeFn(fn) {
-          this._disposeFn = fn;
-        }
-        /**
-         * @private
-         * @return {?}
-         */
-
-      }, {
-        key: "_invokeDisposeFn",
-        value: function _invokeDisposeFn() {
-          if (this._disposeFn) {
-            this._disposeFn();
-
-            this._disposeFn = null;
-          }
-        }
-      }]);
-
-      return BasePortalOutlet;
-    }();
-
-    if (false) {}
-    /**
-     * @deprecated Use `BasePortalOutlet` instead.
-     * \@breaking-change 9.0.0
-     * @abstract
-     */
-
-
-    var BasePortalHost = /*#__PURE__*/function (_BasePortalOutlet) {
-      _inherits(BasePortalHost, _BasePortalOutlet);
-
-      var _super6 = _createSuper(BasePortalHost);
-
-      function BasePortalHost() {
-        _classCallCheck(this, BasePortalHost);
-
-        return _super6.apply(this, arguments);
-      }
-
-      return BasePortalHost;
-    }(BasePortalOutlet);
-    /**
-     * @fileoverview added by tsickle
-     * Generated from: src/cdk/portal/dom-portal-outlet.ts
-     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
-     */
-
-    /**
-     * A PortalOutlet for attaching portals to an arbitrary DOM element outside of the Angular
-     * application context.
-     */
-
-
-    var DomPortalOutlet = /*#__PURE__*/function (_BasePortalOutlet2) {
-      _inherits(DomPortalOutlet, _BasePortalOutlet2);
-
-      var _super7 = _createSuper(DomPortalOutlet);
-
-      /**
-       * @param {?} outletElement
-       * @param {?} _componentFactoryResolver
-       * @param {?} _appRef
-       * @param {?} _defaultInjector
-       * @param {?=} _document
-       */
-      function DomPortalOutlet(outletElement, _componentFactoryResolver, _appRef, _defaultInjector,
-      /**
-       * @deprecated `_document` Parameter to be made required.
-       * @breaking-change 10.0.0
-       */
-      _document) {
-        var _thisSuper, _this104;
-
-        _classCallCheck(this, DomPortalOutlet);
-
-        _this104 = _super7.call(this);
-        _this104.outletElement = outletElement;
-        _this104._componentFactoryResolver = _componentFactoryResolver;
-        _this104._appRef = _appRef;
-        _this104._defaultInjector = _defaultInjector;
-        /**
-         * Attaches a DOM portal by transferring its content into the outlet.
-         * @param portal Portal to be attached.
-         * @deprecated To be turned into a method.
-         * \@breaking-change 10.0.0
-         */
-
-        _this104.attachDomPortal =
-        /**
-        * @param {?} portal
-        * @return {?}
-        */
-        function (portal) {
-          // @breaking-change 10.0.0 Remove check and error once the
-          // `_document` constructor parameter is required.
-          if (!_this104._document) {
-            throw Error('Cannot attach DOM portal without _document constructor parameter');
-          }
-          /** @type {?} */
-
-
-          var element = portal.element;
-
-          if (!element.parentNode) {
-            throw Error('DOM portal content must be attached to a parent node.');
-          } // Anchor used to save the element's previous position so
-          // that we can restore it when the portal is detached.
-
-          /** @type {?} */
-
-
-          var anchorNode = _this104._document.createComment('dom-portal');
-
-          element.parentNode.insertBefore(anchorNode, element);
-
-          _this104.outletElement.appendChild(element);
-
-          _get((_thisSuper = _assertThisInitialized(_this104), _getPrototypeOf(DomPortalOutlet.prototype)), "setDisposeFn", _thisSuper).call(_thisSuper,
-          /**
-          * @return {?}
-          */
-          function () {
-            // We can't use `replaceWith` here because IE doesn't support it.
-            if (anchorNode.parentNode) {
-              anchorNode.parentNode.replaceChild(element, anchorNode);
-            }
-          });
-        };
-
-        _this104._document = _document;
-        return _this104;
-      }
-      /**
-       * Attach the given ComponentPortal to DOM element using the ComponentFactoryResolver.
-       * @template T
-       * @param {?} portal Portal to be attached
-       * @return {?} Reference to the created component.
-       */
-
-
-      _createClass(DomPortalOutlet, [{
-        key: "attachComponentPortal",
-        value: function attachComponentPortal(portal) {
-          var _this105 = this;
-
-          /** @type {?} */
-          var resolver = portal.componentFactoryResolver || this._componentFactoryResolver;
-          /** @type {?} */
-
-          var componentFactory = resolver.resolveComponentFactory(portal.component);
-          /** @type {?} */
-
-          var componentRef; // If the portal specifies a ViewContainerRef, we will use that as the attachment point
-          // for the component (in terms of Angular's component tree, not rendering).
-          // When the ViewContainerRef is missing, we use the factory to create the component directly
-          // and then manually attach the view to the application.
-
-          if (portal.viewContainerRef) {
-            componentRef = portal.viewContainerRef.createComponent(componentFactory, portal.viewContainerRef.length, portal.injector || portal.viewContainerRef.injector);
-            this.setDisposeFn(
-            /**
-            * @return {?}
-            */
-            function () {
-              return componentRef.destroy();
-            });
-          } else {
-            componentRef = componentFactory.create(portal.injector || this._defaultInjector);
-
-            this._appRef.attachView(componentRef.hostView);
-
-            this.setDisposeFn(
-            /**
-            * @return {?}
-            */
-            function () {
-              _this105._appRef.detachView(componentRef.hostView);
-
-              componentRef.destroy();
-            });
-          } // At this point the component has been instantiated, so we move it to the location in the DOM
-          // where we want it to be rendered.
-
-
-          this.outletElement.appendChild(this._getComponentRootNode(componentRef));
-          return componentRef;
-        }
-        /**
-         * Attaches a template portal to the DOM as an embedded view.
-         * @template C
-         * @param {?} portal Portal to be attached.
-         * @return {?} Reference to the created embedded view.
-         */
-
-      }, {
-        key: "attachTemplatePortal",
-        value: function attachTemplatePortal(portal) {
-          var _this106 = this;
-
-          /** @type {?} */
-          var viewContainer = portal.viewContainerRef;
-          /** @type {?} */
-
-          var viewRef = viewContainer.createEmbeddedView(portal.templateRef, portal.context);
-          viewRef.detectChanges(); // The method `createEmbeddedView` will add the view as a child of the viewContainer.
-          // But for the DomPortalOutlet the view can be added everywhere in the DOM
-          // (e.g Overlay Container) To move the view to the specified host element. We just
-          // re-append the existing root nodes.
-
-          viewRef.rootNodes.forEach(
-          /**
-          * @param {?} rootNode
-          * @return {?}
-          */
-          function (rootNode) {
-            return _this106.outletElement.appendChild(rootNode);
-          });
-          this.setDisposeFn(
-          /**
-          * @return {?}
-          */
-          function () {
-            /** @type {?} */
-            var index = viewContainer.indexOf(viewRef);
-
-            if (index !== -1) {
-              viewContainer.remove(index);
-            }
-          }); // TODO(jelbourn): Return locals from view.
-
-          return viewRef;
-        }
-        /**
-         * Clears out a portal from the DOM.
-         * @return {?}
-         */
-
-      }, {
-        key: "dispose",
-        value: function dispose() {
-          _get(_getPrototypeOf(DomPortalOutlet.prototype), "dispose", this).call(this);
-
-          if (this.outletElement.parentNode != null) {
-            this.outletElement.parentNode.removeChild(this.outletElement);
-          }
-        }
-        /**
-         * Gets the root HTMLElement for an instantiated component.
-         * @private
-         * @param {?} componentRef
-         * @return {?}
-         */
-
-      }, {
-        key: "_getComponentRootNode",
-        value: function _getComponentRootNode(componentRef) {
-          return (
-            /** @type {?} */
-
-            /** @type {?} */
-            componentRef.hostView.rootNodes[0]
-          );
-        }
-      }]);
-
-      return DomPortalOutlet;
-    }(BasePortalOutlet);
-
-    if (false) {}
-    /**
-     * @deprecated Use `DomPortalOutlet` instead.
-     * \@breaking-change 9.0.0
-     */
-
-
-    var DomPortalHost = /*#__PURE__*/function (_DomPortalOutlet) {
-      _inherits(DomPortalHost, _DomPortalOutlet);
-
-      var _super8 = _createSuper(DomPortalHost);
-
-      function DomPortalHost() {
-        _classCallCheck(this, DomPortalHost);
-
-        return _super8.apply(this, arguments);
-      }
-
-      return DomPortalHost;
-    }(DomPortalOutlet);
-    /**
-     * @fileoverview added by tsickle
-     * Generated from: src/cdk/portal/portal-directives.ts
-     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
-     */
-
-    /**
-     * Directive version of a `TemplatePortal`. Because the directive *is* a TemplatePortal,
-     * the directive instance itself can be attached to a host, enabling declarative use of portals.
-     */
-
-
-    var CdkPortal = /*#__PURE__*/function (_TemplatePortal) {
-      _inherits(CdkPortal, _TemplatePortal);
-
-      var _super9 = _createSuper(CdkPortal);
-
-      /**
-       * @param {?} templateRef
-       * @param {?} viewContainerRef
-       */
-      function CdkPortal(templateRef, viewContainerRef) {
-        _classCallCheck(this, CdkPortal);
-
-        return _super9.call(this, templateRef, viewContainerRef);
-      }
-
-      return CdkPortal;
-    }(TemplatePortal);
-
-    CdkPortal.ɵfac = function CdkPortal_Factory(t) {
-      return new (t || CdkPortal)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"]));
-    };
-
-    CdkPortal.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({
-      type: CdkPortal,
-      selectors: [["", "cdkPortal", ""]],
-      exportAs: ["cdkPortal"],
-      features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]]
-    });
-    /** @nocollapse */
-
-    CdkPortal.ctorParameters = function () {
-      return [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"]
-      }, {
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"]
-      }];
-    };
-    /*@__PURE__*/
-
-
-    (function () {
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CdkPortal, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"],
-        args: [{
-          selector: '[cdkPortal]',
-          exportAs: 'cdkPortal'
-        }]
-      }], function () {
-        return [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"]
-        }, {
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"]
-        }];
-      }, null);
-    })();
-    /**
-     * @deprecated Use `CdkPortal` instead.
-     * \@breaking-change 9.0.0
-     */
-
-
-    var TemplatePortalDirective = /*#__PURE__*/function (_CdkPortal) {
-      _inherits(TemplatePortalDirective, _CdkPortal);
-
-      var _super10 = _createSuper(TemplatePortalDirective);
-
-      function TemplatePortalDirective() {
-        _classCallCheck(this, TemplatePortalDirective);
-
-        return _super10.apply(this, arguments);
-      }
-
-      return TemplatePortalDirective;
-    }(CdkPortal);
-
-    TemplatePortalDirective.ɵfac = function TemplatePortalDirective_Factory(t) {
-      return ɵTemplatePortalDirective_BaseFactory(t || TemplatePortalDirective);
-    };
-
-    TemplatePortalDirective.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({
-      type: TemplatePortalDirective,
-      selectors: [["", "cdk-portal", ""], ["", "portal", ""]],
-      exportAs: ["cdkPortal"],
-      features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([{
-        provide: CdkPortal,
-        useExisting: TemplatePortalDirective
-      }]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]]
-    });
-
-    var ɵTemplatePortalDirective_BaseFactory = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetInheritedFactory"](TemplatePortalDirective);
-    /*@__PURE__*/
-
-
-    (function () {
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TemplatePortalDirective, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"],
-        args: [{
-          selector: '[cdk-portal], [portal]',
-          exportAs: 'cdkPortal',
-          providers: [{
-            provide: CdkPortal,
-            useExisting: TemplatePortalDirective
-          }]
-        }]
-      }], null, null);
-    })();
-    /**
-     * Directive version of a PortalOutlet. Because the directive *is* a PortalOutlet, portals can be
-     * directly attached to it, enabling declarative use.
-     *
-     * Usage:
-     * `<ng-template [cdkPortalOutlet]="greeting"></ng-template>`
-     */
-
-
-    var CdkPortalOutlet = /*#__PURE__*/function (_BasePortalOutlet3) {
-      _inherits(CdkPortalOutlet, _BasePortalOutlet3);
-
-      var _super11 = _createSuper(CdkPortalOutlet);
-
-      /**
-       * @param {?} _componentFactoryResolver
-       * @param {?} _viewContainerRef
-       * @param {?=} _document
-       */
-      function CdkPortalOutlet(_componentFactoryResolver, _viewContainerRef,
-      /**
-       * @deprecated `_document` parameter to be made required.
-       * @breaking-change 9.0.0
-       */
-      _document) {
-        var _thisSuper2, _this107;
-
-        _classCallCheck(this, CdkPortalOutlet);
-
-        _this107 = _super11.call(this);
-        _this107._componentFactoryResolver = _componentFactoryResolver;
-        _this107._viewContainerRef = _viewContainerRef;
-        /**
-         * Whether the portal component is initialized.
-         */
-
-        _this107._isInitialized = false;
-        /**
-         * Emits when a portal is attached to the outlet.
-         */
-
-        _this107.attached = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        /**
-         * Attaches the given DomPortal to this PortalHost by moving all of the portal content into it.
-         * @param portal Portal to be attached.
-         * @deprecated To be turned into a method.
-         * \@breaking-change 10.0.0
-         */
-
-        _this107.attachDomPortal =
-        /**
-        * @param {?} portal
-        * @return {?}
-        */
-        function (portal) {
-          // @breaking-change 9.0.0 Remove check and error once the
-          // `_document` constructor parameter is required.
-          if (!_this107._document) {
-            throw Error('Cannot attach DOM portal without _document constructor parameter');
-          }
-          /** @type {?} */
-
-
-          var element = portal.element;
-
-          if (!element.parentNode) {
-            throw Error('DOM portal content must be attached to a parent node.');
-          } // Anchor used to save the element's previous position so
-          // that we can restore it when the portal is detached.
-
-          /** @type {?} */
-
-
-          var anchorNode = _this107._document.createComment('dom-portal');
-
-          portal.setAttachedHost(_assertThisInitialized(_this107));
-          element.parentNode.insertBefore(anchorNode, element);
-
-          _this107._getRootNode().appendChild(element);
-
-          _get((_thisSuper2 = _assertThisInitialized(_this107), _getPrototypeOf(CdkPortalOutlet.prototype)), "setDisposeFn", _thisSuper2).call(_thisSuper2,
-          /**
-          * @return {?}
-          */
-          function () {
-            if (anchorNode.parentNode) {
-              /** @type {?} */
-              anchorNode.parentNode.replaceChild(element, anchorNode);
-            }
-          });
-        };
-
-        _this107._document = _document;
-        return _this107;
-      }
-      /**
-       * Portal associated with the Portal outlet.
-       * @return {?}
-       */
-
-
-      _createClass(CdkPortalOutlet, [{
-        key: "ngOnInit",
-
-        /**
-         * @return {?}
-         */
-        value: function ngOnInit() {
-          this._isInitialized = true;
-        }
-        /**
-         * @return {?}
-         */
-
-      }, {
-        key: "ngOnDestroy",
-        value: function ngOnDestroy() {
-          _get(_getPrototypeOf(CdkPortalOutlet.prototype), "dispose", this).call(this);
-
-          this._attachedPortal = null;
-          this._attachedRef = null;
-        }
-        /**
-         * Attach the given ComponentPortal to this PortalOutlet using the ComponentFactoryResolver.
-         *
-         * @template T
-         * @param {?} portal Portal to be attached to the portal outlet.
-         * @return {?} Reference to the created component.
-         */
-
-      }, {
-        key: "attachComponentPortal",
-        value: function attachComponentPortal(portal) {
-          portal.setAttachedHost(this); // If the portal specifies an origin, use that as the logical location of the component
-          // in the application tree. Otherwise use the location of this PortalOutlet.
-
-          /** @type {?} */
-
-          var viewContainerRef = portal.viewContainerRef != null ? portal.viewContainerRef : this._viewContainerRef;
-          /** @type {?} */
-
-          var resolver = portal.componentFactoryResolver || this._componentFactoryResolver;
-          /** @type {?} */
-
-          var componentFactory = resolver.resolveComponentFactory(portal.component);
-          /** @type {?} */
-
-          var ref = viewContainerRef.createComponent(componentFactory, viewContainerRef.length, portal.injector || viewContainerRef.injector); // If we're using a view container that's different from the injected one (e.g. when the portal
-          // specifies its own) we need to move the component into the outlet, otherwise it'll be rendered
-          // inside of the alternate view container.
-
-          if (viewContainerRef !== this._viewContainerRef) {
-            this._getRootNode().appendChild(
-            /** @type {?} */
-            ref.hostView.rootNodes[0]);
-          }
-
-          _get(_getPrototypeOf(CdkPortalOutlet.prototype), "setDisposeFn", this).call(this,
-          /**
-          * @return {?}
-          */
-          function () {
-            return ref.destroy();
-          });
-
-          this._attachedPortal = portal;
-          this._attachedRef = ref;
-          this.attached.emit(ref);
-          return ref;
-        }
-        /**
-         * Attach the given TemplatePortal to this PortalHost as an embedded View.
-         * @template C
-         * @param {?} portal Portal to be attached.
-         * @return {?} Reference to the created embedded view.
-         */
-
-      }, {
-        key: "attachTemplatePortal",
-        value: function attachTemplatePortal(portal) {
-          var _this108 = this;
-
-          portal.setAttachedHost(this);
-          /** @type {?} */
-
-          var viewRef = this._viewContainerRef.createEmbeddedView(portal.templateRef, portal.context);
-
-          _get(_getPrototypeOf(CdkPortalOutlet.prototype), "setDisposeFn", this).call(this,
-          /**
-          * @return {?}
-          */
-          function () {
-            return _this108._viewContainerRef.clear();
-          });
-
-          this._attachedPortal = portal;
-          this._attachedRef = viewRef;
-          this.attached.emit(viewRef);
-          return viewRef;
-        }
-        /**
-         * Gets the root node of the portal outlet.
-         * @private
-         * @return {?}
-         */
-
-      }, {
-        key: "_getRootNode",
-        value: function _getRootNode() {
-          /** @type {?} */
-          var nativeElement = this._viewContainerRef.element.nativeElement; // The directive could be set on a template which will result in a comment
-          // node being the root. Use the comment's parent node if that is the case.
-
-          return (
-            /** @type {?} */
-            nativeElement.nodeType === nativeElement.ELEMENT_NODE ? nativeElement :
-            /** @type {?} */
-            nativeElement.parentNode
-          );
-        }
-      }, {
-        key: "portal",
-        get: function get() {
-          return this._attachedPortal;
-        }
-        /**
-         * @param {?} portal
-         * @return {?}
-         */
-        ,
-        set: function set(portal) {
-          // Ignore the cases where the `portal` is set to a falsy value before the lifecycle hooks have
-          // run. This handles the cases where the user might do something like `<div cdkPortalOutlet>`
-          // and attach a portal programmatically in the parent component. When Angular does the first CD
-          // round, it will fire the setter with empty string, causing the user's content to be cleared.
-          if (this.hasAttached() && !portal && !this._isInitialized) {
-            return;
-          }
-
-          if (this.hasAttached()) {
-            _get(_getPrototypeOf(CdkPortalOutlet.prototype), "detach", this).call(this);
-          }
-
-          if (portal) {
-            _get(_getPrototypeOf(CdkPortalOutlet.prototype), "attach", this).call(this, portal);
-          }
-
-          this._attachedPortal = portal;
-        }
-        /**
-         * Component or view reference that is attached to the portal.
-         * @return {?}
-         */
-
-      }, {
-        key: "attachedRef",
-        get: function get() {
-          return this._attachedRef;
-        }
-      }]);
-
-      return CdkPortalOutlet;
-    }(BasePortalOutlet);
-
-    CdkPortalOutlet.ɵfac = function CdkPortalOutlet_Factory(t) {
-      return new (t || CdkPortalOutlet)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_1__["DOCUMENT"]));
-    };
-
-    CdkPortalOutlet.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({
-      type: CdkPortalOutlet,
-      selectors: [["", "cdkPortalOutlet", ""]],
-      inputs: {
-        portal: ["cdkPortalOutlet", "portal"]
-      },
-      outputs: {
-        attached: "attached"
-      },
-      exportAs: ["cdkPortalOutlet"],
-      features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]]
-    });
-    /** @nocollapse */
-
-    CdkPortalOutlet.ctorParameters = function () {
-      return [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"]
-      }, {
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"]
-      }, {
-        type: undefined,
-        decorators: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
-          args: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["DOCUMENT"]]
-        }]
-      }];
-    };
-
-    CdkPortalOutlet.propDecorators = {
-      attached: [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
-      }]
-    };
-    /*@__PURE__*/
-
-    (function () {
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CdkPortalOutlet, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"],
-        args: [{
-          selector: '[cdkPortalOutlet]',
-          exportAs: 'cdkPortalOutlet',
-          inputs: ['portal: cdkPortalOutlet']
-        }]
-      }], function () {
-        return [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"]
-        }, {
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"]
-        }, {
-          type: undefined,
-          decorators: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
-            args: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["DOCUMENT"]]
-          }]
-        }];
-      }, {
-        attached: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
-        }]
-      });
-    })();
-
-    if (false) {}
-    /**
-     * @deprecated Use `CdkPortalOutlet` instead.
-     * \@breaking-change 9.0.0
-     */
-
-
-    var PortalHostDirective = /*#__PURE__*/function (_CdkPortalOutlet) {
-      _inherits(PortalHostDirective, _CdkPortalOutlet);
-
-      var _super12 = _createSuper(PortalHostDirective);
-
-      function PortalHostDirective() {
-        _classCallCheck(this, PortalHostDirective);
-
-        return _super12.apply(this, arguments);
-      }
-
-      return PortalHostDirective;
-    }(CdkPortalOutlet);
-
-    PortalHostDirective.ɵfac = function PortalHostDirective_Factory(t) {
-      return ɵPortalHostDirective_BaseFactory(t || PortalHostDirective);
-    };
-
-    PortalHostDirective.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({
-      type: PortalHostDirective,
-      selectors: [["", "cdkPortalHost", ""], ["", "portalHost", ""]],
-      inputs: {
-        portal: ["cdkPortalHost", "portal"]
-      },
-      exportAs: ["cdkPortalHost"],
-      features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([{
-        provide: CdkPortalOutlet,
-        useExisting: PortalHostDirective
-      }]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]]
-    });
-
-    var ɵPortalHostDirective_BaseFactory = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetInheritedFactory"](PortalHostDirective);
-    /*@__PURE__*/
-
-
-    (function () {
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PortalHostDirective, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"],
-        args: [{
-          selector: '[cdkPortalHost], [portalHost]',
-          exportAs: 'cdkPortalHost',
-          inputs: ['portal: cdkPortalHost'],
-          providers: [{
-            provide: CdkPortalOutlet,
-            useExisting: PortalHostDirective
-          }]
-        }]
-      }], null, null);
-    })();
-
-    var PortalModule = function PortalModule() {
-      _classCallCheck(this, PortalModule);
-    };
-
-    PortalModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
-      type: PortalModule
-    });
-    PortalModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
-      factory: function PortalModule_Factory(t) {
-        return new (t || PortalModule)();
-      }
-    });
-
-    (function () {
-      (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](PortalModule, {
-        declarations: [CdkPortal, CdkPortalOutlet, TemplatePortalDirective, PortalHostDirective],
-        exports: [CdkPortal, CdkPortalOutlet, TemplatePortalDirective, PortalHostDirective]
-      });
-    })();
-    /*@__PURE__*/
-
-
-    (function () {
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PortalModule, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
-        args: [{
-          exports: [CdkPortal, CdkPortalOutlet, TemplatePortalDirective, PortalHostDirective],
-          declarations: [CdkPortal, CdkPortalOutlet, TemplatePortalDirective, PortalHostDirective]
-        }]
-      }], null, null);
-    })();
-    /**
-     * @fileoverview added by tsickle
-     * Generated from: src/cdk/portal/portal-injector.ts
-     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
-     */
-
-    /**
-     * @license
-     * Copyright Google LLC All Rights Reserved.
-     *
-     * Use of this source code is governed by an MIT-style license that can be
-     * found in the LICENSE file at https://angular.io/license
-     */
-
-    /**
-     * Custom injector to be used when providing custom
-     * injection tokens to components inside a portal.
-     * \@docs-private
-     */
-
-
-    var PortalInjector = /*#__PURE__*/function () {
-      /**
-       * @param {?} _parentInjector
-       * @param {?} _customTokens
-       */
-      function PortalInjector(_parentInjector, _customTokens) {
-        _classCallCheck(this, PortalInjector);
-
-        this._parentInjector = _parentInjector;
-        this._customTokens = _customTokens;
-      }
-      /**
-       * @param {?} token
-       * @param {?=} notFoundValue
-       * @return {?}
-       */
-
-
-      _createClass(PortalInjector, [{
-        key: "get",
-        value: function get(token, notFoundValue) {
-          /** @type {?} */
-          var value = this._customTokens.get(token);
-
-          if (typeof value !== 'undefined') {
-            return value;
-          }
-
-          return this._parentInjector.get(token, notFoundValue);
-        }
-      }]);
-
-      return PortalInjector;
-    }();
-
-    if (false) {}
-    /**
-     * @fileoverview added by tsickle
-     * Generated from: src/cdk/portal/public-api.ts
-     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
-     */
-
-    /**
-     * Generated bundle index. Do not edit.
-     */
-    //# sourceMappingURL=portal.js.map
-
-    /***/
-
-  },
-
-  /***/
   "../../node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/text-field.js":
   /*!*************************************************************************************************!*\
     !*** /home/runner/work/code/code/node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/text-field.js ***!
@@ -16600,7 +15178,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(AutofillMonitor, [{
         key: "monitor",
         value: function monitor(elementOrRef) {
-          var _this109 = this;
+          var _this101 = this;
 
           if (!this._platform.isBrowser) {
             return rxjs__WEBPACK_IMPORTED_MODULE_3__["EMPTY"];
@@ -16639,7 +15217,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             if (event.animationName === 'cdk-text-field-autofill-start' && !element.classList.contains(cssClass)) {
               element.classList.add(cssClass);
 
-              _this109._ngZone.run(
+              _this101._ngZone.run(
               /**
               * @return {?}
               */
@@ -16654,7 +15232,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             } else if (event.animationName === 'cdk-text-field-autofill-end' && element.classList.contains(cssClass)) {
               element.classList.remove(cssClass);
 
-              _this109._ngZone.run(
+              _this101._ngZone.run(
               /**
               * @return {?}
               */
@@ -16721,7 +15299,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ngOnDestroy",
         value: function ngOnDestroy() {
-          var _this110 = this;
+          var _this102 = this;
 
           this._monitoredElements.forEach(
           /**
@@ -16730,7 +15308,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (_info, element) {
-            return _this110.stopMonitoring(element);
+            return _this102.stopMonitoring(element);
           });
         }
       }]);
@@ -16808,7 +15386,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(CdkAutofill, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this111 = this;
+          var _this103 = this;
 
           this._autofillMonitor.monitor(this._elementRef).subscribe(
           /**
@@ -16816,7 +15394,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (event) {
-            return _this111.cdkAutofill.emit(event);
+            return _this103.cdkAutofill.emit(event);
           });
         }
         /**
@@ -16965,7 +15543,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ngAfterViewInit",
         value: function ngAfterViewInit() {
-          var _this112 = this;
+          var _this104 = this;
 
           if (this._platform.isBrowser) {
             // Remember the height which we started with in case autosizing is disabled
@@ -16978,14 +15556,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             */
             function () {
               /** @type {?} */
-              var window = _this112._getWindow();
+              var window = _this104._getWindow();
 
-              Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["fromEvent"])(window, 'resize').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["auditTime"])(16), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["takeUntil"])(_this112._destroyed)).subscribe(
+              Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["fromEvent"])(window, 'resize').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["auditTime"])(16), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["takeUntil"])(_this104._destroyed)).subscribe(
               /**
               * @return {?}
               */
               function () {
-                return _this112.resizeToFitContent(true);
+                return _this104.resizeToFitContent(true);
               });
             });
           }
@@ -17077,7 +15655,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "resizeToFitContent",
         value: function resizeToFitContent() {
-          var _this113 = this;
+          var _this105 = this;
 
           var force = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
 
@@ -17138,7 +15716,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function () {
-                return _this113._scrollToCaretPosition(textarea);
+                return _this105._scrollToCaretPosition(textarea);
               });
             } else {
               setTimeout(
@@ -17146,7 +15724,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function () {
-                return _this113._scrollToCaretPosition(textarea);
+                return _this105._scrollToCaretPosition(textarea);
               });
             }
           });
@@ -18319,7 +16897,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MatFormField = /*#__PURE__*/function (_MatFormFieldMixinBas) {
       _inherits(MatFormField, _MatFormFieldMixinBas);
 
-      var _super13 = _createSuper(MatFormField);
+      var _super3 = _createSuper(MatFormField);
 
       /**
        * @param {?} _elementRef
@@ -18332,51 +16910,51 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _animationMode
        */
       function MatFormField(_elementRef, _changeDetectorRef, labelOptions, _dir, _defaults, _platform, _ngZone, _animationMode) {
-        var _this114;
+        var _this106;
 
         _classCallCheck(this, MatFormField);
 
-        _this114 = _super13.call(this, _elementRef);
-        _this114._elementRef = _elementRef;
-        _this114._changeDetectorRef = _changeDetectorRef;
-        _this114._dir = _dir;
-        _this114._defaults = _defaults;
-        _this114._platform = _platform;
-        _this114._ngZone = _ngZone;
+        _this106 = _super3.call(this, _elementRef);
+        _this106._elementRef = _elementRef;
+        _this106._changeDetectorRef = _changeDetectorRef;
+        _this106._dir = _dir;
+        _this106._defaults = _defaults;
+        _this106._platform = _platform;
+        _this106._ngZone = _ngZone;
         /**
          * Whether the outline gap needs to be calculated
          * immediately on the next change detection run.
          */
 
-        _this114._outlineGapCalculationNeededImmediately = false;
+        _this106._outlineGapCalculationNeededImmediately = false;
         /**
          * Whether the outline gap needs to be calculated next time the zone has stabilized.
          */
 
-        _this114._outlineGapCalculationNeededOnStable = false;
-        _this114._destroyed = new rxjs__WEBPACK_IMPORTED_MODULE_6__["Subject"]();
+        _this106._outlineGapCalculationNeededOnStable = false;
+        _this106._destroyed = new rxjs__WEBPACK_IMPORTED_MODULE_6__["Subject"]();
         /**
          * Override for the logic that disables the label animation in certain cases.
          */
 
-        _this114._showAlwaysAnimate = false;
+        _this106._showAlwaysAnimate = false;
         /**
          * State of the mat-hint and mat-error animations.
          */
 
-        _this114._subscriptAnimationState = '';
-        _this114._hintLabel = ''; // Unique id for the hint label.
+        _this106._subscriptAnimationState = '';
+        _this106._hintLabel = ''; // Unique id for the hint label.
 
-        _this114._hintLabelId = "mat-hint-".concat(nextUniqueId$2++); // Unique id for the internal form field label.
+        _this106._hintLabelId = "mat-hint-".concat(nextUniqueId$2++); // Unique id for the internal form field label.
 
-        _this114._labelId = "mat-form-field-label-".concat(nextUniqueId$2++);
-        _this114._labelOptions = labelOptions ? labelOptions : {};
-        _this114.floatLabel = _this114._getDefaultFloatLabelState();
-        _this114._animationsEnabled = _animationMode !== 'NoopAnimations'; // Set the default through here so we invoke the setter on the first run.
+        _this106._labelId = "mat-form-field-label-".concat(nextUniqueId$2++);
+        _this106._labelOptions = labelOptions ? labelOptions : {};
+        _this106.floatLabel = _this106._getDefaultFloatLabelState();
+        _this106._animationsEnabled = _animationMode !== 'NoopAnimations'; // Set the default through here so we invoke the setter on the first run.
 
-        _this114.appearance = _defaults && _defaults.appearance ? _defaults.appearance : 'legacy';
-        _this114._hideRequiredMarker = _defaults && _defaults.hideRequiredMarker != null ? _defaults.hideRequiredMarker : false;
-        return _this114;
+        _this106.appearance = _defaults && _defaults.appearance ? _defaults.appearance : 'legacy';
+        _this106._hideRequiredMarker = _defaults && _defaults.hideRequiredMarker != null ? _defaults.hideRequiredMarker : false;
+        return _this106;
       }
       /**
        * The form-field appearance style.
@@ -18402,7 +16980,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ngAfterContentInit",
         value: function ngAfterContentInit() {
-          var _this115 = this;
+          var _this107 = this;
 
           this._validateControlChild();
           /** @type {?} */
@@ -18422,11 +17000,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            _this115._validatePlaceholders();
+            _this107._validatePlaceholders();
 
-            _this115._syncDescribedByIds();
+            _this107._syncDescribedByIds();
 
-            _this115._changeDetectorRef.markForCheck();
+            _this107._changeDetectorRef.markForCheck();
           }); // Run change detection if the value changes.
 
           if (control.ngControl && control.ngControl.valueChanges) {
@@ -18435,7 +17013,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              return _this115._changeDetectorRef.markForCheck();
+              return _this107._changeDetectorRef.markForCheck();
             });
           } // Note that we have to run outside of the `NgZone` explicitly,
           // in order to avoid throwing users into an infinite loop
@@ -18447,13 +17025,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            _this115._ngZone.onStable.asObservable().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["takeUntil"])(_this115._destroyed)).subscribe(
+            _this107._ngZone.onStable.asObservable().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["takeUntil"])(_this107._destroyed)).subscribe(
             /**
             * @return {?}
             */
             function () {
-              if (_this115._outlineGapCalculationNeededOnStable) {
-                _this115.updateOutlineGap();
+              if (_this107._outlineGapCalculationNeededOnStable) {
+                _this107.updateOutlineGap();
               }
             });
           }); // Run change detection and update the outline if the suffix or prefix changes.
@@ -18464,9 +17042,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            _this115._outlineGapCalculationNeededOnStable = true;
+            _this107._outlineGapCalculationNeededOnStable = true;
 
-            _this115._changeDetectorRef.markForCheck();
+            _this107._changeDetectorRef.markForCheck();
           }); // Re-validate when the number of hints changes.
 
           this._hintChildren.changes.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["startWith"])(null)).subscribe(
@@ -18474,9 +17052,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            _this115._processHints();
+            _this107._processHints();
 
-            _this115._changeDetectorRef.markForCheck();
+            _this107._changeDetectorRef.markForCheck();
           }); // Update the aria-described by when the number of errors changes.
 
 
@@ -18485,9 +17063,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            _this115._syncDescribedByIds();
+            _this107._syncDescribedByIds();
 
-            _this115._changeDetectorRef.markForCheck();
+            _this107._changeDetectorRef.markForCheck();
           });
 
           if (this._dir) {
@@ -18497,7 +17075,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             */
             function () {
               if (typeof requestAnimationFrame === 'function') {
-                _this115._ngZone.runOutsideAngular(
+                _this107._ngZone.runOutsideAngular(
                 /**
                 * @return {?}
                 */
@@ -18507,11 +17085,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   * @return {?}
                   */
                   function () {
-                    return _this115.updateOutlineGap();
+                    return _this107.updateOutlineGap();
                   });
                 });
               } else {
-                _this115.updateOutlineGap();
+                _this107.updateOutlineGap();
               }
             });
           }
@@ -18630,7 +17208,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_animateAndLockLabel",
         value: function _animateAndLockLabel() {
-          var _this116 = this;
+          var _this108 = this;
 
           if (this._hasFloatingLabel() && this._canLabelFloat) {
             // If animations are disabled, we shouldn't go in here,
@@ -18642,7 +17220,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function () {
-                _this116._showAlwaysAnimate = false;
+                _this108._showAlwaysAnimate = false;
               });
             }
 
@@ -18688,7 +17266,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_validateHints",
         value: function _validateHints() {
-          var _this117 = this;
+          var _this109 = this;
 
           if (this._hintChildren) {
             /** @type {?} */
@@ -18704,7 +17282,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             */
             function (hint) {
               if (hint.align === 'start') {
-                if (startHint || _this117.hintLabel) {
+                if (startHint || _this109.hintLabel) {
                   throw getMatFormFieldDuplicatedHintError('start');
                 }
 
@@ -19706,12 +18284,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MatTextareaAutosize = /*#__PURE__*/function (_angular_cdk_text_fie) {
       _inherits(MatTextareaAutosize, _angular_cdk_text_fie);
 
-      var _super14 = _createSuper(MatTextareaAutosize);
+      var _super4 = _createSuper(MatTextareaAutosize);
 
       function MatTextareaAutosize() {
         _classCallCheck(this, MatTextareaAutosize);
 
-        return _super14.apply(this, arguments);
+        return _super4.apply(this, arguments);
       }
 
       _createClass(MatTextareaAutosize, [{
@@ -19943,7 +18521,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MatInput = /*#__PURE__*/function (_MatInputMixinBase2) {
       _inherits(MatInput, _MatInputMixinBase2);
 
-      var _super15 = _createSuper(MatInput);
+      var _super5 = _createSuper(MatInput);
 
       /**
        * @param {?} _elementRef
@@ -19957,45 +18535,45 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} ngZone
        */
       function MatInput(_elementRef, _platform, ngControl, _parentForm, _parentFormGroup, _defaultErrorStateMatcher, inputValueAccessor, _autofillMonitor, ngZone) {
-        var _this118;
+        var _this110;
 
         _classCallCheck(this, MatInput);
 
-        _this118 = _super15.call(this, _defaultErrorStateMatcher, _parentForm, _parentFormGroup, ngControl);
-        _this118._elementRef = _elementRef;
-        _this118._platform = _platform;
-        _this118.ngControl = ngControl;
-        _this118._autofillMonitor = _autofillMonitor;
-        _this118._uid = "mat-input-".concat(nextUniqueId++);
+        _this110 = _super5.call(this, _defaultErrorStateMatcher, _parentForm, _parentFormGroup, ngControl);
+        _this110._elementRef = _elementRef;
+        _this110._platform = _platform;
+        _this110.ngControl = ngControl;
+        _this110._autofillMonitor = _autofillMonitor;
+        _this110._uid = "mat-input-".concat(nextUniqueId++);
         /**
          * Implemented as part of MatFormFieldControl.
          * \@docs-private
          */
 
-        _this118.focused = false;
+        _this110.focused = false;
         /**
          * Implemented as part of MatFormFieldControl.
          * \@docs-private
          */
 
-        _this118.stateChanges = new rxjs__WEBPACK_IMPORTED_MODULE_7__["Subject"]();
+        _this110.stateChanges = new rxjs__WEBPACK_IMPORTED_MODULE_7__["Subject"]();
         /**
          * Implemented as part of MatFormFieldControl.
          * \@docs-private
          */
 
-        _this118.controlType = 'mat-input';
+        _this110.controlType = 'mat-input';
         /**
          * Implemented as part of MatFormFieldControl.
          * \@docs-private
          */
 
-        _this118.autofilled = false;
-        _this118._disabled = false;
-        _this118._required = false;
-        _this118._type = 'text';
-        _this118._readonly = false;
-        _this118._neverEmptyInputTypes = ['date', 'datetime', 'datetime-local', 'month', 'time', 'week'].filter(
+        _this110.autofilled = false;
+        _this110._disabled = false;
+        _this110._required = false;
+        _this110._type = 'text';
+        _this110._readonly = false;
+        _this110._neverEmptyInputTypes = ['date', 'datetime', 'datetime-local', 'month', 'time', 'week'].filter(
         /**
         * @param {?} t
         * @return {?}
@@ -20005,16 +18583,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         });
         /** @type {?} */
 
-        var element = _this118._elementRef.nativeElement;
+        var element = _this110._elementRef.nativeElement;
         /** @type {?} */
 
         var nodeName = element.nodeName.toLowerCase(); // If no input value accessor was explicitly specified, use the element as the input value
         // accessor.
 
-        _this118._inputValueAccessor = inputValueAccessor || element;
-        _this118._previousNativeValue = _this118.value; // Force setter to be called in case id was not specified.
+        _this110._inputValueAccessor = inputValueAccessor || element;
+        _this110._previousNativeValue = _this110.value; // Force setter to be called in case id was not specified.
 
-        _this118.id = _this118.id; // On some versions of iOS the caret gets stuck in the wrong place when holding down the delete
+        _this110.id = _this110.id; // On some versions of iOS the caret gets stuck in the wrong place when holding down the delete
         // key. In order to get around this we need to "jiggle" the caret loose. Since this bug only
         // exists on iOS, we only bother to install the listener on iOS.
 
@@ -20047,17 +18625,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
 
-        _this118._isServer = !_this118._platform.isBrowser;
-        _this118._isNativeSelect = nodeName === 'select';
-        _this118._isTextarea = nodeName === 'textarea';
+        _this110._isServer = !_this110._platform.isBrowser;
+        _this110._isNativeSelect = nodeName === 'select';
+        _this110._isTextarea = nodeName === 'textarea';
 
-        if (_this118._isNativeSelect) {
-          _this118.controlType =
+        if (_this110._isNativeSelect) {
+          _this110.controlType =
           /** @type {?} */
           element.multiple ? 'mat-native-select-multiple' : 'mat-native-select';
         }
 
-        return _this118;
+        return _this110;
       }
       /**
        * Implemented as part of MatFormFieldControl.
@@ -20073,7 +18651,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * @return {?}
          */
         value: function ngOnInit() {
-          var _this119 = this;
+          var _this111 = this;
 
           if (this._platform.isBrowser) {
             this._autofillMonitor.monitor(this._elementRef.nativeElement).subscribe(
@@ -20082,9 +18660,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (event) {
-              _this119.autofilled = event.isAutofilled;
+              _this111.autofilled = event.isAutofilled;
 
-              _this119.stateChanges.next();
+              _this111.stateChanges.next();
             });
           }
         }
@@ -21328,7 +19906,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MatSelect = /*#__PURE__*/function (_MatSelectMixinBase2) {
       _inherits(MatSelect, _MatSelectMixinBase2);
 
-      var _super16 = _createSuper(MatSelect);
+      var _super6 = _createSuper(MatSelect);
 
       /**
        * @param {?} _viewportRuler
@@ -21347,43 +19925,43 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} defaults
        */
       function MatSelect(_viewportRuler, _changeDetectorRef, _ngZone, _defaultErrorStateMatcher, elementRef, _dir, _parentForm, _parentFormGroup, _parentFormField, ngControl, tabIndex, scrollStrategyFactory, _liveAnnouncer, defaults) {
-        var _this120;
+        var _this112;
 
         _classCallCheck(this, MatSelect);
 
-        _this120 = _super16.call(this, elementRef, _defaultErrorStateMatcher, _parentForm, _parentFormGroup, ngControl);
-        _this120._viewportRuler = _viewportRuler;
-        _this120._changeDetectorRef = _changeDetectorRef;
-        _this120._ngZone = _ngZone;
-        _this120._dir = _dir;
-        _this120._parentFormField = _parentFormField;
-        _this120.ngControl = ngControl;
-        _this120._liveAnnouncer = _liveAnnouncer;
+        _this112 = _super6.call(this, elementRef, _defaultErrorStateMatcher, _parentForm, _parentFormGroup, ngControl);
+        _this112._viewportRuler = _viewportRuler;
+        _this112._changeDetectorRef = _changeDetectorRef;
+        _this112._ngZone = _ngZone;
+        _this112._dir = _dir;
+        _this112._parentFormField = _parentFormField;
+        _this112.ngControl = ngControl;
+        _this112._liveAnnouncer = _liveAnnouncer;
         /**
          * Whether or not the overlay panel is open.
          */
 
-        _this120._panelOpen = false;
+        _this112._panelOpen = false;
         /**
          * Whether filling out the select is required in the form.
          */
 
-        _this120._required = false;
+        _this112._required = false;
         /**
          * The scroll position of the overlay panel, calculated to center the selected option.
          */
 
-        _this120._scrollTop = 0;
+        _this112._scrollTop = 0;
         /**
          * Whether the component is in multiple selection mode.
          */
 
-        _this120._multiple = false;
+        _this112._multiple = false;
         /**
          * Comparison function to specify which option is displayed. Defaults to object equality.
          */
 
-        _this120._compareWith =
+        _this112._compareWith =
         /**
         * @param {?} o1
         * @param {?} o2
@@ -21397,22 +19975,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          */
 
 
-        _this120._uid = "mat-select-".concat(nextUniqueId++);
+        _this112._uid = "mat-select-".concat(nextUniqueId++);
         /**
          * Emits whenever the component is destroyed.
          */
 
-        _this120._destroy = new rxjs__WEBPACK_IMPORTED_MODULE_12__["Subject"]();
+        _this112._destroy = new rxjs__WEBPACK_IMPORTED_MODULE_12__["Subject"]();
         /**
          * The cached font-size of the trigger element.
          */
 
-        _this120._triggerFontSize = 0;
+        _this112._triggerFontSize = 0;
         /**
          * `View -> model callback called when value changes`
          */
 
-        _this120._onChange =
+        _this112._onChange =
         /**
         * @return {?}
         */
@@ -21422,7 +20000,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          */
 
 
-        _this120._onTouched =
+        _this112._onTouched =
         /**
         * @return {?}
         */
@@ -21432,24 +20010,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          */
 
 
-        _this120._optionIds = '';
+        _this112._optionIds = '';
         /**
          * The value of the select panel's transform-origin property.
          */
 
-        _this120._transformOrigin = 'top';
+        _this112._transformOrigin = 'top';
         /**
          * Emits when the panel element is finished transforming in.
          */
 
-        _this120._panelDoneAnimatingStream = new rxjs__WEBPACK_IMPORTED_MODULE_12__["Subject"]();
+        _this112._panelDoneAnimatingStream = new rxjs__WEBPACK_IMPORTED_MODULE_12__["Subject"]();
         /**
          * The y-offset of the overlay panel in relation to the trigger's top start corner.
          * This must be adjusted to align the selected option text over the trigger text.
          * when the panel opens. Will change based on the y-position of the selected option.
          */
 
-        _this120._offsetY = 0;
+        _this112._offsetY = 0;
         /**
          * This position config ensures that the top "start" corner of the overlay
          * is aligned with with the top "start" of the origin by default (overlapping
@@ -21457,7 +20035,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * will fall back to a position above the trigger.
          */
 
-        _this120._positions = [{
+        _this112._positions = [{
           originX: 'start',
           originY: 'top',
           overlayX: 'start',
@@ -21472,23 +20050,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * Whether the component is disabling centering of the active option over the trigger.
          */
 
-        _this120._disableOptionCentering = false;
-        _this120._focused = false;
+        _this112._disableOptionCentering = false;
+        _this112._focused = false;
         /**
          * A name for this control that can be used by `mat-form-field`.
          */
 
-        _this120.controlType = 'mat-select';
+        _this112.controlType = 'mat-select';
         /**
          * Aria label of the select. If not specified, the placeholder will be used as label.
          */
 
-        _this120.ariaLabel = '';
+        _this112.ariaLabel = '';
         /**
          * Combined stream of all of the child options' change events.
          */
 
-        _this120.optionSelectionChanges =
+        _this112.optionSelectionChanges =
         /** @type {?} */
         Object(rxjs__WEBPACK_IMPORTED_MODULE_12__["defer"])(
         /**
@@ -21496,7 +20074,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         */
         function () {
           /** @type {?} */
-          var options = _this120.options;
+          var options = _this112.options;
 
           if (options) {
             return options.changes.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["startWith"])(options), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["switchMap"])(
@@ -21515,24 +20093,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }));
           }
 
-          return _this120._ngZone.onStable.asObservable().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["take"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["switchMap"])(
+          return _this112._ngZone.onStable.asObservable().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["take"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["switchMap"])(
           /**
           * @return {?}
           */
           function () {
-            return _this120.optionSelectionChanges;
+            return _this112.optionSelectionChanges;
           }));
         });
         /**
          * Event emitted when the select panel has been toggled.
          */
 
-        _this120.openedChange = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+        _this112.openedChange = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
         /**
          * Event emitted when the select has been opened.
          */
 
-        _this120._openedStream = _this120.openedChange.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["filter"])(
+        _this112._openedStream = _this112.openedChange.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["filter"])(
         /**
         * @param {?} o
         * @return {?}
@@ -21548,7 +20126,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * Event emitted when the select has been closed.
          */
 
-        _this120._closedStream = _this120.openedChange.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["filter"])(
+        _this112._closedStream = _this112.openedChange.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["filter"])(
         /**
         * @param {?} o
         * @return {?}
@@ -21564,38 +20142,38 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * Event emitted when the selected value has been changed by the user.
          */
 
-        _this120.selectionChange = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+        _this112.selectionChange = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
         /**
          * Event that emits whenever the raw value of the select changes. This is here primarily
          * to facilitate the two-way binding for the `value` input.
          * \@docs-private
          */
 
-        _this120.valueChange = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+        _this112.valueChange = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
 
-        if (_this120.ngControl) {
+        if (_this112.ngControl) {
           // Note: we provide the value accessor through here, instead of
           // the `providers` to avoid running into a circular import.
-          _this120.ngControl.valueAccessor = _assertThisInitialized(_this120);
+          _this112.ngControl.valueAccessor = _assertThisInitialized(_this112);
         }
 
-        _this120._scrollStrategyFactory = scrollStrategyFactory;
-        _this120._scrollStrategy = _this120._scrollStrategyFactory();
-        _this120.tabIndex = parseInt(tabIndex) || 0; // Force setter to be called in case id was not specified.
+        _this112._scrollStrategyFactory = scrollStrategyFactory;
+        _this112._scrollStrategy = _this112._scrollStrategyFactory();
+        _this112.tabIndex = parseInt(tabIndex) || 0; // Force setter to be called in case id was not specified.
 
-        _this120.id = _this120.id;
+        _this112.id = _this112.id;
 
         if (defaults) {
           if (defaults.disableOptionCentering != null) {
-            _this120.disableOptionCentering = defaults.disableOptionCentering;
+            _this112.disableOptionCentering = defaults.disableOptionCentering;
           }
 
           if (defaults.typeaheadDebounceInterval != null) {
-            _this120.typeaheadDebounceInterval = defaults.typeaheadDebounceInterval;
+            _this112.typeaheadDebounceInterval = defaults.typeaheadDebounceInterval;
           }
         }
 
-        return _this120;
+        return _this112;
       }
       /**
        * Whether the select is focused.
@@ -21610,7 +20188,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * @return {?}
          */
         value: function ngOnInit() {
-          var _this121 = this;
+          var _this113 = this;
 
           this._selectionModel = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_9__["SelectionModel"](this.multiple);
           this.stateChanges.next(); // We need `distinctUntilChanged` here, because some browsers will
@@ -21622,16 +20200,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            if (_this121.panelOpen) {
-              _this121._scrollTop = 0;
+            if (_this113.panelOpen) {
+              _this113._scrollTop = 0;
 
-              _this121.openedChange.emit(true);
+              _this113.openedChange.emit(true);
             } else {
-              _this121.openedChange.emit(false);
+              _this113.openedChange.emit(false);
 
-              _this121.overlayDir.offsetX = 0;
+              _this113.overlayDir.offsetX = 0;
 
-              _this121._changeDetectorRef.markForCheck();
+              _this113._changeDetectorRef.markForCheck();
             }
           });
 
@@ -21640,10 +20218,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            if (_this121._panelOpen) {
-              _this121._triggerRect = _this121.trigger.nativeElement.getBoundingClientRect();
+            if (_this113._panelOpen) {
+              _this113._triggerRect = _this113.trigger.nativeElement.getBoundingClientRect();
 
-              _this121._changeDetectorRef.markForCheck();
+              _this113._changeDetectorRef.markForCheck();
             }
           });
         }
@@ -21654,7 +20232,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ngAfterContentInit",
         value: function ngAfterContentInit() {
-          var _this122 = this;
+          var _this114 = this;
 
           this._initKeyManager();
 
@@ -21687,9 +20265,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            _this122._resetOptions();
+            _this114._resetOptions();
 
-            _this122._initializeSelection();
+            _this114._initializeSelection();
           });
         }
         /**
@@ -21752,7 +20330,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "open",
         value: function open() {
-          var _this123 = this;
+          var _this115 = this;
 
           if (this.disabled || !this.options || !this.options.length || this._panelOpen) {
             return;
@@ -21778,8 +20356,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            if (_this123._triggerFontSize && _this123.overlayDir.overlayRef && _this123.overlayDir.overlayRef.overlayElement) {
-              _this123.overlayDir.overlayRef.overlayElement.style.fontSize = "".concat(_this123._triggerFontSize, "px");
+            if (_this115._triggerFontSize && _this115.overlayDir.overlayRef && _this115.overlayDir.overlayRef.overlayElement) {
+              _this115.overlayDir.overlayRef.overlayElement.style.fontSize = "".concat(_this115._triggerFontSize, "px");
             }
           });
         }
@@ -22044,18 +20622,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_onAttached",
         value: function _onAttached() {
-          var _this124 = this;
+          var _this116 = this;
 
           this.overlayDir.positionChange.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["take"])(1)).subscribe(
           /**
           * @return {?}
           */
           function () {
-            _this124._changeDetectorRef.detectChanges();
+            _this116._changeDetectorRef.detectChanges();
 
-            _this124._calculateOverlayOffsetX();
+            _this116._calculateOverlayOffsetX();
 
-            _this124.panel.nativeElement.scrollTop = _this124._scrollTop;
+            _this116.panel.nativeElement.scrollTop = _this116._scrollTop;
           });
         }
         /**
@@ -22081,7 +20659,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * @return {?}
          */
         value: function _initializeSelection() {
-          var _this125 = this;
+          var _this117 = this;
 
           // Defer setting the value in order to avoid the "Expression
           // has changed after it was checked" errors from Angular.
@@ -22090,9 +20668,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            _this125._setSelectionByValue(_this125.ngControl ? _this125.ngControl.value : _this125._value);
+            _this117._setSelectionByValue(_this117.ngControl ? _this117.ngControl.value : _this117._value);
 
-            _this125.stateChanges.next();
+            _this117.stateChanges.next();
           });
         }
         /**
@@ -22106,7 +20684,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_setSelectionByValue",
         value: function _setSelectionByValue(value) {
-          var _this126 = this;
+          var _this118 = this;
 
           if (this.multiple && value) {
             if (!Array.isArray(value)) {
@@ -22121,7 +20699,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (currentValue) {
-              return _this126._selectValue(currentValue);
+              return _this118._selectValue(currentValue);
             });
 
             this._sortValues();
@@ -22155,7 +20733,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_selectValue",
         value: function _selectValue(value) {
-          var _this127 = this;
+          var _this119 = this;
 
           /** @type {?} */
           var correspondingOption = this.options.find(
@@ -22166,7 +20744,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           function (option) {
             try {
               // Treat null as a special reset value.
-              return option.value != null && _this127._compareWith(option.value, value);
+              return option.value != null && _this119._compareWith(option.value, value);
             } catch (error) {
               if (Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["isDevMode"])()) {
                 // Notify developers of errors in their comparator.
@@ -22192,7 +20770,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_initKeyManager",
         value: function _initKeyManager() {
-          var _this128 = this;
+          var _this120 = this;
 
           this._keyManager = new _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["ActiveDescendantKeyManager"](this.options).withTypeAhead(this._typeaheadDebounceInterval).withVerticalOrientation().withHorizontalOrientation(this._isRtl() ? 'rtl' : 'ltr').withAllowedModifierKeys(['shiftKey']);
 
@@ -22201,18 +20779,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            if (_this128.panelOpen) {
+            if (_this120.panelOpen) {
               // Select the active item when tabbing away. This is consistent with how the native
               // select behaves. Note that we only want to do this in single selection mode.
-              if (!_this128.multiple && _this128._keyManager.activeItem) {
-                _this128._keyManager.activeItem._selectViaInteraction();
+              if (!_this120.multiple && _this120._keyManager.activeItem) {
+                _this120._keyManager.activeItem._selectViaInteraction();
               } // Restore focus to the trigger before closing. Ensures that the focus
               // position won't be lost if the user got focus into the overlay.
 
 
-              _this128.focus();
+              _this120.focus();
 
-              _this128.close();
+              _this120.close();
             }
           });
 
@@ -22221,10 +20799,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            if (_this128._panelOpen && _this128.panel) {
-              _this128._scrollActiveOptionIntoView();
-            } else if (!_this128._panelOpen && !_this128.multiple && _this128._keyManager.activeItem) {
-              _this128._keyManager.activeItem._selectViaInteraction();
+            if (_this120._panelOpen && _this120.panel) {
+              _this120._scrollActiveOptionIntoView();
+            } else if (!_this120._panelOpen && !_this120.multiple && _this120._keyManager.activeItem) {
+              _this120._keyManager.activeItem._selectViaInteraction();
             }
           });
         }
@@ -22237,7 +20815,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_resetOptions",
         value: function _resetOptions() {
-          var _this129 = this;
+          var _this121 = this;
 
           /** @type {?} */
           var changedOrDestroyed = Object(rxjs__WEBPACK_IMPORTED_MODULE_12__["merge"])(this.options.changes, this._destroy);
@@ -22247,12 +20825,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (event) {
-            _this129._onSelect(event.source, event.isUserInput);
+            _this121._onSelect(event.source, event.isUserInput);
 
-            if (event.isUserInput && !_this129.multiple && _this129._panelOpen) {
-              _this129.close();
+            if (event.isUserInput && !_this121.multiple && _this121._panelOpen) {
+              _this121.close();
 
-              _this129.focus();
+              _this121.focus();
             }
           }); // Listen to changes in the internal state of the options and react accordingly.
           // Handles cases like the labels of the selected options changing.
@@ -22269,9 +20847,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            _this129._changeDetectorRef.markForCheck();
+            _this121._changeDetectorRef.markForCheck();
 
-            _this129.stateChanges.next();
+            _this121.stateChanges.next();
           });
 
           this._setOptionIds();
@@ -22333,7 +20911,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_sortValues",
         value: function _sortValues() {
-          var _this130 = this;
+          var _this122 = this;
 
           if (this.multiple) {
             /** @type {?} */
@@ -22346,7 +20924,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (a, b) {
-              return _this130.sortComparator ? _this130.sortComparator(a, b, options) : options.indexOf(a) - options.indexOf(b);
+              return _this122.sortComparator ? _this122.sortComparator(a, b, options) : options.indexOf(a) - options.indexOf(b);
             });
 
             this.stateChanges.next();
