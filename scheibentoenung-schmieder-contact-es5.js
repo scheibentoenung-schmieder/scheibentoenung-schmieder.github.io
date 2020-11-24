@@ -22369,7 +22369,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function fixIdSelector(selector) {
-      if (selector[0] !== '#') {
+      if (selector[0] !== '#' && selector[0] !== '.') {
         return '#' + selector;
       }
 
@@ -22399,7 +22399,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function send(serviceID, templateID, templatePrams, userID) {
       var params = {
-        lib_version: '2.6.3',
+        lib_version: '2.6.4',
         user_id: userID || _userID,
         service_id: serviceID,
         template_id: templateID,
@@ -22431,7 +22431,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       UI_1.UI.progressState(form);
       var formData = new FormData(form);
-      formData.append('lib_version', '2.6.3');
+      formData.append('lib_version', '2.6.4');
       formData.append('service_id', serviceID);
       formData.append('template_id', templateID);
       formData.append('user_id', userID || _userID);
