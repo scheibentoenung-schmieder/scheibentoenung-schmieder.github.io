@@ -1,9 +1,21 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["polyfills"],{
 
-/***/ "../../node_modules/zone.js/dist/task-tracking.js":
-/*!******************************************************************************!*\
-  !*** /home/runner/work/code/code/node_modules/zone.js/dist/task-tracking.js ***!
-  \******************************************************************************/
+/***/ 2:
+/*!*****************************************************!*\
+  !*** multi ./apps/scheibentoenung/src/polyfills.ts ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! /home/runner/work/code/code/apps/scheibentoenung/src/polyfills.ts */"v0qU");
+
+
+/***/ }),
+
+/***/ "FGvd":
+/*!****************************************************!*\
+  !*** ./node_modules/zone.js/dist/task-tracking.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -97,10 +109,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
-/***/ "../../node_modules/zone.js/dist/zone-evergreen.js":
-/*!*******************************************************************************!*\
-  !*** /home/runner/work/code/code/node_modules/zone.js/dist/zone-evergreen.js ***!
-  \*******************************************************************************/
+/***/ "pDpN":
+/*!*****************************************************!*\
+  !*** ./node_modules/zone.js/dist/zone-evergreen.js ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3052,18 +3064,18 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
-/***/ "./src/polyfills.ts":
-/*!**************************!*\
-  !*** ./src/polyfills.ts ***!
-  \**************************/
+/***/ "v0qU":
+/*!***********************************************!*\
+  !*** ./apps/scheibentoenung/src/polyfills.ts ***!
+  \***********************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var zone_js_dist_zone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zone.js/dist/zone */ "../../node_modules/zone.js/dist/zone-evergreen.js");
+/* harmony import */ var zone_js_dist_zone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zone.js/dist/zone */ "pDpN");
 /* harmony import */ var zone_js_dist_zone__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(zone_js_dist_zone__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var zone_js_dist_task_tracking__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zone.js/dist/task-tracking */ "../../node_modules/zone.js/dist/task-tracking.js");
+/* harmony import */ var zone_js_dist_task_tracking__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zone.js/dist/task-tracking */ "FGvd");
 /* harmony import */ var zone_js_dist_task_tracking__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zone_js_dist_task_tracking__WEBPACK_IMPORTED_MODULE_1__);
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
@@ -3126,18 +3138,6 @@ __webpack_require__.r(__webpack_exports__);
 */
 // tslint:disable-next-line: align
 
-
-
-/***/ }),
-
-/***/ 2:
-/*!********************************!*\
-  !*** multi ./src/polyfills.ts ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! /home/runner/work/code/code/apps/scheibentoenung/src/polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })

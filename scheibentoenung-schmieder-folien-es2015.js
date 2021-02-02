@@ -1,142 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["scheibentoenung-schmieder-folien"],{
 
-/***/ "../../libs/folien/src/index.ts":
-/*!************************************************************!*\
-  !*** /home/runner/work/code/code/libs/folien/src/index.ts ***!
-  \************************************************************/
-/*! exports provided: folienRoutes, FolienModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _lib_folien_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/folien.module */ "../../libs/folien/src/lib/folien.module.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "folienRoutes", function() { return _lib_folien_module__WEBPACK_IMPORTED_MODULE_0__["folienRoutes"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FolienModule", function() { return _lib_folien_module__WEBPACK_IMPORTED_MODULE_0__["FolienModule"]; });
-
-
-
-
-/***/ }),
-
-/***/ "../../libs/folien/src/lib/components/folie/folien.component.ts":
-/*!********************************************************************************************!*\
-  !*** /home/runner/work/code/code/libs/folien/src/lib/components/folie/folien.component.ts ***!
-  \********************************************************************************************/
-/*! exports provided: FolienComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FolienComponent", function() { return FolienComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../../node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "../../node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var _folien__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./folien */ "../../libs/folien/src/lib/components/folie/folien.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "../../node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/card */ "../../node_modules/@angular/material/__ivy_ngcc__/fesm2015/card.js");
-
-
-
-
-
-
-
-function FolienComponent_ng_container_0_div_1_li_11_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    const description_r6 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", description_r6, " ");
-} }
-function FolienComponent_ng_container_0_div_1_li_17_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    const description_r7 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", description_r7, " ");
-} }
-function FolienComponent_ng_container_0_div_1_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h2");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "br");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "img", 4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "b");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "Technische Daten:");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "ul");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, FolienComponent_ng_container_0_div_1_li_11_Template, 2, 1, "li", 6);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "b");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Leistungsmerkmale:");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "ul");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, FolienComponent_ng_container_0_div_1_li_17_Template, 2, 1, "li", 6);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    const folie_r3 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](folie_r3.headline);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", folie_r3.image, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"])("alt", folie_r3.headline);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", folie_r3.technicalDescription);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", folie_r3.performanceDescription);
-} }
-function FolienComponent_ng_container_0_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, FolienComponent_ng_container_0_div_1_Template, 18, 5, "div", 1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
-} if (rf & 2) {
-    const activeFolie_r1 = ctx.ngIf;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", activeFolie_r1);
-} }
-class FolienComponent {
-    constructor(activeRouter) {
-        this.activeRouter = activeRouter;
-        this.folien = { regular: _folien__WEBPACK_IMPORTED_MODULE_2__["regular"], premium: _folien__WEBPACK_IMPORTED_MODULE_2__["premium"], superior: _folien__WEBPACK_IMPORTED_MODULE_2__["superior"], special: _folien__WEBPACK_IMPORTED_MODULE_2__["special"] };
-    }
-}
-FolienComponent.ɵfac = function FolienComponent_Factory(t) { return new (t || FolienComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"])); };
-FolienComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FolienComponent, selectors: [["scheibentoenung-schmieder-folien"]], decls: 1, vars: 1, consts: [[4, "ngIf"], ["class", "folie mat-elevation-z4", 4, "ngFor", "ngForOf"], [1, "folie", "mat-elevation-z4"], [1, "header"], ["mat-card-image", "", 3, "src", "alt"], [1, "technical"], [4, "ngFor", "ngForOf"], [1, "performance"]], template: function FolienComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, FolienComponent_ng_container_0_Template, 2, 1, "ng-container", 0);
-    } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.folien[ctx.activeRouter.snapshot.params.type]);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardImage"]], styles: [".folie[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: stretch;\n  justify-content: center;\n  flex-wrap: wrap;\n  margin: 16px;\n  padding: 16px;\n  border-radius: 8px;\n}\n\n.header[_ngcontent-%COMP%] {\n  width: 300px;\n}\n\n.performance[_ngcontent-%COMP%], .technical[_ngcontent-%COMP%] {\n  width: 400px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL2NvZGUvY29kZS9saWJzL2ZvbGllbi9zcmMvbGliL2NvbXBvbmVudHMvZm9saWUvZm9saWVuLmNvbXBvbmVudC5zY3NzIiwibGlicy9mb2xpZW4vc3JjL2xpYi9jb21wb25lbnRzL2ZvbGllL2ZvbGllbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQUE7RUFDQSxvQkFBQTtFQUNBLHVCQUFBO0VBQ0EsZUFBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0VBQ0Esa0JBQUE7QUNDRjs7QURFQTtFQUNFLFlBQUE7QUNDRjs7QURDQTs7RUFFRSxZQUFBO0FDRUYiLCJmaWxlIjoibGlicy9mb2xpZW4vc3JjL2xpYi9jb21wb25lbnRzL2ZvbGllL2ZvbGllbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mb2xpZSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBzdHJldGNoO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBtYXJnaW46IDE2cHg7XG4gIHBhZGRpbmc6IDE2cHg7XG4gIGJvcmRlci1yYWRpdXM6IDhweDtcbn1cblxuLmhlYWRlciB7XG4gIHdpZHRoOiAzMDBweDtcbn1cbi5wZXJmb3JtYW5jZSxcbi50ZWNobmljYWwge1xuICB3aWR0aDogNDAwcHg7XG59XG4iLCIuZm9saWUge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogc3RyZXRjaDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGZsZXgtd3JhcDogd3JhcDtcbiAgbWFyZ2luOiAxNnB4O1xuICBwYWRkaW5nOiAxNnB4O1xuICBib3JkZXItcmFkaXVzOiA4cHg7XG59XG5cbi5oZWFkZXIge1xuICB3aWR0aDogMzAwcHg7XG59XG5cbi5wZXJmb3JtYW5jZSxcbi50ZWNobmljYWwge1xuICB3aWR0aDogNDAwcHg7XG59Il19 */"] });
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](FolienComponent, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
-        args: [{
-                selector: 'scheibentoenung-schmieder-folien',
-                templateUrl: './folien.component.html',
-                styleUrls: ['./folien.component.scss'],
-            }]
-    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] }]; }, null); })();
-
-
-/***/ }),
-
-/***/ "../../libs/folien/src/lib/components/folie/folien.ts":
-/*!**********************************************************************************!*\
-  !*** /home/runner/work/code/code/libs/folien/src/lib/components/folie/folien.ts ***!
-  \**********************************************************************************/
+/***/ "Ex8M":
+/*!********************************************************!*\
+  !*** ./libs/folien/src/lib/components/folie/folien.ts ***!
+  \********************************************************/
 /*! exports provided: regular, premium, superior, special */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -490,75 +357,134 @@ const special = [
 
 /***/ }),
 
-/***/ "../../libs/folien/src/lib/components/folien-selection/folien-selection.component.ts":
-/*!*****************************************************************************************************************!*\
-  !*** /home/runner/work/code/code/libs/folien/src/lib/components/folien-selection/folien-selection.component.ts ***!
-  \*****************************************************************************************************************/
-/*! exports provided: FolienSelectionComponent */
+/***/ "c3/c":
+/*!**********************************!*\
+  !*** ./libs/folien/src/index.ts ***!
+  \**********************************/
+/*! exports provided: folienRoutes, FolienModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FolienSelectionComponent", function() { return FolienSelectionComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../../node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "../../node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/tabs */ "../../node_modules/@angular/material/__ivy_ngcc__/fesm2015/tabs.js");
+/* harmony import */ var _lib_folien_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/folien.module */ "gthV");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "folienRoutes", function() { return _lib_folien_module__WEBPACK_IMPORTED_MODULE_0__["folienRoutes"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FolienModule", function() { return _lib_folien_module__WEBPACK_IMPORTED_MODULE_0__["FolienModule"]; });
 
 
-
-
-
-class FolienSelectionComponent {
-    constructor(active) {
-        this.active = active;
-    }
-}
-FolienSelectionComponent.ɵfac = function FolienSelectionComponent_Factory(t) { return new (t || FolienSelectionComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"])); };
-FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FolienSelectionComponent, selectors: [["scheibentoenung-schmieder-folien"]], decls: 11, vars: 4, consts: [[1, "folien-selection"], ["mat-tab-nav-bar", ""], ["mat-tab-link", "", "routerLink", "/folien/regular", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/premium", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/superior", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/special", 3, "active"]], template: function FolienSelectionComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "nav", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " Regular ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "a", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "Premium");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "a", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Superior");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "a", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "Special");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "router-outlet");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("active", ctx.active.firstChild.snapshot.params.type === "regular");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("active", ctx.active.firstChild.snapshot.params.type === "premium");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("active", ctx.active.firstChild.snapshot.params.type === "superior");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("active", ctx.active.firstChild.snapshot.params.type === "special");
-    } }, directives: [_angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__["MatTabNav"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__["MatTabLink"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterOutlet"]], styles: [".folien-selection {\n  margin: 80px 0 80px;\n}\n\n.mat-tab-links {\n  display: flex;\n  justify-content: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL2NvZGUvY29kZS9saWJzL2ZvbGllbi9zcmMvbGliL2NvbXBvbmVudHMvZm9saWVuLXNlbGVjdGlvbi9mb2xpZW4tc2VsZWN0aW9uLmNvbXBvbmVudC5zY3NzIiwibGlicy9mb2xpZW4vc3JjL2xpYi9jb21wb25lbnRzL2ZvbGllbi1zZWxlY3Rpb24vZm9saWVuLXNlbGVjdGlvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1CQUFBO0FDQ0Y7O0FEQ0E7RUFDRSxhQUFBO0VBQ0EsdUJBQUE7QUNFRiIsImZpbGUiOiJsaWJzL2ZvbGllbi9zcmMvbGliL2NvbXBvbmVudHMvZm9saWVuLXNlbGVjdGlvbi9mb2xpZW4tc2VsZWN0aW9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZvbGllbi1zZWxlY3Rpb24ge1xuICBtYXJnaW46IDgwcHggMCA4MHB4O1xufVxuLm1hdC10YWItbGlua3Mge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn1cbiIsIi5mb2xpZW4tc2VsZWN0aW9uIHtcbiAgbWFyZ2luOiA4MHB4IDAgODBweDtcbn1cblxuLm1hdC10YWItbGlua3Mge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn0iXX0= */"], encapsulation: 2 });
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](FolienSelectionComponent, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
-        args: [{
-                selector: 'scheibentoenung-schmieder-folien',
-                templateUrl: './folien-selection.component.html',
-                styleUrls: ['./folien-selection.component.scss'],
-                encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewEncapsulation"].None,
-            }]
-    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] }]; }, null); })();
 
 
 /***/ }),
 
-/***/ "../../libs/folien/src/lib/folien.module.ts":
-/*!************************************************************************!*\
-  !*** /home/runner/work/code/code/libs/folien/src/lib/folien.module.ts ***!
-  \************************************************************************/
+/***/ "dGng":
+/*!******************************************************************!*\
+  !*** ./libs/folien/src/lib/components/folie/folien.component.ts ***!
+  \******************************************************************/
+/*! exports provided: FolienComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FolienComponent", function() { return FolienComponent; });
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _folien__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./folien */ "Ex8M");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/card */ "Wp6s");
+
+
+
+
+
+
+function FolienComponent_ng_container_0_div_1_li_11_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const description_r6 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", description_r6, " ");
+} }
+function FolienComponent_ng_container_0_div_1_li_17_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const description_r7 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", description_r7, " ");
+} }
+function FolienComponent_ng_container_0_div_1_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "div", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "h2");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](4, "br");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](5, "img", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](6, "div", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](7, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](8, "b");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](9, "Technische Daten:");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](10, "ul");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](11, FolienComponent_ng_container_0_div_1_li_11_Template, 2, 1, "li", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](12, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](13, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](14, "b");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](15, "Leistungsmerkmale:");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](16, "ul");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](17, FolienComponent_ng_container_0_div_1_li_17_Template, 2, 1, "li", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const folie_r3 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](folie_r3.headline);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("src", folie_r3.image, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"])("alt", folie_r3.headline);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", folie_r3.technicalDescription);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", folie_r3.performanceDescription);
+} }
+function FolienComponent_ng_container_0_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, FolienComponent_ng_container_0_div_1_Template, 18, 5, "div", 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerEnd"]();
+} if (rf & 2) {
+    const activeFolie_r1 = ctx.ngIf;
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", activeFolie_r1);
+} }
+class FolienComponent {
+    constructor(activeRouter) {
+        this.activeRouter = activeRouter;
+        this.folien = { regular: _folien__WEBPACK_IMPORTED_MODULE_1__["regular"], premium: _folien__WEBPACK_IMPORTED_MODULE_1__["premium"], superior: _folien__WEBPACK_IMPORTED_MODULE_1__["superior"], special: _folien__WEBPACK_IMPORTED_MODULE_1__["special"] };
+    }
+}
+FolienComponent.ɵfac = function FolienComponent_Factory(t) { return new (t || FolienComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"])); };
+FolienComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: FolienComponent, selectors: [["scheibentoenung-schmieder-folien"]], decls: 1, vars: 1, consts: [[4, "ngIf"], ["class", "folie mat-elevation-z4", 4, "ngFor", "ngForOf"], [1, "folie", "mat-elevation-z4"], [1, "header"], ["mat-card-image", "", 3, "src", "alt"], [1, "technical"], [4, "ngFor", "ngForOf"], [1, "performance"]], template: function FolienComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](0, FolienComponent_ng_container_0_Template, 2, 1, "ng-container", 0);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.folien[ctx.activeRouter.snapshot.params.type]);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardImage"]], styles: [".folie[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: stretch;\n  justify-content: center;\n  flex-wrap: wrap;\n  margin: 16px;\n  padding: 16px;\n  border-radius: 8px;\n}\n\n.header[_ngcontent-%COMP%] {\n  width: 300px;\n}\n\n.performance[_ngcontent-%COMP%], .technical[_ngcontent-%COMP%] {\n  width: 400px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uL2ZvbGllbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQUE7RUFDQSxvQkFBQTtFQUNBLHVCQUFBO0VBQ0EsZUFBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0VBQ0Esa0JBQUE7QUFDRjs7QUFFQTtFQUNFLFlBQUE7QUFDRjs7QUFDQTs7RUFFRSxZQUFBO0FBRUYiLCJmaWxlIjoiZm9saWVuLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZvbGllIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IHN0cmV0Y2g7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBmbGV4LXdyYXA6IHdyYXA7XG4gIG1hcmdpbjogMTZweDtcbiAgcGFkZGluZzogMTZweDtcbiAgYm9yZGVyLXJhZGl1czogOHB4O1xufVxuXG4uaGVhZGVyIHtcbiAgd2lkdGg6IDMwMHB4O1xufVxuLnBlcmZvcm1hbmNlLFxuLnRlY2huaWNhbCB7XG4gIHdpZHRoOiA0MDBweDtcbn1cbiJdfQ== */"] });
+
+
+/***/ }),
+
+/***/ "gthV":
+/*!**********************************************!*\
+  !*** ./libs/folien/src/lib/folien.module.ts ***!
+  \**********************************************/
 /*! exports provided: folienRoutes, FolienModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -566,14 +492,13 @@ FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ�
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "folienRoutes", function() { return folienRoutes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FolienModule", function() { return FolienModule; });
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common */ "../../node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../../node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/card */ "../../node_modules/@angular/material/__ivy_ngcc__/fesm2015/card.js");
-/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/tabs */ "../../node_modules/@angular/material/__ivy_ngcc__/fesm2015/tabs.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "../../node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var _components_folie_folien_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/folie/folien.component */ "../../libs/folien/src/lib/components/folie/folien.component.ts");
-/* harmony import */ var _components_folien_selection_folien_selection_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/folien-selection/folien-selection.component */ "../../libs/folien/src/lib/components/folien-selection/folien-selection.component.ts");
-
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material/card */ "Wp6s");
+/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/tabs */ "wZkO");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _components_folie_folien_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/folie/folien.component */ "dGng");
+/* harmony import */ var _components_folien_selection_folien_selection_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/folien-selection/folien-selection.component */ "rK8b");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ "fXoL");
 
 
 
@@ -585,11 +510,11 @@ __webpack_require__.r(__webpack_exports__);
 const folienRoutes = [
     {
         path: '',
-        component: _components_folien_selection_folien_selection_component__WEBPACK_IMPORTED_MODULE_6__["FolienSelectionComponent"],
+        component: _components_folien_selection_folien_selection_component__WEBPACK_IMPORTED_MODULE_5__["FolienSelectionComponent"],
         children: [
             {
                 path: ':type',
-                component: _components_folie_folien_component__WEBPACK_IMPORTED_MODULE_5__["FolienComponent"],
+                component: _components_folie_folien_component__WEBPACK_IMPORTED_MODULE_4__["FolienComponent"],
             },
             {
                 path: '',
@@ -601,36 +526,79 @@ const folienRoutes = [
 ];
 class FolienModule {
 }
-FolienModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: FolienModule });
-FolienModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function FolienModule_Factory(t) { return new (t || FolienModule)(); }, imports: [[
+FolienModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineNgModule"]({ type: FolienModule });
+FolienModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjector"]({ factory: function FolienModule_Factory(t) { return new (t || FolienModule)(); }, imports: [[
             _angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild(folienRoutes),
-            _angular_material_tabs__WEBPACK_IMPORTED_MODULE_3__["MatTabsModule"],
-            _angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCardModule"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forChild(folienRoutes),
+            _angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__["MatTabsModule"],
+            _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardModule"],
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](FolienModule, { declarations: [_components_folien_selection_folien_selection_component__WEBPACK_IMPORTED_MODULE_6__["FolienSelectionComponent"], _components_folie_folien_component__WEBPACK_IMPORTED_MODULE_5__["FolienComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_3__["MatTabsModule"],
-        _angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCardModule"]] }); })();
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](FolienModule, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
-        args: [{
-                declarations: [_components_folien_selection_folien_selection_component__WEBPACK_IMPORTED_MODULE_6__["FolienSelectionComponent"], _components_folie_folien_component__WEBPACK_IMPORTED_MODULE_5__["FolienComponent"]],
-                imports: [
-                    _angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"],
-                    _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild(folienRoutes),
-                    _angular_material_tabs__WEBPACK_IMPORTED_MODULE_3__["MatTabsModule"],
-                    _angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCardModule"],
-                ],
-            }]
-    }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵsetNgModuleScope"](FolienModule, { declarations: [_components_folien_selection_folien_selection_component__WEBPACK_IMPORTED_MODULE_5__["FolienSelectionComponent"], _components_folie_folien_component__WEBPACK_IMPORTED_MODULE_4__["FolienComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__["MatTabsModule"],
+        _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardModule"]] }); })();
 
 
 /***/ }),
 
-/***/ "../../node_modules/@angular/material/__ivy_ngcc__/fesm2015/tabs.js":
-/*!************************************************************************************************!*\
-  !*** /home/runner/work/code/code/node_modules/@angular/material/__ivy_ngcc__/fesm2015/tabs.js ***!
-  \************************************************************************************************/
-/*! exports provided: MAT_TABS_CONFIG, MAT_TAB_GROUP, MatInkBar, MatTab, MatTabBody, MatTabBodyPortal, MatTabChangeEvent, MatTabContent, MatTabGroup, MatTabHeader, MatTabLabel, MatTabLabelWrapper, MatTabLink, MatTabNav, MatTabsModule, _MAT_INK_BAR_POSITIONER, _MatTabBodyBase, _MatTabGroupBase, _MatTabHeaderBase, _MatTabLinkBase, _MatTabNavBase, matTabsAnimations, ɵangular_material_src_material_tabs_tabs_a, ɵangular_material_src_material_tabs_tabs_b */
+/***/ "rK8b":
+/*!***************************************************************************************!*\
+  !*** ./libs/folien/src/lib/components/folien-selection/folien-selection.component.ts ***!
+  \***************************************************************************************/
+/*! exports provided: FolienSelectionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FolienSelectionComponent", function() { return FolienSelectionComponent; });
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/tabs */ "wZkO");
+
+
+
+
+class FolienSelectionComponent {
+    constructor(active) {
+        this.active = active;
+    }
+}
+FolienSelectionComponent.ɵfac = function FolienSelectionComponent_Factory(t) { return new (t || FolienSelectionComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"])); };
+FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: FolienSelectionComponent, selectors: [["scheibentoenung-schmieder-folien"]], decls: 11, vars: 4, consts: [[1, "folien-selection"], ["mat-tab-nav-bar", ""], ["mat-tab-link", "", "routerLink", "/folien/regular", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/premium", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/superior", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/special", 3, "active"]], template: function FolienSelectionComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "nav", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "a", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, " Regular ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "a", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Premium");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "a", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, "Superior");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "a", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "Special");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](10, "router-outlet");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("active", ctx.active.firstChild.snapshot.params.type === "regular");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("active", ctx.active.firstChild.snapshot.params.type === "premium");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("active", ctx.active.firstChild.snapshot.params.type === "superior");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("active", ctx.active.firstChild.snapshot.params.type === "special");
+    } }, directives: [_angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__["MatTabNav"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterLinkWithHref"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__["MatTabLink"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterOutlet"]], styles: [".folien-selection {\n  margin: 80px 0 80px;\n}\n\n.mat-tab-links {\n  display: flex;\n  justify-content: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uL2ZvbGllbi1zZWxlY3Rpb24uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxtQkFBQTtBQUNGOztBQUNBO0VBQ0UsYUFBQTtFQUNBLHVCQUFBO0FBRUYiLCJmaWxlIjoiZm9saWVuLXNlbGVjdGlvbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mb2xpZW4tc2VsZWN0aW9uIHtcbiAgbWFyZ2luOiA4MHB4IDAgODBweDtcbn1cbi5tYXQtdGFiLWxpbmtzIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG59XG4iXX0= */"], encapsulation: 2 });
+
+
+/***/ }),
+
+/***/ "wZkO":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@angular/material/__ivy_ngcc__/fesm2015/tabs.js ***!
+  \**********************************************************************/
+/*! exports provided: MAT_TABS_CONFIG, MAT_TAB_GROUP, MatInkBar, MatTab, MatTabBody, MatTabBodyPortal, MatTabChangeEvent, MatTabContent, MatTabGroup, MatTabHeader, MatTabLabel, MatTabLabelWrapper, MatTabLink, MatTabNav, MatTabsModule, _MAT_INK_BAR_POSITIONER, _MatTabBodyBase, _MatTabGroupBase, _MatTabHeaderBase, _MatTabLinkBase, _MatTabNavBase, matTabsAnimations, ɵangular_material_src_material_tabs_tabs_a, ɵangular_material_src_material_tabs_tabs_b, ɵangular_material_src_material_tabs_tabs_c, ɵangular_material_src_material_tabs_tabs_d */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -658,22 +626,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_MatTabNavBase", function() { return _MatTabNavBase; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "matTabsAnimations", function() { return matTabsAnimations; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵangular_material_src_material_tabs_tabs_a", function() { return _MAT_INK_BAR_POSITIONER_FACTORY; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵangular_material_src_material_tabs_tabs_b", function() { return MatPaginatedTabHeader; });
-/* harmony import */ var _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/cdk/a11y */ "../../node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/a11y.js");
-/* harmony import */ var _angular_cdk_observers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/cdk/observers */ "../../node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/observers.js");
-/* harmony import */ var _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/cdk/portal */ "../../node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/portal.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "../../node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "../../node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/core */ "../../node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser/animations */ "../../node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs */ "../../node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/cdk/bidi */ "../../node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/bidi.js");
-/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/animations */ "../../node_modules/@angular/animations/__ivy_ngcc__/fesm2015/animations.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! rxjs/operators */ "../../node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/cdk/coercion */ "../../node_modules/@angular/cdk/fesm2015/coercion.js");
-/* harmony import */ var _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/cdk/scrolling */ "../../node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/scrolling.js");
-/* harmony import */ var _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/cdk/platform */ "../../node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/platform.js");
-/* harmony import */ var _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/cdk/keycodes */ "../../node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/keycodes.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵangular_material_src_material_tabs_tabs_b", function() { return MAT_TAB_LABEL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵangular_material_src_material_tabs_tabs_c", function() { return MAT_TAB_CONTENT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵangular_material_src_material_tabs_tabs_d", function() { return MatPaginatedTabHeader; });
+/* harmony import */ var _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/cdk/a11y */ "u47x");
+/* harmony import */ var _angular_cdk_observers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/cdk/observers */ "GU7r");
+/* harmony import */ var _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/cdk/portal */ "+rOU");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/core */ "FKr1");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser/animations */ "R1ws");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs */ "qCKp");
+/* harmony import */ var _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/cdk/bidi */ "cH1L");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/animations */ "R0Ic");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
+/* harmony import */ var _angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/cdk/coercion */ "8LU1");
+/* harmony import */ var _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/cdk/scrolling */ "vxfF");
+/* harmony import */ var _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/cdk/platform */ "nLfN");
+/* harmony import */ var _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/cdk/keycodes */ "FtGj");
 
 
 
@@ -691,15 +661,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/material/tabs/ink-bar.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
-/**
- * Interface for a a MatInkBar positioner method, defining the positioning and width of the ink
- * bar in a set of tabs.
- * @record
- */
+/** Injection token for the MatInkBar's Positioner. */
 
 
 
@@ -771,43 +739,26 @@ const _c6 = ["tabList"];
 const _c7 = ["nextPaginator"];
 const _c8 = ["previousPaginator"];
 const _c9 = ["mat-tab-nav-bar", ""];
-function _MatInkBarPositioner() { }
-/**
- * Injection token for the MatInkBar's Positioner.
- * @type {?}
- */
 const _MAT_INK_BAR_POSITIONER = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["InjectionToken"]('MatInkBarPositioner', {
     providedIn: 'root',
     factory: _MAT_INK_BAR_POSITIONER_FACTORY
 });
 /**
  * The default positioner function for the MatInkBar.
- * \@docs-private
- * @return {?}
+ * @docs-private
  */
 function _MAT_INK_BAR_POSITIONER_FACTORY() {
-    /** @type {?} */
-    const method = (/**
-     * @param {?} element
-     * @return {?}
-     */
-    (element) => ({
+    const method = (element) => ({
         left: element ? (element.offsetLeft || 0) + 'px' : '0',
         width: element ? (element.offsetWidth || 0) + 'px' : '0',
-    }));
+    });
     return method;
 }
 /**
  * The ink-bar is used to display and animate the line underneath the current active tab label.
- * \@docs-private
+ * @docs-private
  */
 class MatInkBar {
-    /**
-     * @param {?} _elementRef
-     * @param {?} _ngZone
-     * @param {?} _inkBarPositioner
-     * @param {?=} _animationMode
-     */
     constructor(_elementRef, _ngZone, _inkBarPositioner, _animationMode) {
         this._elementRef = _elementRef;
         this._ngZone = _ngZone;
@@ -817,50 +768,33 @@ class MatInkBar {
     /**
      * Calculates the styles from the provided element in order to align the ink-bar to that element.
      * Shows the ink bar if previously set as hidden.
-     * @param {?} element
-     * @return {?}
+     * @param element
      */
     alignToElement(element) {
         this.show();
         if (typeof requestAnimationFrame !== 'undefined') {
-            this._ngZone.runOutsideAngular((/**
-             * @return {?}
-             */
-            () => {
-                requestAnimationFrame((/**
-                 * @return {?}
-                 */
-                () => this._setStyles(element)));
-            }));
+            this._ngZone.runOutsideAngular(() => {
+                requestAnimationFrame(() => this._setStyles(element));
+            });
         }
         else {
             this._setStyles(element);
         }
     }
-    /**
-     * Shows the ink bar.
-     * @return {?}
-     */
+    /** Shows the ink bar. */
     show() {
         this._elementRef.nativeElement.style.visibility = 'visible';
     }
-    /**
-     * Hides the ink bar.
-     * @return {?}
-     */
+    /** Hides the ink bar. */
     hide() {
         this._elementRef.nativeElement.style.visibility = 'hidden';
     }
     /**
      * Sets the proper styles to the ink bar element.
-     * @private
-     * @param {?} element
-     * @return {?}
+     * @param element
      */
     _setStyles(element) {
-        /** @type {?} */
         const positions = this._inkBarPositioner(element);
-        /** @type {?} */
         const inkBar = this._elementRef.nativeElement;
         inkBar.style.left = positions.left;
         inkBar.style.width = positions.width;
@@ -870,14 +804,13 @@ MatInkBar.ɵfac = function MatInkBar_Factory(t) { return new (t || MatInkBar)(_a
 MatInkBar.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineDirective"]({ type: MatInkBar, selectors: [["mat-ink-bar"]], hostAttrs: [1, "mat-ink-bar"], hostVars: 2, hostBindings: function MatInkBar_HostBindings(rf, ctx) { if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵclassProp"]("_mat-animation-noopable", ctx._animationMode === "NoopAnimations");
     } } });
-/** @nocollapse */
 MatInkBar.ctorParameters = () => [
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] },
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["NgZone"] },
     { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"], args: [_MAT_INK_BAR_POSITIONER,] }] },
     { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"], args: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"],] }] }
 ];
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatInkBar, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatInkBar, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Directive"],
         args: [{
                 selector: 'mat-ink-bar',
@@ -895,95 +828,94 @@ MatInkBar.ctorParameters = () => [
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"],
                 args: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"]]
             }] }]; }, null); })();
-if (false) {}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/material/tabs/tab-content.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
 /**
- * Decorates the `ng-template` tags and reads out the template from it.
+ * Injection token that can be used to reference instances of `MatTabContent`. It serves as
+ * alternative token to the actual `MatTabContent` class which could cause unnecessary
+ * retention of the class and its directive metadata.
  */
+const MAT_TAB_CONTENT = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["InjectionToken"]('MatTabContent');
+/** Decorates the `ng-template` tags and reads out the template from it. */
 class MatTabContent {
-    /**
-     * @param {?} template
-     */
-    constructor(template) {
+    constructor(
+    /** Content for the tab. */ template) {
         this.template = template;
     }
 }
 MatTabContent.ɵfac = function MatTabContent_Factory(t) { return new (t || MatTabContent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["TemplateRef"])); };
-MatTabContent.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineDirective"]({ type: MatTabContent, selectors: [["", "matTabContent", ""]] });
-/** @nocollapse */
+MatTabContent.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineDirective"]({ type: MatTabContent, selectors: [["", "matTabContent", ""]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵProvidersFeature"]([{ provide: MAT_TAB_CONTENT, useExisting: MatTabContent }])] });
 MatTabContent.ctorParameters = () => [
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["TemplateRef"] }
 ];
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabContent, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabContent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Directive"],
-        args: [{ selector: '[matTabContent]' }]
+        args: [{
+                selector: '[matTabContent]',
+                providers: [{ provide: MAT_TAB_CONTENT, useExisting: MatTabContent }]
+            }]
     }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["TemplateRef"] }]; }, null); })();
-if (false) {}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/material/tabs/tab-label.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
 /**
- * Used to flag tab labels for use with the portal directive
+ * Injection token that can be used to reference instances of `MatTabLabel`. It serves as
+ * alternative token to the actual `MatTabLabel` class which could cause unnecessary
+ * retention of the class and its directive metadata.
  */
+const MAT_TAB_LABEL = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["InjectionToken"]('MatTabLabel');
+/** Used to flag tab labels for use with the portal directive */
 class MatTabLabel extends _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["CdkPortal"] {
 }
 MatTabLabel.ɵfac = function MatTabLabel_Factory(t) { return ɵMatTabLabel_BaseFactory(t || MatTabLabel); };
-MatTabLabel.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineDirective"]({ type: MatTabLabel, selectors: [["", "mat-tab-label", ""], ["", "matTabLabel", ""]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]] });
-const ɵMatTabLabel_BaseFactory = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetInheritedFactory"](MatTabLabel);
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabLabel, [{
+MatTabLabel.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineDirective"]({ type: MatTabLabel, selectors: [["", "mat-tab-label", ""], ["", "matTabLabel", ""]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵProvidersFeature"]([{ provide: MAT_TAB_LABEL, useExisting: MatTabLabel }]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]] });
+const ɵMatTabLabel_BaseFactory = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetInheritedFactory"](MatTabLabel);
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabLabel, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Directive"],
         args: [{
-                selector: '[mat-tab-label], [matTabLabel]'
+                selector: '[mat-tab-label], [matTabLabel]',
+                providers: [{ provide: MAT_TAB_LABEL, useExisting: MatTabLabel }]
             }]
     }], null, null); })();
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/material/tabs/tab.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
 // Boilerplate for applying mixins to MatTab.
-/**
- * \@docs-private
- */
+/** @docs-private */
 class MatTabBase {
 }
-/** @type {?} */
 const _MatTabMixinBase = Object(_angular_material_core__WEBPACK_IMPORTED_MODULE_5__["mixinDisabled"])(MatTabBase);
 /**
  * Used to provide a tab group to a tab without causing a circular dependency.
- * \@docs-private
- * @type {?}
+ * @docs-private
  */
 const MAT_TAB_GROUP = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["InjectionToken"]('MAT_TAB_GROUP');
 class MatTab extends _MatTabMixinBase {
-    /**
-     * @param {?} _viewContainerRef
-     * @param {?=} _closestTabGroup
-     */
     constructor(_viewContainerRef, _closestTabGroup) {
         super();
         this._viewContainerRef = _viewContainerRef;
         this._closestTabGroup = _closestTabGroup;
-        /**
-         * Plain text label for the tab, used when there is no template label.
-         */
+        /** Plain text label for the tab, used when there is no template label. */
         this.textLabel = '';
-        /**
-         * Portal that will be the hosted content of the tab
-         */
+        /** Portal that will be the hosted content of the tab */
         this._contentPortal = null;
-        /**
-         * Emits whenever the internal state of the tab changes.
-         */
+        /** Emits whenever the internal state of the tab changes. */
         this._stateChanges = new rxjs__WEBPACK_IMPORTED_MODULE_7__["Subject"]();
         /**
          * The relatively indexed position where 0 represents the center, negative is left, and positive
@@ -1000,16 +932,31 @@ class MatTab extends _MatTabMixinBase {
          */
         this.isActive = false;
     }
-    /**
-     * Content for the tab label given by `<ng-template mat-tab-label>`.
-     * @return {?}
-     */
+    /** Content for the tab label given by `<ng-template mat-tab-label>`. */
     get templateLabel() { return this._templateLabel; }
+    set templateLabel(value) { this._setTemplateLabelInput(value); }
+    /** @docs-private */
+    get content() {
+        return this._contentPortal;
+    }
+    ngOnChanges(changes) {
+        if (changes.hasOwnProperty('textLabel') || changes.hasOwnProperty('disabled')) {
+            this._stateChanges.next();
+        }
+    }
+    ngOnDestroy() {
+        this._stateChanges.complete();
+    }
+    ngOnInit() {
+        this._contentPortal = new _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["TemplatePortal"](this._explicitContent || this._implicitContent, this._viewContainerRef);
+    }
     /**
-     * @param {?} value
-     * @return {?}
+     * This has been extracted to a util because of TS 4 and VE.
+     * View Engine doesn't support property rename inheritance.
+     * TS 4.0 doesn't allow properties to override accessors or vice-versa.
+     * @docs-private
      */
-    set templateLabel(value) {
+    _setTemplateLabelInput(value) {
         // Only update the templateLabel via query if there is actually
         // a MatTabLabel found. This works around an issue where a user may have
         // manually set `templateLabel` during creation mode, which would then get clobbered
@@ -1018,66 +965,37 @@ class MatTab extends _MatTabMixinBase {
             this._templateLabel = value;
         }
     }
-    /**
-     * \@docs-private
-     * @return {?}
-     */
-    get content() {
-        return this._contentPortal;
-    }
-    /**
-     * @param {?} changes
-     * @return {?}
-     */
-    ngOnChanges(changes) {
-        if (changes.hasOwnProperty('textLabel') || changes.hasOwnProperty('disabled')) {
-            this._stateChanges.next();
-        }
-    }
-    /**
-     * @return {?}
-     */
-    ngOnDestroy() {
-        this._stateChanges.complete();
-    }
-    /**
-     * @return {?}
-     */
-    ngOnInit() {
-        this._contentPortal = new _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["TemplatePortal"](this._explicitContent || this._implicitContent, this._viewContainerRef);
-    }
 }
-MatTab.ɵfac = function MatTab_Factory(t) { return new (t || MatTab)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewContainerRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](MAT_TAB_GROUP, 8)); };
+MatTab.ɵfac = function MatTab_Factory(t) { return new (t || MatTab)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewContainerRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](MAT_TAB_GROUP)); };
 MatTab.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: MatTab, selectors: [["mat-tab"]], contentQueries: function MatTab_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵcontentQuery"](dirIndex, MatTabLabel, true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵstaticContentQuery"](dirIndex, MatTabContent, true, _angular_core__WEBPACK_IMPORTED_MODULE_4__["TemplateRef"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵcontentQuery"](dirIndex, MAT_TAB_LABEL, 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵcontentQuery"](dirIndex, MAT_TAB_CONTENT, 3, _angular_core__WEBPACK_IMPORTED_MODULE_4__["TemplateRef"]);
     } if (rf & 2) {
-        var _t;
+        let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx.templateLabel = _t.first);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx._explicitContent = _t.first);
     } }, viewQuery: function MatTab_Query(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵstaticViewQuery"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["TemplateRef"], true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["TemplateRef"], 3);
     } if (rf & 2) {
-        var _t;
+        let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx._implicitContent = _t.first);
     } }, inputs: { disabled: "disabled", textLabel: ["label", "textLabel"], ariaLabel: ["aria-label", "ariaLabel"], ariaLabelledby: ["aria-labelledby", "ariaLabelledby"] }, exportAs: ["matTab"], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"], _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵNgOnChangesFeature"]], ngContentSelectors: _c0, decls: 1, vars: 0, template: function MatTab_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵprojectionDef"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](0, MatTab_ng_template_0_Template, 1, 0, "ng-template");
     } }, encapsulation: 2 });
-/** @nocollapse */
 MatTab.ctorParameters = () => [
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewContainerRef"] },
-    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"], args: [MAT_TAB_GROUP,] }] }
+    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"], args: [MAT_TAB_GROUP,] }] }
 ];
 MatTab.propDecorators = {
-    templateLabel: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ContentChild"], args: [MatTabLabel,] }],
-    _explicitContent: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ContentChild"], args: [MatTabContent, { read: _angular_core__WEBPACK_IMPORTED_MODULE_4__["TemplateRef"], static: true },] }],
+    templateLabel: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ContentChild"], args: [MAT_TAB_LABEL,] }],
+    _explicitContent: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ContentChild"], args: [MAT_TAB_CONTENT, { read: _angular_core__WEBPACK_IMPORTED_MODULE_4__["TemplateRef"], static: true },] }],
     _implicitContent: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"], args: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["TemplateRef"], { static: true },] }],
     textLabel: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Input"], args: ['label',] }],
     ariaLabel: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Input"], args: ['aria-label',] }],
     ariaLabelledby: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Input"], args: ['aria-labelledby',] }]
 };
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTab, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTab, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"],
         args: [{
                 selector: 'mat-tab',
@@ -1089,8 +1007,6 @@ MatTab.propDecorators = {
                 exportAs: 'matTab'
             }]
     }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewContainerRef"] }, { type: undefined, decorators: [{
-                type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"]
-            }, {
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"],
                 args: [MAT_TAB_GROUP]
             }] }]; }, { textLabel: [{
@@ -1098,10 +1014,10 @@ MatTab.propDecorators = {
             args: ['label']
         }], templateLabel: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ContentChild"],
-            args: [MatTabLabel]
+            args: [MAT_TAB_LABEL]
         }], _explicitContent: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ContentChild"],
-            args: [MatTabContent, { read: _angular_core__WEBPACK_IMPORTED_MODULE_4__["TemplateRef"], static: true }]
+            args: [MAT_TAB_CONTENT, { read: _angular_core__WEBPACK_IMPORTED_MODULE_4__["TemplateRef"], static: true }]
         }], _implicitContent: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"],
             args: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["TemplateRef"], { static: true }]
@@ -1112,22 +1028,20 @@ MatTab.propDecorators = {
             type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Input"],
             args: ['aria-labelledby']
         }] }); })();
-if (false) {}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/material/tabs/tabs-animations.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
 /**
  * Animations used by the Material tabs.
- * \@docs-private
- * @type {?}
+ * @docs-private
  */
 const matTabsAnimations = {
-    /**
-     * Animation translates a tab along the X axis.
-     */
+    /** Animation translates a tab along the X axis. */
     translateTab: Object(_angular_animations__WEBPACK_IMPORTED_MODULE_9__["trigger"])('translateTab', [
         // Note: transitions to `none` instead of 0, because some browsers might blur the content.
         Object(_angular_animations__WEBPACK_IMPORTED_MODULE_9__["state"])('center, void, left-origin-center, right-origin-center', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_9__["style"])({ transform: 'none' })),
@@ -1150,170 +1064,101 @@ const matTabsAnimations = {
 };
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/material/tabs/tab-body.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
 /**
  * The portal host directive for the contents of the tab.
- * \@docs-private
+ * @docs-private
  */
 class MatTabBodyPortal extends _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["CdkPortalOutlet"] {
-    /**
-     * @param {?} componentFactoryResolver
-     * @param {?} viewContainerRef
-     * @param {?} _host
-     * @param {?=} _document
-     */
-    constructor(componentFactoryResolver, viewContainerRef, _host, 
-    /**
-     * @deprecated `_document` parameter to be made required.
-     * @breaking-change 9.0.0
-     */
-    _document) {
+    constructor(componentFactoryResolver, viewContainerRef, _host, _document) {
         super(componentFactoryResolver, viewContainerRef, _document);
         this._host = _host;
-        /**
-         * Subscription to events for when the tab body begins centering.
-         */
+        /** Subscription to events for when the tab body begins centering. */
         this._centeringSub = rxjs__WEBPACK_IMPORTED_MODULE_7__["Subscription"].EMPTY;
-        /**
-         * Subscription to events for when the tab body finishes leaving from center position.
-         */
+        /** Subscription to events for when the tab body finishes leaving from center position. */
         this._leavingSub = rxjs__WEBPACK_IMPORTED_MODULE_7__["Subscription"].EMPTY;
     }
-    /**
-     * Set initial visibility or set up subscription for changing visibility.
-     * @return {?}
-     */
+    /** Set initial visibility or set up subscription for changing visibility. */
     ngOnInit() {
         super.ngOnInit();
         this._centeringSub = this._host._beforeCentering
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["startWith"])(this._host._isCenterPosition(this._host._position)))
-            .subscribe((/**
-         * @param {?} isCentering
-         * @return {?}
-         */
-        (isCentering) => {
+            .subscribe((isCentering) => {
             if (isCentering && !this.hasAttached()) {
                 this.attach(this._host._content);
             }
-        }));
-        this._leavingSub = this._host._afterLeavingCenter.subscribe((/**
-         * @return {?}
-         */
-        () => {
+        });
+        this._leavingSub = this._host._afterLeavingCenter.subscribe(() => {
             this.detach();
-        }));
+        });
     }
-    /**
-     * Clean up centering subscription.
-     * @return {?}
-     */
+    /** Clean up centering subscription. */
     ngOnDestroy() {
         super.ngOnDestroy();
         this._centeringSub.unsubscribe();
         this._leavingSub.unsubscribe();
     }
 }
-MatTabBodyPortal.ɵfac = function MatTabBodyPortal_Factory(t) { return new (t || MatTabBodyPortal)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ComponentFactoryResolver"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewContainerRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["forwardRef"])(( /**
-                 * @return {?}
-                 */() => MatTabBody))), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_3__["DOCUMENT"])); };
+MatTabBodyPortal.ɵfac = function MatTabBodyPortal_Factory(t) { return new (t || MatTabBodyPortal)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ComponentFactoryResolver"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewContainerRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["forwardRef"])(() => MatTabBody)), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_3__["DOCUMENT"])); };
 MatTabBodyPortal.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineDirective"]({ type: MatTabBodyPortal, selectors: [["", "matTabBodyHost", ""]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]] });
-/** @nocollapse */
 MatTabBodyPortal.ctorParameters = () => [
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ComponentFactoryResolver"] },
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewContainerRef"] },
-    { type: MatTabBody, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"], args: [Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["forwardRef"])((/**
-                     * @return {?}
-                     */
-                    () => MatTabBody)),] }] },
+    { type: MatTabBody, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"], args: [Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["forwardRef"])(() => MatTabBody),] }] },
     { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"], args: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["DOCUMENT"],] }] }
 ];
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabBodyPortal, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabBodyPortal, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Directive"],
         args: [{
                 selector: '[matTabBodyHost]'
             }]
     }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ComponentFactoryResolver"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewContainerRef"] }, { type: MatTabBody, decorators: [{
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"],
-                args: [Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["forwardRef"])(( /**
-                                     * @return {?}
-                                     */() => MatTabBody))]
+                args: [Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["forwardRef"])(() => MatTabBody)]
             }] }, { type: undefined, decorators: [{
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"],
                 args: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["DOCUMENT"]]
             }] }]; }, null); })();
-if (false) {}
 /**
  * Base class with all of the `MatTabBody` functionality.
- * \@docs-private
- * @abstract
+ * @docs-private
  */
-// tslint:disable-next-line:class-name
 class _MatTabBodyBase {
-    /**
-     * @param {?} _elementRef
-     * @param {?} _dir
-     * @param {?} changeDetectorRef
-     */
     constructor(_elementRef, _dir, changeDetectorRef) {
         this._elementRef = _elementRef;
         this._dir = _dir;
-        /**
-         * Subscription to the directionality change observable.
-         */
+        /** Subscription to the directionality change observable. */
         this._dirChangeSubscription = rxjs__WEBPACK_IMPORTED_MODULE_7__["Subscription"].EMPTY;
-        /**
-         * Emits when an animation on the tab is complete.
-         */
+        /** Emits when an animation on the tab is complete. */
         this._translateTabComplete = new rxjs__WEBPACK_IMPORTED_MODULE_7__["Subject"]();
-        /**
-         * Event emitted when the tab begins to animate towards the center as the active tab.
-         */
+        /** Event emitted when the tab begins to animate towards the center as the active tab. */
         this._onCentering = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["EventEmitter"]();
-        /**
-         * Event emitted before the centering of the tab begins.
-         */
+        /** Event emitted before the centering of the tab begins. */
         this._beforeCentering = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["EventEmitter"]();
-        /**
-         * Event emitted before the centering of the tab begins.
-         */
+        /** Event emitted before the centering of the tab begins. */
         this._afterLeavingCenter = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["EventEmitter"]();
-        /**
-         * Event emitted when the tab completes its animation towards the center.
-         */
+        /** Event emitted when the tab completes its animation towards the center. */
         this._onCentered = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["EventEmitter"](true);
         // Note that the default value will always be overwritten by `MatTabBody`, but we need one
         // anyway to prevent the animations module from throwing an error if the body is used on its own.
-        /**
-         * Duration for the tab's animation.
-         */
+        /** Duration for the tab's animation. */
         this.animationDuration = '500ms';
         if (_dir) {
-            this._dirChangeSubscription = _dir.change.subscribe((/**
-             * @param {?} dir
-             * @return {?}
-             */
-            (dir) => {
+            this._dirChangeSubscription = _dir.change.subscribe((dir) => {
                 this._computePositionAnimationState(dir);
                 changeDetectorRef.markForCheck();
-            }));
+            });
         }
         // Ensure that we get unique animation events, because the `.done` callback can get
         // invoked twice in some browsers. See https://github.com/angular/angular/issues/24084.
-        this._translateTabComplete.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["distinctUntilChanged"])((/**
-         * @param {?} x
-         * @param {?} y
-         * @return {?}
-         */
-        (x, y) => {
+        this._translateTabComplete.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["distinctUntilChanged"])((x, y) => {
             return x.fromState === y.fromState && x.toState === y.toState;
-        }))).subscribe((/**
-         * @param {?} event
-         * @return {?}
-         */
-        event => {
+        })).subscribe(event => {
             // If the transition to the center is complete, emit an event.
             if (this._isCenterPosition(event.toState) && this._isCenterPosition(this._position)) {
                 this._onCentered.emit();
@@ -1321,13 +1166,9 @@ class _MatTabBodyBase {
             if (this._isCenterPosition(event.fromState) && !this._isCenterPosition(this._position)) {
                 this._afterLeavingCenter.emit();
             }
-        }));
+        });
     }
-    /**
-     * The shifted index position of the tab body, where zero represents the active center tab.
-     * @param {?} position
-     * @return {?}
-     */
+    /** The shifted index position of the tab body, where zero represents the active center tab. */
     set position(position) {
         this._positionIndex = position;
         this._computePositionAnimationState();
@@ -1335,55 +1176,34 @@ class _MatTabBodyBase {
     /**
      * After initialized, check if the content is centered and has an origin. If so, set the
      * special position states that transition the tab from the left or right before centering.
-     * @return {?}
      */
     ngOnInit() {
         if (this._position == 'center' && this.origin != null) {
             this._position = this._computePositionFromOrigin(this.origin);
         }
     }
-    /**
-     * @return {?}
-     */
     ngOnDestroy() {
         this._dirChangeSubscription.unsubscribe();
         this._translateTabComplete.complete();
     }
-    /**
-     * @param {?} event
-     * @return {?}
-     */
     _onTranslateTabStarted(event) {
-        /** @type {?} */
         const isCentering = this._isCenterPosition(event.toState);
         this._beforeCentering.emit(isCentering);
         if (isCentering) {
             this._onCentering.emit(this._elementRef.nativeElement.clientHeight);
         }
     }
-    /**
-     * The text direction of the containing app.
-     * @return {?}
-     */
+    /** The text direction of the containing app. */
     _getLayoutDirection() {
         return this._dir && this._dir.value === 'rtl' ? 'rtl' : 'ltr';
     }
-    /**
-     * Whether the provided position state is considered center, regardless of origin.
-     * @param {?} position
-     * @return {?}
-     */
+    /** Whether the provided position state is considered center, regardless of origin. */
     _isCenterPosition(position) {
         return position == 'center' ||
             position == 'left-origin-center' ||
             position == 'right-origin-center';
     }
-    /**
-     * Computes the position state that will be used for the tab-body animation trigger.
-     * @private
-     * @param {?=} dir
-     * @return {?}
-     */
+    /** Computes the position state that will be used for the tab-body animation trigger. */
     _computePositionAnimationState(dir = this._getLayoutDirection()) {
         if (this._positionIndex < 0) {
             this._position = dir == 'ltr' ? 'left' : 'right';
@@ -1398,12 +1218,8 @@ class _MatTabBodyBase {
     /**
      * Computes the position state based on the specified origin position. This is used if the
      * tab is becoming visible immediately after creation.
-     * @private
-     * @param {?} origin
-     * @return {?}
      */
     _computePositionFromOrigin(origin) {
-        /** @type {?} */
         const dir = this._getLayoutDirection();
         if ((dir == 'ltr' && origin <= 0) || (dir == 'rtl' && origin > 0)) {
             return 'left-origin-center';
@@ -1413,7 +1229,6 @@ class _MatTabBodyBase {
 }
 _MatTabBodyBase.ɵfac = function _MatTabBodyBase_Factory(t) { return new (t || _MatTabBodyBase)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"])); };
 _MatTabBodyBase.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineDirective"]({ type: _MatTabBodyBase, inputs: { animationDuration: "animationDuration", position: "position", _content: ["content", "_content"], origin: "origin" }, outputs: { _onCentering: "_onCentering", _beforeCentering: "_beforeCentering", _afterLeavingCenter: "_afterLeavingCenter", _onCentered: "_onCentered" } });
-/** @nocollapse */
 _MatTabBodyBase.ctorParameters = () => [
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] },
     { type: _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"] }] },
@@ -1429,7 +1244,7 @@ _MatTabBodyBase.propDecorators = {
     animationDuration: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Input"] }],
     position: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Input"] }]
 };
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](_MatTabBodyBase, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](_MatTabBodyBase, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Directive"]
     }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] }, { type: _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], decorators: [{
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"]
@@ -1451,26 +1266,20 @@ _MatTabBodyBase.propDecorators = {
         }], origin: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Input"]
         }] }); })();
-if (false) {}
 /**
  * Wrapper for the contents of a tab.
- * \@docs-private
+ * @docs-private
  */
 class MatTabBody extends _MatTabBodyBase {
-    /**
-     * @param {?} elementRef
-     * @param {?} dir
-     * @param {?} changeDetectorRef
-     */
     constructor(elementRef, dir, changeDetectorRef) {
         super(elementRef, dir, changeDetectorRef);
     }
 }
 MatTabBody.ɵfac = function MatTabBody_Factory(t) { return new (t || MatTabBody)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"])); };
 MatTabBody.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: MatTabBody, selectors: [["mat-tab-body"]], viewQuery: function MatTabBody_Query(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["PortalHostDirective"], true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["CdkPortalOutlet"], 1);
     } if (rf & 2) {
-        var _t;
+        let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx._portalHost = _t.first);
     } }, hostAttrs: [1, "mat-tab-body"], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]], decls: 3, vars: 6, consts: [[1, "mat-tab-body-content"], ["content", ""], ["matTabBodyHost", ""]], template: function MatTabBody_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 0, 1);
@@ -1480,16 +1289,15 @@ MatTabBody.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineCompone
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("@translateTab", _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpureFunction2"](3, _c2, ctx._position, _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpureFunction1"](1, _c1, ctx.animationDuration)));
     } }, directives: [MatTabBodyPortal], styles: [".mat-tab-body-content{height:100%;overflow:auto}.mat-tab-group-dynamic-height .mat-tab-body-content{overflow:hidden}\n"], encapsulation: 2, data: { animation: [matTabsAnimations.translateTab] } });
-/** @nocollapse */
 MatTabBody.ctorParameters = () => [
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] },
     { type: _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"] }] },
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"] }
 ];
 MatTabBody.propDecorators = {
-    _portalHost: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"], args: [_angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["PortalHostDirective"],] }]
+    _portalHost: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"], args: [_angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["CdkPortalOutlet"],] }]
 };
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabBody, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabBody, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"],
         args: [{
                 selector: 'mat-tab-body',
@@ -1507,173 +1315,93 @@ MatTabBody.propDecorators = {
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"]
             }] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"] }]; }, { _portalHost: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"],
-            args: [_angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["PortalHostDirective"]]
+            args: [_angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["CdkPortalOutlet"]]
         }] }); })();
-if (false) {}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/material/tabs/tab-config.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
-/**
- * Object that can be used to configure the default options for the tabs module.
- * @record
- */
-function MatTabsConfig() { }
-if (false) {}
-/**
- * Injection token that can be used to provide the default options the tabs module.
- * @type {?}
- */
+/** Injection token that can be used to provide the default options the tabs module. */
 const MAT_TABS_CONFIG = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["InjectionToken"]('MAT_TABS_CONFIG');
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/material/tabs/tab-group.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
-/**
- * Used to generate unique ID's for each tab component
- * @type {?}
- */
+/** Used to generate unique ID's for each tab component */
 let nextId = 0;
-/**
- * A simple change event emitted on focus or selection changes.
- */
+/** A simple change event emitted on focus or selection changes. */
 class MatTabChangeEvent {
 }
-if (false) {}
 // Boilerplate for applying mixins to MatTabGroup.
-/**
- * \@docs-private
- */
+/** @docs-private */
 class MatTabGroupMixinBase {
-    /**
-     * @param {?} _elementRef
-     */
     constructor(_elementRef) {
         this._elementRef = _elementRef;
     }
 }
-if (false) {}
-/** @type {?} */
 const _MatTabGroupMixinBase = Object(_angular_material_core__WEBPACK_IMPORTED_MODULE_5__["mixinColor"])(Object(_angular_material_core__WEBPACK_IMPORTED_MODULE_5__["mixinDisableRipple"])(MatTabGroupMixinBase), 'primary');
 /**
- * @record
- */
-function MatTabGroupBaseHeader() { }
-if (false) {}
-/**
  * Base class with all of the `MatTabGroupBase` functionality.
- * \@docs-private
- * @abstract
+ * @docs-private
  */
-// tslint:disable-next-line:class-name
 class _MatTabGroupBase extends _MatTabGroupMixinBase {
-    /**
-     * @param {?} elementRef
-     * @param {?} _changeDetectorRef
-     * @param {?=} defaultConfig
-     * @param {?=} _animationMode
-     */
     constructor(elementRef, _changeDetectorRef, defaultConfig, _animationMode) {
         super(elementRef);
         this._changeDetectorRef = _changeDetectorRef;
         this._animationMode = _animationMode;
-        /**
-         * All of the tabs that belong to the group.
-         */
+        /** All of the tabs that belong to the group. */
         this._tabs = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["QueryList"]();
-        /**
-         * The tab index that should be selected after the content has been checked.
-         */
+        /** The tab index that should be selected after the content has been checked. */
         this._indexToSelect = 0;
-        /**
-         * Snapshot of the height of the tab body wrapper before another tab is activated.
-         */
+        /** Snapshot of the height of the tab body wrapper before another tab is activated. */
         this._tabBodyWrapperHeight = 0;
-        /**
-         * Subscription to tabs being added/removed.
-         */
+        /** Subscription to tabs being added/removed. */
         this._tabsSubscription = rxjs__WEBPACK_IMPORTED_MODULE_7__["Subscription"].EMPTY;
-        /**
-         * Subscription to changes in the tab labels.
-         */
+        /** Subscription to changes in the tab labels. */
         this._tabLabelSubscription = rxjs__WEBPACK_IMPORTED_MODULE_7__["Subscription"].EMPTY;
-        this._dynamicHeight = false;
         this._selectedIndex = null;
-        /**
-         * Position of the tab header.
-         */
+        /** Position of the tab header. */
         this.headerPosition = 'above';
-        /**
-         * Output to enable support for two-way binding on `[(selectedIndex)]`
-         */
+        /** Output to enable support for two-way binding on `[(selectedIndex)]` */
         this.selectedIndexChange = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["EventEmitter"]();
-        /**
-         * Event emitted when focus has changed within a tab group.
-         */
+        /** Event emitted when focus has changed within a tab group. */
         this.focusChange = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["EventEmitter"]();
-        /**
-         * Event emitted when the body animation has completed
-         */
+        /** Event emitted when the body animation has completed */
         this.animationDone = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["EventEmitter"]();
-        /**
-         * Event emitted when the tab selection has changed.
-         */
+        /** Event emitted when the tab selection has changed. */
         this.selectedTabChange = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["EventEmitter"](true);
         this._groupId = nextId++;
         this.animationDuration = defaultConfig && defaultConfig.animationDuration ?
             defaultConfig.animationDuration : '500ms';
         this.disablePagination = defaultConfig && defaultConfig.disablePagination != null ?
             defaultConfig.disablePagination : false;
+        this.dynamicHeight = defaultConfig && defaultConfig.dynamicHeight != null ?
+            defaultConfig.dynamicHeight : false;
     }
-    /**
-     * Whether the tab group should grow to the size of the active tab.
-     * @return {?}
-     */
+    /** Whether the tab group should grow to the size of the active tab. */
     get dynamicHeight() { return this._dynamicHeight; }
-    /**
-     * @param {?} value
-     * @return {?}
-     */
     set dynamicHeight(value) { this._dynamicHeight = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_11__["coerceBooleanProperty"])(value); }
-    /**
-     * The index of the active tab.
-     * @return {?}
-     */
+    /** The index of the active tab. */
     get selectedIndex() { return this._selectedIndex; }
-    /**
-     * @param {?} value
-     * @return {?}
-     */
     set selectedIndex(value) {
         this._indexToSelect = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_11__["coerceNumberProperty"])(value, null);
     }
-    /**
-     * Duration for the tab animation. Will be normalized to milliseconds if no units are set.
-     * @return {?}
-     */
+    /** Duration for the tab animation. Will be normalized to milliseconds if no units are set. */
     get animationDuration() { return this._animationDuration; }
-    /**
-     * @param {?} value
-     * @return {?}
-     */
     set animationDuration(value) {
         this._animationDuration = /^\d+$/.test(value) ? value + 'ms' : value;
     }
-    /**
-     * Background color of the tab group.
-     * @return {?}
-     */
+    /** Background color of the tab group. */
     get backgroundColor() { return this._backgroundColor; }
-    /**
-     * @param {?} value
-     * @return {?}
-     */
     set backgroundColor(value) {
-        /** @type {?} */
         const nativeElement = this._elementRef.nativeElement;
         nativeElement.classList.remove(`mat-background-${this.backgroundColor}`);
         if (value) {
@@ -1686,75 +1414,51 @@ class _MatTabGroupBase extends _MatTabGroupMixinBase {
      * and what the selected index should be. This is where we can know exactly what position
      * each tab should be in according to the new selected index, and additionally we know how
      * a new selected tab should transition in (from the left or right).
-     * @return {?}
      */
     ngAfterContentChecked() {
         // Don't clamp the `indexToSelect` immediately in the setter because it can happen that
         // the amount of tabs changes before the actual change detection runs.
-        /** @type {?} */
         const indexToSelect = this._indexToSelect = this._clampTabIndex(this._indexToSelect);
         // If there is a change in selected index, emit a change event. Should not trigger if
         // the selected index has not yet been initialized.
         if (this._selectedIndex != indexToSelect) {
-            /** @type {?} */
             const isFirstRun = this._selectedIndex == null;
             if (!isFirstRun) {
                 this.selectedTabChange.emit(this._createChangeEvent(indexToSelect));
             }
             // Changing these values after change detection has run
             // since the checked content may contain references to them.
-            Promise.resolve().then((/**
-             * @return {?}
-             */
-            () => {
-                this._tabs.forEach((/**
-                 * @param {?} tab
-                 * @param {?} index
-                 * @return {?}
-                 */
-                (tab, index) => tab.isActive = index === indexToSelect));
+            Promise.resolve().then(() => {
+                this._tabs.forEach((tab, index) => tab.isActive = index === indexToSelect);
                 if (!isFirstRun) {
                     this.selectedIndexChange.emit(indexToSelect);
                 }
-            }));
+            });
         }
         // Setup the position for each tab and optionally setup an origin on the next selected tab.
-        this._tabs.forEach((/**
-         * @param {?} tab
-         * @param {?} index
-         * @return {?}
-         */
-        (tab, index) => {
+        this._tabs.forEach((tab, index) => {
             tab.position = index - indexToSelect;
             // If there is already a selected tab, then set up an origin for the next selected tab
             // if it doesn't have one already.
             if (this._selectedIndex != null && tab.position == 0 && !tab.origin) {
                 tab.origin = indexToSelect - this._selectedIndex;
             }
-        }));
+        });
         if (this._selectedIndex !== indexToSelect) {
             this._selectedIndex = indexToSelect;
             this._changeDetectorRef.markForCheck();
         }
     }
-    /**
-     * @return {?}
-     */
     ngAfterContentInit() {
         this._subscribeToAllTabChanges();
         this._subscribeToTabLabels();
         // Subscribe to changes in the amount of tabs, in order to be
         // able to re-render the content as new tabs are added or removed.
-        this._tabsSubscription = this._tabs.changes.subscribe((/**
-         * @return {?}
-         */
-        () => {
-            /** @type {?} */
+        this._tabsSubscription = this._tabs.changes.subscribe(() => {
             const indexToSelect = this._clampTabIndex(this._indexToSelect);
             // Maintain the previously-selected tab if a new tab is added or removed and there is no
             // explicit change that selects a different tab.
             if (indexToSelect === this._selectedIndex) {
-                /** @type {?} */
                 const tabs = this._tabs.toArray();
                 for (let i = 0; i < tabs.length; i++) {
                     if (tabs[i].isActive) {
@@ -1767,67 +1471,35 @@ class _MatTabGroupBase extends _MatTabGroupMixinBase {
                 }
             }
             this._changeDetectorRef.markForCheck();
-        }));
+        });
     }
-    /**
-     * Listens to changes in all of the tabs.
-     * @private
-     * @return {?}
-     */
+    /** Listens to changes in all of the tabs. */
     _subscribeToAllTabChanges() {
         // Since we use a query with `descendants: true` to pick up the tabs, we may end up catching
         // some that are inside of nested tab groups. We filter them out manually by checking that
         // the closest group to the tab is the current one.
         this._allTabs.changes
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["startWith"])(this._allTabs))
-            .subscribe((/**
-         * @param {?} tabs
-         * @return {?}
-         */
-        (tabs) => {
-            this._tabs.reset(tabs.filter((/**
-             * @param {?} tab
-             * @return {?}
-             */
-            tab => {
-                // @breaking-change 10.0.0 Remove null check for `_closestTabGroup`
-                // once it becomes a required parameter in MatTab.
-                return !tab._closestTabGroup || tab._closestTabGroup === this;
-            })));
+            .subscribe((tabs) => {
+            this._tabs.reset(tabs.filter(tab => tab._closestTabGroup === this));
             this._tabs.notifyOnChanges();
-        }));
+        });
     }
-    /**
-     * @return {?}
-     */
     ngOnDestroy() {
         this._tabs.destroy();
         this._tabsSubscription.unsubscribe();
         this._tabLabelSubscription.unsubscribe();
     }
-    /**
-     * Re-aligns the ink bar to the selected tab element.
-     * @return {?}
-     */
+    /** Re-aligns the ink bar to the selected tab element. */
     realignInkBar() {
         if (this._tabHeader) {
             this._tabHeader._alignInkBarToSelectedTab();
         }
     }
-    /**
-     * @param {?} index
-     * @return {?}
-     */
     _focusChanged(index) {
         this.focusChange.emit(this._createChangeEvent(index));
     }
-    /**
-     * @private
-     * @param {?} index
-     * @return {?}
-     */
     _createChangeEvent(index) {
-        /** @type {?} */
         const event = new MatTabChangeEvent;
         event.index = index;
         if (this._tabs && this._tabs.length) {
@@ -1836,66 +1508,41 @@ class _MatTabGroupBase extends _MatTabGroupMixinBase {
         return event;
     }
     /**
-     * Subscribes to changes in the tab labels. This is needed, because the \@Input for the label is
+     * Subscribes to changes in the tab labels. This is needed, because the @Input for the label is
      * on the MatTab component, whereas the data binding is inside the MatTabGroup. In order for the
      * binding to be updated, we need to subscribe to changes in it and trigger change detection
      * manually.
-     * @private
-     * @return {?}
      */
     _subscribeToTabLabels() {
         if (this._tabLabelSubscription) {
             this._tabLabelSubscription.unsubscribe();
         }
-        this._tabLabelSubscription = Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["merge"])(...this._tabs.map((/**
-         * @param {?} tab
-         * @return {?}
-         */
-        tab => tab._stateChanges)))
-            .subscribe((/**
-         * @return {?}
-         */
-        () => this._changeDetectorRef.markForCheck()));
+        this._tabLabelSubscription = Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["merge"])(...this._tabs.map(tab => tab._stateChanges))
+            .subscribe(() => this._changeDetectorRef.markForCheck());
     }
-    /**
-     * Clamps the given index to the bounds of 0 and the tabs length.
-     * @private
-     * @param {?} index
-     * @return {?}
-     */
+    /** Clamps the given index to the bounds of 0 and the tabs length. */
     _clampTabIndex(index) {
         // Note the `|| 0`, which ensures that values like NaN can't get through
         // and which would otherwise throw the component into an infinite loop
         // (since Math.max(NaN, 0) === NaN).
         return Math.min(this._tabs.length - 1, Math.max(index || 0, 0));
     }
-    /**
-     * Returns a unique id for each tab label element
-     * @param {?} i
-     * @return {?}
-     */
+    /** Returns a unique id for each tab label element */
     _getTabLabelId(i) {
         return `mat-tab-label-${this._groupId}-${i}`;
     }
-    /**
-     * Returns a unique id for each tab content element
-     * @param {?} i
-     * @return {?}
-     */
+    /** Returns a unique id for each tab content element */
     _getTabContentId(i) {
         return `mat-tab-content-${this._groupId}-${i}`;
     }
     /**
      * Sets the height of the body wrapper to the height of the activating tab if dynamic
      * height property is true.
-     * @param {?} tabHeight
-     * @return {?}
      */
     _setTabBodyWrapperHeight(tabHeight) {
         if (!this._dynamicHeight || !this._tabBodyWrapperHeight) {
             return;
         }
-        /** @type {?} */
         const wrapper = this._tabBodyWrapper.nativeElement;
         wrapper.style.height = this._tabBodyWrapperHeight + 'px';
         // This conditional forces the browser to paint the height so that
@@ -1904,35 +1551,20 @@ class _MatTabGroupBase extends _MatTabGroupMixinBase {
             wrapper.style.height = tabHeight + 'px';
         }
     }
-    /**
-     * Removes the height of the tab body wrapper.
-     * @return {?}
-     */
+    /** Removes the height of the tab body wrapper. */
     _removeTabBodyWrapperHeight() {
-        /** @type {?} */
         const wrapper = this._tabBodyWrapper.nativeElement;
         this._tabBodyWrapperHeight = wrapper.clientHeight;
         wrapper.style.height = '';
         this.animationDone.emit();
     }
-    /**
-     * Handle click events, setting new selected index if appropriate.
-     * @param {?} tab
-     * @param {?} tabHeader
-     * @param {?} index
-     * @return {?}
-     */
+    /** Handle click events, setting new selected index if appropriate. */
     _handleClick(tab, tabHeader, index) {
         if (!tab.disabled) {
             this.selectedIndex = tabHeader.focusIndex = index;
         }
     }
-    /**
-     * Retrieves the tabindex for the tab.
-     * @param {?} tab
-     * @param {?} idx
-     * @return {?}
-     */
+    /** Retrieves the tabindex for the tab. */
     _getTabIndex(tab, idx) {
         if (tab.disabled) {
             return null;
@@ -1942,7 +1574,6 @@ class _MatTabGroupBase extends _MatTabGroupMixinBase {
 }
 _MatTabGroupBase.ɵfac = function _MatTabGroupBase_Factory(t) { return new (t || _MatTabGroupBase)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](MAT_TABS_CONFIG, 8), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"], 8)); };
 _MatTabGroupBase.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineDirective"]({ type: _MatTabGroupBase, inputs: { headerPosition: "headerPosition", animationDuration: "animationDuration", disablePagination: "disablePagination", dynamicHeight: "dynamicHeight", selectedIndex: "selectedIndex", backgroundColor: "backgroundColor" }, outputs: { selectedIndexChange: "selectedIndexChange", focusChange: "focusChange", animationDone: "animationDone", selectedTabChange: "selectedTabChange" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]] });
-/** @nocollapse */
 _MatTabGroupBase.ctorParameters = () => [
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] },
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"] },
@@ -1961,7 +1592,7 @@ _MatTabGroupBase.propDecorators = {
     animationDone: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Output"] }],
     selectedTabChange: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Output"] }]
 };
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](_MatTabGroupBase, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](_MatTabGroupBase, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Directive"]
     }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"] }, { type: undefined, decorators: [{
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"],
@@ -1994,34 +1625,27 @@ _MatTabGroupBase.propDecorators = {
         }], backgroundColor: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Input"]
         }] }); })();
-if (false) {}
 /**
  * Material design tab-group component. Supports basic tab pairs (label + content) and includes
  * animated ink-bar, keyboard navigation, and screen reader.
  * See: https://material.io/design/components/tabs.html
  */
 class MatTabGroup extends _MatTabGroupBase {
-    /**
-     * @param {?} elementRef
-     * @param {?} changeDetectorRef
-     * @param {?=} defaultConfig
-     * @param {?=} animationMode
-     */
     constructor(elementRef, changeDetectorRef, defaultConfig, animationMode) {
         super(elementRef, changeDetectorRef, defaultConfig, animationMode);
     }
 }
 MatTabGroup.ɵfac = function MatTabGroup_Factory(t) { return new (t || MatTabGroup)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](MAT_TABS_CONFIG, 8), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"], 8)); };
 MatTabGroup.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: MatTabGroup, selectors: [["mat-tab-group"]], contentQueries: function MatTabGroup_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵcontentQuery"](dirIndex, MatTab, true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵcontentQuery"](dirIndex, MatTab, 1);
     } if (rf & 2) {
-        var _t;
+        let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx._allTabs = _t);
     } }, viewQuery: function MatTabGroup_Query(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c3, true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c4, true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c3, 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c4, 1);
     } if (rf & 2) {
-        var _t;
+        let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx._tabBodyWrapper = _t.first);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx._tabHeader = _t.first);
     } }, hostAttrs: [1, "mat-tab-group"], hostVars: 4, hostBindings: function MatTabGroup_HostBindings(rf, ctx) { if (rf & 2) {
@@ -2046,7 +1670,6 @@ MatTabGroup.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineCompon
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngForOf", ctx._tabs);
     } }, directives: function () { return [MatTabHeader, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], MatTabLabelWrapper, _angular_material_core__WEBPACK_IMPORTED_MODULE_5__["MatRipple"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_0__["CdkMonitorFocus"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["CdkPortalOutlet"], MatTabBody]; }, styles: [".mat-tab-group{display:flex;flex-direction:column}.mat-tab-group.mat-tab-group-inverted-header{flex-direction:column-reverse}.mat-tab-label{height:48px;padding:0 24px;cursor:pointer;box-sizing:border-box;opacity:.6;min-width:160px;text-align:center;display:inline-flex;justify-content:center;align-items:center;white-space:nowrap;position:relative}.mat-tab-label:focus{outline:none}.mat-tab-label:focus:not(.mat-tab-disabled){opacity:1}.cdk-high-contrast-active .mat-tab-label:focus{outline:dotted 2px;outline-offset:-2px}.mat-tab-label.mat-tab-disabled{cursor:default}.cdk-high-contrast-active .mat-tab-label.mat-tab-disabled{opacity:.5}.mat-tab-label .mat-tab-label-content{display:inline-flex;justify-content:center;align-items:center;white-space:nowrap}.cdk-high-contrast-active .mat-tab-label{opacity:1}@media(max-width: 599px){.mat-tab-label{padding:0 12px}}@media(max-width: 959px){.mat-tab-label{padding:0 12px}}.mat-tab-group[mat-stretch-tabs]>.mat-tab-header .mat-tab-label{flex-basis:0;flex-grow:1}.mat-tab-body-wrapper{position:relative;overflow:hidden;display:flex;transition:height 500ms cubic-bezier(0.35, 0, 0.25, 1)}._mat-animation-noopable.mat-tab-body-wrapper{transition:none;animation:none}.mat-tab-body{top:0;left:0;right:0;bottom:0;position:absolute;display:block;overflow:hidden;flex-basis:100%}.mat-tab-body.mat-tab-body-active{position:relative;overflow-x:hidden;overflow-y:auto;z-index:1;flex-grow:1}.mat-tab-group.mat-tab-group-dynamic-height .mat-tab-body.mat-tab-body-active{overflow-y:hidden}\n"], encapsulation: 2 });
-/** @nocollapse */
 MatTabGroup.ctorParameters = () => [
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] },
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"] },
@@ -2058,7 +1681,7 @@ MatTabGroup.propDecorators = {
     _tabBodyWrapper: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"], args: ['tabBodyWrapper',] }],
     _tabHeader: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"], args: ['tabHeader',] }]
 };
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabGroup, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabGroup, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"],
         args: [{
                 selector: 'mat-tab-group',
@@ -2099,49 +1722,35 @@ MatTabGroup.propDecorators = {
             type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"],
             args: ['tabHeader']
         }] }); })();
-if (false) {}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/material/tabs/tab-label-wrapper.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
 // Boilerplate for applying mixins to MatTabLabelWrapper.
-/**
- * \@docs-private
- */
+/** @docs-private */
 class MatTabLabelWrapperBase {
 }
-/** @type {?} */
 const _MatTabLabelWrapperMixinBase = Object(_angular_material_core__WEBPACK_IMPORTED_MODULE_5__["mixinDisabled"])(MatTabLabelWrapperBase);
 /**
  * Used in the `mat-tab-group` view to display tab labels.
- * \@docs-private
+ * @docs-private
  */
 class MatTabLabelWrapper extends _MatTabLabelWrapperMixinBase {
-    /**
-     * @param {?} elementRef
-     */
     constructor(elementRef) {
         super();
         this.elementRef = elementRef;
     }
-    /**
-     * Sets focus on the wrapper element
-     * @return {?}
-     */
+    /** Sets focus on the wrapper element */
     focus() {
         this.elementRef.nativeElement.focus();
     }
-    /**
-     * @return {?}
-     */
     getOffsetLeft() {
         return this.elementRef.nativeElement.offsetLeft;
     }
-    /**
-     * @return {?}
-     */
     getOffsetWidth() {
         return this.elementRef.nativeElement.offsetWidth;
     }
@@ -2151,11 +1760,10 @@ MatTabLabelWrapper.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵattribute"]("aria-disabled", !!ctx.disabled);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵclassProp"]("mat-tab-disabled", ctx.disabled);
     } }, inputs: { disabled: "disabled" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]] });
-/** @nocollapse */
 MatTabLabelWrapper.ctorParameters = () => [
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] }
 ];
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabLabelWrapper, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabLabelWrapper, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Directive"],
         args: [{
                 selector: '[matTabLabelWrapper]',
@@ -2166,51 +1774,36 @@ MatTabLabelWrapper.ctorParameters = () => [
                 }
             }]
     }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] }]; }, null); })();
-if (false) {}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/material/tabs/paginated-tab-header.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
-/**
- * Config used to bind passive event listeners
- * @type {?}
- */
-const passiveEventListenerOptions = (/** @type {?} */ (Object(_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__["normalizePassiveListenerOptions"])({ passive: true })));
+/** Config used to bind passive event listeners */
+const passiveEventListenerOptions = Object(_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__["normalizePassiveListenerOptions"])({ passive: true });
 /**
  * The distance in pixels that will be overshot when scrolling a tab label into view. This helps
  * provide a small affordance to the label next to it.
- * @type {?}
  */
 const EXAGGERATED_OVERSCROLL = 60;
 /**
  * Amount of milliseconds to wait before starting to scroll the header automatically.
  * Set a little conservatively in order to handle fake events dispatched on touch devices.
- * @type {?}
  */
 const HEADER_SCROLL_DELAY = 650;
 /**
  * Interval in milliseconds at which to scroll the header
  * while the user is holding their pointer.
- * @type {?}
  */
 const HEADER_SCROLL_INTERVAL = 100;
 /**
  * Base class for a tab header that supported pagination.
- * \@docs-private
- * @abstract
+ * @docs-private
  */
 class MatPaginatedTabHeader {
-    /**
-     * @param {?} _elementRef
-     * @param {?} _changeDetectorRef
-     * @param {?} _viewportRuler
-     * @param {?} _dir
-     * @param {?} _ngZone
-     * @param {?=} _platform
-     * @param {?=} _animationMode
-     */
     constructor(_elementRef, _changeDetectorRef, _viewportRuler, _dir, _ngZone, _platform, _animationMode) {
         this._elementRef = _elementRef;
         this._changeDetectorRef = _changeDetectorRef;
@@ -2219,33 +1812,19 @@ class MatPaginatedTabHeader {
         this._ngZone = _ngZone;
         this._platform = _platform;
         this._animationMode = _animationMode;
-        /**
-         * The distance in pixels that the tab labels should be translated to the left.
-         */
+        /** The distance in pixels that the tab labels should be translated to the left. */
         this._scrollDistance = 0;
-        /**
-         * Whether the header should scroll to the selected index after the view has been checked.
-         */
+        /** Whether the header should scroll to the selected index after the view has been checked. */
         this._selectedIndexChanged = false;
-        /**
-         * Emits when the component is destroyed.
-         */
+        /** Emits when the component is destroyed. */
         this._destroyed = new rxjs__WEBPACK_IMPORTED_MODULE_7__["Subject"]();
-        /**
-         * Whether the controls for pagination should be displayed
-         */
+        /** Whether the controls for pagination should be displayed */
         this._showPaginationControls = false;
-        /**
-         * Whether the tab list can be scrolled more towards the end of the tab label list.
-         */
+        /** Whether the tab list can be scrolled more towards the end of the tab label list. */
         this._disableScrollAfter = true;
-        /**
-         * Whether the tab list can be scrolled more towards the beginning of the tab label list.
-         */
+        /** Whether the tab list can be scrolled more towards the beginning of the tab label list. */
         this._disableScrollBefore = true;
-        /**
-         * Stream that will stop the automated scrolling.
-         */
+        /** Stream that will stop the automated scrolling. */
         this._stopScrolling = new rxjs__WEBPACK_IMPORTED_MODULE_7__["Subject"]();
         /**
          * Whether pagination should be disabled. This can be used to avoid unnecessary
@@ -2253,38 +1832,21 @@ class MatPaginatedTabHeader {
          */
         this.disablePagination = false;
         this._selectedIndex = 0;
-        /**
-         * Event emitted when the option is selected.
-         */
+        /** Event emitted when the option is selected. */
         this.selectFocusedIndex = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["EventEmitter"]();
-        /**
-         * Event emitted when a label is focused.
-         */
+        /** Event emitted when a label is focused. */
         this.indexFocused = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["EventEmitter"]();
         // Bind the `mouseleave` event on the outside since it doesn't change anything in the view.
-        _ngZone.runOutsideAngular((/**
-         * @return {?}
-         */
-        () => {
+        _ngZone.runOutsideAngular(() => {
             Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["fromEvent"])(_elementRef.nativeElement, 'mouseleave')
                 .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["takeUntil"])(this._destroyed))
-                .subscribe((/**
-             * @return {?}
-             */
-            () => {
+                .subscribe(() => {
                 this._stopInterval();
-            }));
-        }));
+            });
+        });
     }
-    /**
-     * The index of the active tab.
-     * @return {?}
-     */
+    /** The index of the active tab. */
     get selectedIndex() { return this._selectedIndex; }
-    /**
-     * @param {?} value
-     * @return {?}
-     */
     set selectedIndex(value) {
         value = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_11__["coerceNumberProperty"])(value);
         if (this._selectedIndex != value) {
@@ -2295,76 +1857,49 @@ class MatPaginatedTabHeader {
             }
         }
     }
-    /**
-     * @return {?}
-     */
     ngAfterViewInit() {
         // We need to handle these events manually, because we want to bind passive event listeners.
         Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["fromEvent"])(this._previousPaginator.nativeElement, 'touchstart', passiveEventListenerOptions)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["takeUntil"])(this._destroyed))
-            .subscribe((/**
-         * @return {?}
-         */
-        () => {
+            .subscribe(() => {
             this._handlePaginatorPress('before');
-        }));
+        });
         Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["fromEvent"])(this._nextPaginator.nativeElement, 'touchstart', passiveEventListenerOptions)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["takeUntil"])(this._destroyed))
-            .subscribe((/**
-         * @return {?}
-         */
-        () => {
+            .subscribe(() => {
             this._handlePaginatorPress('after');
-        }));
+        });
     }
-    /**
-     * @return {?}
-     */
     ngAfterContentInit() {
-        /** @type {?} */
         const dirChange = this._dir ? this._dir.change : Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["of"])(null);
-        /** @type {?} */
         const resize = this._viewportRuler.change(150);
-        /** @type {?} */
-        const realign = (/**
-         * @return {?}
-         */
-        () => {
+        const realign = () => {
             this.updatePagination();
             this._alignInkBarToSelectedTab();
-        });
+        };
         this._keyManager = new _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_0__["FocusKeyManager"](this._items)
             .withHorizontalOrientation(this._getLayoutDirection())
+            .withHomeAndEnd()
             .withWrap();
-        this._keyManager.updateActiveItem(0);
+        this._keyManager.updateActiveItem(this._selectedIndex);
         // Defer the first call in order to allow for slower browsers to lay out the elements.
         // This helps in cases where the user lands directly on a page with paginated tabs.
         typeof requestAnimationFrame !== 'undefined' ? requestAnimationFrame(realign) : realign();
         // On dir change or window resize, realign the ink bar and update the orientation of
         // the key manager if the direction has changed.
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["merge"])(dirChange, resize, this._items.changes).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["takeUntil"])(this._destroyed)).subscribe((/**
-         * @return {?}
-         */
-        () => {
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["merge"])(dirChange, resize, this._items.changes).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["takeUntil"])(this._destroyed)).subscribe(() => {
             // We need to defer this to give the browser some time to recalculate the element dimensions.
             Promise.resolve().then(realign);
             this._keyManager.withHorizontalOrientation(this._getLayoutDirection());
-        }));
+        });
         // If there is a change in the focus key manager we need to emit the `indexFocused`
         // event in order to provide a public event that notifies about focus changes. Also we realign
         // the tabs container by scrolling the new focused tab into the visible section.
-        this._keyManager.change.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["takeUntil"])(this._destroyed)).subscribe((/**
-         * @param {?} newFocusIndex
-         * @return {?}
-         */
-        newFocusIndex => {
+        this._keyManager.change.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["takeUntil"])(this._destroyed)).subscribe(newFocusIndex => {
             this.indexFocused.emit(newFocusIndex);
             this._setTabFocus(newFocusIndex);
-        }));
+        });
     }
-    /**
-     * @return {?}
-     */
     ngAfterContentChecked() {
         // If the number of tab labels have changed, check if scrolling should be enabled
         if (this._tabLabelCount != this._items.length) {
@@ -2389,33 +1924,18 @@ class MatPaginatedTabHeader {
             this._changeDetectorRef.markForCheck();
         }
     }
-    /**
-     * @return {?}
-     */
     ngOnDestroy() {
         this._destroyed.next();
         this._destroyed.complete();
         this._stopScrolling.complete();
     }
-    /**
-     * Handles keyboard events on the header.
-     * @param {?} event
-     * @return {?}
-     */
+    /** Handles keyboard events on the header. */
     _handleKeydown(event) {
         // We don't handle any key bindings with a modifier key.
         if (Object(_angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_14__["hasModifierKey"])(event)) {
             return;
         }
         switch (event.keyCode) {
-            case _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_14__["HOME"]:
-                this._keyManager.setFirstItemActive();
-                event.preventDefault();
-                break;
-            case _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_14__["END"]:
-                this._keyManager.setLastItemActive();
-                event.preventDefault();
-                break;
             case _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_14__["ENTER"]:
             case _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_14__["SPACE"]:
                 if (this.focusIndex !== this.selectedIndex) {
@@ -2429,10 +1949,8 @@ class MatPaginatedTabHeader {
     }
     /**
      * Callback for when the MutationObserver detects that the content has changed.
-     * @return {?}
      */
     _onContentChanges() {
-        /** @type {?} */
         const textContent = this._elementRef.nativeElement.textContent;
         // We need to diff the text content of the header, because the MutationObserver callback
         // will fire even if the text content didn't change which is inefficient and is prone
@@ -2441,14 +1959,11 @@ class MatPaginatedTabHeader {
             this._currentTextContent = textContent || '';
             // The content observer runs outside the `NgZone` by default, which
             // means that we need to bring the callback back in ourselves.
-            this._ngZone.run((/**
-             * @return {?}
-             */
-            () => {
+            this._ngZone.run(() => {
                 this.updatePagination();
                 this._alignInkBarToSelectedTab();
                 this._changeDetectorRef.markForCheck();
-            }));
+            });
         }
     }
     /**
@@ -2457,25 +1972,17 @@ class MatPaginatedTabHeader {
      * WARNING: Calling this method can be very costly in terms of performance. It should be called
      * as infrequently as possible from outside of the Tabs component as it causes a reflow of the
      * page.
-     * @return {?}
      */
     updatePagination() {
         this._checkPaginationEnabled();
         this._checkScrollingControls();
         this._updateTabScrollPosition();
     }
-    /**
-     * Tracks which element has focus; used for keyboard navigation
-     * @return {?}
-     */
+    /** Tracks which element has focus; used for keyboard navigation */
     get focusIndex() {
-        return this._keyManager ? (/** @type {?} */ (this._keyManager.activeItemIndex)) : 0;
+        return this._keyManager ? this._keyManager.activeItemIndex : 0;
     }
-    /**
-     * When the focus index is set, we must manually send focus to the correct label
-     * @param {?} value
-     * @return {?}
-     */
+    /** When the focus index is set, we must manually send focus to the correct label */
     set focusIndex(value) {
         if (!this._isValidIndex(value) || this.focusIndex === value || !this._keyManager) {
             return;
@@ -2485,22 +1992,17 @@ class MatPaginatedTabHeader {
     /**
      * Determines if an index is valid.  If the tabs are not ready yet, we assume that the user is
      * providing a valid index and return true.
-     * @param {?} index
-     * @return {?}
      */
     _isValidIndex(index) {
         if (!this._items) {
             return true;
         }
-        /** @type {?} */
         const tab = this._items ? this._items.toArray()[index] : null;
         return !!tab && !tab.disabled;
     }
     /**
      * Sets focus on the HTML element for the label wrapper and scrolls it into the view if
      * scrolling is enabled.
-     * @param {?} tabIndex
-     * @return {?}
      */
     _setTabFocus(tabIndex) {
         if (this._showPaginationControls) {
@@ -2511,9 +2013,7 @@ class MatPaginatedTabHeader {
             // Do not let the browser manage scrolling to focus the element, this will be handled
             // by using translation. In LTR, the scroll left should be 0. In RTL, the scroll width
             // should be the full width minus the offset width.
-            /** @type {?} */
             const containerEl = this._tabListContainer.nativeElement;
-            /** @type {?} */
             const dir = this._getLayoutDirection();
             if (dir == 'ltr') {
                 containerEl.scrollLeft = 0;
@@ -2523,26 +2023,16 @@ class MatPaginatedTabHeader {
             }
         }
     }
-    /**
-     * The layout direction of the containing app.
-     * @return {?}
-     */
+    /** The layout direction of the containing app. */
     _getLayoutDirection() {
         return this._dir && this._dir.value === 'rtl' ? 'rtl' : 'ltr';
     }
-    /**
-     * Performs the CSS transformation on the tab list that will cause the list to scroll.
-     * @return {?}
-     */
+    /** Performs the CSS transformation on the tab list that will cause the list to scroll. */
     _updateTabScrollPosition() {
         if (this.disablePagination) {
             return;
         }
-        /** @type {?} */
         const scrollDistance = this.scrollDistance;
-        /** @type {?} */
-        const platform = this._platform;
-        /** @type {?} */
         const translateX = this._getLayoutDirection() === 'ltr' ? -scrollDistance : scrollDistance;
         // Don't use `translate3d` here because we don't want to create a new layer. A new layer
         // seems to cause flickering and overflow in Internet Explorer. For example, the ink bar
@@ -2555,20 +2045,12 @@ class MatPaginatedTabHeader {
         // position to be thrown off in some cases. We have to reset it ourselves to ensure that
         // it doesn't get thrown off. Note that we scope it only to IE and Edge, because messing
         // with the scroll position throws off Chrome 71+ in RTL mode (see #14689).
-        // @breaking-change 9.0.0 Remove null check for `platform` after it can no longer be undefined.
-        if (platform && (platform.TRIDENT || platform.EDGE)) {
+        if (this._platform.TRIDENT || this._platform.EDGE) {
             this._tabListContainer.nativeElement.scrollLeft = 0;
         }
     }
-    /**
-     * Sets the distance in pixels that the tab header should be transformed in the X-axis.
-     * @return {?}
-     */
+    /** Sets the distance in pixels that the tab header should be transformed in the X-axis. */
     get scrollDistance() { return this._scrollDistance; }
-    /**
-     * @param {?} value
-     * @return {?}
-     */
     set scrollDistance(value) {
         this._scrollTo(value);
     }
@@ -2579,22 +2061,14 @@ class MatPaginatedTabHeader {
      *
      * This is an expensive call that forces a layout reflow to compute box and scroll metrics and
      * should be called sparingly.
-     * @param {?} direction
-     * @return {?}
      */
     _scrollHeader(direction) {
-        /** @type {?} */
         const viewLength = this._tabListContainer.nativeElement.offsetWidth;
         // Move the scroll distance one-third the length of the tab list's viewport.
-        /** @type {?} */
         const scrollAmount = (direction == 'before' ? -1 : 1) * viewLength / 3;
         return this._scrollTo(this._scrollDistance + scrollAmount);
     }
-    /**
-     * Handles click events on the pagination arrows.
-     * @param {?} direction
-     * @return {?}
-     */
+    /** Handles click events on the pagination arrows. */
     _handlePaginatorClick(direction) {
         this._stopInterval();
         this._scrollHeader(direction);
@@ -2604,26 +2078,19 @@ class MatPaginatedTabHeader {
      *
      * This is an expensive call that forces a layout reflow to compute box and scroll metrics and
      * should be called sparingly.
-     * @param {?} labelIndex
-     * @return {?}
      */
     _scrollToLabel(labelIndex) {
         if (this.disablePagination) {
             return;
         }
-        /** @type {?} */
         const selectedLabel = this._items ? this._items.toArray()[labelIndex] : null;
         if (!selectedLabel) {
             return;
         }
         // The view length is the visible width of the tab labels.
-        /** @type {?} */
         const viewLength = this._tabListContainer.nativeElement.offsetWidth;
         const { offsetLeft, offsetWidth } = selectedLabel.elementRef.nativeElement;
-        /** @type {?} */
-        let labelBeforePos;
-        /** @type {?} */
-        let labelAfterPos;
+        let labelBeforePos, labelAfterPos;
         if (this._getLayoutDirection() == 'ltr') {
             labelBeforePos = offsetLeft;
             labelAfterPos = labelBeforePos + offsetWidth;
@@ -2632,9 +2099,7 @@ class MatPaginatedTabHeader {
             labelAfterPos = this._tabList.nativeElement.offsetWidth - offsetLeft;
             labelBeforePos = labelAfterPos - offsetWidth;
         }
-        /** @type {?} */
         const beforeVisiblePos = this.scrollDistance;
-        /** @type {?} */
         const afterVisiblePos = this.scrollDistance + viewLength;
         if (labelBeforePos < beforeVisiblePos) {
             // Scroll header to move label to the before direction
@@ -2652,14 +2117,12 @@ class MatPaginatedTabHeader {
      *
      * This is an expensive call that forces a layout reflow to compute box and scroll metrics and
      * should be called sparingly.
-     * @return {?}
      */
     _checkPaginationEnabled() {
         if (this.disablePagination) {
             this._showPaginationControls = false;
         }
         else {
-            /** @type {?} */
             const isEnabled = this._tabList.nativeElement.scrollWidth > this._elementRef.nativeElement.offsetWidth;
             if (!isEnabled) {
                 this.scrollDistance = 0;
@@ -2678,7 +2141,6 @@ class MatPaginatedTabHeader {
      *
      * This is an expensive call that forces a layout reflow to compute box and scroll metrics and
      * should be called sparingly.
-     * @return {?}
      */
     _checkScrollingControls() {
         if (this.disablePagination) {
@@ -2697,24 +2159,16 @@ class MatPaginatedTabHeader {
      *
      * This is an expensive call that forces a layout reflow to compute box and scroll metrics and
      * should be called sparingly.
-     * @return {?}
      */
     _getMaxScrollDistance() {
-        /** @type {?} */
         const lengthOfTabList = this._tabList.nativeElement.scrollWidth;
-        /** @type {?} */
         const viewLength = this._tabListContainer.nativeElement.offsetWidth;
         return (lengthOfTabList - viewLength) || 0;
     }
-    /**
-     * Tells the ink-bar to align itself to the current label wrapper
-     * @return {?}
-     */
+    /** Tells the ink-bar to align itself to the current label wrapper */
     _alignInkBarToSelectedTab() {
-        /** @type {?} */
         const selectedItem = this._items && this._items.length ?
             this._items.toArray()[this.selectedIndex] : null;
-        /** @type {?} */
         const selectedLabelWrapper = selectedItem ? selectedItem.elementRef.nativeElement : null;
         if (selectedLabelWrapper) {
             this._inkBar.alignToElement(selectedLabelWrapper);
@@ -2723,19 +2177,14 @@ class MatPaginatedTabHeader {
             this._inkBar.hide();
         }
     }
-    /**
-     * Stops the currently-running paginator interval.
-     * @return {?}
-     */
+    /** Stops the currently-running paginator interval.  */
     _stopInterval() {
         this._stopScrolling.next();
     }
     /**
      * Handles the user pressing down on one of the paginators.
      * Starts scrolling the header after a certain amount of time.
-     * @param {?} direction In which direction the paginator should be scrolled.
-     * @param {?=} mouseEvent
-     * @return {?}
+     * @param direction In which direction the paginator should be scrolled.
      */
     _handlePaginatorPress(direction, mouseEvent) {
         // Don't start auto scrolling for right mouse button clicks. Note that we shouldn't have to
@@ -2749,28 +2198,23 @@ class MatPaginatedTabHeader {
         Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["timer"])(HEADER_SCROLL_DELAY, HEADER_SCROLL_INTERVAL)
             // Keep the timer going until something tells it to stop or the component is destroyed.
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["takeUntil"])(Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["merge"])(this._stopScrolling, this._destroyed)))
-            .subscribe((/**
-         * @return {?}
-         */
-        () => {
+            .subscribe(() => {
             const { maxScrollDistance, distance } = this._scrollHeader(direction);
             // Stop the timer if we've reached the start or the end.
             if (distance === 0 || distance >= maxScrollDistance) {
                 this._stopInterval();
             }
-        }));
+        });
     }
     /**
      * Scrolls the header to a given position.
-     * @private
-     * @param {?} position Position to which to scroll.
-     * @return {?} Information on the current scroll distance and the maximum.
+     * @param position Position to which to scroll.
+     * @returns Information on the current scroll distance and the maximum.
      */
     _scrollTo(position) {
         if (this.disablePagination) {
             return { maxScrollDistance: 0, distance: 0 };
         }
-        /** @type {?} */
         const maxScrollDistance = this._getMaxScrollDistance();
         this._scrollDistance = Math.max(0, Math.min(maxScrollDistance, position));
         // Mark that the scroll distance has changed so that after the view is checked, the CSS
@@ -2782,7 +2226,6 @@ class MatPaginatedTabHeader {
 }
 MatPaginatedTabHeader.ɵfac = function MatPaginatedTabHeader_Factory(t) { return new (t || MatPaginatedTabHeader)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_12__["ViewportRuler"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__["Platform"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"], 8)); };
 MatPaginatedTabHeader.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineDirective"]({ type: MatPaginatedTabHeader, inputs: { disablePagination: "disablePagination" } });
-/** @nocollapse */
 MatPaginatedTabHeader.ctorParameters = () => [
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] },
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"] },
@@ -2795,7 +2238,7 @@ MatPaginatedTabHeader.ctorParameters = () => [
 MatPaginatedTabHeader.propDecorators = {
     disablePagination: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Input"] }]
 };
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatPaginatedTabHeader, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatPaginatedTabHeader, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Directive"]
     }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"] }, { type: _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_12__["ViewportRuler"] }, { type: _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], decorators: [{
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"]
@@ -2807,57 +2250,32 @@ MatPaginatedTabHeader.propDecorators = {
             }] }]; }, { disablePagination: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Input"]
         }] }); })();
-if (false) {}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/material/tabs/tab-header.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
 /**
  * Base class with all of the `MatTabHeader` functionality.
- * \@docs-private
- * @abstract
+ * @docs-private
  */
-// tslint:disable-next-line:class-name
 class _MatTabHeaderBase extends MatPaginatedTabHeader {
-    /**
-     * @param {?} elementRef
-     * @param {?} changeDetectorRef
-     * @param {?} viewportRuler
-     * @param {?} dir
-     * @param {?} ngZone
-     * @param {?} platform
-     * @param {?=} animationMode
-     */
-    constructor(elementRef, changeDetectorRef, viewportRuler, dir, ngZone, platform, 
-    // @breaking-change 9.0.0 `_animationMode` parameter to be made required.
-    animationMode) {
+    constructor(elementRef, changeDetectorRef, viewportRuler, dir, ngZone, platform, animationMode) {
         super(elementRef, changeDetectorRef, viewportRuler, dir, ngZone, platform, animationMode);
         this._disableRipple = false;
     }
-    /**
-     * Whether the ripple effect is disabled or not.
-     * @return {?}
-     */
+    /** Whether the ripple effect is disabled or not. */
     get disableRipple() { return this._disableRipple; }
-    /**
-     * @param {?} value
-     * @return {?}
-     */
     set disableRipple(value) { this._disableRipple = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_11__["coerceBooleanProperty"])(value); }
-    /**
-     * @protected
-     * @param {?} event
-     * @return {?}
-     */
     _itemSelected(event) {
         event.preventDefault();
     }
 }
 _MatTabHeaderBase.ɵfac = function _MatTabHeaderBase_Factory(t) { return new (t || _MatTabHeaderBase)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_12__["ViewportRuler"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__["Platform"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"], 8)); };
 _MatTabHeaderBase.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineDirective"]({ type: _MatTabHeaderBase, inputs: { disableRipple: "disableRipple" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]] });
-/** @nocollapse */
 _MatTabHeaderBase.ctorParameters = () => [
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] },
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"] },
@@ -2870,7 +2288,7 @@ _MatTabHeaderBase.ctorParameters = () => [
 _MatTabHeaderBase.propDecorators = {
     disableRipple: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Input"] }]
 };
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](_MatTabHeaderBase, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](_MatTabHeaderBase, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Directive"]
     }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"] }, { type: _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_12__["ViewportRuler"] }, { type: _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], decorators: [{
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"]
@@ -2882,44 +2300,32 @@ _MatTabHeaderBase.propDecorators = {
             }] }]; }, { disableRipple: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Input"]
         }] }); })();
-if (false) {}
 /**
  * The header of the tab group which displays a list of all the tabs in the tab group. Includes
  * an ink bar that follows the currently selected tab. When the tabs list's width exceeds the
  * width of the header container, then arrows will be displayed to allow the user to scroll
  * left and right across the header.
- * \@docs-private
+ * @docs-private
  */
 class MatTabHeader extends _MatTabHeaderBase {
-    /**
-     * @param {?} elementRef
-     * @param {?} changeDetectorRef
-     * @param {?} viewportRuler
-     * @param {?} dir
-     * @param {?} ngZone
-     * @param {?} platform
-     * @param {?=} animationMode
-     */
-    constructor(elementRef, changeDetectorRef, viewportRuler, dir, ngZone, platform, 
-    // @breaking-change 9.0.0 `_animationMode` parameter to be made required.
-    animationMode) {
+    constructor(elementRef, changeDetectorRef, viewportRuler, dir, ngZone, platform, animationMode) {
         super(elementRef, changeDetectorRef, viewportRuler, dir, ngZone, platform, animationMode);
     }
 }
 MatTabHeader.ɵfac = function MatTabHeader_Factory(t) { return new (t || MatTabHeader)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_12__["ViewportRuler"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__["Platform"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"], 8)); };
 MatTabHeader.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: MatTabHeader, selectors: [["mat-tab-header"]], contentQueries: function MatTabHeader_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵcontentQuery"](dirIndex, MatTabLabelWrapper, false);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵcontentQuery"](dirIndex, MatTabLabelWrapper, 0);
     } if (rf & 2) {
-        var _t;
+        let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx._items = _t);
     } }, viewQuery: function MatTabHeader_Query(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵstaticViewQuery"](MatInkBar, true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵstaticViewQuery"](_c5, true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵstaticViewQuery"](_c6, true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c7, true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c8, true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](MatInkBar, 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c5, 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c6, 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c7, 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c8, 1);
     } if (rf & 2) {
-        var _t;
+        let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx._inkBar = _t.first);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx._tabListContainer = _t.first);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx._tabList = _t.first);
@@ -2956,7 +2362,6 @@ MatTabHeader.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵclassProp"]("mat-tab-header-pagination-disabled", ctx._disableScrollAfter);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("matRippleDisabled", ctx._disableScrollAfter || ctx.disableRipple);
     } }, directives: [_angular_material_core__WEBPACK_IMPORTED_MODULE_5__["MatRipple"], _angular_cdk_observers__WEBPACK_IMPORTED_MODULE_1__["CdkObserveContent"], MatInkBar], styles: [".mat-tab-header{display:flex;overflow:hidden;position:relative;flex-shrink:0}.mat-tab-header-pagination{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:relative;display:none;justify-content:center;align-items:center;min-width:32px;cursor:pointer;z-index:2;-webkit-tap-highlight-color:transparent;touch-action:none}.mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination{display:flex}.mat-tab-header-pagination-before,.mat-tab-header-rtl .mat-tab-header-pagination-after{padding-left:4px}.mat-tab-header-pagination-before .mat-tab-header-pagination-chevron,.mat-tab-header-rtl .mat-tab-header-pagination-after .mat-tab-header-pagination-chevron{transform:rotate(-135deg)}.mat-tab-header-rtl .mat-tab-header-pagination-before,.mat-tab-header-pagination-after{padding-right:4px}.mat-tab-header-rtl .mat-tab-header-pagination-before .mat-tab-header-pagination-chevron,.mat-tab-header-pagination-after .mat-tab-header-pagination-chevron{transform:rotate(45deg)}.mat-tab-header-pagination-chevron{border-style:solid;border-width:2px 2px 0 0;content:\"\";height:8px;width:8px}.mat-tab-header-pagination-disabled{box-shadow:none;cursor:default}.mat-tab-list{flex-grow:1;position:relative;transition:transform 500ms cubic-bezier(0.35, 0, 0.25, 1)}.mat-ink-bar{position:absolute;bottom:0;height:2px;transition:500ms cubic-bezier(0.35, 0, 0.25, 1)}._mat-animation-noopable.mat-ink-bar{transition:none;animation:none}.mat-tab-group-inverted-header .mat-ink-bar{bottom:auto;top:0}.cdk-high-contrast-active .mat-ink-bar{outline:solid 2px;height:0}.mat-tab-labels{display:flex}[mat-align-tabs=center]>.mat-tab-header .mat-tab-labels{justify-content:center}[mat-align-tabs=end]>.mat-tab-header .mat-tab-labels{justify-content:flex-end}.mat-tab-label-container{display:flex;flex-grow:1;overflow:hidden;z-index:1}._mat-animation-noopable.mat-tab-list{transition:none;animation:none}.mat-tab-label{height:48px;padding:0 24px;cursor:pointer;box-sizing:border-box;opacity:.6;min-width:160px;text-align:center;display:inline-flex;justify-content:center;align-items:center;white-space:nowrap;position:relative}.mat-tab-label:focus{outline:none}.mat-tab-label:focus:not(.mat-tab-disabled){opacity:1}.cdk-high-contrast-active .mat-tab-label:focus{outline:dotted 2px;outline-offset:-2px}.mat-tab-label.mat-tab-disabled{cursor:default}.cdk-high-contrast-active .mat-tab-label.mat-tab-disabled{opacity:.5}.mat-tab-label .mat-tab-label-content{display:inline-flex;justify-content:center;align-items:center;white-space:nowrap}.cdk-high-contrast-active .mat-tab-label{opacity:1}@media(max-width: 599px){.mat-tab-label{min-width:72px}}\n"], encapsulation: 2 });
-/** @nocollapse */
 MatTabHeader.ctorParameters = () => [
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] },
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"] },
@@ -2974,7 +2379,7 @@ MatTabHeader.propDecorators = {
     _nextPaginator: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"], args: ['nextPaginator',] }],
     _previousPaginator: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"], args: ['previousPaginator',] }]
 };
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabHeader, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabHeader, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"],
         args: [{
                 selector: 'mat-tab-header',
@@ -3017,52 +2422,28 @@ MatTabHeader.propDecorators = {
             type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"],
             args: ['previousPaginator']
         }] }); })();
-if (false) {}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/material/tabs/tab-nav-bar/tab-nav-bar.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
 /**
  * Base class with all of the `MatTabNav` functionality.
- * \@docs-private
- * @abstract
+ * @docs-private
  */
-// tslint:disable-next-line:class-name
 class _MatTabNavBase extends MatPaginatedTabHeader {
-    /**
-     * @param {?} elementRef
-     * @param {?} dir
-     * @param {?} ngZone
-     * @param {?} changeDetectorRef
-     * @param {?} viewportRuler
-     * @param {?=} platform
-     * @param {?=} animationMode
-     */
-    constructor(elementRef, dir, ngZone, changeDetectorRef, viewportRuler, 
-    /**
-     * @deprecated @breaking-change 9.0.0 `platform` parameter to become required.
-     */
-    platform, animationMode) {
+    constructor(elementRef, dir, ngZone, changeDetectorRef, viewportRuler, platform, animationMode) {
         super(elementRef, changeDetectorRef, viewportRuler, dir, ngZone, platform, animationMode);
         this._disableRipple = false;
-        /**
-         * Theme color of the nav bar.
-         */
+        /** Theme color of the nav bar. */
         this.color = 'primary';
     }
-    /**
-     * Background color of the tab nav.
-     * @return {?}
-     */
+    /** Background color of the tab nav. */
     get backgroundColor() { return this._backgroundColor; }
-    /**
-     * @param {?} value
-     * @return {?}
-     */
     set backgroundColor(value) {
-        /** @type {?} */
         const classList = this._elementRef.nativeElement.classList;
         classList.remove(`mat-background-${this.backgroundColor}`);
         if (value) {
@@ -3070,48 +2451,25 @@ class _MatTabNavBase extends MatPaginatedTabHeader {
         }
         this._backgroundColor = value;
     }
-    /**
-     * Whether the ripple effect is disabled or not.
-     * @return {?}
-     */
+    /** Whether the ripple effect is disabled or not. */
     get disableRipple() { return this._disableRipple; }
-    /**
-     * @param {?} value
-     * @return {?}
-     */
     set disableRipple(value) { this._disableRipple = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_11__["coerceBooleanProperty"])(value); }
-    /**
-     * @protected
-     * @return {?}
-     */
     _itemSelected() {
         // noop
     }
-    /**
-     * @return {?}
-     */
     ngAfterContentInit() {
         // We need this to run before the `changes` subscription in parent to ensure that the
         // selectedIndex is up-to-date by the time the super class starts looking for it.
-        this._items.changes.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["startWith"])(null), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["takeUntil"])(this._destroyed)).subscribe((/**
-         * @return {?}
-         */
-        () => {
+        this._items.changes.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["startWith"])(null), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["takeUntil"])(this._destroyed)).subscribe(() => {
             this.updateActiveLink();
-        }));
+        });
         super.ngAfterContentInit();
     }
-    /**
-     * Notifies the component that the active link has been changed.
-     * \@breaking-change 8.0.0 `element` parameter to be removed.
-     * @param {?=} _element
-     * @return {?}
-     */
-    updateActiveLink(_element) {
+    /** Notifies the component that the active link has been changed. */
+    updateActiveLink() {
         if (!this._items) {
             return;
         }
-        /** @type {?} */
         const items = this._items.toArray();
         for (let i = 0; i < items.length; i++) {
             if (items[i].active) {
@@ -3125,16 +2483,15 @@ class _MatTabNavBase extends MatPaginatedTabHeader {
         this._inkBar.hide();
     }
 }
-_MatTabNavBase.ɵfac = function _MatTabNavBase_Factory(t) { return new (t || _MatTabNavBase)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_12__["ViewportRuler"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__["Platform"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"], 8)); };
+_MatTabNavBase.ɵfac = function _MatTabNavBase_Factory(t) { return new (t || _MatTabNavBase)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_12__["ViewportRuler"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__["Platform"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"], 8)); };
 _MatTabNavBase.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineDirective"]({ type: _MatTabNavBase, inputs: { color: "color", backgroundColor: "backgroundColor", disableRipple: "disableRipple" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]] });
-/** @nocollapse */
 _MatTabNavBase.ctorParameters = () => [
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] },
     { type: _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"] }] },
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["NgZone"] },
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"] },
     { type: _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_12__["ViewportRuler"] },
-    { type: _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__["Platform"], decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"] }] },
+    { type: _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__["Platform"] },
     { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"], args: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"],] }] }
 ];
 _MatTabNavBase.propDecorators = {
@@ -3142,13 +2499,11 @@ _MatTabNavBase.propDecorators = {
     disableRipple: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Input"] }],
     color: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Input"] }]
 };
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](_MatTabNavBase, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](_MatTabNavBase, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Directive"]
     }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] }, { type: _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], decorators: [{
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"]
-            }] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["NgZone"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"] }, { type: _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_12__["ViewportRuler"] }, { type: _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__["Platform"], decorators: [{
-                type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"]
-            }] }, { type: String, decorators: [{
+            }] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["NgZone"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"] }, { type: _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_12__["ViewportRuler"] }, { type: _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__["Platform"] }, { type: String, decorators: [{
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"]
             }, {
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"],
@@ -3160,43 +2515,29 @@ _MatTabNavBase.propDecorators = {
         }], disableRipple: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Input"]
         }] }); })();
-if (false) {}
 /**
  * Navigation component matching the styles of the tab group header.
  * Provides anchored navigation with animated ink bar.
  */
 class MatTabNav extends _MatTabNavBase {
-    /**
-     * @param {?} elementRef
-     * @param {?} dir
-     * @param {?} ngZone
-     * @param {?} changeDetectorRef
-     * @param {?} viewportRuler
-     * @param {?=} platform
-     * @param {?=} animationMode
-     */
-    constructor(elementRef, dir, ngZone, changeDetectorRef, viewportRuler, 
-    /**
-     * @deprecated @breaking-change 9.0.0 `platform` parameter to become required.
-     */
-    platform, animationMode) {
+    constructor(elementRef, dir, ngZone, changeDetectorRef, viewportRuler, platform, animationMode) {
         super(elementRef, dir, ngZone, changeDetectorRef, viewportRuler, platform, animationMode);
     }
 }
-MatTabNav.ɵfac = function MatTabNav_Factory(t) { return new (t || MatTabNav)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_12__["ViewportRuler"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__["Platform"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"], 8)); };
+MatTabNav.ɵfac = function MatTabNav_Factory(t) { return new (t || MatTabNav)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_12__["ViewportRuler"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__["Platform"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"], 8)); };
 MatTabNav.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: MatTabNav, selectors: [["", "mat-tab-nav-bar", ""]], contentQueries: function MatTabNav_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵcontentQuery"](dirIndex, MatTabLink, true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵcontentQuery"](dirIndex, MatTabLink, 1);
     } if (rf & 2) {
-        var _t;
+        let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx._items = _t);
     } }, viewQuery: function MatTabNav_Query(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵstaticViewQuery"](MatInkBar, true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵstaticViewQuery"](_c5, true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵstaticViewQuery"](_c6, true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c7, true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c8, true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](MatInkBar, 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c5, 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c6, 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c7, 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c8, 1);
     } if (rf & 2) {
-        var _t;
+        let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx._inkBar = _t.first);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx._tabListContainer = _t.first);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx._tabList = _t.first);
@@ -3233,28 +2574,24 @@ MatTabNav.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponen
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵclassProp"]("mat-tab-header-pagination-disabled", ctx._disableScrollAfter);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("matRippleDisabled", ctx._disableScrollAfter || ctx.disableRipple);
     } }, directives: [_angular_material_core__WEBPACK_IMPORTED_MODULE_5__["MatRipple"], _angular_cdk_observers__WEBPACK_IMPORTED_MODULE_1__["CdkObserveContent"], MatInkBar], styles: [".mat-tab-header{display:flex;overflow:hidden;position:relative;flex-shrink:0}.mat-tab-header-pagination{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:relative;display:none;justify-content:center;align-items:center;min-width:32px;cursor:pointer;z-index:2;-webkit-tap-highlight-color:transparent;touch-action:none}.mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination{display:flex}.mat-tab-header-pagination-before,.mat-tab-header-rtl .mat-tab-header-pagination-after{padding-left:4px}.mat-tab-header-pagination-before .mat-tab-header-pagination-chevron,.mat-tab-header-rtl .mat-tab-header-pagination-after .mat-tab-header-pagination-chevron{transform:rotate(-135deg)}.mat-tab-header-rtl .mat-tab-header-pagination-before,.mat-tab-header-pagination-after{padding-right:4px}.mat-tab-header-rtl .mat-tab-header-pagination-before .mat-tab-header-pagination-chevron,.mat-tab-header-pagination-after .mat-tab-header-pagination-chevron{transform:rotate(45deg)}.mat-tab-header-pagination-chevron{border-style:solid;border-width:2px 2px 0 0;content:\"\";height:8px;width:8px}.mat-tab-header-pagination-disabled{box-shadow:none;cursor:default}.mat-tab-list{flex-grow:1;position:relative;transition:transform 500ms cubic-bezier(0.35, 0, 0.25, 1)}.mat-tab-links{display:flex}[mat-align-tabs=center]>.mat-tab-link-container .mat-tab-links{justify-content:center}[mat-align-tabs=end]>.mat-tab-link-container .mat-tab-links{justify-content:flex-end}.mat-ink-bar{position:absolute;bottom:0;height:2px;transition:500ms cubic-bezier(0.35, 0, 0.25, 1)}._mat-animation-noopable.mat-ink-bar{transition:none;animation:none}.mat-tab-group-inverted-header .mat-ink-bar{bottom:auto;top:0}.cdk-high-contrast-active .mat-ink-bar{outline:solid 2px;height:0}.mat-tab-link-container{display:flex;flex-grow:1;overflow:hidden;z-index:1}.mat-tab-link{height:48px;padding:0 24px;cursor:pointer;box-sizing:border-box;opacity:.6;min-width:160px;text-align:center;display:inline-flex;justify-content:center;align-items:center;white-space:nowrap;vertical-align:top;text-decoration:none;position:relative;overflow:hidden;-webkit-tap-highlight-color:transparent}.mat-tab-link:focus{outline:none}.mat-tab-link:focus:not(.mat-tab-disabled){opacity:1}.cdk-high-contrast-active .mat-tab-link:focus{outline:dotted 2px;outline-offset:-2px}.mat-tab-link.mat-tab-disabled{cursor:default}.cdk-high-contrast-active .mat-tab-link.mat-tab-disabled{opacity:.5}.mat-tab-link .mat-tab-label-content{display:inline-flex;justify-content:center;align-items:center;white-space:nowrap}.cdk-high-contrast-active .mat-tab-link{opacity:1}[mat-stretch-tabs] .mat-tab-link{flex-basis:0;flex-grow:1}.mat-tab-link.mat-tab-disabled{pointer-events:none}@media(max-width: 599px){.mat-tab-link{min-width:72px}}\n"], encapsulation: 2 });
-/** @nocollapse */
 MatTabNav.ctorParameters = () => [
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] },
     { type: _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"] }] },
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["NgZone"] },
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"] },
     { type: _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_12__["ViewportRuler"] },
-    { type: _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__["Platform"], decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"] }] },
+    { type: _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__["Platform"] },
     { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"], args: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"],] }] }
 ];
 MatTabNav.propDecorators = {
-    _items: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ContentChildren"], args: [Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["forwardRef"])((/**
-                 * @return {?}
-                 */
-                () => MatTabLink)), { descendants: true },] }],
+    _items: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ContentChildren"], args: [Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["forwardRef"])(() => MatTabLink), { descendants: true },] }],
     _inkBar: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"], args: [MatInkBar, { static: true },] }],
     _tabListContainer: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"], args: ['tabListContainer', { static: true },] }],
     _tabList: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"], args: ['tabList', { static: true },] }],
     _nextPaginator: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"], args: ['nextPaginator',] }],
     _previousPaginator: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"], args: ['previousPaginator',] }]
 };
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabNav, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabNav, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"],
         args: [{
                 selector: '[mat-tab-nav-bar]',
@@ -3276,18 +2613,14 @@ MatTabNav.propDecorators = {
             }]
     }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] }, { type: _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], decorators: [{
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"]
-            }] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["NgZone"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"] }, { type: _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_12__["ViewportRuler"] }, { type: _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__["Platform"], decorators: [{
-                type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"]
-            }] }, { type: String, decorators: [{
+            }] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["NgZone"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"] }, { type: _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_12__["ViewportRuler"] }, { type: _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_13__["Platform"] }, { type: String, decorators: [{
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"]
             }, {
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"],
                 args: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"]]
             }] }]; }, { _items: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ContentChildren"],
-            args: [Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["forwardRef"])(( /**
-                             * @return {?}
-                             */() => MatTabLink)), { descendants: true }]
+            args: [Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["forwardRef"])(() => MatTabLink), { descendants: true }]
         }], _inkBar: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"],
             args: [MatInkBar, { static: true }]
@@ -3304,81 +2637,56 @@ MatTabNav.propDecorators = {
             type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ViewChild"],
             args: ['previousPaginator']
         }] }); })();
-if (false) {}
 // Boilerplate for applying mixins to MatTabLink.
 class MatTabLinkMixinBase {
 }
-/** @type {?} */
 const _MatTabLinkMixinBase = Object(_angular_material_core__WEBPACK_IMPORTED_MODULE_5__["mixinTabIndex"])(Object(_angular_material_core__WEBPACK_IMPORTED_MODULE_5__["mixinDisableRipple"])(Object(_angular_material_core__WEBPACK_IMPORTED_MODULE_5__["mixinDisabled"])(MatTabLinkMixinBase)));
-/**
- * Base class with all of the `MatTabLink` functionality.
- */
-// tslint:disable-next-line:class-name
+/** Base class with all of the `MatTabLink` functionality. */
 class _MatTabLinkBase extends _MatTabLinkMixinBase {
-    /**
-     * @param {?} _tabNavBar
-     * @param {?} elementRef
-     * @param {?} globalRippleOptions
-     * @param {?} tabIndex
-     * @param {?} _focusMonitor
-     * @param {?=} animationMode
-     */
-    constructor(_tabNavBar, elementRef, globalRippleOptions, tabIndex, _focusMonitor, animationMode) {
+    constructor(_tabNavBar, 
+    /** @docs-private */ elementRef, globalRippleOptions, tabIndex, _focusMonitor, animationMode) {
         super();
         this._tabNavBar = _tabNavBar;
         this.elementRef = elementRef;
         this._focusMonitor = _focusMonitor;
-        /**
-         * Whether the tab link is active or not.
-         */
+        /** Whether the tab link is active or not. */
         this._isActive = false;
         this.rippleConfig = globalRippleOptions || {};
         this.tabIndex = parseInt(tabIndex) || 0;
         if (animationMode === 'NoopAnimations') {
             this.rippleConfig.animation = { enterDuration: 0, exitDuration: 0 };
         }
-        _focusMonitor.monitor(elementRef);
     }
-    /**
-     * Whether the link is active.
-     * @return {?}
-     */
+    /** Whether the link is active. */
     get active() { return this._isActive; }
-    /**
-     * @param {?} value
-     * @return {?}
-     */
     set active(value) {
-        if (value !== this._isActive) {
+        const newValue = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_11__["coerceBooleanProperty"])(value);
+        if (newValue !== this._isActive) {
             this._isActive = value;
-            this._tabNavBar.updateActiveLink(this.elementRef);
+            this._tabNavBar.updateActiveLink();
         }
     }
     /**
      * Whether ripples are disabled on interaction.
-     * \@docs-private
-     * @return {?}
+     * @docs-private
      */
     get rippleDisabled() {
         return this.disabled || this.disableRipple || this._tabNavBar.disableRipple ||
             !!this.rippleConfig.disabled;
     }
-    /**
-     * @return {?}
-     */
+    /** Focuses the tab link. */
     focus() {
         this.elementRef.nativeElement.focus();
     }
-    /**
-     * @return {?}
-     */
+    ngAfterViewInit() {
+        this._focusMonitor.monitor(this.elementRef);
+    }
     ngOnDestroy() {
         this._focusMonitor.stopMonitoring(this.elementRef);
     }
 }
 _MatTabLinkBase.ɵfac = function _MatTabLinkBase_Factory(t) { return new (t || _MatTabLinkBase)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_MatTabNavBase), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_material_core__WEBPACK_IMPORTED_MODULE_5__["MAT_RIPPLE_GLOBAL_OPTIONS"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinjectAttribute"]('tabindex'), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_0__["FocusMonitor"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"], 8)); };
 _MatTabLinkBase.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineDirective"]({ type: _MatTabLinkBase, inputs: { active: "active" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]] });
-/** @nocollapse */
 _MatTabLinkBase.ctorParameters = () => [
     { type: _MatTabNavBase },
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] },
@@ -3390,7 +2698,7 @@ _MatTabLinkBase.ctorParameters = () => [
 _MatTabLinkBase.propDecorators = {
     active: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Input"] }]
 };
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](_MatTabLinkBase, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](_MatTabLinkBase, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Directive"]
     }], function () { return [{ type: _MatTabNavBase }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] }, { type: undefined, decorators: [{
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"]
@@ -3408,29 +2716,15 @@ _MatTabLinkBase.propDecorators = {
             }] }]; }, { active: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Input"]
         }] }); })();
-if (false) {}
 /**
  * Link inside of a `mat-tab-nav-bar`.
  */
 class MatTabLink extends _MatTabLinkBase {
-    /**
-     * @param {?} tabNavBar
-     * @param {?} elementRef
-     * @param {?} ngZone
-     * @param {?} platform
-     * @param {?} globalRippleOptions
-     * @param {?} tabIndex
-     * @param {?} focusMonitor
-     * @param {?=} animationMode
-     */
     constructor(tabNavBar, elementRef, ngZone, platform, globalRippleOptions, tabIndex, focusMonitor, animationMode) {
         super(tabNavBar, elementRef, globalRippleOptions, tabIndex, focusMonitor, animationMode);
         this._tabLinkRipple = new _angular_material_core__WEBPACK_IMPORTED_MODULE_5__["RippleRenderer"](this, ngZone, elementRef, platform);
         this._tabLinkRipple.setupTriggerEvents(elementRef.nativeElement);
     }
-    /**
-     * @return {?}
-     */
     ngOnDestroy() {
         super.ngOnDestroy();
         this._tabLinkRipple._removeTriggerEvents();
@@ -3441,7 +2735,6 @@ MatTabLink.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineDirecti
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵattribute"]("aria-current", ctx.active ? "page" : null)("aria-disabled", ctx.disabled)("tabIndex", ctx.tabIndex);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵclassProp"]("mat-tab-disabled", ctx.disabled)("mat-tab-label-active", ctx.active);
     } }, inputs: { disabled: "disabled", disableRipple: "disableRipple", tabIndex: "tabIndex" }, exportAs: ["matTabLink"], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]] });
-/** @nocollapse */
 MatTabLink.ctorParameters = () => [
     { type: MatTabNav },
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ElementRef"] },
@@ -3452,7 +2745,7 @@ MatTabLink.ctorParameters = () => [
     { type: _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_0__["FocusMonitor"] },
     { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"], args: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"],] }] }
 ];
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabLink, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabLink, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Directive"],
         args: [{
                 selector: '[mat-tab-link], [matTabLink]',
@@ -3481,12 +2774,13 @@ MatTabLink.ctorParameters = () => [
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"],
                 args: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"]]
             }] }]; }, null); })();
-if (false) {}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/material/tabs/tabs-module.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
 class MatTabsModule {
 }
@@ -3498,31 +2792,14 @@ MatTabsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInje
             _angular_material_core__WEBPACK_IMPORTED_MODULE_5__["MatRippleModule"],
             _angular_cdk_observers__WEBPACK_IMPORTED_MODULE_1__["ObserversModule"],
             _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_0__["A11yModule"],
-        ],
-        _angular_material_core__WEBPACK_IMPORTED_MODULE_5__["MatCommonModule"]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵsetNgModuleScope"](MatTabsModule, { declarations: function () { return [MatTabGroup,
-        MatTabLabel,
-        MatTab,
-        MatInkBar,
-        MatTabLabelWrapper,
-        MatTabNav,
-        MatTabLink,
-        MatTabBody,
-        MatTabBodyPortal,
-        MatTabHeader,
-        MatTabContent]; }, imports: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"],
+        ], _angular_material_core__WEBPACK_IMPORTED_MODULE_5__["MatCommonModule"]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵsetNgModuleScope"](MatTabsModule, { declarations: function () { return [MatTabGroup, MatTabLabel, MatTab, MatInkBar, MatTabLabelWrapper, MatTabNav, MatTabLink, MatTabBody, MatTabBodyPortal, MatTabHeader, MatTabContent]; }, imports: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"],
         _angular_material_core__WEBPACK_IMPORTED_MODULE_5__["MatCommonModule"],
         _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["PortalModule"],
         _angular_material_core__WEBPACK_IMPORTED_MODULE_5__["MatRippleModule"],
         _angular_cdk_observers__WEBPACK_IMPORTED_MODULE_1__["ObserversModule"],
-        _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_0__["A11yModule"]]; }, exports: function () { return [_angular_material_core__WEBPACK_IMPORTED_MODULE_5__["MatCommonModule"],
-        MatTabGroup,
-        MatTabLabel,
-        MatTab,
-        MatTabNav,
-        MatTabLink,
-        MatTabContent]; } }); })();
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabsModule, [{
+        _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_0__["A11yModule"]]; }, exports: function () { return [_angular_material_core__WEBPACK_IMPORTED_MODULE_5__["MatCommonModule"], MatTabGroup, MatTabLabel, MatTab, MatTabNav, MatTabLink, MatTabContent]; } }); })();
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](MatTabsModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["NgModule"],
         args: [{
                 imports: [
@@ -3560,15 +2837,19 @@ MatTabsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInje
     }], null, null); })();
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/material/tabs/tab-nav-bar/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/material/tabs/public-api.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
 
 /**
