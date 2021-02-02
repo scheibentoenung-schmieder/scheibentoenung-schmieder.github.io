@@ -551,7 +551,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FolienSelectionComponent", function() { return FolienSelectionComponent; });
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "tyNb");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/tabs */ "wZkO");
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/card */ "Wp6s");
+/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/tabs */ "wZkO");
+
 
 
 
@@ -562,26 +564,37 @@ class FolienSelectionComponent {
     }
 }
 FolienSelectionComponent.ɵfac = function FolienSelectionComponent_Factory(t) { return new (t || FolienSelectionComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"])); };
-FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: FolienSelectionComponent, selectors: [["scheibentoenung-schmieder-folien"]], decls: 11, vars: 4, consts: [[1, "folien-selection"], ["mat-tab-nav-bar", ""], ["mat-tab-link", "", "routerLink", "/folien/regular", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/premium", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/superior", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/special", 3, "active"]], template: function FolienSelectionComponent_Template(rf, ctx) { if (rf & 1) {
+FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: FolienSelectionComponent, selectors: [["scheibentoenung-schmieder-folien"]], decls: 19, vars: 4, consts: [[1, "folien-selection"], [2, "text-align", "center"], ["mat-tab-nav-bar", ""], ["mat-tab-link", "", "routerLink", "/folien/regular", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/premium", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/superior", 3, "active"], ["mat-tab-link", "", "routerLink", "/folien/special", 3, "active"]], template: function FolienSelectionComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "nav", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "a", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, " Regular ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "a", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Premium");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "a", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, "Superior");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "a", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "Special");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "mat-card");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "mat-card-header");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "mat-card-subtitle", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, " Die Vor- und Nachteile einer Fahrzeugfolierung brauchen wir hier wahrscheinlich nicht gro\u00DF aufzuz\u00E4hlen. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](5, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6, " Jeder der sich etwas mit dem Car Wrapping besch\u00E4ftigt hat, wei\u00DF das eine Folierung eine leicht umsetzbare Individualisierung Ihres Fahrzeuges sein kann. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](7, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8, "Kurz gesagt k\u00F6nnen Sie Ihr Fahrzeug schnell und ohne gro\u00DFer Umst\u00E4nden nach Ihren w\u00FCnschen umgestalten. Nahezu ist jedes Design bzw. Vorstellungen m\u00F6glich. Jede Folierung ist r\u00FCckstandslos entfernbar. Ihre original Lack wird ganz nebenbei noch gesch\u00FCtzt vor Steinschl\u00E4gen, Verwitterung und anderen Umwelteinfl\u00FCssen. ");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](10, "router-outlet");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "nav", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "a", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, " Regular ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "a", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](13, "Premium");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "a", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](15, "Superior");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](16, "a", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](17, "Special");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](18, "router-outlet");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](10);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("active", ctx.active.firstChild.snapshot.params.type === "regular");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("active", ctx.active.firstChild.snapshot.params.type === "premium");
@@ -589,7 +602,7 @@ FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵ�
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("active", ctx.active.firstChild.snapshot.params.type === "superior");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("active", ctx.active.firstChild.snapshot.params.type === "special");
-    } }, directives: [_angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__["MatTabNav"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterLinkWithHref"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__["MatTabLink"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterOutlet"]], styles: [".folien-selection {\n  margin: 80px 0 80px;\n}\n\n.mat-tab-links {\n  display: flex;\n  justify-content: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uL2ZvbGllbi1zZWxlY3Rpb24uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxtQkFBQTtBQUNGOztBQUNBO0VBQ0UsYUFBQTtFQUNBLHVCQUFBO0FBRUYiLCJmaWxlIjoiZm9saWVuLXNlbGVjdGlvbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mb2xpZW4tc2VsZWN0aW9uIHtcbiAgbWFyZ2luOiA4MHB4IDAgODBweDtcbn1cbi5tYXQtdGFiLWxpbmtzIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG59XG4iXX0= */"], encapsulation: 2 });
+    } }, directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCardHeader"], _angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCardSubtitle"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_3__["MatTabNav"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterLinkWithHref"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_3__["MatTabLink"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterOutlet"]], styles: [".folien-selection {\n  margin: 100px 0 80px;\n}\n\n.mat-tab-links {\n  display: flex;\n  justify-content: center;\n}\n\n.mat-tab-links a {\n  font-weight: bold;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uL2ZvbGllbi1zZWxlY3Rpb24uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxvQkFBQTtBQUNGOztBQUNBO0VBQ0UsYUFBQTtFQUNBLHVCQUFBO0FBRUY7O0FBREU7RUFDRSxpQkFBQTtBQUdKIiwiZmlsZSI6ImZvbGllbi1zZWxlY3Rpb24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZm9saWVuLXNlbGVjdGlvbiB7XG4gIG1hcmdpbjogMTAwcHggMCA4MHB4O1xufVxuLm1hdC10YWItbGlua3Mge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYSB7XG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIH1cbn1cbiJdfQ== */"], encapsulation: 2 });
 
 
 /***/ }),

@@ -12,7 +12,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material/card */ "Wp6s");
-/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/button */ "bTqV");
+/* harmony import */ var _thisissoon_angular_inviewport__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @thisissoon/angular-inviewport */ "WihE");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "tyNb");
 
 
@@ -21,75 +21,84 @@ __webpack_require__.r(__webpack_exports__);
 class HomeComponent {
 }
 HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(); };
-HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["scheibentoenung-schmieder-home"]], decls: 42, vars: 0, consts: [[1, "list"], [1, "card"], ["mat-card-image", "", "src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/20200305_173405.jpg", "alt", "Photo of a Shiba Inu"], ["mat-flat-button", "", "routerLink", "/folien", "color", "primary"], ["mat-card-avatar", "", 1, "example-header-image"], ["mat-card-image", "", "src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/kind.jpg", "alt", "Photo of a Shiba Inu"], ["mat-card-image", "", "src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/buissnes.jpg", "alt", "Photo of a Shiba Inu"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-card", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-card-header");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "mat-card-title");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Ab sofort haben wir die Regular Titan ");
+HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["scheibentoenung-schmieder-home"]], decls: 50, vars: 0, consts: [["snInViewport", "", 1, "left-card"], [1, "content"], ["mat-card-image", "", "src", "https://www.proteomics.uni-freiburg.de/images/team/portrait-dummy.png/image", "alt", "Photo of a Shiba Inu"], [1, "list"], ["routerLink", "/lackschutz", "color", "primary", 1, "text-link"], ["routerLink", "/folien", "color", "primary", 1, "text-link"], ["mat-card-image", "", "src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/20200305_173405.jpg", "alt", "Photo of a Shiba Inu"], ["mat-card-image", "", "src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/kind.jpg", "alt", "Photo of a Shiba Inu"], ["mat-card-image", "", "src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/buissnes.jpg", "alt", "Photo of a Shiba Inu"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-card", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-card-content", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "img", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "mat-card-header");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "Scheibent\u00F6nung Schmieder ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "mat-card-subtitle");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "Scheibent\u00F6nungsfolie mit 35% Lichtdurchl\u00E4ssigkeit");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](7, "img", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "mat-card-content");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, " Unserer Service.... ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "mat-card-actions");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "a", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "weiterlesen");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "mat-card-subtitle");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, " Wir sind ein Unternehmen was sich auf Scheibent\u00F6nungen und Fahrzeugfolierungen / Teilfolierungen mit h\u00F6chsten Qualit\u00E4tsanspr\u00FCchen, spezialisiert haben. Ans\u00E4ssig sind wir in Limbach-Oberfrohna, f\u00FChren aber nat\u00FCrlich auch alle Arbeiten unter diversen Voraussetzungen bei Ihnen vor Ort aus. Unsere Scheibent\u00F6nungen und Folierungen jeglicher Art, werden selbstverst\u00E4ndlich nur mit den aktuell auf dem Marktf\u00FChrenden Lieferanten ausgef\u00FChrt. Wir verfolgen stetig die neuesten Trends im Bereich Folien und werden diese auch anwenden k\u00F6nnen. ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "mat-card", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "mat-card-header");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](16, "div", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "mat-card-title");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Professioneller Einbau");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "mat-card-subtitle");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "zum kleinen Preis!");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "img", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "mat-card-content");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, " Diese Folie brilliert mit Ihrem sanften Schwarzton und kommt den heutigen Werkst\u00F6nungen am n\u00E4chsten. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "mat-card", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "mat-card-content");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "mat-card-header");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, "Ab sofort haben wir die Regular Titan ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "mat-card-subtitle");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, " Scheibent\u00F6nungsfolie mit 35% Lichtdurchl\u00E4ssigkeit ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, " Hier k\u00F6nnen Sie alles \u00FCber unsere Folien und deren verschiedenen Eigenschaften erfahren. Scheibent\u00F6nung / ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "a", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "Lackschutz");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, " / ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "a", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, "Fahrzeugfolierung");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, " vielleicht so untereinander auff\u00FChren wo man dann mit einem klick auf die jeweilige Rubrik kommt ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "mat-card-actions");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "a", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "weiterlesen");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](25, "img", 6);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "mat-card", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "mat-card", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "mat-card-content");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](28, "img", 7);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "mat-card-header");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](30, "div", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "mat-card-title");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, "H\u00E4ufige Fragen");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "Professioneller Einbau von Sonnenschutzfolie ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "mat-card-subtitle");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, "rund ums Thema Folien");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](35, "img", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "mat-card-content");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, " Wie lang dauer eine T\u00F6nung ? ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "mat-card-actions");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "a", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](41, "weiterlesen");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "mat-card-subtitle");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, " zum kleinen Preis! ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](34, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, " Hier k\u00F6nnen Sie alles \u00FCber unsere Folien und deren verschiedenen Eigenschaften erfahren. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "a", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, "weiterlesen");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardHeader"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardSubtitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardContent"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardActions"], _angular_material_button__WEBPACK_IMPORTED_MODULE_2__["MatAnchor"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkWithHref"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardAvatar"]], styles: [".mat-card-header[_ngcontent-%COMP%] {\n  flex-shrink: 0;\n}\n\n.mat-card-content[_ngcontent-%COMP%] {\n  flex-grow: 1;\n  overflow: auto;\n}\n\n.list[_ngcontent-%COMP%] {\n  flex-flow: row wrap;\n  display: flex;\n  justify-content: space-around;\n  padding: 0 0px 0 0px;\n}\n\n.list[_ngcontent-%COMP%]   .card[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-around;\n  flex: 1 1 auto;\n  margin: 0 20px 20px;\n}\n\n.list[_ngcontent-%COMP%]   .card[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  background-size: cover;\n}\n\n@media only screen and (max-width: 768px) {\n  .list[_ngcontent-%COMP%]   .card[_ngcontent-%COMP%] {\n    margin: 0 0 20px 0;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uL2hvbWUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxjQUFBO0FBQ0Y7O0FBRUE7RUFDRSxZQUFBO0VBQ0EsY0FBQTtBQUNGOztBQUVBO0VBQ0UsbUJBQUE7RUFDQSxhQUFBO0VBQ0EsNkJBQUE7RUFDQSxvQkFBQTtBQUNGOztBQUNFO0VBQ0UsYUFBQTtFQUNBLHNCQUFBO0VBQ0EsbUJBQUE7RUFDQSw2QkFBQTtFQUNBLGNBQUE7RUFDQSxtQkFBQTtBQUNKOztBQUFJO0VBQ0Usc0JBQUE7QUFFTjs7QUFBSTtFQVZGO0lBV0ksa0JBQUE7RUFHSjtBQUNGIiwiZmlsZSI6ImhvbWUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LWNhcmQtaGVhZGVyIHtcbiAgZmxleC1zaHJpbms6IDA7XG59XG5cbi5tYXQtY2FyZC1jb250ZW50IHtcbiAgZmxleC1ncm93OiAxO1xuICBvdmVyZmxvdzogYXV0bztcbn1cblxuLmxpc3Qge1xuICBmbGV4LWZsb3c6IHJvdyB3cmFwO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWFyb3VuZDtcbiAgcGFkZGluZzogMCAwcHggMCAwcHg7XG5cbiAgLmNhcmQge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xuICAgIGZsZXg6IDEgMSBhdXRvO1xuICAgIG1hcmdpbjogMCAyMHB4IDIwcHg7XG4gICAgaW1nIHtcbiAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgfVxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAgIG1hcmdpbjogMCAwIDIwcHggMDtcbiAgICB9XG4gIH1cbn1cbiJdfQ== */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "mat-card", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "mat-card-content");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "mat-card-header");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, "H\u00E4ufige Fragen ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "mat-card-subtitle");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](44, " rund ums Thema Folien ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](45, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](46, " Wie lang dauer eine T\u00F6nung ? ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "a", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](48, "weiterlesen");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](49, "img", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } }, directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCard"], _thisissoon_angular_inviewport__WEBPACK_IMPORTED_MODULE_2__["InViewportDirective"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardContent"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardHeader"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardSubtitle"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkWithHref"]], styles: [".mat-card-header[_ngcontent-%COMP%] {\n  flex-shrink: 0;\n}\n\n.mat-card-content[_ngcontent-%COMP%] {\n  flex-grow: 1;\n  overflow: auto;\n}\n\n.intro[_ngcontent-%COMP%] {\n  margin-top: 200px;\n  padding: 20px;\n  width: 100%;\n  height: 50vh;\n}\n\n.left-card[_ngcontent-%COMP%] {\n  margin-top: 20px;\n  margin-left: 40px;\n  margin-right: 40px;\n  transition: opacity 2s;\n  opacity: 0;\n}\n\n.left-card.sn-viewport--out[_ngcontent-%COMP%] {\n  opacity: 0;\n}\n\n.left-card.sn-viewport--in[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n\n.left-card[_ngcontent-%COMP%]   a.text-link[_ngcontent-%COMP%] {\n  color: inherit;\n}\n\n@media only screen and (min-width: 768px) {\n  .left-card[_ngcontent-%COMP%] {\n    border-radius: 4px;\n    max-height: 1000px;\n    padding: 0;\n  }\n  .left-card[_ngcontent-%COMP%]   .mat-card-image[_ngcontent-%COMP%] {\n    margin: 0;\n    height: 100%;\n  }\n  .left-card[_ngcontent-%COMP%]   mat-card-content[_ngcontent-%COMP%] {\n    display: flex;\n    justify-content: space-between;\n    padding: 50px;\n  }\n  .left-card[_ngcontent-%COMP%]   mat-card-content[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex: auto;\n    max-width: 50%;\n  }\n  .left-card[_ngcontent-%COMP%]   mat-card-content[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%]:first-child {\n    border-top-left-radius: 4px;\n    border-bottom-left-radius: 4px;\n  }\n  .left-card[_ngcontent-%COMP%]   mat-card-content[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%]:last-child {\n    flex-direction: column;\n    align-items: start;\n    padding: 8px;\n  }\n}\n\n.list[_ngcontent-%COMP%] {\n  margin-bottom: 150px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uL2hvbWUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxjQUFBO0FBQ0Y7O0FBRUE7RUFDRSxZQUFBO0VBQ0EsY0FBQTtBQUNGOztBQUNBO0VBQ0UsaUJBQUE7RUFDQSxhQUFBO0VBRUEsV0FBQTtFQUNBLFlBQUE7QUFDRjs7QUFDQTtFQUNFLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtFQUNBLHNCQUFBO0VBQ0EsVUFBQTtBQUVGOztBQURFO0VBQ0UsVUFBQTtBQUdKOztBQUFFO0VBQ0UsVUFBQTtBQUVKOztBQUFFO0VBQ0UsY0FBQTtBQUVKOztBQUNBO0VBQ0U7SUFDRSxrQkFBQTtJQUNBLGtCQUFBO0lBRUEsVUFBQTtFQUNGO0VBQ0U7SUFDRSxTQUFBO0lBQ0EsWUFBQTtFQUNKO0VBRUU7SUFDRSxhQUFBO0lBQ0EsOEJBQUE7SUFDQSxhQUFBO0VBQUo7RUFFSTtJQUNFLGFBQUE7SUFDQSx1QkFBQTtJQUNBLG1CQUFBO0lBQ0EsVUFBQTtJQUNBLGNBQUE7RUFBTjtFQUVNO0lBQ0UsMkJBQUE7SUFDQSw4QkFBQTtFQUFSO0VBR007SUFDRSxzQkFBQTtJQUNBLGtCQUFBO0lBQ0EsWUFBQTtFQURSO0FBQ0Y7O0FBTUE7RUFDRSxvQkFBQTtBQUpGIiwiZmlsZSI6ImhvbWUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LWNhcmQtaGVhZGVyIHtcbiAgZmxleC1zaHJpbms6IDA7XG59XG5cbi5tYXQtY2FyZC1jb250ZW50IHtcbiAgZmxleC1ncm93OiAxO1xuICBvdmVyZmxvdzogYXV0bztcbn1cbi5pbnRybyB7XG4gIG1hcmdpbi10b3A6IDIwMHB4O1xuICBwYWRkaW5nOiAyMHB4O1xuXG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDUwdmg7XG59XG4ubGVmdC1jYXJkIHtcbiAgbWFyZ2luLXRvcDogMjBweDtcbiAgbWFyZ2luLWxlZnQ6IDQwcHg7XG4gIG1hcmdpbi1yaWdodDogNDBweDtcbiAgdHJhbnNpdGlvbjogb3BhY2l0eSAycztcbiAgb3BhY2l0eTogMDtcbiAgJi5zbi12aWV3cG9ydC0tb3V0IHtcbiAgICBvcGFjaXR5OiAwO1xuICB9XG5cbiAgJi5zbi12aWV3cG9ydC0taW4ge1xuICAgIG9wYWNpdHk6IDE7XG4gIH1cbiAgYS50ZXh0LWxpbmsge1xuICAgIGNvbG9yOiBpbmhlcml0O1xuICB9XG59XG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDc2OHB4KSB7XG4gIC5sZWZ0LWNhcmQge1xuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICBtYXgtaGVpZ2h0OiAxMDAwcHg7XG5cbiAgICBwYWRkaW5nOiAwO1xuXG4gICAgLm1hdC1jYXJkLWltYWdlIHtcbiAgICAgIG1hcmdpbjogMDtcbiAgICAgIGhlaWdodDogMTAwJTtcbiAgICB9XG5cbiAgICBtYXQtY2FyZC1jb250ZW50IHtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gICAgICBwYWRkaW5nOiA1MHB4O1xuXG4gICAgICAmID4gKiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBmbGV4OiBhdXRvO1xuICAgICAgICBtYXgtd2lkdGg6IDUwJTtcblxuICAgICAgICAmOmZpcnN0LWNoaWxkIHtcbiAgICAgICAgICBib3JkZXItdG9wLWxlZnQtcmFkaXVzOiA0cHg7XG4gICAgICAgICAgYm9yZGVyLWJvdHRvbS1sZWZ0LXJhZGl1czogNHB4O1xuICAgICAgICB9XG5cbiAgICAgICAgJjpsYXN0LWNoaWxkIHtcbiAgICAgICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgICAgICAgIGFsaWduLWl0ZW1zOiBzdGFydDtcbiAgICAgICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbi5saXN0IHtcbiAgbWFyZ2luLWJvdHRvbTogMTUwcHg7XG59XG4iXX0= */"] });
 
 
 /***/ }),
@@ -126,9 +135,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/card */ "Wp6s");
 /* harmony import */ var _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/grid-list */ "zkoq");
 /* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/icon */ "NFeN");
-/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/home/home.component */ "0X/+");
-/* harmony import */ var _home_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./home-routing.module */ "ieui");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _thisissoon_angular_inviewport__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @thisissoon/angular-inviewport */ "WihE");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/home/home.component */ "0X/+");
+/* harmony import */ var _home_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./home-routing.module */ "ieui");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
 
 
 
@@ -139,22 +150,440 @@ __webpack_require__.r(__webpack_exports__);
 
 class HomeModule {
 }
-HomeModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineNgModule"]({ type: HomeModule });
-HomeModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineInjector"]({ factory: function HomeModule_Factory(t) { return new (t || HomeModule)(); }, imports: [[
+HomeModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineNgModule"]({ type: HomeModule });
+HomeModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineInjector"]({ factory: function HomeModule_Factory(t) { return new (t || HomeModule)(); }, imports: [[
             _angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"],
             _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_3__["MatGridListModule"],
             _angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCardModule"],
-            _home_routing_module__WEBPACK_IMPORTED_MODULE_6__["HomeRoutingModule"],
+            _home_routing_module__WEBPACK_IMPORTED_MODULE_7__["HomeRoutingModule"],
             _angular_material_button__WEBPACK_IMPORTED_MODULE_1__["MatButtonModule"],
             _angular_material_icon__WEBPACK_IMPORTED_MODULE_4__["MatIconModule"],
+            _thisissoon_angular_inviewport__WEBPACK_IMPORTED_MODULE_5__["InViewportModule"],
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵsetNgModuleScope"](HomeModule, { declarations: [_components_home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"],
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵsetNgModuleScope"](HomeModule, { declarations: [_components_home_home_component__WEBPACK_IMPORTED_MODULE_6__["HomeComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"],
         _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_3__["MatGridListModule"],
         _angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCardModule"],
-        _home_routing_module__WEBPACK_IMPORTED_MODULE_6__["HomeRoutingModule"],
+        _home_routing_module__WEBPACK_IMPORTED_MODULE_7__["HomeRoutingModule"],
         _angular_material_button__WEBPACK_IMPORTED_MODULE_1__["MatButtonModule"],
-        _angular_material_icon__WEBPACK_IMPORTED_MODULE_4__["MatIconModule"]] }); })();
+        _angular_material_icon__WEBPACK_IMPORTED_MODULE_4__["MatIconModule"],
+        _thisissoon_angular_inviewport__WEBPACK_IMPORTED_MODULE_5__["InViewportModule"]] }); })();
 
+
+/***/ }),
+
+/***/ "WihE":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/@thisissoon/angular-inviewport/__ivy_ngcc__/fesm2015/thisissoon-angular-inviewport.js ***!
+  \************************************************************************************************************/
+/*! exports provided: InViewportModule, InViewportDirective, WINDOW_MOCK, WINDOW */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InViewportModule", function() { return InViewportModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InViewportDirective", function() { return InViewportDirective; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WINDOW_MOCK", function() { return WINDOW_MOCK; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WINDOW", function() { return WINDOW; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/** @type {?} */
+
+const WINDOW = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('WINDOW', {
+    providedIn: 'root',
+    factory: (/**
+     * @return {?}
+     */
+    () => window)
+});
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * A simple lightweight library for Angular with that detects when an
+ * element is within the browsers viewport and adds a `in-viewport` or
+ * `not-in-viewport` class to the element.
+ *
+ * \@example
+ * ```html
+ * <p
+ *  class="foo"
+ *  snInViewport
+ *  (inViewportChange)="myEventHandler($event)">
+ *  Amet tempor excepteur occaecat nulla.
+ * </p>
+ * ```
+ */
+// @dynamic
+class InViewportDirective {
+    /**
+     * @param {?} el
+     * @param {?} window
+     */
+    constructor(el, window) {
+        this.el = el;
+        this.window = window;
+        this.inViewportChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.hasIntersectionObserver = this.intersectionObserverFeatureDetection();
+    }
+    /**
+     * @return {?}
+     */
+    get isInViewport() {
+        return this.inViewport;
+    }
+    /**
+     * @return {?}
+     */
+    get isNotInViewport() {
+        return !this.inViewport;
+    }
+    /**
+     * @return {?}
+     */
+    ngOnInit() {
+        if (!this.hasIntersectionObserver) {
+            this.inViewport = true;
+            this.inViewportChange.emit(this.inViewport);
+        }
+    }
+    /**
+     * @return {?}
+     */
+    ngAfterViewInit() {
+        if (this.hasIntersectionObserver) {
+            /** @type {?} */
+            const IntersectionObserver = this.window['IntersectionObserver'];
+            this.observer = new IntersectionObserver(this.intersectionObserverCallback.bind(this), this.inViewportOptions);
+            this.observer.observe(this.el.nativeElement);
+        }
+    }
+    /**
+     * @return {?}
+     */
+    ngOnDestroy() {
+        if (this.observer) {
+            this.observer.unobserve(this.el.nativeElement);
+        }
+    }
+    /**
+     * @param {?} entries
+     * @return {?}
+     */
+    intersectionObserverCallback(entries) {
+        entries.forEach((/**
+         * @param {?} entry
+         * @return {?}
+         */
+        entry => {
+            if (this.inViewport === entry.isIntersecting)
+                return;
+            this.inViewport = entry.isIntersecting;
+            this.inViewportChange.emit(this.inViewport);
+        }));
+    }
+    /**
+     * @private
+     * @return {?}
+     */
+    intersectionObserverFeatureDetection() {
+        // Exits early if all IntersectionObserver and IntersectionObserverEntry
+        // features are natively supported.
+        if ('IntersectionObserver' in this.window &&
+            'IntersectionObserverEntry' in this.window) {
+            // Minimal polyfill for Edge 15's lack of `isIntersecting`
+            // See: https://github.com/w3c/IntersectionObserver/issues/211
+            if (!('isIntersecting' in
+                this.window['IntersectionObserverEntry']['prototype'])) {
+                Object.defineProperty(this.window['IntersectionObserverEntry']['prototype'], 'isIntersecting', {
+                    get: (/**
+                     * @return {?}
+                     */
+                    function () {
+                        return this.intersectionRatio > 0;
+                    })
+                });
+            }
+            return true;
+        }
+        return false;
+    }
+}
+InViewportDirective.ɵfac = function InViewportDirective_Factory(t) { return new (t || InViewportDirective)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](WINDOW)); };
+InViewportDirective.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({ type: InViewportDirective, selectors: [["", "snInViewport", ""]], hostVars: 4, hostBindings: function InViewportDirective_HostBindings(rf, ctx) { if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("sn-viewport--in", ctx.isInViewport)("sn-viewport--out", ctx.isNotInViewport);
+    } }, inputs: { inViewportOptions: "inViewportOptions" }, outputs: { inViewportChange: "inViewportChange" }, exportAs: ["snInViewport"] });
+/** @nocollapse */
+InViewportDirective.ctorParameters = () => [
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] },
+    { type: Window, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [WINDOW,] }] }
+];
+InViewportDirective.propDecorators = {
+    inViewportOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    inViewportChange: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
+    isInViewport: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"], args: ['class.sn-viewport--in',] }],
+    isNotInViewport: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"], args: ['class.sn-viewport--out',] }]
+};
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](InViewportDirective, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"],
+        args: [{
+                selector: '[snInViewport]',
+                exportAs: 'snInViewport'
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] }, { type: Window, decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+                args: [WINDOW]
+            }] }]; }, { inViewportChange: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }], isInViewport: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"],
+            args: ['class.sn-viewport--in']
+        }], isNotInViewport: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"],
+            args: ['class.sn-viewport--out']
+        }], inViewportOptions: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }] }); })();
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/** @type {?} */
+const WINDOW_MOCK_WITHOUT_INTERSECTION_OBSERVER = {
+    closed: null,
+    defaultStatus: null,
+    document: null,
+    frameElement: null,
+    frames: null,
+    history: null,
+    innerHeight: null,
+    innerWidth: null,
+    length: null,
+    localStorage: null,
+    location: null,
+    name: null,
+    navigator: null,
+    opener: null,
+    outerHeight: null,
+    outerWidth: null,
+    pageXOffset: null,
+    pageYOffset: null,
+    parent: null,
+    screen: null,
+    screenLeft: null,
+    screenTop: null,
+    screenX: null,
+    screenY: null,
+    sessionStorage: null,
+    scrollX: null,
+    scrollY: null,
+    self: null,
+    status: null,
+    top: null,
+    addEventListener: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    alert: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    atob: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    blur: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    btoa: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    clearInterval: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    clearTimeout: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    close: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    confirm: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    focus: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    getComputedStyle: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    getSelection: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    matchMedia: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    moveBy: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    moveTo: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    open: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    print: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    prompt: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    resizeBy: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    resizeTo: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    removeEventListener: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    scroll: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    scrollBy: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    scrollTo: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    setInterval: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    setTimeout: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null),
+    stop: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    (...args) => null)
+};
+/** @type {?} */
+const WINDOW_MOCK = Object.assign({}, WINDOW_MOCK_WITHOUT_INTERSECTION_OBSERVER, { IntersectionObserver: (/**
+     * @param {...?} args
+     * @return {?}
+     */
+    function (...args) {
+        this.observe = (/**
+         * @return {?}
+         */
+        () => null);
+        this.unobserve = (/**
+         * @return {?}
+         */
+        () => null);
+    }), IntersectionObserverEntry: class IntersectionObserverEntryMock {
+    } });
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * A simple lightweight library for Angular with other dependencies
+ * that detects when an element is within the browsers viewport and adds a
+ * sn-viewport--in or sn-viewport--out class to the element.
+ */
+class InViewportModule {
+    /**
+     * @return {?}
+     */
+    static forServer() {
+        return {
+            ngModule: InViewportModule,
+            providers: [{ provide: WINDOW, useValue: WINDOW_MOCK }]
+        };
+    }
+}
+InViewportModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: InViewportModule });
+InViewportModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function InViewportModule_Factory(t) { return new (t || InViewportModule)(); } });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](InViewportModule, { declarations: [InViewportDirective], exports: [InViewportDirective] }); })();
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](InViewportModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                declarations: [InViewportDirective],
+                exports: [InViewportDirective]
+            }]
+    }], null, null); })();
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+
+
+//# sourceMappingURL=thisissoon-angular-inviewport.js.map
 
 /***/ }),
 
