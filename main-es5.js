@@ -1,307 +1,139 @@
 (function () {
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
   function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
   function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"], {
     /***/
     0:
-    /*!************************************************!*\
-      !*** multi ./apps/scheibentoenung/src/main.ts ***!
-      \************************************************/
+    /*!**********************************************************!*\
+      !*** multi ./apps/scheibentoenung-schmieder/src/main.ts ***!
+      \**********************************************************/
 
     /*! no static exports found */
 
     /***/
     function _(module, exports, __webpack_require__) {
       module.exports = __webpack_require__(
-      /*! /home/runner/work/code/code/apps/scheibentoenung/src/main.ts */
-      "IMGU");
+      /*! /home/runner/work/scheibentoenung-schmieder/scheibentoenung-schmieder/apps/scheibentoenung-schmieder/src/main.ts */
+      "pE0x");
       /***/
     },
 
     /***/
-    "Co2K":
-    /*!****************************************************!*\
-      !*** ./apps/scheibentoenung/src/app/app.module.ts ***!
-      \****************************************************/
+    "5oqi":
+    /*!**********************************************************************************!*\
+      !*** ./apps/scheibentoenung-schmieder/src/app/services/router-helper.service.ts ***!
+      \**********************************************************************************/
 
-    /*! exports provided: AppModule */
+    /*! exports provided: RouterHelperService */
 
     /***/
-    function Co2K(module, __webpack_exports__, __webpack_require__) {
+    function oqi(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
       /* harmony export (binding) */
 
 
-      __webpack_require__.d(__webpack_exports__, "AppModule", function () {
-        return AppModule;
+      __webpack_require__.d(__webpack_exports__, "RouterHelperService", function () {
+        return RouterHelperService;
       });
       /* harmony import */
 
 
-      var _angular_material_button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! @angular/material/button */
-      "bTqV");
-      /* harmony import */
-
-
-      var _angular_material_card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! @angular/material/card */
-      "Wp6s");
-      /* harmony import */
-
-
-      var _angular_material_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! @angular/material/icon */
-      "NFeN");
-      /* harmony import */
-
-
-      var _angular_material_list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/material/list */
-      "MutI");
-      /* harmony import */
-
-
-      var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! @angular/material/sidenav */
-      "XhcP");
-      /* harmony import */
-
-
-      var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! @angular/material/toolbar */
-      "/t3+");
-      /* harmony import */
-
-
-      var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! @angular/platform-browser */
-      "jhN1");
-      /* harmony import */
-
-
-      var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-      /*! @angular/platform-browser/animations */
-      "R1ws");
-      /* harmony import */
-
-
-      var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/router */
       "tyNb");
       /* harmony import */
 
 
-      var _scullyio_ng_lib__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-      /*! @scullyio/ng-lib */
-      "sbAP");
+      var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! rxjs */
+      "qCKp");
       /* harmony import */
 
 
-      var angular2_cookie_law__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
-      /*! angular2-cookie-law */
-      "5soC");
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! rxjs/operators */
+      "kU1M");
       /* harmony import */
 
 
-      var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
-      /*! ./app.component */
-      "qQHf");
-      /* harmony import */
-
-
-      var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
-      /*! ./components/footer/footer.component */
-      "uyF5");
-      /* harmony import */
-
-
-      var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
-      /*! ./components/navbar/navbar.component */
-      "XZi4");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @angular/core */
       "fXoL");
 
-      var AppModule = function AppModule() {
-        _classCallCheck(this, AppModule);
+      var RouterHelperService = /*#__PURE__*/function () {
+        function RouterHelperService(router, activatedRoute) {
+          _classCallCheck(this, RouterHelperService);
+
+          this.router = router;
+          this.activatedRoute = activatedRoute;
+        }
+
+        _createClass(RouterHelperService, [{
+          key: "getDeepSnapshot",
+          value: function getDeepSnapshot() {
+            var _this = this;
+
+            var activatedRoute = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.activatedRoute;
+            return this.onNavigationEnd().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["switchMap"])(function () {
+              return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(null);
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["startWith"])(this.getDeepCurrentSnapshot(activatedRoute.snapshot)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function () {
+              return _this.getDeepCurrentSnapshot(activatedRoute.snapshot);
+            }));
+          }
+        }, {
+          key: "onNavigationEnd",
+          value: function onNavigationEnd() {
+            return this.getRouterEventByType(_angular_router__WEBPACK_IMPORTED_MODULE_0__["NavigationEnd"]);
+          }
+        }, {
+          key: "getDeepCurrentSnapshot",
+          value: function getDeepCurrentSnapshot(activatedRouteSnapshot) {
+            if (activatedRouteSnapshot.firstChild) {
+              return this.getDeepCurrentSnapshot(activatedRouteSnapshot.firstChild);
+            }
+
+            return activatedRouteSnapshot;
+          }
+        }, {
+          key: "getRouterEventByType",
+          value: function getRouterEventByType(eventType) {
+            return this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (event) {
+              return event instanceof eventType;
+            }));
+          }
+        }]);
+
+        return RouterHelperService;
+      }();
+
+      RouterHelperService.ɵfac = function RouterHelperService_Factory(t) {
+        return new (t || RouterHelperService)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"]));
       };
 
-      AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵdefineNgModule"]({
-        type: AppModule,
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]]
+      RouterHelperService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({
+        token: RouterHelperService,
+        factory: RouterHelperService.ɵfac,
+        providedIn: 'root'
       });
-      AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵdefineInjector"]({
-        factory: function AppModule_Factory(t) {
-          return new (t || AppModule)();
-        },
-        providers: [],
-        imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__["BrowserModule"], _scullyio_ng_lib__WEBPACK_IMPORTED_MODULE_9__["ScullyLibModule"], _angular_router__WEBPACK_IMPORTED_MODULE_8__["RouterModule"].forRoot([{
-          path: 'kontakt',
-          loadChildren: function loadChildren() {
-            return Promise.all(
-            /*! import() | scheibentoenung-schmieder-contact */
-            [__webpack_require__.e("default~scheibentoenung-schmieder-contact~scheibentoenung-schmieder-folien"), __webpack_require__.e("scheibentoenung-schmieder-contact")]).then(__webpack_require__.bind(null,
-            /*! @scheibentoenung-schmieder/contact */
-            "HZzK")).then(function (m) {
-              return m.ContactModule;
-            });
-          }
-        }, {
-          path: 'folien',
-          loadChildren: function loadChildren() {
-            return Promise.all(
-            /*! import() | scheibentoenung-schmieder-folien */
-            [__webpack_require__.e("default~scheibentoenung-schmieder-contact~scheibentoenung-schmieder-folien"), __webpack_require__.e("scheibentoenung-schmieder-folien")]).then(__webpack_require__.bind(null,
-            /*! @scheibentoenung-schmieder/folien */
-            "c3/c")).then(function (m) {
-              return m.FolienModule;
-            });
-          }
-        }, {
-          path: '',
-          pathMatch: 'full',
-          loadChildren: function loadChildren() {
-            return __webpack_require__.e(
-            /*! import() | scheibentoenung-schmieder-home */
-            "scheibentoenung-schmieder-home").then(__webpack_require__.bind(null,
-            /*! @scheibentoenung-schmieder/home */
-            "GXy1")).then(function (m) {
-              return m.HomeModule;
-            });
-          }
-        }, {
-          path: '',
-          loadChildren: function loadChildren() {
-            return __webpack_require__.e(
-            /*! import() | scheibentoenung-schmieder-static-pages */
-            "scheibentoenung-schmieder-static-pages").then(__webpack_require__.bind(null,
-            /*! @scheibentoenung-schmieder/static-pages */
-            "VLRE")).then(function (m) {
-              return m.StaticPagesModule;
-            });
-          }
-        }], {
-          anchorScrolling: 'enabled',
-          scrollPositionRestoration: 'enabled'
-        }), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"], _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_5__["MatToolbarModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_0__["MatButtonModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_2__["MatIconModule"], _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_4__["MatSidenavModule"], _angular_material_list__WEBPACK_IMPORTED_MODULE_3__["MatListModule"], angular2_cookie_law__WEBPACK_IMPORTED_MODULE_10__["CookieLawModule"]]]
-      });
-
-      (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵsetNgModuleScope"](AppModule, {
-          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"], _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_13__["NavbarComponent"], _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_12__["FooterComponent"]],
-          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__["BrowserModule"], _scullyio_ng_lib__WEBPACK_IMPORTED_MODULE_9__["ScullyLibModule"], _angular_router__WEBPACK_IMPORTED_MODULE_8__["RouterModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"], _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_5__["MatToolbarModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_0__["MatButtonModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_2__["MatIconModule"], _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_4__["MatSidenavModule"], _angular_material_list__WEBPACK_IMPORTED_MODULE_3__["MatListModule"], angular2_cookie_law__WEBPACK_IMPORTED_MODULE_10__["CookieLawModule"]]
-        });
-      })();
-      /***/
-
-    },
-
-    /***/
-    "IMGU":
-    /*!******************************************!*\
-      !*** ./apps/scheibentoenung/src/main.ts ***!
-      \******************************************/
-
-    /*! no exports provided */
-
-    /***/
-    function IMGU(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony import */
-
-
-      var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! @angular/platform-browser */
-      "jhN1");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-      /* harmony import */
-
-
-      var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./app/app.module */
-      "Co2K");
-      /* harmony import */
-
-
-      var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! ./environments/environment */
-      "Qs7W");
-
-      if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
-      }
-
-      _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["platformBrowser"]().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])["catch"](function (err) {
-        return console.error(err);
-      });
-      /***/
-
-    },
-
-    /***/
-    "Qs7W":
-    /*!**************************************************************!*\
-      !*** ./apps/scheibentoenung/src/environments/environment.ts ***!
-      \**************************************************************/
-
-    /*! exports provided: environment */
-
-    /***/
-    function Qs7W(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "environment", function () {
-        return environment;
-      }); // This file can be replaced during build by using the `fileReplacements` array.
-      // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
-      // The list of file replacements can be found in `angular.json`.
-
-
-      var environment = {
-        production: false
-      };
-      /*
-       * For easier debugging in development mode, you can import the following file
-       * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
-       *
-       * This import should be commented out in production mode because it will have a negative impact
-       * on performance if an error is thrown.
-       */
-
       /***/
     },
 
     /***/
-    "XZi4":
-    /*!****************************************************************************!*\
-      !*** ./apps/scheibentoenung/src/app/components/navbar/navbar.component.ts ***!
-      \****************************************************************************/
+    "EelO":
+    /*!**************************************************************************************!*\
+      !*** ./apps/scheibentoenung-schmieder/src/app/components/navbar/navbar.component.ts ***!
+      \**************************************************************************************/
 
     /*! exports provided: NavbarComponent */
 
     /***/
-    function XZi4(module, __webpack_exports__, __webpack_require__) {
+    function EelO(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -448,10 +280,10 @@
         }, {
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this = this;
+            var _this2 = this;
 
             this.router.events.subscribe(function (event) {
-              _this.sidenavContainer.close();
+              _this2.sidenavContainer.close();
             });
           }
         }]);
@@ -611,117 +443,210 @@
     },
 
     /***/
-    "n2ij":
-    /*!************************************************************************!*\
-      !*** ./apps/scheibentoenung/src/app/services/router-helper.service.ts ***!
-      \************************************************************************/
+    "Kcda":
+    /*!**************************************************************************************!*\
+      !*** ./apps/scheibentoenung-schmieder/src/app/components/footer/footer.component.ts ***!
+      \**************************************************************************************/
 
-    /*! exports provided: RouterHelperService */
+    /*! exports provided: FooterComponent */
 
     /***/
-    function n2ij(module, __webpack_exports__, __webpack_require__) {
+    function Kcda(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
       /* harmony export (binding) */
 
 
-      __webpack_require__.d(__webpack_exports__, "RouterHelperService", function () {
-        return RouterHelperService;
+      __webpack_require__.d(__webpack_exports__, "FooterComponent", function () {
+        return FooterComponent;
       });
       /* harmony import */
 
 
-      var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! @angular/router */
-      "tyNb");
-      /* harmony import */
-
-
-      var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! rxjs */
-      "qCKp");
-      /* harmony import */
-
-
-      var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! rxjs/operators */
-      "kU1M");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
       "fXoL");
+      /* harmony import */
 
-      var RouterHelperService = /*#__PURE__*/function () {
-        function RouterHelperService(router, activatedRoute) {
-          _classCallCheck(this, RouterHelperService);
 
-          this.router = router;
-          this.activatedRoute = activatedRoute;
-        }
+      var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/material/toolbar */
+      "/t3+");
+      /* harmony import */
 
-        _createClass(RouterHelperService, [{
-          key: "getDeepSnapshot",
-          value: function getDeepSnapshot() {
-            var _this2 = this;
 
-            var activatedRoute = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.activatedRoute;
-            return this.onNavigationEnd().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["switchMap"])(function () {
-              return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(null);
-            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["startWith"])(this.getDeepCurrentSnapshot(activatedRoute.snapshot)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function () {
-              return _this2.getDeepCurrentSnapshot(activatedRoute.snapshot);
-            }));
-          }
-        }, {
-          key: "onNavigationEnd",
-          value: function onNavigationEnd() {
-            return this.getRouterEventByType(_angular_router__WEBPACK_IMPORTED_MODULE_0__["NavigationEnd"]);
-          }
-        }, {
-          key: "getDeepCurrentSnapshot",
-          value: function getDeepCurrentSnapshot(activatedRouteSnapshot) {
-            if (activatedRouteSnapshot.firstChild) {
-              return this.getDeepCurrentSnapshot(activatedRouteSnapshot.firstChild);
-            }
+      var _angular_material_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/material/button */
+      "bTqV");
+      /* harmony import */
 
-            return activatedRouteSnapshot;
-          }
-        }, {
-          key: "getRouterEventByType",
-          value: function getRouterEventByType(eventType) {
-            return this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (event) {
-              return event instanceof eventType;
-            }));
-          }
-        }]);
 
-        return RouterHelperService;
-      }();
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "tyNb");
 
-      RouterHelperService.ɵfac = function RouterHelperService_Factory(t) {
-        return new (t || RouterHelperService)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"]));
+      var FooterComponent = function FooterComponent() {
+        _classCallCheck(this, FooterComponent);
       };
 
-      RouterHelperService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({
-        token: RouterHelperService,
-        factory: RouterHelperService.ɵfac,
-        providedIn: 'root'
+      FooterComponent.ɵfac = function FooterComponent_Factory(t) {
+        return new (t || FooterComponent)();
+      };
+
+      FooterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+        type: FooterComponent,
+        selectors: [["scheibentoenung-schmieder-footer"]],
+        decls: 13,
+        vars: 0,
+        consts: [[1, "whatsapp"], ["mat-list-ite", "", "href", "https://wa.me/0491739621191?text=Anfrage%20Folie:", 1, "icon"], [1, "icon-whatsapp"], ["color", "primary", 1, "footer"], [1, "list"], ["mat-button", "", "routerLink", "/impressum"], ["mat-button", "", "routerLink", "/kontakt"], ["mat-button", "", "routerLink", "/agb"], ["mat-button", "", "routerLink", "/datenschutz"]],
+        template: function FooterComponent_Template(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "i", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "mat-toolbar", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 4);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "a", 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "Impressum");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "a", 6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "Kontakt");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "a", 7);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "AGB");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "a", 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Datenschutz");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          }
+        },
+        directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_1__["MatToolbar"], _angular_material_button__WEBPACK_IMPORTED_MODULE_2__["MatAnchor"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkWithHref"]],
+        styles: [".list[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n  justify-content: space-around;\n}\n.list[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  flex-direction: column;\n}\n.footer[_ngcontent-%COMP%] {\n  background-color: black;\n  -o-object-fit: cover;\n     object-fit: cover;\n  background-size: cover;\n  transform: translate3d(0px, 0px, 0px);\n}\n.whatsapp[_ngcontent-%COMP%] {\n  position: fixed;\n  right: 10px;\n  bottom: 30%;\n  z-index: 3;\n  font-size: 40px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uL2Zvb3Rlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVFLGFBQUE7RUFDQSxXQUFBO0VBQ0EsNkJBQUE7QUFBRjtBQUNFO0VBQ0Usc0JBQUE7QUFDSjtBQUVBO0VBQ0UsdUJBQUE7RUFDQSxvQkFBQTtLQUFBLGlCQUFBO0VBQ0Esc0JBQUE7RUFDQSxxQ0FBQTtBQUNGO0FBRUE7RUFDRSxlQUFBO0VBQ0EsV0FBQTtFQUNBLFdBQUE7RUFDQSxVQUFBO0VBQ0EsZUFBQTtBQUNGIiwiZmlsZSI6ImZvb3Rlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5saXN0IHtcbiAgLy9wYWRkaW5nOiAyMHB4O1xuICBkaXNwbGF5OiBmbGV4O1xuICB3aWR0aDogMTAwJTtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1hcm91bmQ7XG4gIGEge1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIH1cbn1cbi5mb290ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbiAgb2JqZWN0LWZpdDogY292ZXI7XG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlM2QoMHB4LCAwcHgsIDBweCk7XG59XG5cbi53aGF0c2FwcCB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgcmlnaHQ6IDEwcHg7XG4gIGJvdHRvbTogMzAlO1xuICB6LWluZGV4OiAzO1xuICBmb250LXNpemU6IDQwcHg7XG59XG4iXX0= */"]
       });
       /***/
     },
 
     /***/
-    "qQHf":
-    /*!*******************************************************!*\
-      !*** ./apps/scheibentoenung/src/app/app.component.ts ***!
-      \*******************************************************/
+    "UExW":
+    /*!************************************************************************!*\
+      !*** ./apps/scheibentoenung-schmieder/src/environments/environment.ts ***!
+      \************************************************************************/
+
+    /*! exports provided: environment */
+
+    /***/
+    function UExW(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "environment", function () {
+        return environment;
+      }); // This file can be replaced during build by using the `fileReplacements` array.
+      // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
+      // The list of file replacements can be found in `angular.json`.
+
+
+      var environment = {
+        production: false
+      };
+      /*
+       * For easier debugging in development mode, you can import the following file
+       * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
+       *
+       * This import should be commented out in production mode because it will have a negative impact
+       * on performance if an error is thrown.
+       */
+
+      /***/
+    },
+
+    /***/
+    "pE0x":
+    /*!****************************************************!*\
+      !*** ./apps/scheibentoenung-schmieder/src/main.ts ***!
+      \****************************************************/
+
+    /*! no exports provided */
+
+    /***/
+    function pE0x(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony import */
+
+
+      var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/platform-browser */
+      "jhN1");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+      /* harmony import */
+
+
+      var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./app/app.module */
+      "u+Jn");
+      /* harmony import */
+
+
+      var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! ./environments/environment */
+      "UExW");
+
+      if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
+      }
+
+      _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["platformBrowser"]().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])["catch"](function (err) {
+        return console.error(err);
+      });
+      /***/
+
+    },
+
+    /***/
+    "qEWt":
+    /*!*****************************************************************!*\
+      !*** ./apps/scheibentoenung-schmieder/src/app/app.component.ts ***!
+      \*****************************************************************/
 
     /*! exports provided: AppComponent */
 
     /***/
-    function qQHf(module, __webpack_exports__, __webpack_require__) {
+    function qEWt(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -766,7 +691,7 @@
 
       var _services_router_helper_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! ./services/router-helper.service */
-      "n2ij");
+      "5oqi");
       /* harmony import */
 
 
@@ -778,13 +703,13 @@
 
       var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! ./components/navbar/navbar.component */
-      "XZi4");
+      "EelO");
       /* harmony import */
 
 
       var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! ./components/footer/footer.component */
-      "uyF5");
+      "Kcda");
       /* harmony import */
 
 
@@ -937,112 +862,187 @@
     },
 
     /***/
-    "uyF5":
-    /*!****************************************************************************!*\
-      !*** ./apps/scheibentoenung/src/app/components/footer/footer.component.ts ***!
-      \****************************************************************************/
+    "u+Jn":
+    /*!**************************************************************!*\
+      !*** ./apps/scheibentoenung-schmieder/src/app/app.module.ts ***!
+      \**************************************************************/
 
-    /*! exports provided: FooterComponent */
+    /*! exports provided: AppModule */
 
     /***/
-    function uyF5(module, __webpack_exports__, __webpack_require__) {
+    function uJn(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
       /* harmony export (binding) */
 
 
-      __webpack_require__.d(__webpack_exports__, "FooterComponent", function () {
-        return FooterComponent;
+      __webpack_require__.d(__webpack_exports__, "AppModule", function () {
+        return AppModule;
       });
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-      /* harmony import */
-
-
-      var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! @angular/material/toolbar */
-      "/t3+");
-      /* harmony import */
-
-
-      var _angular_material_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var _angular_material_button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/material/button */
       "bTqV");
       /* harmony import */
 
 
-      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _angular_material_card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/material/card */
+      "Wp6s");
+      /* harmony import */
+
+
+      var _angular_material_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/material/icon */
+      "NFeN");
+      /* harmony import */
+
+
+      var _angular_material_list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/material/list */
+      "MutI");
+      /* harmony import */
+
+
+      var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! @angular/material/sidenav */
+      "XhcP");
+      /* harmony import */
+
+
+      var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! @angular/material/toolbar */
+      "/t3+");
+      /* harmony import */
+
+
+      var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! @angular/platform-browser */
+      "jhN1");
+      /* harmony import */
+
+
+      var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @angular/platform-browser/animations */
+      "R1ws");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! @angular/router */
       "tyNb");
+      /* harmony import */
 
-      var FooterComponent = function FooterComponent() {
-        _classCallCheck(this, FooterComponent);
+
+      var _scullyio_ng_lib__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! @scullyio/ng-lib */
+      "sbAP");
+      /* harmony import */
+
+
+      var angular2_cookie_law__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      /*! angular2-cookie-law */
+      "5soC");
+      /* harmony import */
+
+
+      var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      /*! ./app.component */
+      "qEWt");
+      /* harmony import */
+
+
+      var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      /*! ./components/footer/footer.component */
+      "Kcda");
+      /* harmony import */
+
+
+      var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      /*! ./components/navbar/navbar.component */
+      "EelO");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+
+      var AppModule = function AppModule() {
+        _classCallCheck(this, AppModule);
       };
 
-      FooterComponent.ɵfac = function FooterComponent_Factory(t) {
-        return new (t || FooterComponent)();
-      };
-
-      FooterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
-        type: FooterComponent,
-        selectors: [["scheibentoenung-schmieder-footer"]],
-        decls: 13,
-        vars: 0,
-        consts: [[1, "whatsapp"], ["mat-list-ite", "", "href", "https://wa.me/0491739621191?text=Anfrage%20Folie:", 1, "icon"], [1, "icon-whatsapp"], ["color", "primary", 1, "footer"], [1, "list"], ["mat-button", "", "routerLink", "/impressum"], ["mat-button", "", "routerLink", "/kontakt"], ["mat-button", "", "routerLink", "/agb"], ["mat-button", "", "routerLink", "/datenschutz"]],
-        template: function FooterComponent_Template(rf, ctx) {
-          if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 1);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "i", 2);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "mat-toolbar", 3);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 4);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "a", 5);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "Impressum");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "a", 6);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "Kontakt");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "a", 7);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "AGB");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "a", 8);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Datenschutz");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-          }
-        },
-        directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_1__["MatToolbar"], _angular_material_button__WEBPACK_IMPORTED_MODULE_2__["MatAnchor"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkWithHref"]],
-        styles: [".list[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n  justify-content: space-around;\n}\n.list[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  flex-direction: column;\n}\n.footer[_ngcontent-%COMP%] {\n  background-color: black;\n  -o-object-fit: cover;\n     object-fit: cover;\n  background-size: cover;\n  transform: translate3d(0px, 0px, 0px);\n}\n.whatsapp[_ngcontent-%COMP%] {\n  position: fixed;\n  right: 10px;\n  bottom: 30%;\n  z-index: 3;\n  font-size: 40px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uL2Zvb3Rlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVFLGFBQUE7RUFDQSxXQUFBO0VBQ0EsNkJBQUE7QUFBRjtBQUNFO0VBQ0Usc0JBQUE7QUFDSjtBQUVBO0VBQ0UsdUJBQUE7RUFDQSxvQkFBQTtLQUFBLGlCQUFBO0VBQ0Esc0JBQUE7RUFDQSxxQ0FBQTtBQUNGO0FBRUE7RUFDRSxlQUFBO0VBQ0EsV0FBQTtFQUNBLFdBQUE7RUFDQSxVQUFBO0VBQ0EsZUFBQTtBQUNGIiwiZmlsZSI6ImZvb3Rlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5saXN0IHtcbiAgLy9wYWRkaW5nOiAyMHB4O1xuICBkaXNwbGF5OiBmbGV4O1xuICB3aWR0aDogMTAwJTtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1hcm91bmQ7XG4gIGEge1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIH1cbn1cbi5mb290ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbiAgb2JqZWN0LWZpdDogY292ZXI7XG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlM2QoMHB4LCAwcHgsIDBweCk7XG59XG5cbi53aGF0c2FwcCB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgcmlnaHQ6IDEwcHg7XG4gIGJvdHRvbTogMzAlO1xuICB6LWluZGV4OiAzO1xuICBmb250LXNpemU6IDQwcHg7XG59XG4iXX0= */"]
+      AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵdefineNgModule"]({
+        type: AppModule,
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]]
       });
+      AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵdefineInjector"]({
+        factory: function AppModule_Factory(t) {
+          return new (t || AppModule)();
+        },
+        providers: [],
+        imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__["BrowserModule"], _scullyio_ng_lib__WEBPACK_IMPORTED_MODULE_9__["ScullyLibModule"], _angular_router__WEBPACK_IMPORTED_MODULE_8__["RouterModule"].forRoot([{
+          path: 'kontakt',
+          loadChildren: function loadChildren() {
+            return Promise.all(
+            /*! import() | scheibentoenung-schmieder-contact */
+            [__webpack_require__.e("default~scheibentoenung-schmieder-contact~scheibentoenung-schmieder-folien"), __webpack_require__.e("scheibentoenung-schmieder-contact")]).then(__webpack_require__.bind(null,
+            /*! @scheibentoenung-schmieder/contact */
+            "HZzK")).then(function (m) {
+              return m.ContactModule;
+            });
+          }
+        }, {
+          path: 'folien',
+          loadChildren: function loadChildren() {
+            return Promise.all(
+            /*! import() | scheibentoenung-schmieder-folien */
+            [__webpack_require__.e("default~scheibentoenung-schmieder-contact~scheibentoenung-schmieder-folien"), __webpack_require__.e("scheibentoenung-schmieder-folien")]).then(__webpack_require__.bind(null,
+            /*! @scheibentoenung-schmieder/folien */
+            "c3/c")).then(function (m) {
+              return m.FolienModule;
+            });
+          }
+        }, {
+          path: '',
+          pathMatch: 'full',
+          loadChildren: function loadChildren() {
+            return __webpack_require__.e(
+            /*! import() | scheibentoenung-schmieder-home */
+            "scheibentoenung-schmieder-home").then(__webpack_require__.bind(null,
+            /*! @scheibentoenung-schmieder/home */
+            "GXy1")).then(function (m) {
+              return m.HomeModule;
+            });
+          }
+        }, {
+          path: '',
+          loadChildren: function loadChildren() {
+            return __webpack_require__.e(
+            /*! import() | scheibentoenung-schmieder-static-pages */
+            "scheibentoenung-schmieder-static-pages").then(__webpack_require__.bind(null,
+            /*! @scheibentoenung-schmieder/static-pages */
+            "VLRE")).then(function (m) {
+              return m.StaticPagesModule;
+            });
+          }
+        }], {
+          anchorScrolling: 'enabled',
+          scrollPositionRestoration: 'enabled'
+        }), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"], _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_5__["MatToolbarModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_0__["MatButtonModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_2__["MatIconModule"], _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_4__["MatSidenavModule"], _angular_material_list__WEBPACK_IMPORTED_MODULE_3__["MatListModule"], angular2_cookie_law__WEBPACK_IMPORTED_MODULE_10__["CookieLawModule"]]]
+      });
+
+      (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵsetNgModuleScope"](AppModule, {
+          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"], _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_13__["NavbarComponent"], _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_12__["FooterComponent"]],
+          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__["BrowserModule"], _scullyio_ng_lib__WEBPACK_IMPORTED_MODULE_9__["ScullyLibModule"], _angular_router__WEBPACK_IMPORTED_MODULE_8__["RouterModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"], _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_5__["MatToolbarModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_0__["MatButtonModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_2__["MatIconModule"], _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_4__["MatSidenavModule"], _angular_material_list__WEBPACK_IMPORTED_MODULE_3__["MatListModule"], angular2_cookie_law__WEBPACK_IMPORTED_MODULE_10__["CookieLawModule"]]
+        });
+      })();
       /***/
+
     },
 
     /***/
