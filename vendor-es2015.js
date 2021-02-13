@@ -628,13 +628,14 @@ class _RecycleViewRepeaterStrategy {
         for (const view of this._viewCache) {
             view.destroy();
         }
+        this._viewCache = [];
     }
     /**
      * Inserts a view for a new item, either from the cache or by creating a new
      * one. Returns `undefined` if the item was inserted into a cached view.
      */
     _insertView(viewArgsFactory, currentIndex, viewContainerRef, value) {
-        let cachedView = this._insertViewFromCache(currentIndex, viewContainerRef);
+        const cachedView = this._insertViewFromCache(currentIndex, viewContainerRef);
         if (cachedView) {
             cachedView.context.$implicit = value;
             return undefined;
@@ -644,7 +645,7 @@ class _RecycleViewRepeaterStrategy {
     }
     /** Detaches the view at the given index and inserts into the view cache. */
     _detachAndCacheView(index, viewContainerRef) {
-        const detachedView = this._detachView(index, viewContainerRef);
+        const detachedView = viewContainerRef.detach(index);
         this._maybeCacheView(detachedView, viewContainerRef);
     }
     /** Moves view at the previous index to the current index. */
@@ -683,10 +684,6 @@ class _RecycleViewRepeaterStrategy {
             viewContainerRef.insert(cachedView, index);
         }
         return cachedView || null;
-    }
-    /** Detaches the embedded view at the given index. */
-    _detachView(index, viewContainerRef) {
-        return viewContainerRef.detach(index);
     }
 }
 
@@ -12026,7 +12023,7 @@ function MatOption_span_3_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("(", ctx_r1.group.label, ")");
 } }
 const _c2 = ["*"];
-const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('11.1.1');
+const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('11.2.0');
 
 /**
  * @license
@@ -12060,7 +12057,7 @@ AnimationDurations.EXITING = '195ms';
 // i.e. avoid core to depend on the @angular/material primary entry-point
 // Can be removed once the Material primary entry-point no longer
 // re-exports all secondary entry-points
-const VERSION$1 = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('11.1.1');
+const VERSION$1 = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('11.2.0');
 /** @docs-private */
 function MATERIAL_SANITY_CHECKS_FACTORY() {
     return true;
@@ -88297,7 +88294,7 @@ __webpack_require__.r(__webpack_exports__);
  * found in the LICENSE file at https://angular.io/license
  */
 /** Current version of the Angular Component Development Kit. */
-const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('11.1.1');
+const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('11.2.0');
 
 /**
  * @license

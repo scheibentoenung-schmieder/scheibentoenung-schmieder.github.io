@@ -216,9 +216,9 @@
 
         _createClass(Portal, [{
           key: "attach",
-
+          value:
           /** Attach this portal to a host. */
-          value: function attach(host) {
+          function attach(host) {
             if (typeof ngDevMode === 'undefined' || ngDevMode) {
               if (host == null) {
                 throwNullPortalOutletError();
@@ -249,19 +249,19 @@
           /** Whether this portal is attached to a host. */
 
         }, {
-          key: "setAttachedHost",
-
+          key: "isAttached",
+          get: function get() {
+            return this._attachedHost != null;
+          }
           /**
            * Sets the PortalOutlet reference without performing `attach()`. This is used directly by
            * the PortalOutlet when it is performing an `attach()` or `detach()`.
            */
+
+        }, {
+          key: "setAttachedHost",
           value: function setAttachedHost(host) {
             this._attachedHost = host;
-          }
-        }, {
-          key: "isAttached",
-          get: function get() {
-            return this._attachedHost != null;
           }
         }]);
 
@@ -315,13 +315,18 @@
         }
 
         _createClass(TemplatePortal, [{
-          key: "attach",
-
+          key: "origin",
+          get: function get() {
+            return this.templateRef.elementRef;
+          }
           /**
            * Attach the portal to the provided `PortalOutlet`.
            * When a context is provided it will override the `context` property of the `TemplatePortal`
            * instance.
            */
+
+        }, {
+          key: "attach",
           value: function attach(host) {
             var context = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.context;
             this.context = context;
@@ -332,11 +337,6 @@
           value: function detach() {
             this.context = undefined;
             return _get(_getPrototypeOf(TemplatePortal.prototype), "detach", this).call(this);
-          }
-        }, {
-          key: "origin",
-          get: function get() {
-            return this.templateRef.elementRef;
           }
         }]);
 
@@ -868,6 +868,37 @@
 
 
         _createClass(CdkPortalOutlet, [{
+          key: "portal",
+          get: function get() {
+            return this._attachedPortal;
+          },
+          set: function set(portal) {
+            // Ignore the cases where the `portal` is set to a falsy value before the lifecycle hooks have
+            // run. This handles the cases where the user might do something like `<div cdkPortalOutlet>`
+            // and attach a portal programmatically in the parent component. When Angular does the first CD
+            // round, it will fire the setter with empty string, causing the user's content to be cleared.
+            if (this.hasAttached() && !portal && !this._isInitialized) {
+              return;
+            }
+
+            if (this.hasAttached()) {
+              _get(_getPrototypeOf(CdkPortalOutlet.prototype), "detach", this).call(this);
+            }
+
+            if (portal) {
+              _get(_getPrototypeOf(CdkPortalOutlet.prototype), "attach", this).call(this, portal);
+            }
+
+            this._attachedPortal = portal;
+          }
+          /** Component or view reference that is attached to the portal. */
+
+        }, {
+          key: "attachedRef",
+          get: function get() {
+            return this._attachedRef;
+          }
+        }, {
           key: "ngOnInit",
           value: function ngOnInit() {
             this._isInitialized = true;
@@ -946,37 +977,6 @@
             // node being the root. Use the comment's parent node if that is the case.
 
             return nativeElement.nodeType === nativeElement.ELEMENT_NODE ? nativeElement : nativeElement.parentNode;
-          }
-        }, {
-          key: "portal",
-          get: function get() {
-            return this._attachedPortal;
-          },
-          set: function set(portal) {
-            // Ignore the cases where the `portal` is set to a falsy value before the lifecycle hooks have
-            // run. This handles the cases where the user might do something like `<div cdkPortalOutlet>`
-            // and attach a portal programmatically in the parent component. When Angular does the first CD
-            // round, it will fire the setter with empty string, causing the user's content to be cleared.
-            if (this.hasAttached() && !portal && !this._isInitialized) {
-              return;
-            }
-
-            if (this.hasAttached()) {
-              _get(_getPrototypeOf(CdkPortalOutlet.prototype), "detach", this).call(this);
-            }
-
-            if (portal) {
-              _get(_getPrototypeOf(CdkPortalOutlet.prototype), "attach", this).call(this, portal);
-            }
-
-            this._attachedPortal = portal;
-          }
-          /** Component or view reference that is attached to the portal. */
-
-        }, {
-          key: "attachedRef",
-          get: function get() {
-            return this._attachedRef;
           }
         }]);
 
