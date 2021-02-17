@@ -694,7 +694,8 @@ class _MatSelectBase extends _MatSelectMixinBase {
     /** Value of the select control. */
     get value() { return this._value; }
     set value(newValue) {
-        if (newValue !== this._value) {
+        // Always re-assign an array, because it might have been mutated.
+        if (newValue !== this._value || (this._multiple && Array.isArray(newValue))) {
             if (this.options) {
                 this._setSelectionByValue(newValue);
             }
@@ -9375,7 +9376,7 @@ MatInput.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("focus", function MatInput_focus_HostBindingHandler() { return ctx._focusChanged(true); })("blur", function MatInput_blur_HostBindingHandler() { return ctx._focusChanged(false); })("input", function MatInput_input_HostBindingHandler() { return ctx._onInput(); });
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵhostProperty"]("disabled", ctx.disabled)("required", ctx.required);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵattribute"]("id", ctx.id)("data-placeholder", ctx.placeholder)("readonly", ctx.readonly && !ctx._isNativeSelect || null)("aria-invalid", ctx.errorState)("aria-required", ctx.required.toString());
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵattribute"]("id", ctx.id)("data-placeholder", ctx.placeholder)("readonly", ctx.readonly && !ctx._isNativeSelect || null)("aria-invalid", ctx.errorState && !ctx.empty)("aria-required", ctx.required);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("mat-input-server", ctx._isServer);
     } }, inputs: { id: "id", disabled: "disabled", required: "required", type: "type", value: "value", readonly: "readonly", placeholder: "placeholder", errorStateMatcher: "errorStateMatcher", userAriaDescribedBy: ["aria-describedby", "userAriaDescribedBy"] }, exportAs: ["matInput"], features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵProvidersFeature"]([{ provide: _angular_material_form_field__WEBPACK_IMPORTED_MODULE_6__["MatFormFieldControl"], useExisting: MatInput }]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵInheritDefinitionFeature"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]] });
 MatInput.ctorParameters = () => [
@@ -9425,8 +9426,10 @@ MatInput.propDecorators = {
                     '[disabled]': 'disabled',
                     '[required]': 'required',
                     '[attr.readonly]': 'readonly && !_isNativeSelect || null',
-                    '[attr.aria-invalid]': 'errorState',
-                    '[attr.aria-required]': 'required.toString()'
+                    // Only mark the input as invalid for assistive technology if it has a value since the
+                    // state usually overlaps with `aria-required` when the input is empty and can be redundant.
+                    '[attr.aria-invalid]': 'errorState && !empty',
+                    '[attr.aria-required]': 'required'
                 },
                 providers: [{ provide: _angular_material_form_field__WEBPACK_IMPORTED_MODULE_6__["MatFormFieldControl"], useExisting: MatInput }]
             }]

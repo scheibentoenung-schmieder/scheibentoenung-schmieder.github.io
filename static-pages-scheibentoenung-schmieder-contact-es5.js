@@ -1192,7 +1192,8 @@
             return this._value;
           },
           set: function set(newValue) {
-            if (newValue !== this._value) {
+            // Always re-assign an array, because it might have been mutated.
+            if (newValue !== this._value || this._multiple && Array.isArray(newValue)) {
               if (this.options) {
                 this._setSelectionByValue(newValue);
               }
@@ -14882,7 +14883,7 @@
           if (rf & 2) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵhostProperty"]("disabled", ctx.disabled)("required", ctx.required);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵattribute"]("id", ctx.id)("data-placeholder", ctx.placeholder)("readonly", ctx.readonly && !ctx._isNativeSelect || null)("aria-invalid", ctx.errorState)("aria-required", ctx.required.toString());
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵattribute"]("id", ctx.id)("data-placeholder", ctx.placeholder)("readonly", ctx.readonly && !ctx._isNativeSelect || null)("aria-invalid", ctx.errorState && !ctx.empty)("aria-required", ctx.required);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("mat-input-server", ctx._isServer);
           }
@@ -15018,8 +15019,10 @@
               '[disabled]': 'disabled',
               '[required]': 'required',
               '[attr.readonly]': 'readonly && !_isNativeSelect || null',
-              '[attr.aria-invalid]': 'errorState',
-              '[attr.aria-required]': 'required.toString()'
+              // Only mark the input as invalid for assistive technology if it has a value since the
+              // state usually overlaps with `aria-required` when the input is empty and can be redundant.
+              '[attr.aria-invalid]': 'errorState && !empty',
+              '[attr.aria-required]': 'required'
             },
             providers: [{
               provide: _angular_material_form_field__WEBPACK_IMPORTED_MODULE_6__["MatFormFieldControl"],

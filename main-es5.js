@@ -437,9 +437,31 @@
       /* harmony import */
 
 
-      var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common */
+      "ofXK");
+      /* harmony import */
+
+
+      var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/material/toolbar */
       "/t3+");
+
+      function FooterComponent_a_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "i", 5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("href", "https://wa.me/" + ctx_r0.whatsapp.phone + "?text=" + ctx_r0.whatsapp.message, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+        }
+      }
 
       var _c0 = [[["", "links", ""]]];
       var _c1 = ["[links]"];
@@ -455,36 +477,41 @@
       FooterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
         type: FooterComponent,
         selectors: [["static-pages-shared-ui-footer"]],
+        inputs: {
+          whatsapp: "whatsapp"
+        },
         ngContentSelectors: _c1,
-        decls: 6,
-        vars: 0,
-        consts: [[1, "whatsapp"], ["mat-list-ite", "", "href", "https://wa.me/0491739621191?text=Anfrage%20Folie:", 1, "icon"], [1, "icon-whatsapp"], ["color", "primary", 1, "footer"], [1, "list"]],
+        decls: 5,
+        vars: 1,
+        consts: [[1, "whatsapp"], ["mat-list-ite", "", "class", "icon", 3, "href", 4, "ngIf"], ["color", "primary", 1, "footer"], [1, "list"], ["mat-list-ite", "", 1, "icon", 3, "href"], [1, "icon-whatsapp"]],
         template: function FooterComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵprojectionDef"](_c0);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 1);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "i", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, FooterComponent_a_1_Template, 2, 1, "a", 1);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-toolbar", 2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "mat-toolbar", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 4);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵprojection"](5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵprojection"](4);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
           }
+
+          if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.whatsapp);
+          }
         },
-        directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_1__["MatToolbar"]],
+        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_2__["MatToolbar"]],
         styles: [".list[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n  justify-content: space-around;\n}\n.list[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  flex-direction: column;\n  color: white;\n  text-decoration: none;\n}\n.footer[_ngcontent-%COMP%] {\n  background-color: black;\n  -o-object-fit: cover;\n     object-fit: cover;\n  background-size: cover;\n  transform: translate3d(0px, 0px, 0px);\n}\n.whatsapp[_ngcontent-%COMP%] {\n  position: fixed;\n  right: 10px;\n  bottom: 30%;\n  z-index: 3;\n  font-size: 40px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uL2Zvb3Rlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVFLGFBQUE7RUFDQSxXQUFBO0VBQ0EsNkJBQUE7QUFBRjtBQUNFO0VBQ0Usc0JBQUE7RUFDQSxZQUFBO0VBQ0EscUJBQUE7QUFDSjtBQUVBO0VBQ0UsdUJBQUE7RUFDQSxvQkFBQTtLQUFBLGlCQUFBO0VBQ0Esc0JBQUE7RUFDQSxxQ0FBQTtBQUNGO0FBRUE7RUFDRSxlQUFBO0VBQ0EsV0FBQTtFQUNBLFdBQUE7RUFDQSxVQUFBO0VBQ0EsZUFBQTtBQUNGIiwiZmlsZSI6ImZvb3Rlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5saXN0IHtcbiAgLy9wYWRkaW5nOiAyMHB4O1xuICBkaXNwbGF5OiBmbGV4O1xuICB3aWR0aDogMTAwJTtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1hcm91bmQ7XG4gIGEge1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgfVxufVxuLmZvb3RlciB7XG4gIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xuICBvYmplY3QtZml0OiBjb3ZlcjtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUzZCgwcHgsIDBweCwgMHB4KTtcbn1cblxuLndoYXRzYXBwIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICByaWdodDogMTBweDtcbiAgYm90dG9tOiAzMCU7XG4gIHotaW5kZXg6IDM7XG4gIGZvbnQtc2l6ZTogNDBweDtcbn1cbiJdfQ== */"]
       });
       /***/
@@ -667,6 +694,13 @@
         };
       };
 
+      var _c4 = function _c4() {
+        return {
+          phone: "0491739621191",
+          message: "Anfrage%20Folie"
+        };
+      };
+
       var AppComponent = /*#__PURE__*/function () {
         function AppComponent(router, routerHelperService, titleService, metaService) {
           _classCallCheck(this, AppComponent);
@@ -725,8 +759,8 @@
         type: AppComponent,
         selectors: [["scheibentoenung-schmieder-root"]],
         decls: 25,
-        vars: 20,
-        consts: [[1, "navbar", 3, "links", "contact"], ["logo", "", "src", "/assets/img/logo.png", 1, "logo"], ["header", ""], [1, "cover"], [1, "container"], [1, "content"], [1, "footer"], ["mat-button", "", "links", "", "routerLink", "/impressum"], ["mat-button", "", "links", "", "routerLink", "/kontakt"], ["mat-button", "", "links", "", "routerLink", "/agb"], ["mat-button", "", "links", "", "routerLink", "/datenschutz"], ["routerLink", "/datenschutz"]],
+        vars: 22,
+        consts: [[1, "navbar", 3, "links", "contact"], ["logo", "", "src", "/assets/img/logo.png", 1, "logo"], ["header", ""], [1, "cover"], [1, "container"], [1, "content"], [1, "footer"], [3, "whatsapp"], ["mat-button", "", "links", "", "routerLink", "/impressum"], ["mat-button", "", "links", "", "routerLink", "/kontakt"], ["mat-button", "", "links", "", "routerLink", "/agb"], ["mat-button", "", "links", "", "routerLink", "/datenschutz"], ["routerLink", "/datenschutz"]],
         template: function AppComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "static-pages-shared-ui-navbar", 0);
@@ -761,27 +795,27 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](11, "div", 6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](12, "static-pages-shared-ui-footer");
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](12, "static-pages-shared-ui-footer", 7);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](13, "a", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](13, "a", 8);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](14, "Impressum");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](15, "a", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](15, "a", 9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](16, "Kontakt");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](17, "a", 9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](17, "a", 10);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](18, "AGB");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](19, "a", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](19, "a", 11);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](20, "Datenschutz");
 
@@ -795,7 +829,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](22, " Diese Website verwendet Cookies. Durch die Nutzung erkl\xE4rst du dich mit dem Einsatz von Cookies einverstanden.");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](23, "a", 11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](23, "a", 12);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](24, "Datenschutz");
 
@@ -809,17 +843,21 @@
             var tmp_3_0 = null;
             var tmp_4_0 = null;
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("links", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction2"](16, _c2, _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](14, _c0), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](15, _c1)))("contact", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](19, _c3));
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("links", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction2"](17, _c2, _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](15, _c0), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](16, _c1)))("contact", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](20, _c3));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵstyleProp"]("background-image", "url(/assets/img/cover/" + (((tmp_2_0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind1"](5, 8, ctx.meta$)) == null ? null : tmp_2_0.cover) || "home.jpg") + ")");
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵstyleProp"]("background-image", "url(/assets/img/cover/" + (((tmp_2_0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind1"](5, 9, ctx.meta$)) == null ? null : tmp_2_0.cover) || "home.jpg") + ")");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵclassProp"]("full", (tmp_3_0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind1"](6, 10, ctx.data$)) == null ? null : tmp_3_0.fullSize);
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵclassProp"]("full", (tmp_3_0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind1"](6, 11, ctx.data$)) == null ? null : tmp_3_0.fullSize);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵclassProp"]("fullSize", (tmp_4_0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind1"](9, 12, ctx.meta$)) == null ? null : tmp_4_0.fullSize);
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵclassProp"]("fullSize", (tmp_4_0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind1"](9, 13, ctx.meta$)) == null ? null : tmp_4_0.fullSize);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](4);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("whatsapp", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](21, _c4));
           }
         },
         directives: [_libs_shared_ui_src_lib_components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_4__["NavbarComponent"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterOutlet"], _libs_shared_ui_src_lib_components_footer_footer_component__WEBPACK_IMPORTED_MODULE_5__["FooterComponent"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatAnchor"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"], angular2_cookie_law__WEBPACK_IMPORTED_MODULE_7__["CookieLawContainerComponent"]],
@@ -869,37 +907,31 @@
       /* harmony import */
 
 
-      var _scullyio_ng_lib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @scullyio/ng-lib */
-      "sbAP");
-      /* harmony import */
-
-
-      var _static_pages_shared_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _static_pages_shared_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @static-pages/shared/ui */
       "bsWm");
       /* harmony import */
 
 
-      var _static_pages_shared_util_router_helper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var _static_pages_shared_util_router_helper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! @static-pages/shared/util-router-helper */
       "0Rew");
       /* harmony import */
 
 
-      var angular2_cookie_law__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var angular2_cookie_law__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! angular2-cookie-law */
       "5soC");
       /* harmony import */
 
 
-      var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! ./app.component */
       "qEWt");
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! @angular/core */
       "fXoL");
 
@@ -907,16 +939,16 @@
         _classCallCheck(this, AppModule);
       };
 
-      AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineNgModule"]({
+      AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineNgModule"]({
         type: AppModule,
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
       });
-      AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineInjector"]({
+      AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineInjector"]({
         factory: function AppModule_Factory(t) {
           return new (t || AppModule)();
         },
         providers: [],
-        imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _scullyio_ng_lib__WEBPACK_IMPORTED_MODULE_3__["ScullyLibModule"], _static_pages_shared_ui__WEBPACK_IMPORTED_MODULE_4__["UiModule"], _static_pages_shared_util_router_helper__WEBPACK_IMPORTED_MODULE_5__["UtilRouterHelperModule"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot([{
+        imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _static_pages_shared_ui__WEBPACK_IMPORTED_MODULE_3__["UiModule"], _static_pages_shared_util_router_helper__WEBPACK_IMPORTED_MODULE_4__["UtilRouterHelperModule"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot([{
           path: 'kontakt',
           loadChildren: function loadChildren() {
             return Promise.all(
@@ -964,13 +996,13 @@
         }], {
           anchorScrolling: 'enabled',
           scrollPositionRestoration: 'enabled'
-        }), angular2_cookie_law__WEBPACK_IMPORTED_MODULE_6__["CookieLawModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_0__["MatButtonModule"]]]
+        }), angular2_cookie_law__WEBPACK_IMPORTED_MODULE_5__["CookieLawModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_0__["MatButtonModule"]]]
       });
 
       (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵsetNgModuleScope"](AppModule, {
-          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
-          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _scullyio_ng_lib__WEBPACK_IMPORTED_MODULE_3__["ScullyLibModule"], _static_pages_shared_ui__WEBPACK_IMPORTED_MODULE_4__["UiModule"], _static_pages_shared_util_router_helper__WEBPACK_IMPORTED_MODULE_5__["UtilRouterHelperModule"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"], angular2_cookie_law__WEBPACK_IMPORTED_MODULE_6__["CookieLawModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_0__["MatButtonModule"]]
+        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵsetNgModuleScope"](AppModule, {
+          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]],
+          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _static_pages_shared_ui__WEBPACK_IMPORTED_MODULE_3__["UiModule"], _static_pages_shared_util_router_helper__WEBPACK_IMPORTED_MODULE_4__["UtilRouterHelperModule"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"], angular2_cookie_law__WEBPACK_IMPORTED_MODULE_5__["CookieLawModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_0__["MatButtonModule"]]
         });
       })();
       /***/
