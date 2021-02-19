@@ -1,5 +1,686 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static-pages-scheibentoenung-schmieder-contact"],{
 
+/***/ "+rOU":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/portal.js ***!
+  \*******************************************************************/
+/*! exports provided: BasePortalHost, BasePortalOutlet, CdkPortal, CdkPortalOutlet, ComponentPortal, DomPortal, DomPortalHost, DomPortalOutlet, Portal, PortalHostDirective, PortalInjector, PortalModule, TemplatePortal, TemplatePortalDirective */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BasePortalHost", function() { return BasePortalHost; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BasePortalOutlet", function() { return BasePortalOutlet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CdkPortal", function() { return CdkPortal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CdkPortalOutlet", function() { return CdkPortalOutlet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComponentPortal", function() { return ComponentPortal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DomPortal", function() { return DomPortal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DomPortalHost", function() { return DomPortalHost; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DomPortalOutlet", function() { return DomPortalOutlet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Portal", function() { return Portal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PortalHostDirective", function() { return PortalHostDirective; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PortalInjector", function() { return PortalInjector; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PortalModule", function() { return PortalModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TemplatePortal", function() { return TemplatePortal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TemplatePortalDirective", function() { return TemplatePortalDirective; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "ofXK");
+
+
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Throws an exception when attempting to attach a null portal to a host.
+ * @docs-private
+ */
+
+function throwNullPortalError() {
+    throw Error('Must provide a portal to attach');
+}
+/**
+ * Throws an exception when attempting to attach a portal to a host that is already attached.
+ * @docs-private
+ */
+function throwPortalAlreadyAttachedError() {
+    throw Error('Host already has a portal attached');
+}
+/**
+ * Throws an exception when attempting to attach a portal to an already-disposed host.
+ * @docs-private
+ */
+function throwPortalOutletAlreadyDisposedError() {
+    throw Error('This PortalOutlet has already been disposed');
+}
+/**
+ * Throws an exception when attempting to attach an unknown portal type.
+ * @docs-private
+ */
+function throwUnknownPortalTypeError() {
+    throw Error('Attempting to attach an unknown Portal type. BasePortalOutlet accepts either ' +
+        'a ComponentPortal or a TemplatePortal.');
+}
+/**
+ * Throws an exception when attempting to attach a portal to a null host.
+ * @docs-private
+ */
+function throwNullPortalOutletError() {
+    throw Error('Attempting to attach a portal to a null PortalOutlet');
+}
+/**
+ * Throws an exception when attempting to detach a portal that is not attached.
+ * @docs-private
+ */
+function throwNoPortalAttachedError() {
+    throw Error('Attempting to detach a portal that is not attached to a host');
+}
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * A `Portal` is something that you want to render somewhere else.
+ * It can be attach to / detached from a `PortalOutlet`.
+ */
+class Portal {
+    /** Attach this portal to a host. */
+    attach(host) {
+        if (typeof ngDevMode === 'undefined' || ngDevMode) {
+            if (host == null) {
+                throwNullPortalOutletError();
+            }
+            if (host.hasAttached()) {
+                throwPortalAlreadyAttachedError();
+            }
+        }
+        this._attachedHost = host;
+        return host.attach(this);
+    }
+    /** Detach this portal from its host */
+    detach() {
+        let host = this._attachedHost;
+        if (host != null) {
+            this._attachedHost = null;
+            host.detach();
+        }
+        else if (typeof ngDevMode === 'undefined' || ngDevMode) {
+            throwNoPortalAttachedError();
+        }
+    }
+    /** Whether this portal is attached to a host. */
+    get isAttached() {
+        return this._attachedHost != null;
+    }
+    /**
+     * Sets the PortalOutlet reference without performing `attach()`. This is used directly by
+     * the PortalOutlet when it is performing an `attach()` or `detach()`.
+     */
+    setAttachedHost(host) {
+        this._attachedHost = host;
+    }
+}
+/**
+ * A `ComponentPortal` is a portal that instantiates some Component upon attachment.
+ */
+class ComponentPortal extends Portal {
+    constructor(component, viewContainerRef, injector, componentFactoryResolver) {
+        super();
+        this.component = component;
+        this.viewContainerRef = viewContainerRef;
+        this.injector = injector;
+        this.componentFactoryResolver = componentFactoryResolver;
+    }
+}
+/**
+ * A `TemplatePortal` is a portal that represents some embedded template (TemplateRef).
+ */
+class TemplatePortal extends Portal {
+    constructor(template, viewContainerRef, context) {
+        super();
+        this.templateRef = template;
+        this.viewContainerRef = viewContainerRef;
+        this.context = context;
+    }
+    get origin() {
+        return this.templateRef.elementRef;
+    }
+    /**
+     * Attach the portal to the provided `PortalOutlet`.
+     * When a context is provided it will override the `context` property of the `TemplatePortal`
+     * instance.
+     */
+    attach(host, context = this.context) {
+        this.context = context;
+        return super.attach(host);
+    }
+    detach() {
+        this.context = undefined;
+        return super.detach();
+    }
+}
+/**
+ * A `DomPortal` is a portal whose DOM element will be taken from its current position
+ * in the DOM and moved into a portal outlet, when it is attached. On detach, the content
+ * will be restored to its original position.
+ */
+class DomPortal extends Portal {
+    constructor(element) {
+        super();
+        this.element = element instanceof _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] ? element.nativeElement : element;
+    }
+}
+/**
+ * Partial implementation of PortalOutlet that handles attaching
+ * ComponentPortal and TemplatePortal.
+ */
+class BasePortalOutlet {
+    constructor() {
+        /** Whether this host has already been permanently disposed. */
+        this._isDisposed = false;
+        // @breaking-change 10.0.0 `attachDomPortal` to become a required abstract method.
+        this.attachDomPortal = null;
+    }
+    /** Whether this host has an attached portal. */
+    hasAttached() {
+        return !!this._attachedPortal;
+    }
+    /** Attaches a portal. */
+    attach(portal) {
+        if (typeof ngDevMode === 'undefined' || ngDevMode) {
+            if (!portal) {
+                throwNullPortalError();
+            }
+            if (this.hasAttached()) {
+                throwPortalAlreadyAttachedError();
+            }
+            if (this._isDisposed) {
+                throwPortalOutletAlreadyDisposedError();
+            }
+        }
+        if (portal instanceof ComponentPortal) {
+            this._attachedPortal = portal;
+            return this.attachComponentPortal(portal);
+        }
+        else if (portal instanceof TemplatePortal) {
+            this._attachedPortal = portal;
+            return this.attachTemplatePortal(portal);
+            // @breaking-change 10.0.0 remove null check for `this.attachDomPortal`.
+        }
+        else if (this.attachDomPortal && portal instanceof DomPortal) {
+            this._attachedPortal = portal;
+            return this.attachDomPortal(portal);
+        }
+        if (typeof ngDevMode === 'undefined' || ngDevMode) {
+            throwUnknownPortalTypeError();
+        }
+    }
+    /** Detaches a previously attached portal. */
+    detach() {
+        if (this._attachedPortal) {
+            this._attachedPortal.setAttachedHost(null);
+            this._attachedPortal = null;
+        }
+        this._invokeDisposeFn();
+    }
+    /** Permanently dispose of this portal host. */
+    dispose() {
+        if (this.hasAttached()) {
+            this.detach();
+        }
+        this._invokeDisposeFn();
+        this._isDisposed = true;
+    }
+    /** @docs-private */
+    setDisposeFn(fn) {
+        this._disposeFn = fn;
+    }
+    _invokeDisposeFn() {
+        if (this._disposeFn) {
+            this._disposeFn();
+            this._disposeFn = null;
+        }
+    }
+}
+/**
+ * @deprecated Use `BasePortalOutlet` instead.
+ * @breaking-change 9.0.0
+ */
+class BasePortalHost extends BasePortalOutlet {
+}
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * A PortalOutlet for attaching portals to an arbitrary DOM element outside of the Angular
+ * application context.
+ */
+class DomPortalOutlet extends BasePortalOutlet {
+    constructor(
+    /** Element into which the content is projected. */
+    outletElement, _componentFactoryResolver, _appRef, _defaultInjector, 
+    /**
+     * @deprecated `_document` Parameter to be made required.
+     * @breaking-change 10.0.0
+     */
+    _document) {
+        super();
+        this.outletElement = outletElement;
+        this._componentFactoryResolver = _componentFactoryResolver;
+        this._appRef = _appRef;
+        this._defaultInjector = _defaultInjector;
+        /**
+         * Attaches a DOM portal by transferring its content into the outlet.
+         * @param portal Portal to be attached.
+         * @deprecated To be turned into a method.
+         * @breaking-change 10.0.0
+         */
+        this.attachDomPortal = (portal) => {
+            // @breaking-change 10.0.0 Remove check and error once the
+            // `_document` constructor parameter is required.
+            if (!this._document && (typeof ngDevMode === 'undefined' || ngDevMode)) {
+                throw Error('Cannot attach DOM portal without _document constructor parameter');
+            }
+            const element = portal.element;
+            if (!element.parentNode && (typeof ngDevMode === 'undefined' || ngDevMode)) {
+                throw Error('DOM portal content must be attached to a parent node.');
+            }
+            // Anchor used to save the element's previous position so
+            // that we can restore it when the portal is detached.
+            const anchorNode = this._document.createComment('dom-portal');
+            element.parentNode.insertBefore(anchorNode, element);
+            this.outletElement.appendChild(element);
+            super.setDisposeFn(() => {
+                // We can't use `replaceWith` here because IE doesn't support it.
+                if (anchorNode.parentNode) {
+                    anchorNode.parentNode.replaceChild(element, anchorNode);
+                }
+            });
+        };
+        this._document = _document;
+    }
+    /**
+     * Attach the given ComponentPortal to DOM element using the ComponentFactoryResolver.
+     * @param portal Portal to be attached
+     * @returns Reference to the created component.
+     */
+    attachComponentPortal(portal) {
+        const resolver = portal.componentFactoryResolver || this._componentFactoryResolver;
+        const componentFactory = resolver.resolveComponentFactory(portal.component);
+        let componentRef;
+        // If the portal specifies a ViewContainerRef, we will use that as the attachment point
+        // for the component (in terms of Angular's component tree, not rendering).
+        // When the ViewContainerRef is missing, we use the factory to create the component directly
+        // and then manually attach the view to the application.
+        if (portal.viewContainerRef) {
+            componentRef = portal.viewContainerRef.createComponent(componentFactory, portal.viewContainerRef.length, portal.injector || portal.viewContainerRef.injector);
+            this.setDisposeFn(() => componentRef.destroy());
+        }
+        else {
+            componentRef = componentFactory.create(portal.injector || this._defaultInjector);
+            this._appRef.attachView(componentRef.hostView);
+            this.setDisposeFn(() => {
+                this._appRef.detachView(componentRef.hostView);
+                componentRef.destroy();
+            });
+        }
+        // At this point the component has been instantiated, so we move it to the location in the DOM
+        // where we want it to be rendered.
+        this.outletElement.appendChild(this._getComponentRootNode(componentRef));
+        return componentRef;
+    }
+    /**
+     * Attaches a template portal to the DOM as an embedded view.
+     * @param portal Portal to be attached.
+     * @returns Reference to the created embedded view.
+     */
+    attachTemplatePortal(portal) {
+        let viewContainer = portal.viewContainerRef;
+        let viewRef = viewContainer.createEmbeddedView(portal.templateRef, portal.context);
+        // The method `createEmbeddedView` will add the view as a child of the viewContainer.
+        // But for the DomPortalOutlet the view can be added everywhere in the DOM
+        // (e.g Overlay Container) To move the view to the specified host element. We just
+        // re-append the existing root nodes.
+        viewRef.rootNodes.forEach(rootNode => this.outletElement.appendChild(rootNode));
+        // Note that we want to detect changes after the nodes have been moved so that
+        // any directives inside the portal that are looking at the DOM inside a lifecycle
+        // hook won't be invoked too early.
+        viewRef.detectChanges();
+        this.setDisposeFn((() => {
+            let index = viewContainer.indexOf(viewRef);
+            if (index !== -1) {
+                viewContainer.remove(index);
+            }
+        }));
+        // TODO(jelbourn): Return locals from view.
+        return viewRef;
+    }
+    /**
+     * Clears out a portal from the DOM.
+     */
+    dispose() {
+        super.dispose();
+        if (this.outletElement.parentNode != null) {
+            this.outletElement.parentNode.removeChild(this.outletElement);
+        }
+    }
+    /** Gets the root HTMLElement for an instantiated component. */
+    _getComponentRootNode(componentRef) {
+        return componentRef.hostView.rootNodes[0];
+    }
+}
+/**
+ * @deprecated Use `DomPortalOutlet` instead.
+ * @breaking-change 9.0.0
+ */
+class DomPortalHost extends DomPortalOutlet {
+}
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Directive version of a `TemplatePortal`. Because the directive *is* a TemplatePortal,
+ * the directive instance itself can be attached to a host, enabling declarative use of portals.
+ */
+class CdkPortal extends TemplatePortal {
+    constructor(templateRef, viewContainerRef) {
+        super(templateRef, viewContainerRef);
+    }
+}
+CdkPortal.ɵfac = function CdkPortal_Factory(t) { return new (t || CdkPortal)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"])); };
+CdkPortal.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({ type: CdkPortal, selectors: [["", "cdkPortal", ""]], exportAs: ["cdkPortal"], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]] });
+CdkPortal.ctorParameters = () => [
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"] }
+];
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CdkPortal, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"],
+        args: [{
+                selector: '[cdkPortal]',
+                exportAs: 'cdkPortal'
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"] }]; }, null); })();
+/**
+ * @deprecated Use `CdkPortal` instead.
+ * @breaking-change 9.0.0
+ */
+class TemplatePortalDirective extends CdkPortal {
+}
+TemplatePortalDirective.ɵfac = function TemplatePortalDirective_Factory(t) { return ɵTemplatePortalDirective_BaseFactory(t || TemplatePortalDirective); };
+TemplatePortalDirective.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({ type: TemplatePortalDirective, selectors: [["", "cdk-portal", ""], ["", "portal", ""]], exportAs: ["cdkPortal"], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([{
+                provide: CdkPortal,
+                useExisting: TemplatePortalDirective
+            }]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]] });
+const ɵTemplatePortalDirective_BaseFactory = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetInheritedFactory"](TemplatePortalDirective);
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TemplatePortalDirective, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"],
+        args: [{
+                selector: '[cdk-portal], [portal]',
+                exportAs: 'cdkPortal',
+                providers: [{
+                        provide: CdkPortal,
+                        useExisting: TemplatePortalDirective
+                    }]
+            }]
+    }], null, null); })();
+/**
+ * Directive version of a PortalOutlet. Because the directive *is* a PortalOutlet, portals can be
+ * directly attached to it, enabling declarative use.
+ *
+ * Usage:
+ * `<ng-template [cdkPortalOutlet]="greeting"></ng-template>`
+ */
+class CdkPortalOutlet extends BasePortalOutlet {
+    constructor(_componentFactoryResolver, _viewContainerRef, 
+    /**
+     * @deprecated `_document` parameter to be made required.
+     * @breaking-change 9.0.0
+     */
+    _document) {
+        super();
+        this._componentFactoryResolver = _componentFactoryResolver;
+        this._viewContainerRef = _viewContainerRef;
+        /** Whether the portal component is initialized. */
+        this._isInitialized = false;
+        /** Emits when a portal is attached to the outlet. */
+        this.attached = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        /**
+         * Attaches the given DomPortal to this PortalHost by moving all of the portal content into it.
+         * @param portal Portal to be attached.
+         * @deprecated To be turned into a method.
+         * @breaking-change 10.0.0
+         */
+        this.attachDomPortal = (portal) => {
+            // @breaking-change 9.0.0 Remove check and error once the
+            // `_document` constructor parameter is required.
+            if (!this._document && (typeof ngDevMode === 'undefined' || ngDevMode)) {
+                throw Error('Cannot attach DOM portal without _document constructor parameter');
+            }
+            const element = portal.element;
+            if (!element.parentNode && (typeof ngDevMode === 'undefined' || ngDevMode)) {
+                throw Error('DOM portal content must be attached to a parent node.');
+            }
+            // Anchor used to save the element's previous position so
+            // that we can restore it when the portal is detached.
+            const anchorNode = this._document.createComment('dom-portal');
+            portal.setAttachedHost(this);
+            element.parentNode.insertBefore(anchorNode, element);
+            this._getRootNode().appendChild(element);
+            super.setDisposeFn(() => {
+                if (anchorNode.parentNode) {
+                    anchorNode.parentNode.replaceChild(element, anchorNode);
+                }
+            });
+        };
+        this._document = _document;
+    }
+    /** Portal associated with the Portal outlet. */
+    get portal() {
+        return this._attachedPortal;
+    }
+    set portal(portal) {
+        // Ignore the cases where the `portal` is set to a falsy value before the lifecycle hooks have
+        // run. This handles the cases where the user might do something like `<div cdkPortalOutlet>`
+        // and attach a portal programmatically in the parent component. When Angular does the first CD
+        // round, it will fire the setter with empty string, causing the user's content to be cleared.
+        if (this.hasAttached() && !portal && !this._isInitialized) {
+            return;
+        }
+        if (this.hasAttached()) {
+            super.detach();
+        }
+        if (portal) {
+            super.attach(portal);
+        }
+        this._attachedPortal = portal;
+    }
+    /** Component or view reference that is attached to the portal. */
+    get attachedRef() {
+        return this._attachedRef;
+    }
+    ngOnInit() {
+        this._isInitialized = true;
+    }
+    ngOnDestroy() {
+        super.dispose();
+        this._attachedPortal = null;
+        this._attachedRef = null;
+    }
+    /**
+     * Attach the given ComponentPortal to this PortalOutlet using the ComponentFactoryResolver.
+     *
+     * @param portal Portal to be attached to the portal outlet.
+     * @returns Reference to the created component.
+     */
+    attachComponentPortal(portal) {
+        portal.setAttachedHost(this);
+        // If the portal specifies an origin, use that as the logical location of the component
+        // in the application tree. Otherwise use the location of this PortalOutlet.
+        const viewContainerRef = portal.viewContainerRef != null ?
+            portal.viewContainerRef :
+            this._viewContainerRef;
+        const resolver = portal.componentFactoryResolver || this._componentFactoryResolver;
+        const componentFactory = resolver.resolveComponentFactory(portal.component);
+        const ref = viewContainerRef.createComponent(componentFactory, viewContainerRef.length, portal.injector || viewContainerRef.injector);
+        // If we're using a view container that's different from the injected one (e.g. when the portal
+        // specifies its own) we need to move the component into the outlet, otherwise it'll be rendered
+        // inside of the alternate view container.
+        if (viewContainerRef !== this._viewContainerRef) {
+            this._getRootNode().appendChild(ref.hostView.rootNodes[0]);
+        }
+        super.setDisposeFn(() => ref.destroy());
+        this._attachedPortal = portal;
+        this._attachedRef = ref;
+        this.attached.emit(ref);
+        return ref;
+    }
+    /**
+     * Attach the given TemplatePortal to this PortalHost as an embedded View.
+     * @param portal Portal to be attached.
+     * @returns Reference to the created embedded view.
+     */
+    attachTemplatePortal(portal) {
+        portal.setAttachedHost(this);
+        const viewRef = this._viewContainerRef.createEmbeddedView(portal.templateRef, portal.context);
+        super.setDisposeFn(() => this._viewContainerRef.clear());
+        this._attachedPortal = portal;
+        this._attachedRef = viewRef;
+        this.attached.emit(viewRef);
+        return viewRef;
+    }
+    /** Gets the root node of the portal outlet. */
+    _getRootNode() {
+        const nativeElement = this._viewContainerRef.element.nativeElement;
+        // The directive could be set on a template which will result in a comment
+        // node being the root. Use the comment's parent node if that is the case.
+        return (nativeElement.nodeType === nativeElement.ELEMENT_NODE ?
+            nativeElement : nativeElement.parentNode);
+    }
+}
+CdkPortalOutlet.ɵfac = function CdkPortalOutlet_Factory(t) { return new (t || CdkPortalOutlet)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_1__["DOCUMENT"])); };
+CdkPortalOutlet.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({ type: CdkPortalOutlet, selectors: [["", "cdkPortalOutlet", ""]], inputs: { portal: ["cdkPortalOutlet", "portal"] }, outputs: { attached: "attached" }, exportAs: ["cdkPortalOutlet"], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]] });
+CdkPortalOutlet.ctorParameters = () => [
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"] },
+    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["DOCUMENT"],] }] }
+];
+CdkPortalOutlet.propDecorators = {
+    attached: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }]
+};
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CdkPortalOutlet, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"],
+        args: [{
+                selector: '[cdkPortalOutlet]',
+                exportAs: 'cdkPortalOutlet',
+                inputs: ['portal: cdkPortalOutlet']
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"] }, { type: undefined, decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+                args: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["DOCUMENT"]]
+            }] }]; }, { attached: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }] }); })();
+/**
+ * @deprecated Use `CdkPortalOutlet` instead.
+ * @breaking-change 9.0.0
+ */
+class PortalHostDirective extends CdkPortalOutlet {
+}
+PortalHostDirective.ɵfac = function PortalHostDirective_Factory(t) { return ɵPortalHostDirective_BaseFactory(t || PortalHostDirective); };
+PortalHostDirective.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({ type: PortalHostDirective, selectors: [["", "cdkPortalHost", ""], ["", "portalHost", ""]], inputs: { portal: ["cdkPortalHost", "portal"] }, exportAs: ["cdkPortalHost"], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([{
+                provide: CdkPortalOutlet,
+                useExisting: PortalHostDirective
+            }]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]] });
+const ɵPortalHostDirective_BaseFactory = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetInheritedFactory"](PortalHostDirective);
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PortalHostDirective, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"],
+        args: [{
+                selector: '[cdkPortalHost], [portalHost]',
+                exportAs: 'cdkPortalHost',
+                inputs: ['portal: cdkPortalHost'],
+                providers: [{
+                        provide: CdkPortalOutlet,
+                        useExisting: PortalHostDirective
+                    }]
+            }]
+    }], null, null); })();
+class PortalModule {
+}
+PortalModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: PortalModule });
+PortalModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function PortalModule_Factory(t) { return new (t || PortalModule)(); } });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](PortalModule, { declarations: [CdkPortal, CdkPortalOutlet, TemplatePortalDirective, PortalHostDirective], exports: [CdkPortal, CdkPortalOutlet, TemplatePortalDirective, PortalHostDirective] }); })();
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PortalModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                exports: [CdkPortal, CdkPortalOutlet, TemplatePortalDirective, PortalHostDirective],
+                declarations: [CdkPortal, CdkPortalOutlet, TemplatePortalDirective, PortalHostDirective]
+            }]
+    }], null, null); })();
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Custom injector to be used when providing custom
+ * injection tokens to components inside a portal.
+ * @docs-private
+ * @deprecated Use `Injector.create` instead.
+ * @breaking-change 11.0.0
+ */
+class PortalInjector {
+    constructor(_parentInjector, _customTokens) {
+        this._parentInjector = _parentInjector;
+        this._customTokens = _customTokens;
+    }
+    get(token, notFoundValue) {
+        const value = this._customTokens.get(token);
+        if (typeof value !== 'undefined') {
+            return value;
+        }
+        return this._parentInjector.get(token, notFoundValue);
+    }
+}
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+//# sourceMappingURL=portal.js.map
+
+/***/ }),
+
 /***/ "D5Hz":
 /*!**************************************************!*\
   !*** ./node_modules/emailjs-com/source/index.js ***!
@@ -135,10 +816,8 @@ exports.default = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactComponent", function() { return ContactComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material/card */ "Wp6s");
-/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/button */ "bTqV");
-/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @agm/core */ "pxUr");
-
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material/button */ "bTqV");
+/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @agm/core */ "pxUr");
 
 
 
@@ -149,24 +828,26 @@ class ContactComponent {
     }
 }
 ContactComponent.ɵfac = function ContactComponent_Factory(t) { return new (t || ContactComponent)(); };
-ContactComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ContactComponent, selectors: [["scheibentoenung-schmieder-contact"]], decls: 13, vars: 6, consts: [[1, "card"], ["mat-button", "", "color", "primary", "target", "_blank", "href", "https://www.google.com/maps/dir//Scheibent%C3%B6nung-Schmieder/@50.8504602,12.769376,17z/", 1, "route-link"], [3, "mapTypeId", "latitude", "longitude", "minZoom"], [3, "latitude", "longitude", "label"]], template: function ContactComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-card", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-card-header");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-card-title");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Anfahrt");
+ContactComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ContactComponent, selectors: [["scheibentoenung-schmieder-contact"]], decls: 13, vars: 6, consts: [[1, "section", "profile-content"], [1, "container"], [1, "row"], [1, "col-md-12", "ml-auto", "mr-auto", "text-center"], ["mat-button", "", "color", "primary", "target", "_blank", "href", "https://www.google.com/maps/dir//Scheibent%C3%B6nung-Schmieder/@50.8504602,12.769376,17z/", 1, "btn", "btn-link", "btn-danger"], [3, "mapTypeId", "latitude", "longitude", "minZoom"], [3, "latitude", "longitude", "label"]], template: function ContactComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, " Patrick Schmieder Scheibent\u00F6nung-Schmieder Siedlung am Friedhof 17 Geb\u00E4ude 1 09212 Limbach-Oberfrohna ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "a", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " Route anzeigen ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "mat-card-content");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, " Patrick Schmieder Scheibent\u00F6nung-Schmieder Siedlung am Friedhof 17 Geb\u00E4ude 1 09212 Limbach-Oberfrohna ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "a", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, " Route anzeigen ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "agm-map", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "agm-marker", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "agm-map", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "agm-marker", 6);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Scheibent\u00F6nung-Schmieder ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -176,7 +857,7 @@ ContactComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineC
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("latitude", ctx.lat)("longitude", ctx.lng)("minZoom", 16);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("latitude", ctx.lat)("longitude", ctx.lng)("label", "S");
-    } }, directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardHeader"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardContent"], _angular_material_button__WEBPACK_IMPORTED_MODULE_2__["MatAnchor"], _agm_core__WEBPACK_IMPORTED_MODULE_3__["AgmMap"], _agm_core__WEBPACK_IMPORTED_MODULE_3__["AgmMarker"]], styles: ["agm-map[_ngcontent-%COMP%] {\n  height: 300px;\n}\n\n.route-link[_ngcontent-%COMP%] {\n  width: 100%;\n  padding: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uL2NvbnRhY3QuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFBO0FBQ0Y7O0FBRUE7RUFDRSxXQUFBO0VBQ0EsYUFBQTtBQUNGIiwiZmlsZSI6ImNvbnRhY3QuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJhZ20tbWFwIHtcbiAgaGVpZ2h0OiAzMDBweDtcbn1cblxuLnJvdXRlLWxpbmsge1xuICB3aWR0aDogMTAwJTtcbiAgcGFkZGluZzogMTBweDtcbn1cbiJdfQ== */"] });
+    } }, directives: [_angular_material_button__WEBPACK_IMPORTED_MODULE_1__["MatAnchor"], _agm_core__WEBPACK_IMPORTED_MODULE_2__["AgmMap"], _agm_core__WEBPACK_IMPORTED_MODULE_2__["AgmMarker"]], styles: ["agm-map[_ngcontent-%COMP%] {\n  height: 300px;\n}\n\n.profile-content[_ngcontent-%COMP%] {\n  margin-top: 20px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uL2NvbnRhY3QuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFBO0FBQ0Y7O0FBRUE7RUFDRSxnQkFBQTtBQUNGIiwiZmlsZSI6ImNvbnRhY3QuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJhZ20tbWFwIHtcbiAgaGVpZ2h0OiAzMDBweDtcbn1cblxuLnByb2ZpbGUtY29udGVudCB7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG4iXX0= */"] });
 
 
 /***/ }),
@@ -3382,260 +4063,6 @@ MatFormFieldModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefin
 
 /***/ }),
 
-/***/ "mrSG":
-/*!*****************************************!*\
-  !*** ./node_modules/tslib/tslib.es6.js ***!
-  \*****************************************/
-/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__extends", function() { return __extends; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__assign", function() { return __assign; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__rest", function() { return __rest; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__decorate", function() { return __decorate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__param", function() { return __param; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__metadata", function() { return __metadata; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__awaiter", function() { return __awaiter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__generator", function() { return __generator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__createBinding", function() { return __createBinding; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__exportStar", function() { return __exportStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__values", function() { return __values; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__read", function() { return __read; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spread", function() { return __spread; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spreadArrays", function() { return __spreadArrays; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__await", function() { return __await; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function() { return __asyncGenerator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function() { return __asyncDelegator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncValues", function() { return __asyncValues; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function() { return __classPrivateFieldGet; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function() { return __classPrivateFieldSet; });
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation.
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */
-/* global Reflect, Promise */
-
-var extendStatics = function(d, b) {
-    extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return extendStatics(d, b);
-};
-
-function __extends(d, b) {
-    extendStatics(d, b);
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-}
-
-var __assign = function() {
-    __assign = Object.assign || function __assign(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-        }
-        return t;
-    }
-    return __assign.apply(this, arguments);
-}
-
-function __rest(s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-}
-
-function __decorate(decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-}
-
-function __param(paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-}
-
-function __metadata(metadataKey, metadataValue) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
-}
-
-function __awaiter(thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-}
-
-function __generator(thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-}
-
-function __createBinding(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}
-
-function __exportStar(m, exports) {
-    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-
-function __values(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-}
-
-function __read(o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-}
-
-function __spread() {
-    for (var ar = [], i = 0; i < arguments.length; i++)
-        ar = ar.concat(__read(arguments[i]));
-    return ar;
-}
-
-function __spreadArrays() {
-    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
-    for (var r = Array(s), k = 0, i = 0; i < il; i++)
-        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-            r[k] = a[j];
-    return r;
-};
-
-function __await(v) {
-    return this instanceof __await ? (this.v = v, this) : new __await(v);
-}
-
-function __asyncGenerator(thisArg, _arguments, generator) {
-    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-    var g = generator.apply(thisArg, _arguments || []), i, q = [];
-    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
-    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
-    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
-    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
-    function fulfill(value) { resume("next", value); }
-    function reject(value) { resume("throw", value); }
-    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
-}
-
-function __asyncDelegator(o) {
-    var i, p;
-    return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
-    function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
-}
-
-function __asyncValues(o) {
-    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-    var m = o[Symbol.asyncIterator], i;
-    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
-    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
-    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
-}
-
-function __makeTemplateObject(cooked, raw) {
-    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
-    return cooked;
-};
-
-function __importStar(mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-    result.default = mod;
-    return result;
-}
-
-function __importDefault(mod) {
-    return (mod && mod.__esModule) ? mod : { default: mod };
-}
-
-function __classPrivateFieldGet(receiver, privateMap) {
-    if (!privateMap.has(receiver)) {
-        throw new TypeError("attempted to get private field on non-instance");
-    }
-    return privateMap.get(receiver);
-}
-
-function __classPrivateFieldSet(receiver, privateMap, value) {
-    if (!privateMap.has(receiver)) {
-        throw new TypeError("attempted to set private field on non-instance");
-    }
-    privateMap.set(receiver, value);
-    return value;
-}
-
-
-/***/ }),
-
 /***/ "p9x1":
 /*!**************************************************************************!*\
   !*** ./libs/scheibentoenung-schmieder/contact/src/lib/contact.module.ts ***!
@@ -3678,7 +4105,10 @@ const contactRoutes = [
         path: '',
         component: _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_8__["ContactComponent"],
         data: {
-            cover: 'contact.jpg',
+            cover: {
+                src: 'contact.jpg',
+                teaser: 'Anfahrt',
+            },
             title: 'Anfahrt',
             description: 'Anfahrt',
         },
@@ -3687,7 +4117,10 @@ const contactRoutes = [
         path: 'anfrage',
         component: _components_request_offer_request_offer_component__WEBPACK_IMPORTED_MODULE_9__["RequestOfferComponent"],
         data: {
-            cover: 'contact.jpg',
+            cover: {
+                src: 'contact.jpg',
+                teaser: 'Anfrage',
+            },
             title: 'Kontakt',
             description: 'Anfrage für Tönnung der Scheibe',
         },
@@ -12845,113 +13278,144 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! emailjs-com */ "D5Hz");
 /* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(emailjs_com__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/card */ "Wp6s");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "ofXK");
-/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/form-field */ "kmnG");
-/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/input */ "qFsG");
-/* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/select */ "d3UM");
-/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/core */ "FKr1");
-/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/button */ "bTqV");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "ofXK");
 
 
 
 
 
-
-
-
-
-
-
-function RequestOfferComponent_div_7_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 4);
+function RequestOfferComponent_div_6_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 7);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, " Ein Fehler ist aufgetretten");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](2, "br");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3, " Bitte versuche es nocheinmal ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 } }
-function RequestOfferComponent_div_8_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 5);
+function RequestOfferComponent_div_7_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 8);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, " Vielen Dank!");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](2, "br");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3, " Deine Anfrage wurde erfolgreich verschickt. ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 } }
-function RequestOfferComponent_ng_template_9_mat_optgroup_23_mat_option_1_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "mat-option", 18);
+function RequestOfferComponent_ng_template_8_optgroup_46_option_1_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "option", 37);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const pokemon_r7 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("value", pokemon_r7.value);
+    const foil_r7 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("value", foil_r7.value);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", pokemon_r7.viewValue, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", foil_r7.viewValue, " ");
 } }
-function RequestOfferComponent_ng_template_9_mat_optgroup_23_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "mat-optgroup", 16);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, RequestOfferComponent_ng_template_9_mat_optgroup_23_mat_option_1_Template, 2, 2, "mat-option", 17);
+function RequestOfferComponent_ng_template_8_optgroup_46_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "optgroup", 35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, RequestOfferComponent_ng_template_8_optgroup_46_option_1_Template, 2, 2, "option", 36);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const group_r5 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("label", group_r5.name);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", group_r5.pokemon);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", group_r5.foils);
 } }
-function RequestOfferComponent_ng_template_9_Template(rf, ctx) { if (rf & 1) {
+function RequestOfferComponent_ng_template_8_Template(rf, ctx) { if (rf & 1) {
     const _r9 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "form", 6);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "mat-form-field", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "mat-label");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3, "Name*");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "form", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "div", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "label", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](4, "Name*");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](4, "input", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "mat-form-field", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](6, "mat-label");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](7, "Email*");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](8, "input", 9);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](9, "mat-form-field", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](10, "mat-label");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](11, "Telefon");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](12, "input", 10);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](13, "mat-form-field", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](14, "mat-label");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](15, "Fahrzeug");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](16, "input", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](17, "mat-form-field", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](18, "mat-label");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](19, "Folienauswahl");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](20, "mat-select", 12);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](21, "mat-option");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](22, "-- None --");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](23, RequestOfferComponent_ng_template_9_mat_optgroup_23_Template, 2, 2, "mat-optgroup", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "div", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](6, "div", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](7, "span", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](8, "i", 15);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](24, "mat-form-field", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](25, "mat-label");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](26, "Nachricht*");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](9, "input", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](27, "textarea", 14);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](28, "button", 15);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function RequestOfferComponent_ng_template_9_Template_button_click_28_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r9); const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](); return ctx_r8.send(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](29, " Absenden ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](10, "div", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](11, "label", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](12, "Email*");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](13, "div", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](14, "div", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](15, "span", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](16, "i", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](17, "input", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](18, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](19, "div", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](20, "label", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](21, "Telefon*");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](22, "div", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](23, "div", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](24, "span", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](25, "i", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](26, "input", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](27, "div", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](28, "label", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](29, "Fahrzeug");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](30, "div", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](31, "div", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](32, "span", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](33, "i", 24);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](34, "input", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](35, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](36, "div", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](37, "label", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](38, "Folienauswahl");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](39, "div", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](40, "div", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](41, "span", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](42, "i", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](43, "select", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](44, "option");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](45, "-- None --");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](46, RequestOfferComponent_ng_template_8_optgroup_46_Template, 2, 2, "optgroup", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](47, "label", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](48, "Nachricht*");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](49, "textarea", 32);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](50, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](51, "div", 33);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](52, "button", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function RequestOfferComponent_ng_template_8_Template_button_click_52_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r9); const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](); return ctx_r8.send(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](53, " Absenden ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("formGroup", ctx_r3.form);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](46);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx_r3.foilGroups);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](6);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("disabled", ctx_r3.form.invalid);
 } }
 class RequestOfferComponent {
@@ -12969,7 +13433,7 @@ class RequestOfferComponent {
         this.foilGroups = [
             {
                 name: 'Regular-Serie',
-                pokemon: [
+                foils: [
                     { value: 'Regular Black', viewValue: 'Black' },
                     { value: 'Regular Graphite', viewValue: 'Graphite' },
                     { value: 'Regular Anthracite', viewValue: 'Anthracite' },
@@ -12979,7 +13443,7 @@ class RequestOfferComponent {
             },
             {
                 name: 'Premium-Serie',
-                pokemon: [
+                foils: [
                     { value: 'Premium Black', viewValue: 'Black' },
                     { value: 'Premium Graphite', viewValue: 'Graphite' },
                     { value: 'Premium Anthracite', viewValue: 'Anthracite' },
@@ -12989,7 +13453,7 @@ class RequestOfferComponent {
             },
             {
                 name: 'Superior-Serie',
-                pokemon: [
+                foils: [
                     { value: 'Superior Black', viewValue: 'Black' },
                     { value: 'Superior Graphite', viewValue: 'Graphite' },
                     { value: 'Superior Titan', viewValue: 'Titan' },
@@ -12998,7 +13462,7 @@ class RequestOfferComponent {
             },
             {
                 name: 'Special-Serie',
-                pokemon: [
+                foils: [
                     {
                         value: 'Special-SerieSpecial-Serie- Secure Clear',
                         viewValue: 'Secure Clear',
@@ -13022,29 +13486,28 @@ class RequestOfferComponent {
     }
 }
 RequestOfferComponent.ɵfac = function RequestOfferComponent_Factory(t) { return new (t || RequestOfferComponent)(); };
-RequestOfferComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: RequestOfferComponent, selectors: [["scheibentoenung-schmieder-request-offer"]], decls: 11, vars: 3, consts: [[1, "card"], ["class", "message-error", 4, "ngIf"], ["class", "message-success", 4, "ngIf", "ngIfElse"], ["showForm", ""], [1, "message-error"], [1, "message-success"], [1, "form", 3, "formGroup"], [1, "field"], ["matInput", "", "type", "text", "formControlName", "name", "placeholder", "Name"], ["matInput", "", "type", "text", "formControlName", "mail", "placeholder", "Email"], ["matInput", "", "type", "text", "formControlName", "phone", "placeholder", "Telefon"], ["matInput", "", "type", "text", "formControlName", "car", "placeholder", "Fahrzeug"], ["formControlName", "foil"], [3, "label", 4, "ngFor", "ngForOf"], ["rows", "5", "matInput", "", "formControlName", "message", "placeholder", "ihre Nachricht"], ["type", "submit", "color", "primary", "mat-raised-button", "", 1, "button-submit", 3, "disabled", "click"], [3, "label"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function RequestOfferComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "mat-card", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "mat-card-header");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "mat-card-title");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3, "Kontaktanfrage");
+RequestOfferComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: RequestOfferComponent, selectors: [["scheibentoenung-schmieder-request-offer"]], decls: 10, vars: 3, consts: [[1, "section", "profile-content"], [1, "container"], [1, "row"], [1, "col-md-12", "ml-auto", "mr-auto", "text-center"], ["class", "alert alert-danger", 4, "ngIf"], ["class", "alert alert-success", 4, "ngIf", "ngIfElse"], ["showForm", ""], [1, "alert", "alert-danger"], [1, "alert", "alert-success"], [1, "contact-form", 3, "formGroup"], [1, "col-md-6"], ["for", "name"], [1, "input-group"], [1, "input-group-prepend"], [1, "input-group-text"], [1, "nc-icon", "nc-single-02"], ["type", "text", "formControlName", "name", "placeholder", "Name", "id", "name", 1, "form-control"], ["for", "mail"], [1, "nc-icon", "nc-email-85"], ["type", "text", "id", "mail", "formControlName", "mail", "placeholder", "Email", 1, "form-control"], ["for", "phone"], [1, "nc-icon", "nc-mobile"], ["type", "text", "formControlName", "phone", "placeholder", "Telefon", "id", "phone", 1, "form-control"], ["for", "car"], [1, "nc-icon", "nc-settings"], ["type", "text", "formControlName", "car", "placeholder", "Fahrzeug", "id", "car", 1, "form-control"], [1, "col-md-12"], ["for", "foil"], [1, "nc-icon", "nc-settings-gear-65"], ["type", "text", "formControlName", "foil", "placeholder", "Telefon", "id", "foil", 1, "form-control"], [3, "label", 4, "ngFor", "ngForOf"], ["for", "message"], ["id", "message", "formControlName", "message", "rows", "4", "placeholder", "ihre Nachricht", 1, "form-control"], [1, "col-md-4", "mr-auto", "ml-auto"], ["type", "submit", 1, "btn", "btn-danger", "btn-lg", "btn-fill", 3, "disabled", "click"], [3, "label"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function RequestOfferComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](4, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](5, " F\u00FCr ein Preisangebot, geben Sie bitte Ihr Fahrzeug und die von Ihnen ausgew\u00E4hlte Folie an. Wir w\u00FCrden Ihnen f\u00FCr Ihre Scheibent\u00F6nung die Regular Serie empfehlen. Von dieser Serie haben wir die 6%, 20% und die 35% Lichtdurchl\u00E4ssigkeit immer auf Lager. Bei allen anderen Folien, betr\u00E4gt die Lieferzeit ca. 3 Tage. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](6, RequestOfferComponent_div_6_Template, 4, 0, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](7, RequestOfferComponent_div_7_Template, 4, 0, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](8, RequestOfferComponent_ng_template_8_Template, 54, 3, "ng-template", null, 6, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplateRefExtractor"]);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](4, "mat-card-content");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](6, " F\u00FCr ein Preisangebot, geben Sie bitte Ihr Fahrzeug und die von Ihnen ausgew\u00E4hlte Folie an. Wir w\u00FCrden Ihnen f\u00FCr Ihre Scheibent\u00F6nung die Regular Serie empfehlen. Von dieser Serie haben wir die 6%, 20% und die 35% Lichtdurchl\u00E4ssigkeit immer auf Lager. Bei allen anderen Folien, betr\u00E4gt die Lieferzeit ca. 3 Tage. ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](7, RequestOfferComponent_div_7_Template, 4, 0, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](8, RequestOfferComponent_div_8_Template, 4, 0, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](9, RequestOfferComponent_ng_template_9_Template, 30, 3, "ng-template", null, 3, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplateRefExtractor"]);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        const _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](7);
+        const _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](6);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.error);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.success)("ngIfElse", _r2);
-    } }, directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_3__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_3__["MatCardHeader"], _angular_material_card__WEBPACK_IMPORTED_MODULE_3__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_3__["MatCardContent"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormGroupDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_5__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_5__["MatLabel"], _angular_material_input__WEBPACK_IMPORTED_MODULE_6__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormControlName"], _angular_material_select__WEBPACK_IMPORTED_MODULE_7__["MatSelect"], _angular_material_core__WEBPACK_IMPORTED_MODULE_8__["MatOption"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], _angular_material_button__WEBPACK_IMPORTED_MODULE_9__["MatButton"], _angular_material_core__WEBPACK_IMPORTED_MODULE_8__["MatOptgroup"]], styles: [".form[_ngcontent-%COMP%]   .field[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.form[_ngcontent-%COMP%]   .button-submit[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.message-success[_ngcontent-%COMP%] {\n  color: #008000;\n  border: 1px solid #008000;\n  border-radius: 4px;\n  padding: 10px;\n  text-align: center;\n}\n.message-error[_ngcontent-%COMP%] {\n  color: #8b0000;\n  border: 1px solid #8b0000;\n  border-radius: 4px;\n  padding: 10px;\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uL3JlcXVlc3Qtb2ZmZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0U7RUFDRSxXQUFBO0FBQUo7QUFFRTtFQUNFLFdBQUE7QUFBSjtBQUdBO0VBQ0UsY0FBQTtFQUNBLHlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxhQUFBO0VBQ0Esa0JBQUE7QUFBRjtBQUdBO0VBQ0UsY0FBQTtFQUNBLHlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxhQUFBO0VBQ0Esa0JBQUE7QUFBRiIsImZpbGUiOiJyZXF1ZXN0LW9mZmVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZvcm0ge1xuICAuZmllbGQge1xuICAgIHdpZHRoOiAxMDAlO1xuICB9XG4gIC5idXR0b24tc3VibWl0IHtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxufVxuLm1lc3NhZ2Utc3VjY2VzcyB7XG4gIGNvbG9yOiAjMDA4MDAwO1xuICBib3JkZXI6IDFweCBzb2xpZCAjMDA4MDAwO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIHBhZGRpbmc6IDEwcHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLm1lc3NhZ2UtZXJyb3Ige1xuICBjb2xvcjogIzhiMDAwMDtcbiAgYm9yZGVyOiAxcHggc29saWQgIzhiMDAwMDtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBwYWRkaW5nOiAxMHB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4iXX0= */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormControlName"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["SelectControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_forms_forms_x"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"]], styles: [".section[_ngcontent-%COMP%] {\n  margin-top: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uL3JlcXVlc3Qtb2ZmZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBQTtBQUNGIiwiZmlsZSI6InJlcXVlc3Qtb2ZmZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2VjdGlvbiB7XG4gIG1hcmdpbi10b3A6IDEwcHg7XG59XG4iXX0= */"] });
 
 
 /***/ })
