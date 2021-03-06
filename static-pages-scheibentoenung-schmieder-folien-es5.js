@@ -1,4 +1,8 @@
 (function () {
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static-pages-scheibentoenung-schmieder-folien"], {
@@ -405,16 +409,16 @@
       "fXoL");
 
       var folienRoutes = [{
-        path: '',
+        path: ':type',
         component: _components_folien_selection_folien_selection_component__WEBPACK_IMPORTED_MODULE_4__["FolienSelectionComponent"],
         children: [{
-          path: ':type',
-          component: _components_folie_folien_component__WEBPACK_IMPORTED_MODULE_3__["FolienComponent"]
-        }, {
           path: '',
-          pathMatch: 'full',
-          redirectTo: 'regular'
+          component: _components_folie_folien_component__WEBPACK_IMPORTED_MODULE_3__["FolienComponent"]
         }]
+      }, {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'regular'
       }];
 
       var FolienModule = function FolienModule() {
@@ -481,35 +485,35 @@
 
       var regular = [{
         headline: 'Regular Black 6%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-R05_thumb%20(2).jpg',
+        image: '/assets/img/folien/AG-R05_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'tiefschwarze Tönung, relativ gute Durchsicht von innen, kaum Einblick von außen', 'Splitterschutz', 'Blendschutz'],
         licht: 6,
         hitze: 50,
         uv: 99
       }, {
         headline: 'Regular Graphite 15%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-R20_thumb.jpg',
+        image: '/assets/img/folien/AG-R20_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'grau-schwarze Tönung', 'relativ gute Durchsicht von innen, erschwerter Einblick von außen', 'Splitterschutz', 'Blendschutz'],
         licht: 15,
         hitze: 44,
         uv: 99
       }, {
         headline: 'Regular Anthracite 20%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-R15_thumb.jpg',
+        image: '/assets/img/folien/AG-R15_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'dunkelgraue Tönung', 'gute Durchsicht von innen, erschwerter Einblick von außen', 'Splitterschutz', 'leichter Blendschutz '],
         licht: 52,
         hitze: 24,
         uv: 99
       }, {
         headline: 'Regular Titan 35%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-R35_thumb.jpg',
+        image: '/assets/img/folien/AG-R35_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'hellgraue Tönung', 'gute Durchsicht von innen, relativ guter Einblick von außen', 'Splitterschutz', 'Blendschutz'],
         licht: 35,
         hitze: 38,
         uv: 99
       }, {
         headline: 'Regular Silver 52%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-R50_thumb.jpg',
+        image: '/assets/img/folien/AG-R50_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'leichte Tönung', 'perfekte Durchsicht von innen, guter Einblick von außen', 'Splitterschutz'],
         licht: 20,
         hitze: 39,
@@ -517,35 +521,35 @@
       }];
       var premium = [{
         headline: 'Premium Black 5%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-P05_thumb.jpg',
+        image: '/assets/img/folien/AG-P05_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'tiefschwarze Tönung, relativ gute Durchsicht von innen, kaum Einblick von außen', 'Splitterschutz', 'Blendschutz', 'erhöhte Hitzereduktion durch Metallisierung '],
         licht: 5,
         hitze: 60,
         uv: 99
       }, {
         headline: 'Premium Graphite 15%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-P15_thumb.jpg',
+        image: '/assets/img/folien/AG-P15_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'grau-schwarze Tönung, relativ gute Durchsicht von innen, erschwerter Einblick von außen', 'Splitterschutz', 'Blendschutz', 'erhöhte Hitzereduktion durch Metallisierung'],
         licht: 15,
         hitze: 56,
         uv: 99
       }, {
         headline: 'Premium Anthracite 20%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-P20_thumb.jpg',
+        image: '/assets/img/folien/AG-P20_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'dunkelgraue Tönung', 'gute Durchsicht von innen, erschwerter Einblick von außen', 'Splitterschutz', 'Blendschutz', 'erhöhte Hitzereduktion durch Metallisierung'],
         licht: 20,
         hitze: 53,
         uv: 99
       }, {
         headline: 'Premium Titan 36%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-P35_thumb.jpg',
+        image: '/assets/img/folien/AG-P35_thumb.jpg',
         technicalDescription: ['-2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'hellgraue Tönung, sehr gute Durchsicht von innen, relativ guter Einblick von außen', 'Splitterschutz', 'leichter Blendschutz', 'erhöhte Hitzereduktion durch Metallisierung'],
         licht: 36,
         hitze: 51,
         uv: 99
       }, {
         headline: 'Premium Silver 55%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-P50_thumb.jpg',
+        image: '/assets/img/folien/AG-P50_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'leichte Tönung, perfekte Durchsicht von innen, guter Einblick von außen', 'Splitterschutz', 'erhöhte Hitzereduktion durch Metallisierung'],
         licht: 55,
         hitze: 42,
@@ -553,28 +557,28 @@
       }];
       var superior = [{
         headline: 'Superior Black 5%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-S05_thumb.jpg',
+        image: '/assets/img/folien/AG-S05_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'tiefschwarze Tönung, relativ gute Durchsicht von innen, kaum Einblick von außen', 'Splitterschutz', 'Blendschutz'],
         licht: 5,
         hitze: 76,
         uv: 99
       }, {
         headline: 'Superior Graphite 15%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-S15_thumb.jpg',
+        image: '/assets/img/folien/AG-S15_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'schwarze Tönung, relativ gute Durchsicht von innen, kaum Einblick von außen', 'Splitterschutz', 'Blendschutz'],
         licht: 15,
         hitze: 61,
         uv: 99
       }, {
         headline: 'Superior Titan 38%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-S35_thumb.jpg',
+        image: '/assets/img/folien/AG-S35_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'hellgraue Tönung, sehr gute Durchsicht von innen, relativ guter Einblick von außen', 'Splitterschutz'],
         licht: 38,
         hitze: 51,
         uv: 99
       }, {
         headline: 'Superior Silver 52%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-S50_thumb.jpg',
+        image: '/assets/img/folien/AG-S50_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'leichte Tönung', 'perfekte Durchsicht von innen, guter Einblick von außen', 'Splitterschutz'],
         licht: 52,
         hitze: 46,
@@ -582,21 +586,21 @@
       }];
       var special = [{
         headline: 'Secure Clear 89%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-SS90_thumb.jpg',
+        image: '/assets/img/folien/AG-SS90_thumb.jpg',
         technicalDescription: ['1-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,110mm', 'Garantie 5 Jahre', 'sehr hohe Lichtdurchlässigkeit', 'perfekte Transparenz', 'extrem reißfeste Polyesterfolie', 'einbruchhemmend', 'verstärkte Splitterbindung bei Glasbruch', 'auch für vordere Scheiben bei Klarglas genehmigt (DE) (Gesamtlichtdurchlässigkeit von Glas + Folie < 70%)'],
         licht: 89,
         hitze: 16,
         uv: 97
       }, {
         headline: 'Secure Green Style Dark 13%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-X13_thumb.jpg',
+        image: '/assets/img/folien/AG-X13_thumb.jpg',
         technicalDescription: ['3-lagiger Folienaufbau', 'Alu-Bedampfung / Metallisierung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,050 mm', 'dunkelgraue Tönung mit Grünstich, gute Durchsicht von innen, erschwerter Einblick von außen', 'Splitterschutz', 'langer Anwendungszeitraum: 7 Jahre -Sonnenbrilleneffekt durch Ray-Green-Einfärbung'],
         licht: 13,
         hitze: 48,
         uv: 99
       }, {
         headline: 'Green Style 30%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-X30_thumb.jpg',
+        image: '/assets/img/folien/AG-X30_thumb.jpg',
         technicalDescription: ['3-lagiger Folienaufbau', 'Alu-Bedampfung / Metallisierung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,050 mm', 'hellgrüne Tönung, sehr gute Durchsicht von innen, guter Einblick von außen', 'Splitterschutz', 'Blendschutz', 'langer Anwendungszeitraum: 7 Jahre'],
         licht: 30,
         hitze: 56,
@@ -667,11 +671,24 @@
         }
       }
 
-      var FolienSelectionComponent = function FolienSelectionComponent(active) {
-        _classCallCheck(this, FolienSelectionComponent);
+      var FolienSelectionComponent = /*#__PURE__*/function () {
+        function FolienSelectionComponent(active) {
+          _classCallCheck(this, FolienSelectionComponent);
 
-        this.active = active;
-      };
+          this.active = active;
+          this.activeFolie = this.active.snapshot.params.type;
+        }
+
+        _createClass(FolienSelectionComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            console.log(this.active.snapshot);
+            this.activeFolie = this.active.snapshot.params.type;
+          }
+        }]);
+
+        return FolienSelectionComponent;
+      }();
 
       FolienSelectionComponent.ɵfac = function FolienSelectionComponent_Factory(t) {
         return new (t || FolienSelectionComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"]));
@@ -681,8 +698,8 @@
         type: FolienSelectionComponent,
         selectors: [["scheibentoenung-schmieder-folien"]],
         decls: 31,
-        vars: 5,
-        consts: [[1, "section", "profile-content"], [1, "container"], [1, "row"], [1, "col-md-12", "ml-auto", "mr-auto", "text-center"], [1, "nav-tabs-navigation"], [1, "nav-tabs-wrapper"], ["ngbNav", "", 1, "nav-tabs"], ["nav", "ngbNav"], ["ngbNavItem", ""], ["ngbNavLink", "", "routerLink", "/folien/regular", 3, "skipLocationChange"], ["ngbNavContent", ""], ["ngbNavLink", "", "routerLink", "/folien/premium", 3, "skipLocationChange"], ["ngbNavLink", "", "routerLink", "/folien/superior", 3, "skipLocationChange"], ["ngbNavLink", "", "routerLink", "/folien/special", 3, "skipLocationChange"], [3, "ngbNavOutlet"]],
+        vars: 6,
+        consts: [[1, "section", "profile-content"], [1, "container"], [1, "row"], [1, "col-md-12", "ml-auto", "mr-auto", "text-center"], [1, "nav-tabs-navigation"], [1, "nav-tabs-wrapper"], ["ngbNav", "", 1, "nav-tabs", 3, "activeId", "activeIdChange"], ["nav", "ngbNav"], [3, "ngbNavItem"], ["ngbNavLink", "", "routerLink", "/folien/regular"], ["ngbNavContent", ""], ["ngbNavLink", "", "routerLink", "/folien/premium"], ["ngbNavLink", "", "routerLink", "/folien/superior"], ["ngbNavLink", "", "routerLink", "/folien/special"], [3, "ngbNavOutlet"]],
         template: function FolienSelectionComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
@@ -714,6 +731,10 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "div", 5);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "ul", 6, 7);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("activeIdChange", function FolienSelectionComponent_Template_ul_activeIdChange_12_listener($event) {
+              return ctx.activeFolie = $event;
+            });
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "li", 8);
 
@@ -781,23 +802,27 @@
           if (rf & 2) {
             var _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵreference"](13);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("skipLocationChange", true);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("activeId", ctx.activeFolie);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("skipLocationChange", true);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("skipLocationChange", true);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "regular");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("skipLocationChange", true);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "premium");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "superior");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "special");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavOutlet", _r0);
           }

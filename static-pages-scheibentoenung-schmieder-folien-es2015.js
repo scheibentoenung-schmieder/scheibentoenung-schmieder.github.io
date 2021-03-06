@@ -185,19 +185,19 @@ __webpack_require__.r(__webpack_exports__);
 
 const folienRoutes = [
     {
-        path: '',
+        path: ':type',
         component: _components_folien_selection_folien_selection_component__WEBPACK_IMPORTED_MODULE_4__["FolienSelectionComponent"],
         children: [
             {
-                path: ':type',
+                path: '',
                 component: _components_folie_folien_component__WEBPACK_IMPORTED_MODULE_3__["FolienComponent"],
             },
-            {
-                path: '',
-                pathMatch: 'full',
-                redirectTo: 'regular',
-            },
         ],
+    },
+    {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'regular',
     },
 ];
 class FolienModule {
@@ -225,7 +225,7 @@ __webpack_require__.r(__webpack_exports__);
 const regular = [
     {
         headline: 'Regular Black 6%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-R05_thumb%20(2).jpg',
+        image: '/assets/img/folien/AG-R05_thumb.jpg',
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'nicht metallisiert',
@@ -242,7 +242,7 @@ const regular = [
     },
     {
         headline: 'Regular Graphite 15%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-R20_thumb.jpg',
+        image: '/assets/img/folien/AG-R20_thumb.jpg',
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'nicht metallisiert',
@@ -260,7 +260,7 @@ const regular = [
     },
     {
         headline: 'Regular Anthracite 20%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-R15_thumb.jpg',
+        image: '/assets/img/folien/AG-R15_thumb.jpg',
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'nicht metallisiert',
@@ -278,7 +278,7 @@ const regular = [
     },
     {
         headline: 'Regular Titan 35%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-R35_thumb.jpg',
+        image: '/assets/img/folien/AG-R35_thumb.jpg',
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'nicht metallisiert',
@@ -296,7 +296,7 @@ const regular = [
     },
     {
         headline: 'Regular Silver 52%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-R50_thumb.jpg',
+        image: '/assets/img/folien/AG-R50_thumb.jpg',
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'nicht metallisiert',
@@ -315,7 +315,7 @@ const regular = [
 const premium = [
     {
         headline: 'Premium Black 5%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-P05_thumb.jpg',
+        image: '/assets/img/folien/AG-P05_thumb.jpg',
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'metallisiert',
@@ -333,7 +333,7 @@ const premium = [
     },
     {
         headline: 'Premium Graphite 15%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-P15_thumb.jpg',
+        image: '/assets/img/folien/AG-P15_thumb.jpg',
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'metallisiert',
@@ -351,7 +351,7 @@ const premium = [
     },
     {
         headline: 'Premium Anthracite 20%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-P20_thumb.jpg',
+        image: '/assets/img/folien/AG-P20_thumb.jpg',
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'metallisiert',
@@ -370,7 +370,7 @@ const premium = [
     },
     {
         headline: 'Premium Titan 36%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-P35_thumb.jpg',
+        image: '/assets/img/folien/AG-P35_thumb.jpg',
         technicalDescription: [
             '-2-lagiger Folienaufbau',
             'metallisiert',
@@ -388,7 +388,7 @@ const premium = [
     },
     {
         headline: 'Premium Silver 55%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-P50_thumb.jpg',
+        image: '/assets/img/folien/AG-P50_thumb.jpg',
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'metallisiert',
@@ -407,7 +407,7 @@ const premium = [
 const superior = [
     {
         headline: 'Superior Black 5%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-S05_thumb.jpg',
+        image: '/assets/img/folien/AG-S05_thumb.jpg',
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'Keramik Beschichtung',
@@ -424,7 +424,7 @@ const superior = [
     },
     {
         headline: 'Superior Graphite 15%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-S15_thumb.jpg',
+        image: '/assets/img/folien/AG-S15_thumb.jpg',
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'Keramik Beschichtung',
@@ -441,7 +441,7 @@ const superior = [
     },
     {
         headline: 'Superior Titan 38%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-S35_thumb.jpg',
+        image: '/assets/img/folien/AG-S35_thumb.jpg',
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'Keramik Beschichtung',
@@ -457,7 +457,7 @@ const superior = [
     },
     {
         headline: 'Superior Silver 52%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-S50_thumb.jpg',
+        image: '/assets/img/folien/AG-S50_thumb.jpg',
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'Keramik Beschichtung',
@@ -476,7 +476,7 @@ const superior = [
 const special = [
     {
         headline: 'Secure Clear 89%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-SS90_thumb.jpg',
+        image: '/assets/img/folien/AG-SS90_thumb.jpg',
         technicalDescription: [
             '1-lagiger Folienaufbau',
             'nicht metallisiert',
@@ -496,7 +496,7 @@ const special = [
     },
     {
         headline: 'Secure Green Style Dark 13%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-X13_thumb.jpg',
+        image: '/assets/img/folien/AG-X13_thumb.jpg',
         technicalDescription: [
             '3-lagiger Folienaufbau',
             'Alu-Bedampfung / Metallisierung',
@@ -512,7 +512,7 @@ const special = [
     },
     {
         headline: 'Green Style 30%',
-        image: 'https://img.webme.com/pic/s/scheibentoenung-schmieder/AG-X30_thumb.jpg',
+        image: '/assets/img/folien/AG-X30_thumb.jpg',
         technicalDescription: [
             '3-lagiger Folienaufbau',
             'Alu-Bedampfung / Metallisierung',
@@ -564,10 +564,15 @@ function FolienSelectionComponent_ng_template_29_Template(rf, ctx) { if (rf & 1)
 class FolienSelectionComponent {
     constructor(active) {
         this.active = active;
+        this.activeFolie = this.active.snapshot.params.type;
+    }
+    ngOnInit() {
+        console.log(this.active.snapshot);
+        this.activeFolie = this.active.snapshot.params.type;
     }
 }
 FolienSelectionComponent.ɵfac = function FolienSelectionComponent_Factory(t) { return new (t || FolienSelectionComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"])); };
-FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: FolienSelectionComponent, selectors: [["scheibentoenung-schmieder-folien"]], decls: 31, vars: 5, consts: [[1, "section", "profile-content"], [1, "container"], [1, "row"], [1, "col-md-12", "ml-auto", "mr-auto", "text-center"], [1, "nav-tabs-navigation"], [1, "nav-tabs-wrapper"], ["ngbNav", "", 1, "nav-tabs"], ["nav", "ngbNav"], ["ngbNavItem", ""], ["ngbNavLink", "", "routerLink", "/folien/regular", 3, "skipLocationChange"], ["ngbNavContent", ""], ["ngbNavLink", "", "routerLink", "/folien/premium", 3, "skipLocationChange"], ["ngbNavLink", "", "routerLink", "/folien/superior", 3, "skipLocationChange"], ["ngbNavLink", "", "routerLink", "/folien/special", 3, "skipLocationChange"], [3, "ngbNavOutlet"]], template: function FolienSelectionComponent_Template(rf, ctx) { if (rf & 1) {
+FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: FolienSelectionComponent, selectors: [["scheibentoenung-schmieder-folien"]], decls: 31, vars: 6, consts: [[1, "section", "profile-content"], [1, "container"], [1, "row"], [1, "col-md-12", "ml-auto", "mr-auto", "text-center"], [1, "nav-tabs-navigation"], [1, "nav-tabs-wrapper"], ["ngbNav", "", 1, "nav-tabs", 3, "activeId", "activeIdChange"], ["nav", "ngbNav"], [3, "ngbNavItem"], ["ngbNavLink", "", "routerLink", "/folien/regular"], ["ngbNavContent", ""], ["ngbNavLink", "", "routerLink", "/folien/premium"], ["ngbNavLink", "", "routerLink", "/folien/superior"], ["ngbNavLink", "", "routerLink", "/folien/special"], [3, "ngbNavOutlet"]], template: function FolienSelectionComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 2);
@@ -583,6 +588,7 @@ FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵ�
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "div", 4);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "div", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "ul", 6, 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("activeIdChange", function FolienSelectionComponent_Template_ul_activeIdChange_12_listener($event) { return ctx.activeFolie = $event; });
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "li", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "a", 9);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](16, " Regular ");
@@ -616,15 +622,17 @@ FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵ�
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     } if (rf & 2) {
         const _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵreference"](13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("skipLocationChange", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("activeId", ctx.activeFolie);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "regular");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("skipLocationChange", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "premium");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("skipLocationChange", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "superior");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("skipLocationChange", true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "special");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavOutlet", _r0);
     } }, directives: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNav"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNavItem"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNavLink"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterLinkWithHref"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNavContent"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNavOutlet"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterOutlet"]], styles: [".nav-tabs {\n  justify-content: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uL2ZvbGllbi1zZWxlY3Rpb24uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSx1QkFBQTtBQUNGIiwiZmlsZSI6ImZvbGllbi1zZWxlY3Rpb24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubmF2LXRhYnMge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn1cbiJdfQ== */"], encapsulation: 2 });
 
