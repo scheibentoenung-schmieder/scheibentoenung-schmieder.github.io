@@ -411,6 +411,9 @@
       var folienRoutes = [{
         path: ':type',
         component: _components_folien_selection_folien_selection_component__WEBPACK_IMPORTED_MODULE_4__["FolienSelectionComponent"],
+        data: {
+          title: 'Folien'
+        },
         children: [{
           path: '',
           component: _components_folie_folien_component__WEBPACK_IMPORTED_MODULE_3__["FolienComponent"]
@@ -647,25 +650,25 @@
       /*! @ng-bootstrap/ng-bootstrap */
       "1kSV");
 
-      function FolienSelectionComponent_ng_template_17_Template(rf, ctx) {
+      function FolienSelectionComponent_ng_template_16_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "router-outlet");
         }
       }
 
-      function FolienSelectionComponent_ng_template_21_Template(rf, ctx) {
+      function FolienSelectionComponent_ng_template_20_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "router-outlet");
         }
       }
 
-      function FolienSelectionComponent_ng_template_25_Template(rf, ctx) {
+      function FolienSelectionComponent_ng_template_24_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "router-outlet");
         }
       }
 
-      function FolienSelectionComponent_ng_template_29_Template(rf, ctx) {
+      function FolienSelectionComponent_ng_template_28_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "router-outlet");
         }
@@ -697,9 +700,9 @@
       FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
         type: FolienSelectionComponent,
         selectors: [["scheibentoenung-schmieder-folien"]],
-        decls: 31,
+        decls: 30,
         vars: 6,
-        consts: [[1, "section", "profile-content"], [1, "container"], [1, "row"], [1, "col-md-12", "ml-auto", "mr-auto", "text-center"], [1, "nav-tabs-navigation"], [1, "nav-tabs-wrapper"], ["ngbNav", "", 1, "nav-tabs", 3, "activeId", "activeIdChange"], ["nav", "ngbNav"], [3, "ngbNavItem"], ["ngbNavLink", "", "routerLink", "/folien/regular"], ["ngbNavContent", ""], ["ngbNavLink", "", "routerLink", "/folien/premium"], ["ngbNavLink", "", "routerLink", "/folien/superior"], ["ngbNavLink", "", "routerLink", "/folien/special"], [3, "ngbNavOutlet"]],
+        consts: [[1, "section", "profile-content"], [1, "container"], [1, "row"], [1, "col-md-12", "ml-auto", "mr-auto"], [1, "text-center"], ["src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/tuevsiegel.jpg", 1, "card-avatar", 2, "width", "100px"], [1, "nav-tabs-navigation"], [1, "nav-tabs-wrapper"], ["ngbNav", "", 1, "nav-tabs", 3, "activeId", "activeIdChange"], ["nav", "ngbNav"], [3, "ngbNavItem"], ["ngbNavLink", "", "routerLink", "/folien/regular"], ["ngbNavContent", ""], ["ngbNavLink", "", "routerLink", "/folien/premium"], ["ngbNavLink", "", "routerLink", "/folien/superior"], ["ngbNavLink", "", "routerLink", "/folien/special"], [3, "ngbNavOutlet"]],
         template: function FolienSelectionComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
@@ -710,83 +713,83 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "p", 4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, " Die Vor- und Nachteile einer Fahrzeugfolierung brauchen wir hier wahrscheinlich nicht gro\xDF aufzuz\xE4hlen. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, " Mit CFC AutoGlasFolien entscheiden Sie sich f\xFCr absolute Spitzenprodukte! Unser gesamtes Foliensortiment steht f\xFCr h\xF6chste Qualit\xE4t und Farbstabilit\xE4t. Eine zus\xE4tzliche Kratzschutzschicht macht diese Funktionsfolien besonders langlebig und praktisch wartungsfrei. CFC AutoGlasFolien bieten eine Vielfalt an Farben und T\xF6nungsstufen, sowie unterschiedliche Materialaufbauten. Unsere Folien bestehen ausschlie\xDFlich aus durchgef\xE4rbten polyesterschichten. F\xFCr eine bessere \xDCbersicht haben wir unser breitgef\xE4chertes Sortiment in sechs Serien, welche sich in einzelne Spezifikationen unterscheiden, unterteilt. Auf s\xE4mtliche von uns verbauten Folien geben wir eine Gew\xE4hrleistung von 3 Jahren, auf Farbbest\xE4ndigkeit und Klebebest\xE4ndigkeit. ");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](6, "br");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, " Jeder der sich etwas mit dem Car Wrapping besch\xE4ftigt hat, wei\xDF das eine Folierung eine leicht umsetzbare Individualisierung Ihres Fahrzeuges sein kann. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](6, "img", 5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](8, "br");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "p", 4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "Kurz gesagt k\xF6nnen Sie Ihr Fahrzeug schnell und ohne gro\xDFer Umst\xE4nden nach Ihren w\xFCnschen umgestalten. Nahezu ist jedes Design bzw. Vorstellungen m\xF6glich. Jede Folierung ist r\xFCckstandslos entfernbar. Ihre original Lack wird ganz nebenbei noch gesch\xFCtzt vor Steinschl\xE4gen, Verwitterung und anderen Umwelteinfl\xFCssen. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8, " Jede, von uns verbaute, T\xF6nungsfolie ist T\xDCV frei. Sie erhalten lediglich eine ABG die Sie immer mitf\xFChren m\xFCssen. ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "div", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "div", 6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "div", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "div", 7);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "ul", 6, 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "ul", 8, 9);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("activeIdChange", function FolienSelectionComponent_Template_ul_activeIdChange_12_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("activeIdChange", function FolienSelectionComponent_Template_ul_activeIdChange_11_listener($event) {
               return ctx.activeFolie = $event;
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "li", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "li", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "a", 9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "a", 11);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](16, " Regular ");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](17, FolienSelectionComponent_ng_template_17_Template, 1, 0, "ng-template", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](15, " Regular ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "li", 8);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "a", 11);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](20, "Premium");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](16, FolienSelectionComponent_ng_template_16_Template, 1, 0, "ng-template", 12);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, FolienSelectionComponent_ng_template_21_Template, 1, 0, "ng-template", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "li", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "a", 13);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](19, "Premium");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "li", 8);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](23, "a", 12);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](24, "Superior");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, FolienSelectionComponent_ng_template_20_Template, 1, 0, "ng-template", 12);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, FolienSelectionComponent_ng_template_25_Template, 1, 0, "ng-template", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "li", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "a", 14);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](23, "Superior");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](26, "li", 8);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](27, "a", 13);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](28, "Special");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, FolienSelectionComponent_ng_template_24_Template, 1, 0, "ng-template", 12);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, FolienSelectionComponent_ng_template_29_Template, 1, 0, "ng-template", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](25, "li", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](26, "a", 15);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](27, "Special");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](28, FolienSelectionComponent_ng_template_28_Template, 1, 0, "ng-template", 12);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](30, "div", 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](29, "div", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -800,9 +803,9 @@
           }
 
           if (rf & 2) {
-            var _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵreference"](13);
+            var _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵreference"](12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](11);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("activeId", ctx.activeFolie);
 
