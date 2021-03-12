@@ -123,7 +123,7 @@ function FolienComponent_ng_template_2_Template(rf, ctx) { if (rf & 1) {
 class FolienComponent {
     constructor(activeRouter) {
         this.activeRouter = activeRouter;
-        this.folien = { regular: _folien__WEBPACK_IMPORTED_MODULE_1__["regular"], premium: _folien__WEBPACK_IMPORTED_MODULE_1__["premium"], superior: _folien__WEBPACK_IMPORTED_MODULE_1__["superior"], special: _folien__WEBPACK_IMPORTED_MODULE_1__["special"] };
+        this.folien = { regular: _folien__WEBPACK_IMPORTED_MODULE_1__["regular"], premium: _folien__WEBPACK_IMPORTED_MODULE_1__["premium"], superior: _folien__WEBPACK_IMPORTED_MODULE_1__["superior"], secure: _folien__WEBPACK_IMPORTED_MODULE_1__["secure"] };
     }
 }
 FolienComponent.ɵfac = function FolienComponent_Factory(t) { return new (t || FolienComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"])); };
@@ -216,7 +216,7 @@ FolienModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjec
 /*!**********************************************************************************!*\
   !*** ./libs/scheibentoenung-schmieder/folien/src/lib/components/folie/folien.ts ***!
   \**********************************************************************************/
-/*! exports provided: regular, premium, superior, special */
+/*! exports provided: regular, premium, superior, secure */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -224,7 +224,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "regular", function() { return regular; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "premium", function() { return premium; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "superior", function() { return superior; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "special", function() { return special; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "secure", function() { return secure; });
 const regular = [
     {
         headline: 'Regular Black 6%',
@@ -275,8 +275,8 @@ const regular = [
             'Splitterschutz',
             'leichter Blendschutz ',
         ],
-        licht: 52,
-        hitze: 24,
+        licht: 20,
+        hitze: 38,
         uv: 99,
     },
     {
@@ -310,8 +310,8 @@ const regular = [
             'perfekte Durchsicht von innen, guter Einblick von außen',
             'Splitterschutz',
         ],
-        licht: 20,
-        hitze: 39,
+        licht: 52,
+        hitze: 34,
         uv: 99,
     },
 ];
@@ -439,7 +439,7 @@ const superior = [
             'Blendschutz',
         ],
         licht: 15,
-        hitze: 61,
+        hitze: 64,
         uv: 99,
     },
     {
@@ -476,7 +476,7 @@ const superior = [
         uv: 99,
     },
 ];
-const special = [
+const secure = [
     {
         headline: 'Secure Clear 89%',
         image: '/assets/img/folien/AG-SS90_thumb.jpg',
@@ -570,18 +570,17 @@ class FolienSelectionComponent {
         this.activeFolie = this.active.snapshot.params.type;
     }
     ngOnInit() {
-        console.log(this.active.snapshot);
         this.activeFolie = this.active.snapshot.params.type;
     }
 }
 FolienSelectionComponent.ɵfac = function FolienSelectionComponent_Factory(t) { return new (t || FolienSelectionComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"])); };
-FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: FolienSelectionComponent, selectors: [["scheibentoenung-schmieder-folien"]], decls: 30, vars: 6, consts: [[1, "section", "profile-content"], [1, "container"], [1, "row"], [1, "col-md-12", "ml-auto", "mr-auto"], [1, "text-center"], ["src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/tuevsiegel.jpg", 1, "card-avatar", 2, "width", "100px"], [1, "nav-tabs-navigation"], [1, "nav-tabs-wrapper"], ["ngbNav", "", 1, "nav-tabs", 3, "activeId", "activeIdChange"], ["nav", "ngbNav"], [3, "ngbNavItem"], ["ngbNavLink", "", "routerLink", "/folien/regular"], ["ngbNavContent", ""], ["ngbNavLink", "", "routerLink", "/folien/premium"], ["ngbNavLink", "", "routerLink", "/folien/superior"], ["ngbNavLink", "", "routerLink", "/folien/special"], [3, "ngbNavOutlet"]], template: function FolienSelectionComponent_Template(rf, ctx) { if (rf & 1) {
+FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: FolienSelectionComponent, selectors: [["scheibentoenung-schmieder-folien"]], decls: 30, vars: 6, consts: [[1, "section", "profile-content"], [1, "container"], [1, "row"], [1, "col-md-12", "ml-auto", "mr-auto"], [1, "text-center"], ["src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/tuevsiegel.jpg", 1, "card-avatar", 2, "width", "100px"], [1, "nav-tabs-navigation"], [1, "nav-tabs-wrapper"], ["ngbNav", "", 1, "nav-tabs", 3, "activeId", "activeIdChange"], ["nav", "ngbNav"], [3, "ngbNavItem"], ["ngbNavLink", "", "routerLink", "/folien/regular"], ["ngbNavContent", ""], ["ngbNavLink", "", "routerLink", "/folien/premium"], ["ngbNavLink", "", "routerLink", "/folien/superior"], ["ngbNavLink", "", "routerLink", "/folien/secure"], [3, "ngbNavOutlet"]], template: function FolienSelectionComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "p", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, " Mit CFC AutoGlasFolien entscheiden Sie sich f\u00FCr absolute Spitzenprodukte! Unser gesamtes Foliensortiment steht f\u00FCr h\u00F6chste Qualit\u00E4t und Farbstabilit\u00E4t. Eine zus\u00E4tzliche Kratzschutzschicht macht diese Funktionsfolien besonders langlebig und praktisch wartungsfrei. CFC AutoGlasFolien bieten eine Vielfalt an Farben und T\u00F6nungsstufen, sowie unterschiedliche Materialaufbauten. Unsere Folien bestehen ausschlie\u00DFlich aus durchgef\u00E4rbten polyesterschichten. F\u00FCr eine bessere \u00DCbersicht haben wir unser breitgef\u00E4chertes Sortiment in sechs Serien, welche sich in einzelne Spezifikationen unterscheiden, unterteilt. Auf s\u00E4mtliche von uns verbauten Folien geben wir eine Gew\u00E4hrleistung von 3 Jahren, auf Farbbest\u00E4ndigkeit und Klebebest\u00E4ndigkeit. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, " Mit CFC AutoGlasFolien entscheiden Sie sich f\u00FCr absolute Spitzenprodukte! Unser gesamtes Foliensortiment steht f\u00FCr h\u00F6chste Qualit\u00E4t und Farbstabilit\u00E4t. Eine zus\u00E4tzliche Kratzschutzschicht macht diese Funktionsfolien besonders langlebig und praktisch wartungsfrei. CFC AutoGlasFolien bieten eine Vielfalt an Farben und T\u00F6nungsstufen, sowie unterschiedliche Materialaufbauten. Unsere Folien bestehen ausschlie\u00DFlich aus durchgef\u00E4rbten polyesterschichten. F\u00FCr eine bessere \u00DCbersicht haben wir unser breitgef\u00E4chertes Sortiment in 4 Serien, welche sich in einzelne Spezifikationen unterscheiden, unterteilt. Auf s\u00E4mtliche von uns verbauten Folien geben wir eine Gew\u00E4hrleistung von 3 Jahren, auf Farbbest\u00E4ndigkeit und Klebebest\u00E4ndigkeit. ");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](6, "img", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "p", 4);
@@ -612,7 +611,7 @@ FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵ�
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](25, "li", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](26, "a", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](27, "Special");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](27, "Secure");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](28, FolienSelectionComponent_ng_template_28_Template, 1, 0, "ng-template", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -634,7 +633,7 @@ FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵ�
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "superior");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "special");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "secure");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavOutlet", _r0);
     } }, directives: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNav"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNavItem"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNavLink"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterLinkWithHref"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNavContent"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNavOutlet"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterOutlet"]], styles: [".nav-tabs {\n  justify-content: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uL2ZvbGllbi1zZWxlY3Rpb24uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSx1QkFBQTtBQUNGIiwiZmlsZSI6ImZvbGllbi1zZWxlY3Rpb24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubmF2LXRhYnMge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn1cbiJdfQ== */"], encapsulation: 2 });

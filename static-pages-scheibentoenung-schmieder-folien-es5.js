@@ -274,7 +274,7 @@
           regular: _folien__WEBPACK_IMPORTED_MODULE_1__["regular"],
           premium: _folien__WEBPACK_IMPORTED_MODULE_1__["premium"],
           superior: _folien__WEBPACK_IMPORTED_MODULE_1__["superior"],
-          special: _folien__WEBPACK_IMPORTED_MODULE_1__["special"]
+          secure: _folien__WEBPACK_IMPORTED_MODULE_1__["secure"]
         };
       };
 
@@ -454,7 +454,7 @@
       !*** ./libs/scheibentoenung-schmieder/folien/src/lib/components/folie/folien.ts ***!
       \**********************************************************************************/
 
-    /*! exports provided: regular, premium, superior, special */
+    /*! exports provided: regular, premium, superior, secure */
 
     /***/
     function ga6W(module, __webpack_exports__, __webpack_require__) {
@@ -482,8 +482,8 @@
       /* harmony export (binding) */
 
 
-      __webpack_require__.d(__webpack_exports__, "special", function () {
-        return special;
+      __webpack_require__.d(__webpack_exports__, "secure", function () {
+        return secure;
       });
 
       var regular = [{
@@ -504,8 +504,8 @@
         headline: 'Regular Anthracite 20%',
         image: '/assets/img/folien/AG-R15_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'dunkelgraue Tönung', 'gute Durchsicht von innen, erschwerter Einblick von außen', 'Splitterschutz', 'leichter Blendschutz '],
-        licht: 52,
-        hitze: 24,
+        licht: 20,
+        hitze: 38,
         uv: 99
       }, {
         headline: 'Regular Titan 35%',
@@ -518,8 +518,8 @@
         headline: 'Regular Silver 52%',
         image: '/assets/img/folien/AG-R50_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'leichte Tönung', 'perfekte Durchsicht von innen, guter Einblick von außen', 'Splitterschutz'],
-        licht: 20,
-        hitze: 39,
+        licht: 52,
+        hitze: 34,
         uv: 99
       }];
       var premium = [{
@@ -570,7 +570,7 @@
         image: '/assets/img/folien/AG-S15_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'schwarze Tönung, relativ gute Durchsicht von innen, kaum Einblick von außen', 'Splitterschutz', 'Blendschutz'],
         licht: 15,
-        hitze: 61,
+        hitze: 64,
         uv: 99
       }, {
         headline: 'Superior Titan 38%',
@@ -587,7 +587,7 @@
         hitze: 46,
         uv: 99
       }];
-      var special = [{
+      var secure = [{
         headline: 'Secure Clear 89%',
         image: '/assets/img/folien/AG-SS90_thumb.jpg',
         technicalDescription: ['1-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,110mm', 'Garantie 5 Jahre', 'sehr hohe Lichtdurchlässigkeit', 'perfekte Transparenz', 'extrem reißfeste Polyesterfolie', 'einbruchhemmend', 'verstärkte Splitterbindung bei Glasbruch', 'auch für vordere Scheiben bei Klarglas genehmigt (DE) (Gesamtlichtdurchlässigkeit von Glas + Folie < 70%)'],
@@ -685,7 +685,6 @@
         _createClass(FolienSelectionComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            console.log(this.active.snapshot);
             this.activeFolie = this.active.snapshot.params.type;
           }
         }]);
@@ -702,7 +701,7 @@
         selectors: [["scheibentoenung-schmieder-folien"]],
         decls: 30,
         vars: 6,
-        consts: [[1, "section", "profile-content"], [1, "container"], [1, "row"], [1, "col-md-12", "ml-auto", "mr-auto"], [1, "text-center"], ["src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/tuevsiegel.jpg", 1, "card-avatar", 2, "width", "100px"], [1, "nav-tabs-navigation"], [1, "nav-tabs-wrapper"], ["ngbNav", "", 1, "nav-tabs", 3, "activeId", "activeIdChange"], ["nav", "ngbNav"], [3, "ngbNavItem"], ["ngbNavLink", "", "routerLink", "/folien/regular"], ["ngbNavContent", ""], ["ngbNavLink", "", "routerLink", "/folien/premium"], ["ngbNavLink", "", "routerLink", "/folien/superior"], ["ngbNavLink", "", "routerLink", "/folien/special"], [3, "ngbNavOutlet"]],
+        consts: [[1, "section", "profile-content"], [1, "container"], [1, "row"], [1, "col-md-12", "ml-auto", "mr-auto"], [1, "text-center"], ["src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/tuevsiegel.jpg", 1, "card-avatar", 2, "width", "100px"], [1, "nav-tabs-navigation"], [1, "nav-tabs-wrapper"], ["ngbNav", "", 1, "nav-tabs", 3, "activeId", "activeIdChange"], ["nav", "ngbNav"], [3, "ngbNavItem"], ["ngbNavLink", "", "routerLink", "/folien/regular"], ["ngbNavContent", ""], ["ngbNavLink", "", "routerLink", "/folien/premium"], ["ngbNavLink", "", "routerLink", "/folien/superior"], ["ngbNavLink", "", "routerLink", "/folien/secure"], [3, "ngbNavOutlet"]],
         template: function FolienSelectionComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
@@ -715,7 +714,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "p", 4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, " Mit CFC AutoGlasFolien entscheiden Sie sich f\xFCr absolute Spitzenprodukte! Unser gesamtes Foliensortiment steht f\xFCr h\xF6chste Qualit\xE4t und Farbstabilit\xE4t. Eine zus\xE4tzliche Kratzschutzschicht macht diese Funktionsfolien besonders langlebig und praktisch wartungsfrei. CFC AutoGlasFolien bieten eine Vielfalt an Farben und T\xF6nungsstufen, sowie unterschiedliche Materialaufbauten. Unsere Folien bestehen ausschlie\xDFlich aus durchgef\xE4rbten polyesterschichten. F\xFCr eine bessere \xDCbersicht haben wir unser breitgef\xE4chertes Sortiment in sechs Serien, welche sich in einzelne Spezifikationen unterscheiden, unterteilt. Auf s\xE4mtliche von uns verbauten Folien geben wir eine Gew\xE4hrleistung von 3 Jahren, auf Farbbest\xE4ndigkeit und Klebebest\xE4ndigkeit. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, " Mit CFC AutoGlasFolien entscheiden Sie sich f\xFCr absolute Spitzenprodukte! Unser gesamtes Foliensortiment steht f\xFCr h\xF6chste Qualit\xE4t und Farbstabilit\xE4t. Eine zus\xE4tzliche Kratzschutzschicht macht diese Funktionsfolien besonders langlebig und praktisch wartungsfrei. CFC AutoGlasFolien bieten eine Vielfalt an Farben und T\xF6nungsstufen, sowie unterschiedliche Materialaufbauten. Unsere Folien bestehen ausschlie\xDFlich aus durchgef\xE4rbten polyesterschichten. F\xFCr eine bessere \xDCbersicht haben wir unser breitgef\xE4chertes Sortiment in 4 Serien, welche sich in einzelne Spezifikationen unterscheiden, unterteilt. Auf s\xE4mtliche von uns verbauten Folien geben wir eine Gew\xE4hrleistung von 3 Jahren, auf Farbbest\xE4ndigkeit und Klebebest\xE4ndigkeit. ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -779,7 +778,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](26, "a", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](27, "Special");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](27, "Secure");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -823,7 +822,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "special");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "secure");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
 
