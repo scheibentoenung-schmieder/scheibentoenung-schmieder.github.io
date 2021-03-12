@@ -287,7 +287,7 @@
         selectors: [["scheibentoenung-schmieder-folien"]],
         decls: 4,
         vars: 1,
-        consts: [[1, "content"], [4, "ngIf"], ["percentIcon", ""], [1, "row"], ["class", "col-md-6", 4, "ngFor", "ngForOf"], [1, "col-md-6"], [1, "card", "card-product", "card-plain"], [1, "card-image"], [1, "img-rounded", "img-responsive", 3, "alt", "src"], [1, "card-body"], [1, ""], [1, "card-title"], [1, "card-description"], [1, "list-unstyled", "follows"], [4, "ngFor", "ngForOf"], [1, "card-footer"], [1, "col-4"], [3, "ngTemplateOutlet", "ngTemplateOutletContext"], [1, "nc-icon", "nc-check-2", 2, "color", "#0d9814"], [1, "slice"], [1, "bar"], [1, "fill"]],
+        consts: [[1, "content"], [4, "ngIf"], ["percentIcon", ""], [1, "row"], ["class", "col-md-6", 4, "ngFor", "ngForOf"], [1, "col-md-6"], [1, "card", "card-product"], [1, "card-image"], [1, "img-rounded", "img-responsive", 3, "alt", "src"], [1, "card-body"], [1, ""], [1, "card-title"], [1, "card-description"], [1, "list-unstyled", "follows"], [4, "ngFor", "ngForOf"], [1, "card-footer"], [1, "col-4"], [3, "ngTemplateOutlet", "ngTemplateOutletContext"], [1, "nc-icon", "nc-check-2", 2, "color", "#0d9814"], [1, "slice"], [1, "bar"], [1, "fill"]],
         template: function FolienComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0);
@@ -523,6 +523,13 @@
         uv: 99
       }];
       var premium = [{
+        headline: 'Super Dark 3%',
+        image: '/assets/img/folien/super-dark.jpg',
+        technicalDescription: ['2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'tiefschwarze Tönung (dunkelste Tönungsstufe), annähernd blickdicht von außen', 'Splitterschutz', 'Blendschutz', 'erhöhte Hitzereduktion durch Metallisierung '],
+        licht: 3,
+        hitze: 70,
+        uv: 99
+      }, {
         headline: 'Premium Black 5%',
         image: '/assets/img/folien/AG-P05_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'tiefschwarze Tönung, relativ gute Durchsicht von innen, kaum Einblick von außen', 'Splitterschutz', 'Blendschutz', 'erhöhte Hitzereduktion durch Metallisierung '],
@@ -573,6 +580,13 @@
         hitze: 64,
         uv: 99
       }, {
+        headline: 'Superior Anthracite 23%',
+        image: '/assets/img/folien/superior-anthracite.jpg',
+        technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'dunkelgraue Tönung, erschwerte Durchsicht von innen, kaum Einblick von außen', 'Splitterschutz'],
+        licht: 23,
+        hitze: 58,
+        uv: 99
+      }, {
         headline: 'Superior Titan 38%',
         image: '/assets/img/folien/AG-S35_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'hellgraue Tönung, sehr gute Durchsicht von innen, relativ guter Einblick von außen', 'Splitterschutz'],
@@ -580,10 +594,24 @@
         hitze: 51,
         uv: 99
       }, {
+        headline: 'Superior platin 35%',
+        image: '/assets/img/folien/AG-S50_thumb.jpg',
+        technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'hellgraue Tönung, sehr gute Durchsicht von innen, relativ guter Einblick von außen', 'Splitterschutz'],
+        licht: 35,
+        hitze: 58,
+        uv: 99
+      }, {
         headline: 'Superior Silver 52%',
         image: '/assets/img/folien/AG-S50_thumb.jpg',
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'leichte Tönung', 'perfekte Durchsicht von innen, guter Einblick von außen', 'Splitterschutz'],
         licht: 52,
+        hitze: 46,
+        uv: 99
+      }, {
+        headline: 'Superior Silicium 70%',
+        image: '/assets/img/folien/superior-silicium.jpg',
+        technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'leichte Tönung', 'perfekte Durchsicht von innen, guter Einblick von außen', 'Splitterschutz'],
+        licht: 70,
         hitze: 46,
         uv: 99
       }];
