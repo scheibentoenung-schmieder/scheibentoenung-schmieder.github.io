@@ -525,23 +525,6 @@ const superior = [
         hitze: 46,
         uv: 99,
     },
-    {
-        headline: 'Superior Silicium 70%',
-        image: '/assets/img/folien/superior-silicium.jpg',
-        technicalDescription: [
-            '2-lagiger Folienaufbau',
-            'Keramik Beschichtung',
-            'extra gehärtete Kratzschutzschicht',
-            'Dicke ohne Liner 0,045mm',
-            'Garantie 15 Jahre',
-            'leichte Tönung',
-            'perfekte Durchsicht von innen, guter Einblick von außen',
-            'Splitterschutz',
-        ],
-        licht: 70,
-        hitze: 46,
-        uv: 99,
-    },
 ];
 const secure = [
     {

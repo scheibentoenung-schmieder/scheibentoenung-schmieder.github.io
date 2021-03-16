@@ -1551,36 +1551,38 @@
         return [a0, a1];
       };
 
-      var _c3 = function _c3() {
+      var _c3 = "https://www.instagram.com/scheibentoenungschmieder/";
+
+      var _c4 = function _c4() {
         return {
           facebookLink: "https://www.facebook.com/ScheibentoenungSchmieder",
           whatsapp: "https://wa.me/0491739621191?text=Anfrage%20Folie:",
-          instagram: "Todo"
+          instagram: _c3
         };
       };
 
-      var _c4 = function _c4() {
+      var _c5 = function _c5() {
         return {
           href: "/impressum",
           name: "Impressum"
         };
       };
 
-      var _c5 = function _c5() {
+      var _c6 = function _c6() {
         return {
           href: "/agb",
           name: "AGB"
         };
       };
 
-      var _c6 = function _c6() {
+      var _c7 = function _c7() {
         return {
           href: "/datenschutz",
           name: "Datenschutz"
         };
       };
 
-      var _c7 = function _c7(a0, a1, a2) {
+      var _c8 = function _c8(a0, a1, a2) {
         return [a0, a1, a2];
       };
 
@@ -1670,7 +1672,7 @@
             var tmp_3_0 = null;
             var tmp_4_0 = null;
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("links", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction2"](15, _c2, _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](13, _c0), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](14, _c1)))("forceVisible", !((tmp_1_0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind1"](1, 7, ctx.meta$)) == null ? null : tmp_1_0.cover))("socialMedia", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](18, _c3));
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("links", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction2"](15, _c2, _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](13, _c0), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](14, _c1)))("forceVisible", !((tmp_1_0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind1"](1, 7, ctx.meta$)) == null ? null : tmp_1_0.cover))("socialMedia", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](18, _c4));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
 
@@ -1682,7 +1684,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("links", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction3"](22, _c7, _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](19, _c4), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](20, _c5), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](21, _c6)));
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("links", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction3"](22, _c8, _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](19, _c5), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](20, _c6), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](21, _c7)));
           }
         },
         directives: [_libs_shared_ui_paper_kit_src_lib_components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_4__["NavbarComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterOutlet"], _libs_shared_ui_paper_kit_src_lib_components_footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"]],
