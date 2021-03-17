@@ -47,7 +47,7 @@
         selectors: [["scheibentoenung-schmieder-home"]],
         decls: 46,
         vars: 0,
-        consts: [[1, "main"], [1, "text-center"], [1, "container"], [1, "row"], [1, "col-md-8", "mr-auto", "ml-auto"], [1, "title"], [1, "description"], [1, "col-md-6"], [1, "card"], ["alt", "Card image cap", "src", "/assets/img/home/lack.jpg", 1, "card-img-top"], [1, "card-body"], [1, "card-title"], ["routerLink", "/lackschutz", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "src", "/assets/img/home/rain.png", 1, "card-img-top"], ["routerLink", "/folien", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "src", "/assets/img/home/teilfolierung.jpg", 1, "card-img-top"], ["routerLink", "/car-wrapping", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "src", "/assets/img/home/questions.png", 1, "card-img-top"], ["href", "/fragen", 1, "btn", "btn-link", "btn-danger"]],
+        consts: [[1, "main"], [1, "text-center"], [1, "container"], [1, "row"], [1, "col-md-8", "mr-auto", "ml-auto"], [1, "title"], [1, "description"], [1, "col-md-6"], [1, "card"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/lack.jpg", 1, "card-img-top"], [1, "card-body"], [1, "card-title"], ["routerLink", "/lackschutz", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/rain.png", 1, "card-img-top"], ["routerLink", "/folien", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/teilfolierung.jpg", 1, "card-img-top"], ["routerLink", "/car-wrapping", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/questions.png", 1, "card-img-top"], ["href", "/fragen", 1, "btn", "btn-link", "btn-danger"]],
         template: function HomeComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -66,7 +66,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "h5", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "h3", 6);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, " Wir sind ein Unternehmen was sich auf Scheibent\xF6nungen und Fahrzeugfolierungen / Teilfolierungen mit h\xF6chsten Qualit\xE4tsanspr\xFCchen, spezialisiert hat. Ans\xE4ssig sind wir in Limbach-Oberfrohna, f\xFChren aber nat\xFCrlich auch alle Arbeiten unter diversen Voraussetzungen bei Ihnen vor Ort aus. Unsere Scheibent\xF6nungen und Folierungen jeglicher Art, werden selbstverst\xE4ndlich nur mit den aktuell auf dem Marktf\xFChrenden Lieferanten ausgef\xFChrt. Wir verfolgen stetig die neuesten Trends im Bereich Folien und werden diese auch anwenden k\xF6nnen. ");
 

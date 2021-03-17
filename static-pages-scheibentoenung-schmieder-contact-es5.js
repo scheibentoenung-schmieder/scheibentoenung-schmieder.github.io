@@ -1,6 +1,4 @@
 (function () {
-  function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
   function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
   function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -13,11 +11,13 @@
 
   function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-  function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
   function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
 
   function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+  function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+  function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
   function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
@@ -1209,6 +1209,803 @@
     },
 
     /***/
+    "0EQZ":
+    /*!************************************************************************!*\
+      !*** ./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/collections.js ***!
+      \************************************************************************/
+
+    /*! exports provided: ArrayDataSource, DataSource, SelectionModel, UniqueSelectionDispatcher, _DisposeViewRepeaterStrategy, _RecycleViewRepeaterStrategy, _VIEW_REPEATER_STRATEGY, getMultipleValuesInSingleSelectionError, isDataSource */
+
+    /***/
+    function EQZ(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ArrayDataSource", function () {
+        return ArrayDataSource;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "DataSource", function () {
+        return DataSource;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "SelectionModel", function () {
+        return SelectionModel;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "UniqueSelectionDispatcher", function () {
+        return UniqueSelectionDispatcher;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "_DisposeViewRepeaterStrategy", function () {
+        return _DisposeViewRepeaterStrategy;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "_RecycleViewRepeaterStrategy", function () {
+        return _RecycleViewRepeaterStrategy;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "_VIEW_REPEATER_STRATEGY", function () {
+        return _VIEW_REPEATER_STRATEGY;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "getMultipleValuesInSingleSelectionError", function () {
+        return getMultipleValuesInSingleSelectionError;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "isDataSource", function () {
+        return isDataSource;
+      });
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! rxjs */
+      "qCKp");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+
+      var DataSource = function DataSource() {
+        _classCallCheck(this, DataSource);
+      };
+      /** Checks whether an object is a data source. */
+
+
+      function isDataSource(value) {
+        // Check if the value is a DataSource by observing if it has a connect function. Cannot
+        // be checked as an `instanceof DataSource` since people could create their own sources
+        // that match the interface, but don't extend DataSource.
+        return value && typeof value.connect === 'function';
+      }
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /** DataSource wrapper for a native array. */
+
+
+      var ArrayDataSource = /*#__PURE__*/function (_DataSource) {
+        _inherits(ArrayDataSource, _DataSource);
+
+        var _super11 = _createSuper(ArrayDataSource);
+
+        function ArrayDataSource(_data) {
+          var _this9;
+
+          _classCallCheck(this, ArrayDataSource);
+
+          _this9 = _super11.call(this);
+          _this9._data = _data;
+          return _this9;
+        }
+
+        _createClass(ArrayDataSource, [{
+          key: "connect",
+          value: function connect() {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["isObservable"])(this._data) ? this._data : Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["of"])(this._data);
+          }
+        }, {
+          key: "disconnect",
+          value: function disconnect() {}
+        }]);
+
+        return ArrayDataSource;
+      }(DataSource);
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /**
+       * A repeater that destroys views when they are removed from a
+       * {@link ViewContainerRef}. When new items are inserted into the container,
+       * the repeater will always construct a new embedded view for each item.
+       *
+       * @template T The type for the embedded view's $implicit property.
+       * @template R The type for the item in each IterableDiffer change record.
+       * @template C The type for the context passed to each embedded view.
+       */
+
+
+      var _DisposeViewRepeaterStrategy = /*#__PURE__*/function () {
+        function _DisposeViewRepeaterStrategy() {
+          _classCallCheck(this, _DisposeViewRepeaterStrategy);
+        }
+
+        _createClass(_DisposeViewRepeaterStrategy, [{
+          key: "applyChanges",
+          value: function applyChanges(changes, viewContainerRef, itemContextFactory, itemValueResolver, itemViewChanged) {
+            changes.forEachOperation(function (record, adjustedPreviousIndex, currentIndex) {
+              var view;
+              var operation;
+
+              if (record.previousIndex == null) {
+                var insertContext = itemContextFactory(record, adjustedPreviousIndex, currentIndex);
+                view = viewContainerRef.createEmbeddedView(insertContext.templateRef, insertContext.context, insertContext.index);
+                operation = 1
+                /* INSERTED */
+                ;
+              } else if (currentIndex == null) {
+                viewContainerRef.remove(adjustedPreviousIndex);
+                operation = 3
+                /* REMOVED */
+                ;
+              } else {
+                view = viewContainerRef.get(adjustedPreviousIndex);
+                viewContainerRef.move(view, currentIndex);
+                operation = 2
+                /* MOVED */
+                ;
+              }
+
+              if (itemViewChanged) {
+                itemViewChanged({
+                  context: view === null || view === void 0 ? void 0 : view.context,
+                  operation: operation,
+                  record: record
+                });
+              }
+            });
+          }
+        }, {
+          key: "detach",
+          value: function detach() {}
+        }]);
+
+        return _DisposeViewRepeaterStrategy;
+      }();
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /**
+       * A repeater that caches views when they are removed from a
+       * {@link ViewContainerRef}. When new items are inserted into the container,
+       * the repeater will reuse one of the cached views instead of creating a new
+       * embedded view. Recycling cached views reduces the quantity of expensive DOM
+       * inserts.
+       *
+       * @template T The type for the embedded view's $implicit property.
+       * @template R The type for the item in each IterableDiffer change record.
+       * @template C The type for the context passed to each embedded view.
+       */
+
+
+      var _RecycleViewRepeaterStrategy = /*#__PURE__*/function () {
+        function _RecycleViewRepeaterStrategy() {
+          _classCallCheck(this, _RecycleViewRepeaterStrategy);
+
+          /**
+           * The size of the cache used to store unused views.
+           * Setting the cache size to `0` will disable caching. Defaults to 20 views.
+           */
+          this.viewCacheSize = 20;
+          /**
+           * View cache that stores embedded view instances that have been previously stamped out,
+           * but don't are not currently rendered. The view repeater will reuse these views rather than
+           * creating brand new ones.
+           *
+           * TODO(michaeljamesparsons) Investigate whether using a linked list would improve performance.
+           */
+
+          this._viewCache = [];
+        }
+        /** Apply changes to the DOM. */
+
+
+        _createClass(_RecycleViewRepeaterStrategy, [{
+          key: "applyChanges",
+          value: function applyChanges(changes, viewContainerRef, itemContextFactory, itemValueResolver, itemViewChanged) {
+            var _this10 = this;
+
+            // Rearrange the views to put them in the right location.
+            changes.forEachOperation(function (record, adjustedPreviousIndex, currentIndex) {
+              var view;
+              var operation;
+
+              if (record.previousIndex == null) {
+                // Item added.
+                var viewArgsFactory = function viewArgsFactory() {
+                  return itemContextFactory(record, adjustedPreviousIndex, currentIndex);
+                };
+
+                view = _this10._insertView(viewArgsFactory, currentIndex, viewContainerRef, itemValueResolver(record));
+                operation = view ? 1
+                /* INSERTED */
+                : 0
+                /* REPLACED */
+                ;
+              } else if (currentIndex == null) {
+                // Item removed.
+                _this10._detachAndCacheView(adjustedPreviousIndex, viewContainerRef);
+
+                operation = 3
+                /* REMOVED */
+                ;
+              } else {
+                // Item moved.
+                view = _this10._moveView(adjustedPreviousIndex, currentIndex, viewContainerRef, itemValueResolver(record));
+                operation = 2
+                /* MOVED */
+                ;
+              }
+
+              if (itemViewChanged) {
+                itemViewChanged({
+                  context: view === null || view === void 0 ? void 0 : view.context,
+                  operation: operation,
+                  record: record
+                });
+              }
+            });
+          }
+        }, {
+          key: "detach",
+          value: function detach() {
+            var _iterator = _createForOfIteratorHelper(this._viewCache),
+                _step;
+
+            try {
+              for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                var view = _step.value;
+                view.destroy();
+              }
+            } catch (err) {
+              _iterator.e(err);
+            } finally {
+              _iterator.f();
+            }
+
+            this._viewCache = [];
+          }
+          /**
+           * Inserts a view for a new item, either from the cache or by creating a new
+           * one. Returns `undefined` if the item was inserted into a cached view.
+           */
+
+        }, {
+          key: "_insertView",
+          value: function _insertView(viewArgsFactory, currentIndex, viewContainerRef, value) {
+            var cachedView = this._insertViewFromCache(currentIndex, viewContainerRef);
+
+            if (cachedView) {
+              cachedView.context.$implicit = value;
+              return undefined;
+            }
+
+            var viewArgs = viewArgsFactory();
+            return viewContainerRef.createEmbeddedView(viewArgs.templateRef, viewArgs.context, viewArgs.index);
+          }
+          /** Detaches the view at the given index and inserts into the view cache. */
+
+        }, {
+          key: "_detachAndCacheView",
+          value: function _detachAndCacheView(index, viewContainerRef) {
+            var detachedView = viewContainerRef.detach(index);
+
+            this._maybeCacheView(detachedView, viewContainerRef);
+          }
+          /** Moves view at the previous index to the current index. */
+
+        }, {
+          key: "_moveView",
+          value: function _moveView(adjustedPreviousIndex, currentIndex, viewContainerRef, value) {
+            var view = viewContainerRef.get(adjustedPreviousIndex);
+            viewContainerRef.move(view, currentIndex);
+            view.context.$implicit = value;
+            return view;
+          }
+          /**
+           * Cache the given detached view. If the cache is full, the view will be
+           * destroyed.
+           */
+
+        }, {
+          key: "_maybeCacheView",
+          value: function _maybeCacheView(view, viewContainerRef) {
+            if (this._viewCache.length < this.viewCacheSize) {
+              this._viewCache.push(view);
+            } else {
+              var index = viewContainerRef.indexOf(view); // The host component could remove views from the container outside of
+              // the view repeater. It's unlikely this will occur, but just in case,
+              // destroy the view on its own, otherwise destroy it through the
+              // container to ensure that all the references are removed.
+
+              if (index === -1) {
+                view.destroy();
+              } else {
+                viewContainerRef.remove(index);
+              }
+            }
+          }
+          /** Inserts a recycled view from the cache at the given index. */
+
+        }, {
+          key: "_insertViewFromCache",
+          value: function _insertViewFromCache(index, viewContainerRef) {
+            var cachedView = this._viewCache.pop();
+
+            if (cachedView) {
+              viewContainerRef.insert(cachedView, index);
+            }
+
+            return cachedView || null;
+          }
+        }]);
+
+        return _RecycleViewRepeaterStrategy;
+      }();
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /**
+       * Class to be used to power selecting one or more options from a list.
+       */
+
+
+      var SelectionModel = /*#__PURE__*/function () {
+        function SelectionModel() {
+          var _this11 = this;
+
+          var _multiple = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
+          var initiallySelectedValues = arguments.length > 1 ? arguments[1] : undefined;
+
+          var _emitChanges = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+          _classCallCheck(this, SelectionModel);
+
+          this._multiple = _multiple;
+          this._emitChanges = _emitChanges;
+          /** Currently-selected values. */
+
+          this._selection = new Set();
+          /** Keeps track of the deselected options that haven't been emitted by the change event. */
+
+          this._deselectedToEmit = [];
+          /** Keeps track of the selected options that haven't been emitted by the change event. */
+
+          this._selectedToEmit = [];
+          /** Event emitted when the value has changed. */
+
+          this.changed = new rxjs__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
+
+          if (initiallySelectedValues && initiallySelectedValues.length) {
+            if (_multiple) {
+              initiallySelectedValues.forEach(function (value) {
+                return _this11._markSelected(value);
+              });
+            } else {
+              this._markSelected(initiallySelectedValues[0]);
+            } // Clear the array in order to avoid firing the change event for preselected values.
+
+
+            this._selectedToEmit.length = 0;
+          }
+        }
+        /** Selected values. */
+
+
+        _createClass(SelectionModel, [{
+          key: "selected",
+          get: function get() {
+            if (!this._selected) {
+              this._selected = Array.from(this._selection.values());
+            }
+
+            return this._selected;
+          }
+          /**
+           * Selects a value or an array of values.
+           */
+
+        }, {
+          key: "select",
+          value: function select() {
+            var _this12 = this;
+
+            for (var _len = arguments.length, values = new Array(_len), _key = 0; _key < _len; _key++) {
+              values[_key] = arguments[_key];
+            }
+
+            this._verifyValueAssignment(values);
+
+            values.forEach(function (value) {
+              return _this12._markSelected(value);
+            });
+
+            this._emitChangeEvent();
+          }
+          /**
+           * Deselects a value or an array of values.
+           */
+
+        }, {
+          key: "deselect",
+          value: function deselect() {
+            var _this13 = this;
+
+            for (var _len2 = arguments.length, values = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+              values[_key2] = arguments[_key2];
+            }
+
+            this._verifyValueAssignment(values);
+
+            values.forEach(function (value) {
+              return _this13._unmarkSelected(value);
+            });
+
+            this._emitChangeEvent();
+          }
+          /**
+           * Toggles a value between selected and deselected.
+           */
+
+        }, {
+          key: "toggle",
+          value: function toggle(value) {
+            this.isSelected(value) ? this.deselect(value) : this.select(value);
+          }
+          /**
+           * Clears all of the selected values.
+           */
+
+        }, {
+          key: "clear",
+          value: function clear() {
+            this._unmarkAll();
+
+            this._emitChangeEvent();
+          }
+          /**
+           * Determines whether a value is selected.
+           */
+
+        }, {
+          key: "isSelected",
+          value: function isSelected(value) {
+            return this._selection.has(value);
+          }
+          /**
+           * Determines whether the model does not have a value.
+           */
+
+        }, {
+          key: "isEmpty",
+          value: function isEmpty() {
+            return this._selection.size === 0;
+          }
+          /**
+           * Determines whether the model has a value.
+           */
+
+        }, {
+          key: "hasValue",
+          value: function hasValue() {
+            return !this.isEmpty();
+          }
+          /**
+           * Sorts the selected values based on a predicate function.
+           */
+
+        }, {
+          key: "sort",
+          value: function sort(predicate) {
+            if (this._multiple && this.selected) {
+              this._selected.sort(predicate);
+            }
+          }
+          /**
+           * Gets whether multiple values can be selected.
+           */
+
+        }, {
+          key: "isMultipleSelection",
+          value: function isMultipleSelection() {
+            return this._multiple;
+          }
+          /** Emits a change event and clears the records of selected and deselected values. */
+
+        }, {
+          key: "_emitChangeEvent",
+          value: function _emitChangeEvent() {
+            // Clear the selected values so they can be re-cached.
+            this._selected = null;
+
+            if (this._selectedToEmit.length || this._deselectedToEmit.length) {
+              this.changed.next({
+                source: this,
+                added: this._selectedToEmit,
+                removed: this._deselectedToEmit
+              });
+              this._deselectedToEmit = [];
+              this._selectedToEmit = [];
+            }
+          }
+          /** Selects a value. */
+
+        }, {
+          key: "_markSelected",
+          value: function _markSelected(value) {
+            if (!this.isSelected(value)) {
+              if (!this._multiple) {
+                this._unmarkAll();
+              }
+
+              this._selection.add(value);
+
+              if (this._emitChanges) {
+                this._selectedToEmit.push(value);
+              }
+            }
+          }
+          /** Deselects a value. */
+
+        }, {
+          key: "_unmarkSelected",
+          value: function _unmarkSelected(value) {
+            if (this.isSelected(value)) {
+              this._selection["delete"](value);
+
+              if (this._emitChanges) {
+                this._deselectedToEmit.push(value);
+              }
+            }
+          }
+          /** Clears out the selected values. */
+
+        }, {
+          key: "_unmarkAll",
+          value: function _unmarkAll() {
+            var _this14 = this;
+
+            if (!this.isEmpty()) {
+              this._selection.forEach(function (value) {
+                return _this14._unmarkSelected(value);
+              });
+            }
+          }
+          /**
+           * Verifies the value assignment and throws an error if the specified value array is
+           * including multiple values while the selection model is not supporting multiple values.
+           */
+
+        }, {
+          key: "_verifyValueAssignment",
+          value: function _verifyValueAssignment(values) {
+            if (values.length > 1 && !this._multiple && (typeof ngDevMode === 'undefined' || ngDevMode)) {
+              throw getMultipleValuesInSingleSelectionError();
+            }
+          }
+        }]);
+
+        return SelectionModel;
+      }();
+      /**
+       * Returns an error that reports that multiple values are passed into a selection model
+       * with a single value.
+       * @docs-private
+       */
+
+
+      function getMultipleValuesInSingleSelectionError() {
+        return Error('Cannot pass multiple values into SelectionModel with single-value mode.');
+      }
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /**
+       * Class to coordinate unique selection based on name.
+       * Intended to be consumed as an Angular service.
+       * This service is needed because native radio change events are only fired on the item currently
+       * being selected, and we still need to uncheck the previous selection.
+       *
+       * This service does not *store* any IDs and names because they may change at any time, so it is
+       * less error-prone if they are simply passed through when the events occur.
+       */
+
+
+      var UniqueSelectionDispatcher = /*#__PURE__*/function () {
+        function UniqueSelectionDispatcher() {
+          _classCallCheck(this, UniqueSelectionDispatcher);
+
+          this._listeners = [];
+        }
+        /**
+         * Notify other items that selection for the given name has been set.
+         * @param id ID of the item.
+         * @param name Name of the item.
+         */
+
+
+        _createClass(UniqueSelectionDispatcher, [{
+          key: "notify",
+          value: function notify(id, name) {
+            var _iterator2 = _createForOfIteratorHelper(this._listeners),
+                _step2;
+
+            try {
+              for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+                var listener = _step2.value;
+                listener(id, name);
+              }
+            } catch (err) {
+              _iterator2.e(err);
+            } finally {
+              _iterator2.f();
+            }
+          }
+          /**
+           * Listen for future changes to item selection.
+           * @return Function used to deregister listener
+           */
+
+        }, {
+          key: "listen",
+          value: function listen(listener) {
+            var _this15 = this;
+
+            this._listeners.push(listener);
+
+            return function () {
+              _this15._listeners = _this15._listeners.filter(function (registered) {
+                return listener !== registered;
+              });
+            };
+          }
+        }, {
+          key: "ngOnDestroy",
+          value: function ngOnDestroy() {
+            this._listeners = [];
+          }
+        }]);
+
+        return UniqueSelectionDispatcher;
+      }();
+
+      UniqueSelectionDispatcher.ɵfac = function UniqueSelectionDispatcher_Factory(t) {
+        return new (t || UniqueSelectionDispatcher)();
+      };
+
+      UniqueSelectionDispatcher.ɵprov = Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"])({
+        factory: function UniqueSelectionDispatcher_Factory() {
+          return new UniqueSelectionDispatcher();
+        },
+        token: UniqueSelectionDispatcher,
+        providedIn: "root"
+      });
+
+      (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](UniqueSelectionDispatcher, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [];
+        }, null);
+      })();
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /**
+       * Injection token for {@link _ViewRepeater}. This token is for use by Angular Material only.
+       * @docs-private
+       */
+
+
+      var _VIEW_REPEATER_STRATEGY = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["InjectionToken"]('_ViewRepeater');
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /**
+       * Generated bundle index. Do not edit.
+       */
+      //# sourceMappingURL=collections.js.map
+
+      /***/
+
+    },
+
+    /***/
     "D5Hz":
     /*!**************************************************!*\
       !*** ./node_modules/emailjs-com/source/index.js ***!
@@ -2142,71 +2939,71 @@
       var _MatSelectBase = /*#__PURE__*/function (_MatSelectMixinBase2) {
         _inherits(_MatSelectBase, _MatSelectMixinBase2);
 
-        var _super11 = _createSuper(_MatSelectBase);
+        var _super12 = _createSuper(_MatSelectBase);
 
         function _MatSelectBase(_viewportRuler, _changeDetectorRef, _ngZone, _defaultErrorStateMatcher, elementRef, _dir, _parentForm, _parentFormGroup, _parentFormField, ngControl, tabIndex, scrollStrategyFactory, _liveAnnouncer, _defaultOptions) {
-          var _this9;
+          var _this16;
 
           _classCallCheck(this, _MatSelectBase);
 
           var _a, _b, _c;
 
-          _this9 = _super11.call(this, elementRef, _defaultErrorStateMatcher, _parentForm, _parentFormGroup, ngControl);
-          _this9._viewportRuler = _viewportRuler;
-          _this9._changeDetectorRef = _changeDetectorRef;
-          _this9._ngZone = _ngZone;
-          _this9._dir = _dir;
-          _this9._parentFormField = _parentFormField;
-          _this9.ngControl = ngControl;
-          _this9._liveAnnouncer = _liveAnnouncer;
-          _this9._defaultOptions = _defaultOptions;
+          _this16 = _super12.call(this, elementRef, _defaultErrorStateMatcher, _parentForm, _parentFormGroup, ngControl);
+          _this16._viewportRuler = _viewportRuler;
+          _this16._changeDetectorRef = _changeDetectorRef;
+          _this16._ngZone = _ngZone;
+          _this16._dir = _dir;
+          _this16._parentFormField = _parentFormField;
+          _this16.ngControl = ngControl;
+          _this16._liveAnnouncer = _liveAnnouncer;
+          _this16._defaultOptions = _defaultOptions;
           /** Whether or not the overlay panel is open. */
 
-          _this9._panelOpen = false;
+          _this16._panelOpen = false;
           /** Comparison function to specify which option is displayed. Defaults to object equality. */
 
-          _this9._compareWith = function (o1, o2) {
+          _this16._compareWith = function (o1, o2) {
             return o1 === o2;
           };
           /** Unique id for this input. */
 
 
-          _this9._uid = "mat-select-".concat(nextUniqueId++);
+          _this16._uid = "mat-select-".concat(nextUniqueId++);
           /** Current `ariar-labelledby` value for the select trigger. */
 
-          _this9._triggerAriaLabelledBy = null;
+          _this16._triggerAriaLabelledBy = null;
           /** Emits whenever the component is destroyed. */
 
-          _this9._destroy = new rxjs__WEBPACK_IMPORTED_MODULE_12__["Subject"]();
+          _this16._destroy = new rxjs__WEBPACK_IMPORTED_MODULE_12__["Subject"]();
           /** `View -> model callback called when value changes` */
 
-          _this9._onChange = function () {};
+          _this16._onChange = function () {};
           /** `View -> model callback called when select has been touched` */
 
 
-          _this9._onTouched = function () {};
+          _this16._onTouched = function () {};
           /** ID for the DOM node containing the select's value. */
 
 
-          _this9._valueId = "mat-select-value-".concat(nextUniqueId++);
+          _this16._valueId = "mat-select-value-".concat(nextUniqueId++);
           /** Emits when the panel element is finished transforming in. */
 
-          _this9._panelDoneAnimatingStream = new rxjs__WEBPACK_IMPORTED_MODULE_12__["Subject"]();
-          _this9._overlayPanelClass = ((_a = _this9._defaultOptions) === null || _a === void 0 ? void 0 : _a.overlayPanelClass) || '';
-          _this9._focused = false;
+          _this16._panelDoneAnimatingStream = new rxjs__WEBPACK_IMPORTED_MODULE_12__["Subject"]();
+          _this16._overlayPanelClass = ((_a = _this16._defaultOptions) === null || _a === void 0 ? void 0 : _a.overlayPanelClass) || '';
+          _this16._focused = false;
           /** A name for this control that can be used by `mat-form-field`. */
 
-          _this9.controlType = 'mat-select';
-          _this9._required = false;
-          _this9._multiple = false;
-          _this9._disableOptionCentering = (_c = (_b = _this9._defaultOptions) === null || _b === void 0 ? void 0 : _b.disableOptionCentering) !== null && _c !== void 0 ? _c : false;
+          _this16.controlType = 'mat-select';
+          _this16._required = false;
+          _this16._multiple = false;
+          _this16._disableOptionCentering = (_c = (_b = _this16._defaultOptions) === null || _b === void 0 ? void 0 : _b.disableOptionCentering) !== null && _c !== void 0 ? _c : false;
           /** Aria label of the select. */
 
-          _this9.ariaLabel = '';
+          _this16.ariaLabel = '';
           /** Combined stream of all of the child options' change events. */
 
-          _this9.optionSelectionChanges = Object(rxjs__WEBPACK_IMPORTED_MODULE_12__["defer"])(function () {
-            var options = _this9.options;
+          _this16.optionSelectionChanges = Object(rxjs__WEBPACK_IMPORTED_MODULE_12__["defer"])(function () {
+            var options = _this16.options;
 
             if (options) {
               return options.changes.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["startWith"])(options), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["switchMap"])(function () {
@@ -2216,52 +3013,52 @@
               }));
             }
 
-            return _this9._ngZone.onStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["take"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["switchMap"])(function () {
-              return _this9.optionSelectionChanges;
+            return _this16._ngZone.onStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["take"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["switchMap"])(function () {
+              return _this16.optionSelectionChanges;
             }));
           });
           /** Event emitted when the select panel has been toggled. */
 
-          _this9.openedChange = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+          _this16.openedChange = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
           /** Event emitted when the select has been opened. */
 
-          _this9._openedStream = _this9.openedChange.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["filter"])(function (o) {
+          _this16._openedStream = _this16.openedChange.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["filter"])(function (o) {
             return o;
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["map"])(function () {}));
           /** Event emitted when the select has been closed. */
 
-          _this9._closedStream = _this9.openedChange.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["filter"])(function (o) {
+          _this16._closedStream = _this16.openedChange.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["filter"])(function (o) {
             return !o;
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["map"])(function () {}));
           /** Event emitted when the selected value has been changed by the user. */
 
-          _this9.selectionChange = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+          _this16.selectionChange = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
           /**
            * Event that emits whenever the raw value of the select changes. This is here primarily
            * to facilitate the two-way binding for the `value` input.
            * @docs-private
            */
 
-          _this9.valueChange = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+          _this16.valueChange = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
 
-          if (_this9.ngControl) {
+          if (_this16.ngControl) {
             // Note: we provide the value accessor through here, instead of
             // the `providers` to avoid running into a circular import.
-            _this9.ngControl.valueAccessor = _assertThisInitialized(_this9);
+            _this16.ngControl.valueAccessor = _assertThisInitialized(_this16);
           } // Note that we only want to set this when the defaults pass it in, otherwise it should
           // stay as `undefined` so that it falls back to the default in the key manager.
 
 
           if ((_defaultOptions === null || _defaultOptions === void 0 ? void 0 : _defaultOptions.typeaheadDebounceInterval) != null) {
-            _this9._typeaheadDebounceInterval = _defaultOptions.typeaheadDebounceInterval;
+            _this16._typeaheadDebounceInterval = _defaultOptions.typeaheadDebounceInterval;
           }
 
-          _this9._scrollStrategyFactory = scrollStrategyFactory;
-          _this9._scrollStrategy = _this9._scrollStrategyFactory();
-          _this9.tabIndex = parseInt(tabIndex) || 0; // Force setter to be called in case id was not specified.
+          _this16._scrollStrategyFactory = scrollStrategyFactory;
+          _this16._scrollStrategy = _this16._scrollStrategyFactory();
+          _this16.tabIndex = parseInt(tabIndex) || 0; // Force setter to be called in case id was not specified.
 
-          _this9.id = _this9.id;
-          return _this9;
+          _this16.id = _this16.id;
+          return _this16;
         }
         /** Whether the select is focused. */
 
@@ -2381,7 +3178,7 @@
         }, {
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this10 = this;
+            var _this17 = this;
 
             this._selectionModel = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_9__["SelectionModel"](this.multiple);
             this.stateChanges.next(); // We need `distinctUntilChanged` here, because some browsers will
@@ -2389,13 +3186,13 @@
             // https://github.com/angular/angular/issues/24084
 
             this._panelDoneAnimatingStream.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["distinctUntilChanged"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["takeUntil"])(this._destroy)).subscribe(function () {
-              return _this10._panelDoneAnimating(_this10.panelOpen);
+              return _this17._panelDoneAnimating(_this17.panelOpen);
             });
           }
         }, {
           key: "ngAfterContentInit",
           value: function ngAfterContentInit() {
-            var _this11 = this;
+            var _this18 = this;
 
             this._initKeyManager();
 
@@ -2409,9 +3206,9 @@
             });
 
             this.options.changes.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["startWith"])(null), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["takeUntil"])(this._destroy)).subscribe(function () {
-              _this11._resetOptions();
+              _this18._resetOptions();
 
-              _this11._initializeSelection();
+              _this18._initializeSelection();
             });
           }
         }, {
@@ -2701,12 +3498,12 @@
         }, {
           key: "_onAttached",
           value: function _onAttached() {
-            var _this12 = this;
+            var _this19 = this;
 
             this.overlayDir.positionChange.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["take"])(1)).subscribe(function () {
-              _this12._changeDetectorRef.detectChanges();
+              _this19._changeDetectorRef.detectChanges();
 
-              _this12._positioningSettled();
+              _this19._positioningSettled();
             });
           }
           /** Returns the theme to be used on the panel. */
@@ -2726,14 +3523,14 @@
         }, {
           key: "_initializeSelection",
           value: function _initializeSelection() {
-            var _this13 = this;
+            var _this20 = this;
 
             // Defer setting the value in order to avoid the "Expression
             // has changed after it was checked" errors from Angular.
             Promise.resolve().then(function () {
-              _this13._setSelectionByValue(_this13.ngControl ? _this13.ngControl.value : _this13._value);
+              _this20._setSelectionByValue(_this20.ngControl ? _this20.ngControl.value : _this20._value);
 
-              _this13.stateChanges.next();
+              _this20.stateChanges.next();
             });
           }
           /**
@@ -2744,7 +3541,7 @@
         }, {
           key: "_setSelectionByValue",
           value: function _setSelectionByValue(value) {
-            var _this14 = this;
+            var _this21 = this;
 
             this._selectionModel.selected.forEach(function (option) {
               return option.setInactiveStyles();
@@ -2758,7 +3555,7 @@
               }
 
               value.forEach(function (currentValue) {
-                return _this14._selectValue(currentValue);
+                return _this21._selectValue(currentValue);
               });
 
               this._sortValues();
@@ -2786,18 +3583,18 @@
         }, {
           key: "_selectValue",
           value: function _selectValue(value) {
-            var _this15 = this;
+            var _this22 = this;
 
             var correspondingOption = this.options.find(function (option) {
               // Skip options that are already in the model. This allows us to handle cases
               // where the same primitive value is selected multiple times.
-              if (_this15._selectionModel.isSelected(option)) {
+              if (_this22._selectionModel.isSelected(option)) {
                 return false;
               }
 
               try {
                 // Treat null as a special reset value.
-                return option.value != null && _this15._compareWith(option.value, value);
+                return option.value != null && _this22._compareWith(option.value, value);
               } catch (error) {
                 if (typeof ngDevMode === 'undefined' || ngDevMode) {
                   // Notify developers of errors in their comparator.
@@ -2819,31 +3616,31 @@
         }, {
           key: "_initKeyManager",
           value: function _initKeyManager() {
-            var _this16 = this;
+            var _this23 = this;
 
             this._keyManager = new _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_6__["ActiveDescendantKeyManager"](this.options).withTypeAhead(this._typeaheadDebounceInterval).withVerticalOrientation().withHorizontalOrientation(this._isRtl() ? 'rtl' : 'ltr').withHomeAndEnd().withAllowedModifierKeys(['shiftKey']);
 
             this._keyManager.tabOut.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["takeUntil"])(this._destroy)).subscribe(function () {
-              if (_this16.panelOpen) {
+              if (_this23.panelOpen) {
                 // Select the active item when tabbing away. This is consistent with how the native
                 // select behaves. Note that we only want to do this in single selection mode.
-                if (!_this16.multiple && _this16._keyManager.activeItem) {
-                  _this16._keyManager.activeItem._selectViaInteraction();
+                if (!_this23.multiple && _this23._keyManager.activeItem) {
+                  _this23._keyManager.activeItem._selectViaInteraction();
                 } // Restore focus to the trigger before closing. Ensures that the focus
                 // position won't be lost if the user got focus into the overlay.
 
 
-                _this16.focus();
+                _this23.focus();
 
-                _this16.close();
+                _this23.close();
               }
             });
 
             this._keyManager.change.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["takeUntil"])(this._destroy)).subscribe(function () {
-              if (_this16._panelOpen && _this16.panel) {
-                _this16._scrollOptionIntoView(_this16._keyManager.activeItemIndex || 0);
-              } else if (!_this16._panelOpen && !_this16.multiple && _this16._keyManager.activeItem) {
-                _this16._keyManager.activeItem._selectViaInteraction();
+              if (_this23._panelOpen && _this23.panel) {
+                _this23._scrollOptionIntoView(_this23._keyManager.activeItemIndex || 0);
+              } else if (!_this23._panelOpen && !_this23.multiple && _this23._keyManager.activeItem) {
+                _this23._keyManager.activeItem._selectViaInteraction();
               }
             });
           }
@@ -2852,16 +3649,16 @@
         }, {
           key: "_resetOptions",
           value: function _resetOptions() {
-            var _this17 = this;
+            var _this24 = this;
 
             var changedOrDestroyed = Object(rxjs__WEBPACK_IMPORTED_MODULE_12__["merge"])(this.options.changes, this._destroy);
             this.optionSelectionChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["takeUntil"])(changedOrDestroyed)).subscribe(function (event) {
-              _this17._onSelect(event.source, event.isUserInput);
+              _this24._onSelect(event.source, event.isUserInput);
 
-              if (event.isUserInput && !_this17.multiple && _this17._panelOpen) {
-                _this17.close();
+              if (event.isUserInput && !_this24.multiple && _this24._panelOpen) {
+                _this24.close();
 
-                _this17.focus();
+                _this24.focus();
               }
             }); // Listen to changes in the internal state of the options and react accordingly.
             // Handles cases like the labels of the selected options changing.
@@ -2869,9 +3666,9 @@
             Object(rxjs__WEBPACK_IMPORTED_MODULE_12__["merge"]).apply(void 0, _toConsumableArray(this.options.map(function (option) {
               return option._stateChanges;
             }))).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["takeUntil"])(changedOrDestroyed)).subscribe(function () {
-              _this17._changeDetectorRef.markForCheck();
+              _this24._changeDetectorRef.markForCheck();
 
-              _this17.stateChanges.next();
+              _this24.stateChanges.next();
             });
           }
           /** Invoked when an option is clicked. */
@@ -2922,13 +3719,13 @@
         }, {
           key: "_sortValues",
           value: function _sortValues() {
-            var _this18 = this;
+            var _this25 = this;
 
             if (this.multiple) {
               var options = this.options.toArray();
 
               this._selectionModel.sort(function (a, b) {
-                return _this18.sortComparator ? _this18.sortComparator(a, b, options) : options.indexOf(a) - options.indexOf(b);
+                return _this25.sortComparator ? _this25.sortComparator(a, b, options) : options.indexOf(a) - options.indexOf(b);
               });
 
               this.stateChanges.next();
@@ -3076,7 +3873,7 @@
         }, {
           key: "shouldLabelFloat",
           get: function get() {
-            return this._panelOpen || !this.empty;
+            return this._panelOpen || !this.empty || this._focused && !!this._placeholder;
           }
         }]);
 
@@ -3414,31 +4211,31 @@
       var MatSelect = /*#__PURE__*/function (_MatSelectBase2) {
         _inherits(MatSelect, _MatSelectBase2);
 
-        var _super12 = _createSuper(MatSelect);
+        var _super13 = _createSuper(MatSelect);
 
         function MatSelect() {
-          var _this19;
+          var _this26;
 
           _classCallCheck(this, MatSelect);
 
-          _this19 = _super12.apply(this, arguments);
+          _this26 = _super13.apply(this, arguments);
           /** The scroll position of the overlay panel, calculated to center the selected option. */
 
-          _this19._scrollTop = 0;
+          _this26._scrollTop = 0;
           /** The cached font-size of the trigger element. */
 
-          _this19._triggerFontSize = 0;
+          _this26._triggerFontSize = 0;
           /** The value of the select panel's transform-origin property. */
 
-          _this19._transformOrigin = 'top';
+          _this26._transformOrigin = 'top';
           /**
            * The y-offset of the overlay panel in relation to the trigger's top start corner.
            * This must be adjusted to align the selected option text over the trigger text.
            * when the panel opens. Will change based on the y-position of the selected option.
            */
 
-          _this19._offsetY = 0;
-          _this19._positions = [{
+          _this26._offsetY = 0;
+          _this26._positions = [{
             originX: 'start',
             originY: 'top',
             overlayX: 'start',
@@ -3449,7 +4246,7 @@
             overlayX: 'start',
             overlayY: 'bottom'
           }];
-          return _this19;
+          return _this26;
         }
         /**
          * Calculates the scroll position of the select's overlay panel.
@@ -3477,22 +4274,22 @@
         }, {
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this20 = this;
+            var _this27 = this;
 
             _get(_getPrototypeOf(MatSelect.prototype), "ngOnInit", this).call(this);
 
             this._viewportRuler.change().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["takeUntil"])(this._destroy)).subscribe(function () {
-              if (_this20.panelOpen) {
-                _this20._triggerRect = _this20.trigger.nativeElement.getBoundingClientRect();
+              if (_this27.panelOpen) {
+                _this27._triggerRect = _this27.trigger.nativeElement.getBoundingClientRect();
 
-                _this20._changeDetectorRef.markForCheck();
+                _this27._changeDetectorRef.markForCheck();
               }
             });
           }
         }, {
           key: "open",
           value: function open() {
-            var _this21 = this;
+            var _this28 = this;
 
             if (_get(_getPrototypeOf(MatSelect.prototype), "_canOpen", this).call(this)) {
               _get(_getPrototypeOf(MatSelect.prototype), "open", this).call(this);
@@ -3506,8 +4303,8 @@
 
 
               this._ngZone.onStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["take"])(1)).subscribe(function () {
-                if (_this21._triggerFontSize && _this21.overlayDir.overlayRef && _this21.overlayDir.overlayRef.overlayElement) {
-                  _this21.overlayDir.overlayRef.overlayElement.style.fontSize = "".concat(_this21._triggerFontSize, "px");
+                if (_this28._triggerFontSize && _this28.overlayDir.overlayRef && _this28.overlayDir.overlayRef.overlayElement) {
+                  _this28.overlayDir.overlayRef.overlayElement.style.fontSize = "".concat(_this28._triggerFontSize, "px");
                 }
               });
             }
@@ -4196,7 +4993,7 @@
         _createClass(AutofillMonitor, [{
           key: "monitor",
           value: function monitor(elementOrRef) {
-            var _this22 = this;
+            var _this29 = this;
 
             if (!this._platform.isBrowser) {
               return rxjs__WEBPACK_IMPORTED_MODULE_3__["EMPTY"];
@@ -4220,7 +5017,7 @@
               if (event.animationName === 'cdk-text-field-autofill-start' && !element.classList.contains(cssClass)) {
                 element.classList.add(cssClass);
 
-                _this22._ngZone.run(function () {
+                _this29._ngZone.run(function () {
                   return result.next({
                     target: event.target,
                     isAutofilled: true
@@ -4229,7 +5026,7 @@
               } else if (event.animationName === 'cdk-text-field-autofill-end' && element.classList.contains(cssClass)) {
                 element.classList.remove(cssClass);
 
-                _this22._ngZone.run(function () {
+                _this29._ngZone.run(function () {
                   return result.next({
                     target: event.target,
                     isAutofilled: false
@@ -4271,10 +5068,10 @@
         }, {
           key: "ngOnDestroy",
           value: function ngOnDestroy() {
-            var _this23 = this;
+            var _this30 = this;
 
             this._monitoredElements.forEach(function (_info, element) {
-              return _this23.stopMonitoring(element);
+              return _this30.stopMonitoring(element);
             });
           }
         }]);
@@ -4333,10 +5130,10 @@
         _createClass(CdkAutofill, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this24 = this;
+            var _this31 = this;
 
             this._autofillMonitor.monitor(this._elementRef).subscribe(function (event) {
-              return _this24.cdkAutofill.emit(event);
+              return _this31.cdkAutofill.emit(event);
             });
           }
         }, {
@@ -4491,7 +5288,7 @@
         }, {
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            var _this25 = this;
+            var _this32 = this;
 
             if (this._platform.isBrowser) {
               // Remember the height which we started with in case autosizing is disabled
@@ -4499,10 +5296,10 @@
               this.resizeToFitContent();
 
               this._ngZone.runOutsideAngular(function () {
-                var window = _this25._getWindow();
+                var window = _this32._getWindow();
 
-                Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["fromEvent"])(window, 'resize').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["auditTime"])(16), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["takeUntil"])(_this25._destroyed)).subscribe(function () {
-                  return _this25.resizeToFitContent(true);
+                Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["fromEvent"])(window, 'resize').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["auditTime"])(16), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["takeUntil"])(_this32._destroyed)).subscribe(function () {
+                  return _this32.resizeToFitContent(true);
                 });
               });
             }
@@ -4577,7 +5374,7 @@
         }, {
           key: "resizeToFitContent",
           value: function resizeToFitContent() {
-            var _this26 = this;
+            var _this33 = this;
 
             var force = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
 
@@ -4620,11 +5417,11 @@
             this._ngZone.runOutsideAngular(function () {
               if (typeof requestAnimationFrame !== 'undefined') {
                 requestAnimationFrame(function () {
-                  return _this26._scrollToCaretPosition(textarea);
+                  return _this33._scrollToCaretPosition(textarea);
                 });
               } else {
                 setTimeout(function () {
-                  return _this26._scrollToCaretPosition(textarea);
+                  return _this33._scrollToCaretPosition(textarea);
                 });
               }
             });
@@ -5748,7 +6545,7 @@
       var MatFormField = /*#__PURE__*/function (_MatFormFieldMixinBas) {
         _inherits(MatFormField, _MatFormFieldMixinBas);
 
-        var _super13 = _createSuper(MatFormField);
+        var _super14 = _createSuper(MatFormField);
 
         function MatFormField(_elementRef, _changeDetectorRef,
         /**
@@ -5757,44 +6554,44 @@
          */
         // Use `ElementRef` here so Angular has something to inject.
         _labelOptions, _dir, _defaults, _platform, _ngZone, _animationMode) {
-          var _this27;
+          var _this34;
 
           _classCallCheck(this, MatFormField);
 
-          _this27 = _super13.call(this, _elementRef);
-          _this27._elementRef = _elementRef;
-          _this27._changeDetectorRef = _changeDetectorRef;
-          _this27._dir = _dir;
-          _this27._defaults = _defaults;
-          _this27._platform = _platform;
-          _this27._ngZone = _ngZone;
+          _this34 = _super14.call(this, _elementRef);
+          _this34._elementRef = _elementRef;
+          _this34._changeDetectorRef = _changeDetectorRef;
+          _this34._dir = _dir;
+          _this34._defaults = _defaults;
+          _this34._platform = _platform;
+          _this34._ngZone = _ngZone;
           /**
            * Whether the outline gap needs to be calculated
            * immediately on the next change detection run.
            */
 
-          _this27._outlineGapCalculationNeededImmediately = false;
+          _this34._outlineGapCalculationNeededImmediately = false;
           /** Whether the outline gap needs to be calculated next time the zone has stabilized. */
 
-          _this27._outlineGapCalculationNeededOnStable = false;
-          _this27._destroyed = new rxjs__WEBPACK_IMPORTED_MODULE_6__["Subject"]();
+          _this34._outlineGapCalculationNeededOnStable = false;
+          _this34._destroyed = new rxjs__WEBPACK_IMPORTED_MODULE_6__["Subject"]();
           /** Override for the logic that disables the label animation in certain cases. */
 
-          _this27._showAlwaysAnimate = false;
+          _this34._showAlwaysAnimate = false;
           /** State of the mat-hint and mat-error animations. */
 
-          _this27._subscriptAnimationState = '';
-          _this27._hintLabel = ''; // Unique id for the hint label.
+          _this34._subscriptAnimationState = '';
+          _this34._hintLabel = ''; // Unique id for the hint label.
 
-          _this27._hintLabelId = "mat-hint-".concat(nextUniqueId$2++); // Unique id for the label element.
+          _this34._hintLabelId = "mat-hint-".concat(nextUniqueId$2++); // Unique id for the label element.
 
-          _this27._labelId = "mat-form-field-label-".concat(nextUniqueId$2++);
-          _this27.floatLabel = _this27._getDefaultFloatLabelState();
-          _this27._animationsEnabled = _animationMode !== 'NoopAnimations'; // Set the default through here so we invoke the setter on the first run.
+          _this34._labelId = "mat-form-field-label-".concat(nextUniqueId$2++);
+          _this34.floatLabel = _this34._getDefaultFloatLabelState();
+          _this34._animationsEnabled = _animationMode !== 'NoopAnimations'; // Set the default through here so we invoke the setter on the first run.
 
-          _this27.appearance = _defaults && _defaults.appearance ? _defaults.appearance : 'legacy';
-          _this27._hideRequiredMarker = _defaults && _defaults.hideRequiredMarker != null ? _defaults.hideRequiredMarker : false;
-          return _this27;
+          _this34.appearance = _defaults && _defaults.appearance ? _defaults.appearance : 'legacy';
+          _this34._hideRequiredMarker = _defaults && _defaults.hideRequiredMarker != null ? _defaults.hideRequiredMarker : false;
+          return _this34;
         }
         /** The form-field appearance style. */
 
@@ -5901,7 +6698,7 @@
         }, {
           key: "ngAfterContentInit",
           value: function ngAfterContentInit() {
-            var _this28 = this;
+            var _this35 = this;
 
             this._validateControlChild();
 
@@ -5913,16 +6710,16 @@
 
 
             control.stateChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["startWith"])(null)).subscribe(function () {
-              _this28._validatePlaceholders();
+              _this35._validatePlaceholders();
 
-              _this28._syncDescribedByIds();
+              _this35._syncDescribedByIds();
 
-              _this28._changeDetectorRef.markForCheck();
+              _this35._changeDetectorRef.markForCheck();
             }); // Run change detection if the value changes.
 
             if (control.ngControl && control.ngControl.valueChanges) {
               control.ngControl.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["takeUntil"])(this._destroyed)).subscribe(function () {
-                return _this28._changeDetectorRef.markForCheck();
+                return _this35._changeDetectorRef.markForCheck();
               });
             } // Note that we have to run outside of the `NgZone` explicitly,
             // in order to avoid throwing users into an infinite loop
@@ -5930,43 +6727,43 @@
 
 
             this._ngZone.runOutsideAngular(function () {
-              _this28._ngZone.onStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["takeUntil"])(_this28._destroyed)).subscribe(function () {
-                if (_this28._outlineGapCalculationNeededOnStable) {
-                  _this28.updateOutlineGap();
+              _this35._ngZone.onStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["takeUntil"])(_this35._destroyed)).subscribe(function () {
+                if (_this35._outlineGapCalculationNeededOnStable) {
+                  _this35.updateOutlineGap();
                 }
               });
             }); // Run change detection and update the outline if the suffix or prefix changes.
 
 
             Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["merge"])(this._prefixChildren.changes, this._suffixChildren.changes).subscribe(function () {
-              _this28._outlineGapCalculationNeededOnStable = true;
+              _this35._outlineGapCalculationNeededOnStable = true;
 
-              _this28._changeDetectorRef.markForCheck();
+              _this35._changeDetectorRef.markForCheck();
             }); // Re-validate when the number of hints changes.
 
             this._hintChildren.changes.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["startWith"])(null)).subscribe(function () {
-              _this28._processHints();
+              _this35._processHints();
 
-              _this28._changeDetectorRef.markForCheck();
+              _this35._changeDetectorRef.markForCheck();
             }); // Update the aria-described by when the number of errors changes.
 
 
             this._errorChildren.changes.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["startWith"])(null)).subscribe(function () {
-              _this28._syncDescribedByIds();
+              _this35._syncDescribedByIds();
 
-              _this28._changeDetectorRef.markForCheck();
+              _this35._changeDetectorRef.markForCheck();
             });
 
             if (this._dir) {
               this._dir.change.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["takeUntil"])(this._destroyed)).subscribe(function () {
                 if (typeof requestAnimationFrame === 'function') {
-                  _this28._ngZone.runOutsideAngular(function () {
+                  _this35._ngZone.runOutsideAngular(function () {
                     requestAnimationFrame(function () {
-                      return _this28.updateOutlineGap();
+                      return _this35.updateOutlineGap();
                     });
                   });
                 } else {
-                  _this28.updateOutlineGap();
+                  _this35.updateOutlineGap();
                 }
               });
             }
@@ -6042,7 +6839,7 @@
         }, {
           key: "_animateAndLockLabel",
           value: function _animateAndLockLabel() {
-            var _this29 = this;
+            var _this36 = this;
 
             if (this._hasFloatingLabel() && this._canLabelFloat()) {
               // If animations are disabled, we shouldn't go in here,
@@ -6050,7 +6847,7 @@
               if (this._animationsEnabled && this._label) {
                 this._showAlwaysAnimate = true;
                 Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["fromEvent"])(this._label.nativeElement, 'transitionend').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["take"])(1)).subscribe(function () {
-                  _this29._showAlwaysAnimate = false;
+                  _this36._showAlwaysAnimate = false;
                 });
               }
 
@@ -6088,7 +6885,7 @@
         }, {
           key: "_validateHints",
           value: function _validateHints() {
-            var _this30 = this;
+            var _this37 = this;
 
             if (this._hintChildren && (typeof ngDevMode === 'undefined' || ngDevMode)) {
               var startHint;
@@ -6096,7 +6893,7 @@
 
               this._hintChildren.forEach(function (hint) {
                 if (hint.align === 'start') {
-                  if (startHint || _this30.hintLabel) {
+                  if (startHint || _this37.hintLabel) {
                     throw getMatFormFieldDuplicatedHintError('start');
                   }
 
@@ -7256,27 +8053,27 @@
 
       var GoogleMapsAPIWrapper = /*#__PURE__*/function () {
         function GoogleMapsAPIWrapper(_loader, _zone) {
-          var _this31 = this;
+          var _this38 = this;
 
           _classCallCheck(this, GoogleMapsAPIWrapper);
 
           this._loader = _loader;
           this._zone = _zone;
           this._map = new Promise(function (resolve) {
-            _this31._mapResolver = resolve;
+            _this38._mapResolver = resolve;
           });
         }
 
         _createClass(GoogleMapsAPIWrapper, [{
           key: "createMap",
           value: function createMap(el, mapOptions) {
-            var _this32 = this;
+            var _this39 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this32._loader.load().then(function () {
+              return _this39._loader.load().then(function () {
                 var map = new google.maps.Map(el, mapOptions);
 
-                _this32._mapResolver(map);
+                _this39._mapResolver(map);
 
                 return;
               });
@@ -7285,10 +8082,10 @@
         }, {
           key: "setMapOptions",
           value: function setMapOptions(options) {
-            var _this33 = this;
+            var _this40 = this;
 
             return this._zone.runOutsideAngular(function () {
-              _this33._map.then(function (m) {
+              _this40._map.then(function (m) {
                 m.setOptions(options);
               });
             });
@@ -7300,12 +8097,12 @@
         }, {
           key: "createMarker",
           value: function createMarker() {
-            var _this34 = this;
+            var _this41 = this;
 
             var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
             var addToMap = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
             return this._zone.runOutsideAngular(function () {
-              return _this34._map.then(function (map) {
+              return _this41._map.then(function (map) {
                 if (addToMap) {
                   options.map = map;
                 }
@@ -7317,10 +8114,10 @@
         }, {
           key: "createInfoWindow",
           value: function createInfoWindow(options) {
-            var _this35 = this;
+            var _this42 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this35._map.then(function () {
+              return _this42._map.then(function () {
                 return new google.maps.InfoWindow(options);
               });
             });
@@ -7332,10 +8129,10 @@
         }, {
           key: "createCircle",
           value: function createCircle(options) {
-            var _this36 = this;
+            var _this43 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this36._map.then(function (map) {
+              return _this43._map.then(function (map) {
                 if (typeof options.strokePosition === 'string') {
                   options.strokePosition = google.maps.StrokePosition[options.strokePosition];
                 }
@@ -7352,10 +8149,10 @@
         }, {
           key: "createRectangle",
           value: function createRectangle(options) {
-            var _this37 = this;
+            var _this44 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this37._map.then(function (map) {
+              return _this44._map.then(function (map) {
                 options.map = map;
                 return new google.maps.Rectangle(options);
               });
@@ -7364,10 +8161,10 @@
         }, {
           key: "createPolyline",
           value: function createPolyline(options) {
-            var _this38 = this;
+            var _this45 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this38.getNativeMap().then(function (map) {
+              return _this45.getNativeMap().then(function (map) {
                 var line = new google.maps.Polyline(options);
                 line.setMap(map);
                 return line;
@@ -7377,10 +8174,10 @@
         }, {
           key: "createPolygon",
           value: function createPolygon(options) {
-            var _this39 = this;
+            var _this46 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this39.getNativeMap().then(function (map) {
+              return _this46.getNativeMap().then(function (map) {
                 var polygon = new google.maps.Polygon(options);
                 polygon.setMap(map);
                 return polygon;
@@ -7394,10 +8191,10 @@
         }, {
           key: "createDataLayer",
           value: function createDataLayer(options) {
-            var _this40 = this;
+            var _this47 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this40._map.then(function (m) {
+              return _this47._map.then(function (m) {
                 var data = new google.maps.Data(options);
                 data.setMap(m);
                 return data;
@@ -7413,10 +8210,10 @@
         }, {
           key: "createTransitLayer",
           value: function createTransitLayer(options) {
-            var _this41 = this;
+            var _this48 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this41._map.then(function (map) {
+              return _this48._map.then(function (map) {
                 var newLayer = new google.maps.TransitLayer();
                 newLayer.setMap(options.visible ? map : null);
                 return newLayer;
@@ -7432,10 +8229,10 @@
         }, {
           key: "createBicyclingLayer",
           value: function createBicyclingLayer(options) {
-            var _this42 = this;
+            var _this49 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this42._map.then(function (map) {
+              return _this49._map.then(function (map) {
                 var newLayer = new google.maps.BicyclingLayer();
                 newLayer.setMap(options.visible ? map : null);
                 return newLayer;
@@ -7454,12 +8251,12 @@
         }, {
           key: "subscribeToMapEvent",
           value: function subscribeToMapEvent(eventName) {
-            var _this43 = this;
+            var _this50 = this;
 
             return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
-              _this43._map.then(function (m) {
+              _this50._map.then(function (m) {
                 m.addListener(eventName, function (arg) {
-                  _this43._zone.run(function () {
+                  _this50._zone.run(function () {
                     return observer.next(arg);
                   });
                 });
@@ -7469,10 +8266,10 @@
         }, {
           key: "clearInstanceListeners",
           value: function clearInstanceListeners() {
-            var _this44 = this;
+            var _this51 = this;
 
             return this._zone.runOutsideAngular(function () {
-              _this44._map.then(function (map) {
+              _this51._map.then(function (map) {
                 google.maps.event.clearInstanceListeners(map);
               });
             });
@@ -7480,10 +8277,10 @@
         }, {
           key: "setCenter",
           value: function setCenter(latLng) {
-            var _this45 = this;
+            var _this52 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this45._map.then(function (map) {
+              return _this52._map.then(function (map) {
                 return map.setCenter(latLng);
               });
             });
@@ -7491,10 +8288,10 @@
         }, {
           key: "getZoom",
           value: function getZoom() {
-            var _this46 = this;
+            var _this53 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this46._map.then(function (map) {
+              return _this53._map.then(function (map) {
                 return map.getZoom();
               });
             });
@@ -7502,10 +8299,10 @@
         }, {
           key: "getBounds",
           value: function getBounds() {
-            var _this47 = this;
+            var _this54 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this47._map.then(function (map) {
+              return _this54._map.then(function (map) {
                 return map.getBounds();
               });
             });
@@ -7513,10 +8310,10 @@
         }, {
           key: "getMapTypeId",
           value: function getMapTypeId() {
-            var _this48 = this;
+            var _this55 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this48._map.then(function (map) {
+              return _this55._map.then(function (map) {
                 return map.getMapTypeId();
               });
             });
@@ -7524,10 +8321,10 @@
         }, {
           key: "setZoom",
           value: function setZoom(zoom) {
-            var _this49 = this;
+            var _this56 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this49._map.then(function (map) {
+              return _this56._map.then(function (map) {
                 return map.setZoom(zoom);
               });
             });
@@ -7535,10 +8332,10 @@
         }, {
           key: "getCenter",
           value: function getCenter() {
-            var _this50 = this;
+            var _this57 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this50._map.then(function (map) {
+              return _this57._map.then(function (map) {
                 return map.getCenter();
               });
             });
@@ -7546,10 +8343,10 @@
         }, {
           key: "panTo",
           value: function panTo(latLng) {
-            var _this51 = this;
+            var _this58 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this51._map.then(function (map) {
+              return _this58._map.then(function (map) {
                 return map.panTo(latLng);
               });
             });
@@ -7557,10 +8354,10 @@
         }, {
           key: "panBy",
           value: function panBy(x, y) {
-            var _this52 = this;
+            var _this59 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this52._map.then(function (map) {
+              return _this59._map.then(function (map) {
                 return map.panBy(x, y);
               });
             });
@@ -7568,10 +8365,10 @@
         }, {
           key: "fitBounds",
           value: function fitBounds(latLng, padding) {
-            var _this53 = this;
+            var _this60 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this53._map.then(function (map) {
+              return _this60._map.then(function (map) {
                 return map.fitBounds(latLng, padding);
               });
             });
@@ -7579,10 +8376,10 @@
         }, {
           key: "panToBounds",
           value: function panToBounds(latLng, padding) {
-            var _this54 = this;
+            var _this61 = this;
 
             return this._zone.runOutsideAngular(function () {
-              return _this54._map.then(function (map) {
+              return _this61._map.then(function (map) {
                 return map.panToBounds(latLng, padding);
               });
             });
@@ -7681,12 +8478,12 @@
         }, {
           key: "deleteLayer",
           value: function deleteLayer(layer) {
-            var _this55 = this;
+            var _this62 = this;
 
             return this._layers.get(layer).then(function (currentLayer) {
               currentLayer.setMap(null);
 
-              _this55._layers["delete"](layer);
+              _this62._layers["delete"](layer);
             });
           }
           /**
@@ -7699,14 +8496,14 @@
         }, {
           key: "toggleLayerVisibility",
           value: function toggleLayerVisibility(layer, options) {
-            var _this56 = this;
+            var _this63 = this;
 
             return this._layers.get(layer).then(function (currentLayer) {
               if (!options.visible) {
                 currentLayer.setMap(null);
                 return;
               } else {
-                return _this56._wrapper.getNativeMap().then(function (map) {
+                return _this63._wrapper.getNativeMap().then(function (map) {
                   currentLayer.setMap(map);
                 });
               }
@@ -7867,12 +8664,12 @@
         }, {
           key: "removeCircle",
           value: function removeCircle(circle) {
-            var _this57 = this;
+            var _this64 = this;
 
             return this._circles.get(circle).then(function (c) {
               c.setMap(null);
 
-              _this57._circles["delete"](circle);
+              _this64._circles["delete"](circle);
             });
           }
         }, {
@@ -7953,14 +8750,14 @@
         }, {
           key: "createEventObservable",
           value: function createEventObservable(eventName, circle) {
-            var _this58 = this;
+            var _this65 = this;
 
             return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
               var listener = null;
 
-              _this58._circles.get(circle).then(function (c) {
+              _this65._circles.get(circle).then(function (c) {
                 listener = c.addListener(eventName, function (e) {
-                  return _this58._zone.run(function () {
+                  return _this65._zone.run(function () {
                     return observer.next(e);
                   });
                 });
@@ -8172,7 +8969,7 @@
         }, {
           key: "_registerEventListeners",
           value: function _registerEventListeners() {
-            var _this59 = this;
+            var _this66 = this;
 
             var events = new Map();
             events.set('center_changed', this.centerChange);
@@ -8189,17 +8986,17 @@
             events.set('radius_changed', this.radiusChange);
             events.set('rightclick', this.rightClick);
             events.forEach(function (eventEmitter, eventName) {
-              _this59._eventSubscriptions.push(_this59._manager.createEventObservable(eventName, _this59).subscribe(function (value) {
+              _this66._eventSubscriptions.push(_this66._manager.createEventObservable(eventName, _this66).subscribe(function (value) {
                 switch (eventName) {
                   case 'radius_changed':
-                    _this59._manager.getRadius(_this59).then(function (radius) {
+                    _this66._manager.getRadius(_this66).then(function (radius) {
                       return eventEmitter.emit(radius);
                     });
 
                     break;
 
                   case 'center_changed':
-                    _this59._manager.getCenter(_this59).then(function (center) {
+                    _this66._manager.getCenter(_this66).then(function (center) {
                       return eventEmitter.emit({
                         lat: center.lat(),
                         lng: center.lng()
@@ -8347,13 +9144,13 @@
         _createClass(DataLayerManager, [{
           key: "addDataLayer",
           value: function addDataLayer(layer) {
-            var _this60 = this;
+            var _this67 = this;
 
             var newLayer = this._wrapper.createDataLayer({
               style: layer.style
             }).then(function (d) {
               if (layer.geoJson) {
-                _this60.getDataFeatures(d, layer.geoJson).then(function (features) {
+                _this67.getDataFeatures(d, layer.geoJson).then(function (features) {
                   return d.features = features;
                 });
               }
@@ -8366,18 +9163,18 @@
         }, {
           key: "deleteDataLayer",
           value: function deleteDataLayer(layer) {
-            var _this61 = this;
+            var _this68 = this;
 
             this._layers.get(layer).then(function (l) {
               l.setMap(null);
 
-              _this61._layers["delete"](layer);
+              _this68._layers["delete"](layer);
             });
           }
         }, {
           key: "updateGeoJson",
           value: function updateGeoJson(layer, geoJson) {
-            var _this62 = this;
+            var _this69 = this;
 
             this._layers.get(layer).then(function (l) {
               l.forEach(function (feature) {
@@ -8389,7 +9186,7 @@
                 }
               });
 
-              _this62.getDataFeatures(l, geoJson).then(function (features) {
+              _this69.getDataFeatures(l, geoJson).then(function (features) {
                 return l.features = features;
               });
             });
@@ -8411,12 +9208,12 @@
         }, {
           key: "createEventObservable",
           value: function createEventObservable(eventName, layer) {
-            var _this63 = this;
+            var _this70 = this;
 
             return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
-              _this63._layers.get(layer).then(function (d) {
+              _this70._layers.get(layer).then(function (d) {
                 d.addListener(eventName, function (e) {
-                  return _this63._zone.run(function () {
+                  return _this70._zone.run(function () {
                     return observer.next(e);
                   });
                 });
@@ -8701,18 +9498,18 @@
         }, {
           key: "_addEventListeners",
           value: function _addEventListeners() {
-            var _this64 = this;
+            var _this71 = this;
 
             var listeners = [{
               name: 'click',
               handler: function handler(ev) {
-                return _this64.layerClick.emit(ev);
+                return _this71.layerClick.emit(ev);
               }
             }];
             listeners.forEach(function (obj) {
-              var os = _this64._manager.createEventObservable(obj.name, _this64).subscribe(obj.handler);
+              var os = _this71._manager.createEventObservable(obj.name, _this71).subscribe(obj.handler);
 
-              _this64._subscriptions.push(os);
+              _this71._subscriptions.push(os);
             });
           }
           /** @internal */
@@ -8746,7 +9543,7 @@
         }, {
           key: "ngOnChanges",
           value: function ngOnChanges(changes) {
-            var _this65 = this;
+            var _this72 = this;
 
             if (!this._addedToManager) {
               return;
@@ -8761,7 +9558,7 @@
             var dataOptions = {};
 
             AgmDataLayer_1._dataOptionsAttributes.forEach(function (k) {
-              return dataOptions[k] = changes.hasOwnProperty(k) ? changes[k].currentValue : _this65[k];
+              return dataOptions[k] = changes.hasOwnProperty(k) ? changes[k].currentValue : _this72[k];
             });
 
             this._manager.setDataOptions(this, dataOptions);
@@ -8814,18 +9611,18 @@
 
       var FitBoundsService = /*#__PURE__*/function () {
         function FitBoundsService(loader) {
-          var _this66 = this;
+          var _this73 = this;
 
           _classCallCheck(this, FitBoundsService);
 
           this._boundsChangeSampleTime$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](200);
           this._includeInBounds$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](new Map());
           this.bounds$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["from"])(loader.load()).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["flatMap"])(function () {
-            return _this66._includeInBounds$;
+            return _this73._includeInBounds$;
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["sample"])(this._boundsChangeSampleTime$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function (time) {
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["timer"])(0, time);
           }))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (includeInBounds) {
-            return _this66._generateBounds(includeInBounds);
+            return _this73._generateBounds(includeInBounds);
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["shareReplay"])(1));
         }
 
@@ -8937,12 +9734,12 @@
         }, {
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this67 = this;
+            var _this74 = this;
 
             this._fitBoundsAccessor.getFitBoundsDetails$().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["distinctUntilChanged"])(function (x, y) {
               return x.latLng.lat === y.latLng.lat && x.latLng.lng === y.latLng.lng;
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["takeUntil"])(this._destroyed$)).subscribe(function (details) {
-              return _this67._updateBounds(details);
+              return _this74._updateBounds(details);
             });
           }
           /*
@@ -9062,7 +9859,7 @@
         }, {
           key: "deleteMarker",
           value: function deleteMarker(marker) {
-            var _this68 = this;
+            var _this75 = this;
 
             var m = this._markers.get(marker);
 
@@ -9072,10 +9869,10 @@
             }
 
             return m.then(function (m) {
-              return _this68._zone.run(function () {
+              return _this75._zone.run(function () {
                 m.setMap(null);
 
-                _this68._markers["delete"](marker);
+                _this75._markers["delete"](marker);
               });
             });
           }
@@ -9179,10 +9976,10 @@
         }, {
           key: "addMarker",
           value: function addMarker(marker) {
-            var _this69 = this;
+            var _this76 = this;
 
             var markerPromise = new Promise(function (resolve) {
-              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this69, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this76, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
                 return regeneratorRuntime.wrap(function _callee3$(_context3) {
                   while (1) {
                     switch (_context3.prev = _context3.next) {
@@ -9238,12 +10035,12 @@
         }, {
           key: "createEventObservable",
           value: function createEventObservable(eventName, marker) {
-            var _this70 = this;
+            var _this77 = this;
 
             return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
-              _this70._markers.get(marker).then(function (m) {
+              _this77._markers.get(marker).then(function (m) {
                 m.addListener(eventName, function (e) {
-                  return _this70._zone.run(function () {
+                  return _this77._zone.run(function () {
                     return observer.next(e);
                   });
                 });
@@ -9289,7 +10086,7 @@
         _createClass(InfoWindowManager, [{
           key: "deleteInfoWindow",
           value: function deleteInfoWindow(infoWindow) {
-            var _this71 = this;
+            var _this78 = this;
 
             var iWindow = this._infoWindows.get(infoWindow);
 
@@ -9299,10 +10096,10 @@
             }
 
             return iWindow.then(function (i) {
-              return _this71._zone.run(function () {
+              return _this78._zone.run(function () {
                 i.close();
 
-                _this71._infoWindows["delete"](infoWindow);
+                _this78._infoWindows["delete"](infoWindow);
               });
             });
           }
@@ -9326,18 +10123,18 @@
         }, {
           key: "open",
           value: function open(infoWindow) {
-            var _this72 = this;
+            var _this79 = this;
 
             return this._infoWindows.get(infoWindow).then(function (w) {
               if (infoWindow.hostMarker != null) {
-                return _this72._markerManager.getNativeMarker(infoWindow.hostMarker).then(function (marker) {
-                  return _this72._mapsWrapper.getNativeMap().then(function (map) {
+                return _this79._markerManager.getNativeMarker(infoWindow.hostMarker).then(function (marker) {
+                  return _this79._mapsWrapper.getNativeMap().then(function (map) {
                     return w.open(map, marker);
                   });
                 });
               }
 
-              return _this72._mapsWrapper.getNativeMap().then(function (map) {
+              return _this79._mapsWrapper.getNativeMap().then(function (map) {
                 return w.open(map);
               });
             });
@@ -9384,12 +10181,12 @@
         }, {
           key: "createEventObservable",
           value: function createEventObservable(eventName, infoWindow) {
-            var _this73 = this;
+            var _this80 = this;
 
             return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
-              _this73._infoWindows.get(infoWindow).then(function (i) {
+              _this80._infoWindows.get(infoWindow).then(function (i) {
                 i.addListener(eventName, function (e) {
-                  return _this73._zone.run(function () {
+                  return _this80._zone.run(function () {
                     return observer.next(e);
                   });
                 });
@@ -9511,12 +10308,12 @@
         }, {
           key: "_registerEventListeners",
           value: function _registerEventListeners() {
-            var _this74 = this;
+            var _this81 = this;
 
             this._infoWindowManager.createEventObservable('closeclick', this).subscribe(function () {
-              _this74.isOpen = false;
+              _this81.isOpen = false;
 
-              _this74.infoWindowClose.emit();
+              _this81.infoWindowClose.emit();
             });
           }
         }, {
@@ -9553,10 +10350,10 @@
         }, {
           key: "close",
           value: function close() {
-            var _this75 = this;
+            var _this82 = this;
 
             return this._infoWindowManager.close(this).then(function () {
-              _this75.infoWindowClose.emit();
+              _this82.infoWindowClose.emit();
             });
           }
           /** @internal */
@@ -9683,12 +10480,12 @@
         }, {
           key: "deleteKmlLayer",
           value: function deleteKmlLayer(layer) {
-            var _this76 = this;
+            var _this83 = this;
 
             this._layers.get(layer).then(function (l) {
               l.setMap(null);
 
-              _this76._layers["delete"](layer);
+              _this83._layers["delete"](layer);
             });
           }
           /**
@@ -9698,12 +10495,12 @@
         }, {
           key: "createEventObservable",
           value: function createEventObservable(eventName, layer) {
-            var _this77 = this;
+            var _this84 = this;
 
             return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
-              _this77._layers.get(layer).then(function (m) {
+              _this84._layers.get(layer).then(function (m) {
                 m.addListener(eventName, function (e) {
-                  return _this77._zone.run(function () {
+                  return _this84._zone.run(function () {
                     return observer.next(e);
                   });
                 });
@@ -9837,28 +10634,28 @@
         }, {
           key: "_addEventListeners",
           value: function _addEventListeners() {
-            var _this78 = this;
+            var _this85 = this;
 
             var listeners = [{
               name: 'click',
               handler: function handler(ev) {
-                return _this78.layerClick.emit(ev);
+                return _this85.layerClick.emit(ev);
               }
             }, {
               name: 'defaultviewport_changed',
               handler: function handler() {
-                return _this78.defaultViewportChange.emit();
+                return _this85.defaultViewportChange.emit();
               }
             }, {
               name: 'status_changed',
               handler: function handler() {
-                return _this78.statusChange.emit();
+                return _this85.statusChange.emit();
               }
             }];
             listeners.forEach(function (obj) {
-              var os = _this78._manager.createEventObservable(obj.name, _this78).subscribe(obj.handler);
+              var os = _this85._manager.createEventObservable(obj.name, _this85).subscribe(obj.handler);
 
-              _this78._subscriptions.push(os);
+              _this85._subscriptions.push(os);
             });
           }
           /** @internal */
@@ -9998,22 +10795,22 @@
         }, {
           key: "pop",
           value: function pop() {
-            var _this79 = this;
+            var _this86 = this;
 
             var deleted = this.vals.pop();
             this.listeners.remove_at.map(function (listener) {
-              return listener(_this79.vals.length, deleted);
+              return listener(_this86.vals.length, deleted);
             });
             return deleted;
           }
         }, {
           key: "push",
           value: function push(elem) {
-            var _this80 = this;
+            var _this87 = this;
 
             this.vals.push(elem);
             this.listeners.insert_at.map(function (listener) {
-              return listener(_this80.vals.length - 1);
+              return listener(_this87.vals.length - 1);
             });
             return this.vals.length;
           }
@@ -10088,7 +10885,7 @@
         }, {
           key: "updatePolygon",
           value: function updatePolygon(polygon) {
-            var _this81 = this;
+            var _this88 = this;
 
             var m = this._polygons.get(polygon);
 
@@ -10097,7 +10894,7 @@
             }
 
             return m.then(function (l) {
-              return _this81._zone.run(function () {
+              return _this88._zone.run(function () {
                 l.setPaths(polygon.paths);
               });
             });
@@ -10112,7 +10909,7 @@
         }, {
           key: "deletePolygon",
           value: function deletePolygon(paths) {
-            var _this82 = this;
+            var _this89 = this;
 
             var m = this._polygons.get(paths);
 
@@ -10121,10 +10918,10 @@
             }
 
             return m.then(function (l) {
-              return _this82._zone.run(function () {
+              return _this89._zone.run(function () {
                 l.setMap(null);
 
-                _this82._polygons["delete"](paths);
+                _this89._polygons["delete"](paths);
               });
             });
           }
@@ -10147,12 +10944,12 @@
         }, {
           key: "createEventObservable",
           value: function createEventObservable(eventName, path) {
-            var _this83 = this;
+            var _this90 = this;
 
             return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
-              _this83._polygons.get(path).then(function (l) {
+              _this90._polygons.get(path).then(function (l) {
                 l.addListener(eventName, function (e) {
-                  return _this83._zone.run(function () {
+                  return _this90._zone.run(function () {
                     return observer.next(e);
                   });
                 });
@@ -10282,7 +11079,7 @@
         _createClass(PolylineManager, [{
           key: "addPolyline",
           value: function addPolyline(line) {
-            var _this84 = this;
+            var _this91 = this;
 
             var polylinePromise = this._mapsWrapper.getNativeMap().then(function () {
               return [PolylineManager_1._convertPoints(line), PolylineManager_1._convertIcons(line)];
@@ -10291,7 +11088,7 @@
                   path = _ref3[0],
                   icons = _ref3[1];
 
-              return _this84._mapsWrapper.createPolyline({
+              return _this91._mapsWrapper.createPolyline({
                 clickable: line.clickable,
                 draggable: line.draggable,
                 editable: line.editable,
@@ -10311,7 +11108,7 @@
         }, {
           key: "updatePolylinePoints",
           value: function updatePolylinePoints(line) {
-            var _this85 = this;
+            var _this92 = this;
 
             var path = PolylineManager_1._convertPoints(line);
 
@@ -10322,7 +11119,7 @@
             }
 
             return m.then(function (l) {
-              return _this85._zone.run(function () {
+              return _this92._zone.run(function () {
                 l.setPath(path);
               });
             });
@@ -10331,7 +11128,7 @@
           key: "updateIconSequences",
           value: function updateIconSequences(line) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
-              var _this86 = this;
+              var _this93 = this;
 
               var icons, m;
               return regeneratorRuntime.wrap(function _callee5$(_context5) {
@@ -10354,7 +11151,7 @@
 
                     case 6:
                       return _context5.abrupt("return", m.then(function (l) {
-                        return _this86._zone.run(function () {
+                        return _this93._zone.run(function () {
                           return l.setOptions({
                             icons: icons
                           });
@@ -10379,7 +11176,7 @@
         }, {
           key: "deletePolyline",
           value: function deletePolyline(line) {
-            var _this87 = this;
+            var _this94 = this;
 
             var m = this._polylines.get(line);
 
@@ -10388,10 +11185,10 @@
             }
 
             return m.then(function (l) {
-              return _this87._zone.run(function () {
+              return _this94._zone.run(function () {
                 l.setMap(null);
 
-                _this87._polylines["delete"](line);
+                _this94._polylines["delete"](line);
               });
             });
           }
@@ -10444,12 +11241,12 @@
         }, {
           key: "createEventObservable",
           value: function createEventObservable(eventName, line) {
-            var _this88 = this;
+            var _this95 = this;
 
             return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
-              _this88._polylines.get(line).then(function (l) {
+              _this95._polylines.get(line).then(function (l) {
                 l.addListener(eventName, function (e) {
-                  return _this88._zone.run(function () {
+                  return _this95._zone.run(function () {
                     return observer.next(e);
                   });
                 });
@@ -10608,12 +11405,12 @@
         }, {
           key: "removeRectangle",
           value: function removeRectangle(rectangle) {
-            var _this89 = this;
+            var _this96 = this;
 
             return this._rectangles.get(rectangle).then(function (r) {
               r.setMap(null);
 
-              _this89._rectangles["delete"](rectangle);
+              _this96._rectangles["delete"](rectangle);
             });
           }
         }, {
@@ -10666,14 +11463,14 @@
         }, {
           key: "createEventObservable",
           value: function createEventObservable(eventName, rectangle) {
-            var _this90 = this;
+            var _this97 = this;
 
             return rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"].create(function (observer) {
               var listener = null;
 
-              _this90._rectangles.get(rectangle).then(function (r) {
+              _this97._rectangles.get(rectangle).then(function (r) {
                 listener = r.addListener(eventName, function (e) {
-                  return _this90._zone.run(function () {
+                  return _this97._zone.run(function () {
                     return observer.next(e);
                   });
                 });
@@ -10952,7 +11749,7 @@
         }, {
           key: "_initMapInstance",
           value: function _initMapInstance(el) {
-            var _this91 = this;
+            var _this98 = this;
 
             this._mapsWrapper.createMap(el, {
               center: {
@@ -10992,9 +11789,9 @@
               tilt: this.tilt,
               restriction: this.restriction
             }).then(function () {
-              return _this91._mapsWrapper.getNativeMap();
+              return _this98._mapsWrapper.getNativeMap();
             }).then(function (map) {
-              return _this91.mapReady.emit(map);
+              return _this98.mapReady.emit(map);
             }); // register event listeners
 
 
@@ -11060,7 +11857,7 @@
         }, {
           key: "triggerResize",
           value: function triggerResize() {
-            var _this92 = this;
+            var _this99 = this;
 
             var recenter = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
             // Note: When we would trigger the resize event and show the map in the same turn (which is a
@@ -11068,9 +11865,9 @@
             // work (to show the map), so we trigger the event in a timeout.
             return new Promise(function (resolve) {
               setTimeout(function () {
-                return _this92._mapsWrapper.triggerMapEvent('resize').then(function () {
+                return _this99._mapsWrapper.triggerMapEvent('resize').then(function () {
                   if (recenter) {
-                    _this92.fitBounds != null ? _this92._fitBounds() : _this92._setCenter();
+                    _this99.fitBounds != null ? _this99._fitBounds() : _this99._setCenter();
                   }
 
                   resolve();
@@ -11137,12 +11934,12 @@
         }, {
           key: "_subscribeToFitBoundsUpdates",
           value: function _subscribeToFitBoundsUpdates() {
-            var _this93 = this;
+            var _this100 = this;
 
             this._zone.runOutsideAngular(function () {
-              _this93._fitBoundsSubscription = _this93._fitBoundsService.getBounds$().subscribe(function (b) {
-                _this93._zone.run(function () {
-                  return _this93._updateBounds(b, _this93.fitBoundsPadding);
+              _this100._fitBoundsSubscription = _this100._fitBoundsService.getBounds$().subscribe(function (b) {
+                _this100._zone.run(function () {
+                  return _this100._updateBounds(b, _this100.fitBoundsPadding);
                 });
               });
             });
@@ -11176,16 +11973,16 @@
         }, {
           key: "_handleMapCenterChange",
           value: function _handleMapCenterChange() {
-            var _this94 = this;
+            var _this101 = this;
 
             var s = this._mapsWrapper.subscribeToMapEvent('center_changed').subscribe(function () {
-              _this94._mapsWrapper.getCenter().then(function (center) {
-                _this94.latitude = center.lat();
-                _this94.longitude = center.lng();
+              _this101._mapsWrapper.getCenter().then(function (center) {
+                _this101.latitude = center.lat();
+                _this101.longitude = center.lng();
 
-                _this94.centerChange.emit({
-                  lat: _this94.latitude,
-                  lng: _this94.longitude
+                _this101.centerChange.emit({
+                  lat: _this101.latitude,
+                  lng: _this101.longitude
                 });
               });
             });
@@ -11195,11 +11992,11 @@
         }, {
           key: "_handleBoundsChange",
           value: function _handleBoundsChange() {
-            var _this95 = this;
+            var _this102 = this;
 
             var s = this._mapsWrapper.subscribeToMapEvent('bounds_changed').subscribe(function () {
-              _this95._mapsWrapper.getBounds().then(function (bounds) {
-                _this95.boundsChange.emit(bounds);
+              _this102._mapsWrapper.getBounds().then(function (bounds) {
+                _this102.boundsChange.emit(bounds);
               });
             });
 
@@ -11208,11 +12005,11 @@
         }, {
           key: "_handleMapTypeIdChange",
           value: function _handleMapTypeIdChange() {
-            var _this96 = this;
+            var _this103 = this;
 
             var s = this._mapsWrapper.subscribeToMapEvent('maptypeid_changed').subscribe(function () {
-              _this96._mapsWrapper.getMapTypeId().then(function (mapTypeId) {
-                _this96.mapTypeIdChange.emit(mapTypeId);
+              _this103._mapsWrapper.getMapTypeId().then(function (mapTypeId) {
+                _this103.mapTypeIdChange.emit(mapTypeId);
               });
             });
 
@@ -11221,13 +12018,13 @@
         }, {
           key: "_handleMapZoomChange",
           value: function _handleMapZoomChange() {
-            var _this97 = this;
+            var _this104 = this;
 
             var s = this._mapsWrapper.subscribeToMapEvent('zoom_changed').subscribe(function () {
-              _this97._mapsWrapper.getZoom().then(function (z) {
-                _this97.zoom = z;
+              _this104._mapsWrapper.getZoom().then(function (z) {
+                _this104.zoom = z;
 
-                _this97.zoomChange.emit(z);
+                _this104.zoomChange.emit(z);
               });
             });
 
@@ -11236,10 +12033,10 @@
         }, {
           key: "_handleIdleEvent",
           value: function _handleIdleEvent() {
-            var _this98 = this;
+            var _this105 = this;
 
             var s = this._mapsWrapper.subscribeToMapEvent('idle').subscribe(function () {
-              _this98.idle.emit(void 0);
+              _this105.idle.emit(void 0);
             });
 
             this._observableSubscriptions.push(s);
@@ -11247,10 +12044,10 @@
         }, {
           key: "_handleTilesLoadedEvent",
           value: function _handleTilesLoadedEvent() {
-            var _this99 = this;
+            var _this106 = this;
 
             var s = this._mapsWrapper.subscribeToMapEvent('tilesloaded').subscribe(function () {
-              return _this99.tilesLoaded.emit(void 0);
+              return _this106.tilesLoaded.emit(void 0);
             });
 
             this._observableSubscriptions.push(s);
@@ -11258,7 +12055,7 @@
         }, {
           key: "_handleMapMouseEvents",
           value: function _handleMapMouseEvents() {
-            var _this100 = this;
+            var _this107 = this;
 
             var events = [{
               name: 'click',
@@ -11271,7 +12068,7 @@
               emitter: this.mapDblClick
             }];
             events.forEach(function (e) {
-              var s = _this100._mapsWrapper.subscribeToMapEvent(e.name).subscribe(function (event) {
+              var s = _this107._mapsWrapper.subscribeToMapEvent(e.name).subscribe(function (event) {
                 var value = {
                   coords: {
                     lat: event.latLng.lat(),
@@ -11280,14 +12077,14 @@
                   placeId: event.placeId
                 }; // the placeId will be undefined in case the event was not an IconMouseEvent (google types)
 
-                if (value.placeId && !_this100.showDefaultInfoWindow) {
+                if (value.placeId && !_this107.showDefaultInfoWindow) {
                   event.stop();
                 }
 
                 e.emitter.emit(value);
               });
 
-              _this100._observableSubscriptions.push(s);
+              _this107._observableSubscriptions.push(s);
             });
           }
         }]);
@@ -11580,24 +12377,24 @@
         _createClass(AgmMarker, [{
           key: "ngAfterContentInit",
           value: function ngAfterContentInit() {
-            var _this101 = this;
+            var _this108 = this;
 
             this.handleInfoWindowUpdate();
             this.infoWindow.changes.subscribe(function () {
-              return _this101.handleInfoWindowUpdate();
+              return _this108.handleInfoWindowUpdate();
             });
           }
         }, {
           key: "handleInfoWindowUpdate",
           value: function handleInfoWindowUpdate() {
-            var _this102 = this;
+            var _this109 = this;
 
             if (this.infoWindow.length > 1) {
               throw new Error('Expected no more than one info window.');
             }
 
             this.infoWindow.forEach(function (marker) {
-              marker.hostMarker = _this102;
+              marker.hostMarker = _this109;
             });
           }
           /** @internal */
@@ -11691,34 +12488,34 @@
         }, {
           key: "_addEventListeners",
           value: function _addEventListeners() {
-            var _this103 = this;
+            var _this110 = this;
 
             var cs = this._markerManager.createEventObservable('click', this).subscribe(function () {
-              if (_this103.openInfoWindow) {
-                _this103.infoWindow.forEach(function (infoWindow) {
+              if (_this110.openInfoWindow) {
+                _this110.infoWindow.forEach(function (infoWindow) {
                   return infoWindow.open();
                 });
               }
 
-              _this103.markerClick.emit(_this103);
+              _this110.markerClick.emit(_this110);
             });
 
             this._observableSubscriptions.push(cs);
 
             var dcs = this._markerManager.createEventObservable('dblclick', this).subscribe(function () {
-              _this103.markerDblClick.emit(null);
+              _this110.markerDblClick.emit(null);
             });
 
             this._observableSubscriptions.push(dcs);
 
             var rc = this._markerManager.createEventObservable('rightclick', this).subscribe(function () {
-              _this103.markerRightClick.emit(null);
+              _this110.markerRightClick.emit(null);
             });
 
             this._observableSubscriptions.push(rc);
 
             var ds = this._markerManager.createEventObservable('dragstart', this).subscribe(function (e) {
-              _this103.dragStart.emit({
+              _this110.dragStart.emit({
                 coords: {
                   lat: e.latLng.lat(),
                   lng: e.latLng.lng()
@@ -11729,7 +12526,7 @@
             this._observableSubscriptions.push(ds);
 
             var d = this._markerManager.createEventObservable('drag', this).subscribe(function (e) {
-              _this103.drag.emit({
+              _this110.drag.emit({
                 coords: {
                   lat: e.latLng.lat(),
                   lng: e.latLng.lng()
@@ -11740,7 +12537,7 @@
             this._observableSubscriptions.push(d);
 
             var de = this._markerManager.createEventObservable('dragend', this).subscribe(function (e) {
-              _this103.dragEnd.emit({
+              _this110.dragEnd.emit({
                 coords: {
                   lat: e.latLng.lat(),
                   lng: e.latLng.lng()
@@ -11751,7 +12548,7 @@
             this._observableSubscriptions.push(de);
 
             var mover = this._markerManager.createEventObservable('mouseover', this).subscribe(function (e) {
-              _this103.mouseOver.emit({
+              _this110.mouseOver.emit({
                 coords: {
                   lat: e.latLng.lat(),
                   lng: e.latLng.lng()
@@ -11762,7 +12559,7 @@
             this._observableSubscriptions.push(mover);
 
             var mout = this._markerManager.createEventObservable('mouseout', this).subscribe(function (e) {
-              _this103.mouseOut.emit({
+              _this110.mouseOut.emit({
                 coords: {
                   lat: e.latLng.lat(),
                   lng: e.latLng.lng()
@@ -11773,7 +12570,7 @@
             this._observableSubscriptions.push(mout);
 
             var anChng = this._markerManager.createEventObservable('animation_changed', this).subscribe(function () {
-              _this103.animationChange.emit(_this103.animation);
+              _this110.animationChange.emit(_this110.animation);
             });
 
             this._observableSubscriptions.push(anChng);
@@ -12081,76 +12878,76 @@
         }, {
           key: "_addEventListeners",
           value: function _addEventListeners() {
-            var _this104 = this;
+            var _this111 = this;
 
             var handlers = [{
               name: 'click',
               handler: function handler(ev) {
-                return _this104.polyClick.emit(ev);
+                return _this111.polyClick.emit(ev);
               }
             }, {
               name: 'dblclick',
               handler: function handler(ev) {
-                return _this104.polyDblClick.emit(ev);
+                return _this111.polyDblClick.emit(ev);
               }
             }, {
               name: 'drag',
               handler: function handler(ev) {
-                return _this104.polyDrag.emit(ev);
+                return _this111.polyDrag.emit(ev);
               }
             }, {
               name: 'dragend',
               handler: function handler(ev) {
-                return _this104.polyDragEnd.emit(ev);
+                return _this111.polyDragEnd.emit(ev);
               }
             }, {
               name: 'dragstart',
               handler: function handler(ev) {
-                return _this104.polyDragStart.emit(ev);
+                return _this111.polyDragStart.emit(ev);
               }
             }, {
               name: 'mousedown',
               handler: function handler(ev) {
-                return _this104.polyMouseDown.emit(ev);
+                return _this111.polyMouseDown.emit(ev);
               }
             }, {
               name: 'mousemove',
               handler: function handler(ev) {
-                return _this104.polyMouseMove.emit(ev);
+                return _this111.polyMouseMove.emit(ev);
               }
             }, {
               name: 'mouseout',
               handler: function handler(ev) {
-                return _this104.polyMouseOut.emit(ev);
+                return _this111.polyMouseOut.emit(ev);
               }
             }, {
               name: 'mouseover',
               handler: function handler(ev) {
-                return _this104.polyMouseOver.emit(ev);
+                return _this111.polyMouseOver.emit(ev);
               }
             }, {
               name: 'mouseup',
               handler: function handler(ev) {
-                return _this104.polyMouseUp.emit(ev);
+                return _this111.polyMouseUp.emit(ev);
               }
             }, {
               name: 'rightclick',
               handler: function handler(ev) {
-                return _this104.polyRightClick.emit(ev);
+                return _this111.polyRightClick.emit(ev);
               }
             }];
             handlers.forEach(function (obj) {
-              var os = _this104._polygonManager.createEventObservable(obj.name, _this104).subscribe(obj.handler);
+              var os = _this111._polygonManager.createEventObservable(obj.name, _this111).subscribe(obj.handler);
 
-              _this104._subscriptions.push(os);
+              _this111._subscriptions.push(os);
             });
 
             this._polygonManager.createPathEventObservable(this).then(function (paths$) {
               var os = paths$.subscribe(function (pathEvent) {
-                return _this104.polyPathsChange.emit(pathEvent);
+                return _this111.polyPathsChange.emit(pathEvent);
               });
 
-              _this104._subscriptions.push(os);
+              _this111._subscriptions.push(os);
             });
           }
         }, {
@@ -12546,15 +13343,15 @@
         _createClass(AgmPolyline, [{
           key: "ngAfterContentInit",
           value: function ngAfterContentInit() {
-            var _this105 = this;
+            var _this112 = this;
 
             if (this.points.length) {
               this.points.forEach(function (point) {
                 var s = point.positionChanged.subscribe(function () {
-                  _this105._polylineManager.updatePolylinePoints(_this105);
+                  _this112._polylineManager.updatePolylinePoints(_this112);
                 });
 
-                _this105._subscriptions.push(s);
+                _this112._subscriptions.push(s);
               });
             }
 
@@ -12563,7 +13360,7 @@
             }
 
             var pointSub = this.points.changes.subscribe(function () {
-              return _this105._polylineManager.updatePolylinePoints(_this105);
+              return _this112._polylineManager.updatePolylinePoints(_this112);
             });
 
             this._subscriptions.push(pointSub);
@@ -12571,7 +13368,7 @@
             this._polylineManager.updatePolylinePoints(this);
 
             var iconSub = this.iconSequences.changes.subscribe(function () {
-              return _this105._polylineManager.updateIconSequences(_this105);
+              return _this112._polylineManager.updateIconSequences(_this112);
             });
 
             this._subscriptions.push(iconSub);
@@ -12612,76 +13409,76 @@
         }, {
           key: "_addEventListeners",
           value: function _addEventListeners() {
-            var _this106 = this;
+            var _this113 = this;
 
             var handlers = [{
               name: 'click',
               handler: function handler(ev) {
-                return _this106.lineClick.emit(ev);
+                return _this113.lineClick.emit(ev);
               }
             }, {
               name: 'dblclick',
               handler: function handler(ev) {
-                return _this106.lineDblClick.emit(ev);
+                return _this113.lineDblClick.emit(ev);
               }
             }, {
               name: 'drag',
               handler: function handler(ev) {
-                return _this106.lineDrag.emit(ev);
+                return _this113.lineDrag.emit(ev);
               }
             }, {
               name: 'dragend',
               handler: function handler(ev) {
-                return _this106.lineDragEnd.emit(ev);
+                return _this113.lineDragEnd.emit(ev);
               }
             }, {
               name: 'dragstart',
               handler: function handler(ev) {
-                return _this106.lineDragStart.emit(ev);
+                return _this113.lineDragStart.emit(ev);
               }
             }, {
               name: 'mousedown',
               handler: function handler(ev) {
-                return _this106.lineMouseDown.emit(ev);
+                return _this113.lineMouseDown.emit(ev);
               }
             }, {
               name: 'mousemove',
               handler: function handler(ev) {
-                return _this106.lineMouseMove.emit(ev);
+                return _this113.lineMouseMove.emit(ev);
               }
             }, {
               name: 'mouseout',
               handler: function handler(ev) {
-                return _this106.lineMouseOut.emit(ev);
+                return _this113.lineMouseOut.emit(ev);
               }
             }, {
               name: 'mouseover',
               handler: function handler(ev) {
-                return _this106.lineMouseOver.emit(ev);
+                return _this113.lineMouseOver.emit(ev);
               }
             }, {
               name: 'mouseup',
               handler: function handler(ev) {
-                return _this106.lineMouseUp.emit(ev);
+                return _this113.lineMouseUp.emit(ev);
               }
             }, {
               name: 'rightclick',
               handler: function handler(ev) {
-                return _this106.lineRightClick.emit(ev);
+                return _this113.lineRightClick.emit(ev);
               }
             }];
             handlers.forEach(function (obj) {
-              var os = _this106._polylineManager.createEventObservable(obj.name, _this106).subscribe(obj.handler);
+              var os = _this113._polylineManager.createEventObservable(obj.name, _this113).subscribe(obj.handler);
 
-              _this106._subscriptions.push(os);
+              _this113._subscriptions.push(os);
             });
 
             this._polylineManager.createPathEventObservable(this).then(function (ob$) {
               var os = ob$.subscribe(function (pathEvent) {
-                return _this106.polyPathChange.emit(pathEvent);
+                return _this113.polyPathChange.emit(pathEvent);
               });
 
-              _this106._subscriptions.push(os);
+              _this113._subscriptions.push(os);
             });
           }
           /** @internal */
@@ -12968,7 +13765,7 @@
         }, {
           key: "_registerEventListeners",
           value: function _registerEventListeners() {
-            var _this107 = this;
+            var _this114 = this;
 
             var events = new Map();
             events.set('bounds_changed', this.boundsChange);
@@ -12984,10 +13781,10 @@
             events.set('mouseup', this.mouseUp);
             events.set('rightclick', this.rightClick);
             events.forEach(function (eventEmitter, eventName) {
-              _this107._eventSubscriptions.push(_this107._manager.createEventObservable(eventName, _this107).subscribe(function (value) {
+              _this114._eventSubscriptions.push(_this114._manager.createEventObservable(eventName, _this114).subscribe(function (value) {
                 switch (eventName) {
                   case 'bounds_changed':
-                    _this107._manager.getBounds(_this107).then(function (bounds) {
+                    _this114._manager.getBounds(_this114).then(function (bounds) {
                       return eventEmitter.emit({
                         north: bounds.getNorthEast().lat(),
                         east: bounds.getNorthEast().lng(),
@@ -13300,7 +14097,7 @@
 
       var AgmGeocoder = /*#__PURE__*/function () {
         function AgmGeocoder(loader) {
-          var _this108 = this;
+          var _this115 = this;
 
           _classCallCheck(this, AgmGeocoder);
 
@@ -13309,7 +14106,7 @@
               return subscriber.next();
             });
           }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function () {
-            return _this108._createGeocoder();
+            return _this115._createGeocoder();
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["multicast"])(new rxjs__WEBPACK_IMPORTED_MODULE_2__["ReplaySubject"](1)));
           connectableGeocoder$.connect(); // ignore the subscription
           // since we will remain subscribed till application exits
@@ -13320,10 +14117,10 @@
         _createClass(AgmGeocoder, [{
           key: "geocode",
           value: function geocode(request) {
-            var _this109 = this;
+            var _this116 = this;
 
             return this.geocoder$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function (geocoder) {
-              return _this109._getGoogleResults(geocoder, request);
+              return _this116._getGoogleResults(geocoder, request);
             }));
           }
         }, {
@@ -13428,10 +14225,10 @@
       var LazyMapsAPILoader = /*#__PURE__*/function (_MapsAPILoader) {
         _inherits(LazyMapsAPILoader, _MapsAPILoader);
 
-        var _super14 = _createSuper(LazyMapsAPILoader);
+        var _super15 = _createSuper(LazyMapsAPILoader);
 
         function LazyMapsAPILoader() {
-          var _this110;
+          var _this117;
 
           var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
           var w = arguments.length > 1 ? arguments[1] : undefined;
@@ -13440,14 +14237,14 @@
 
           _classCallCheck(this, LazyMapsAPILoader);
 
-          _this110 = _super14.call(this);
-          _this110.localeId = localeId;
-          _this110._SCRIPT_ID = 'agmGoogleMapsApiScript';
-          _this110.callbackName = "agmLazyMapsAPILoader";
-          _this110._config = config || {};
-          _this110._windowRef = w;
-          _this110._documentRef = d;
-          return _this110;
+          _this117 = _super15.call(this);
+          _this117.localeId = localeId;
+          _this117._SCRIPT_ID = 'agmGoogleMapsApiScript';
+          _this117.callbackName = "agmLazyMapsAPILoader";
+          _this117._config = config || {};
+          _this117._windowRef = w;
+          _this117._documentRef = d;
+          return _this117;
         }
 
         _createClass(LazyMapsAPILoader, [{
@@ -13490,10 +14287,10 @@
         }, {
           key: "_assignScriptLoadingPromise",
           value: function _assignScriptLoadingPromise(scriptElem) {
-            var _this111 = this;
+            var _this118 = this;
 
             this._scriptLoadingPromise = new Promise(function (resolve, reject) {
-              _this111._windowRef.getNativeWindow()[_this111.callbackName] = function () {
+              _this118._windowRef.getNativeWindow()[_this118.callbackName] = function () {
                 resolve();
               };
 
@@ -14852,12 +15649,12 @@
       var MatTextareaAutosize = /*#__PURE__*/function (_angular_cdk_text_fie) {
         _inherits(MatTextareaAutosize, _angular_cdk_text_fie);
 
-        var _super15 = _createSuper(MatTextareaAutosize);
+        var _super16 = _createSuper(MatTextareaAutosize);
 
         function MatTextareaAutosize() {
           _classCallCheck(this, MatTextareaAutosize);
 
-          return _super15.apply(this, arguments);
+          return _super16.apply(this, arguments);
         }
 
         _createClass(MatTextareaAutosize, [{
@@ -15027,63 +15824,63 @@
       var MatInput = /*#__PURE__*/function (_MatInputMixinBase2) {
         _inherits(MatInput, _MatInputMixinBase2);
 
-        var _super16 = _createSuper(MatInput);
+        var _super17 = _createSuper(MatInput);
 
         function MatInput(_elementRef, _platform,
         /** @docs-private */
         ngControl, _parentForm, _parentFormGroup, _defaultErrorStateMatcher, inputValueAccessor, _autofillMonitor, ngZone, // TODO: Remove this once the legacy appearance has been removed. We only need
         // to inject the form-field for determining whether the placeholder has been promoted.
         _formField) {
-          var _this112;
+          var _this119;
 
           _classCallCheck(this, MatInput);
 
-          _this112 = _super16.call(this, _defaultErrorStateMatcher, _parentForm, _parentFormGroup, ngControl);
-          _this112._elementRef = _elementRef;
-          _this112._platform = _platform;
-          _this112.ngControl = ngControl;
-          _this112._autofillMonitor = _autofillMonitor;
-          _this112._formField = _formField;
-          _this112._uid = "mat-input-".concat(nextUniqueId++);
+          _this119 = _super17.call(this, _defaultErrorStateMatcher, _parentForm, _parentFormGroup, ngControl);
+          _this119._elementRef = _elementRef;
+          _this119._platform = _platform;
+          _this119.ngControl = ngControl;
+          _this119._autofillMonitor = _autofillMonitor;
+          _this119._formField = _formField;
+          _this119._uid = "mat-input-".concat(nextUniqueId++);
           /**
            * Implemented as part of MatFormFieldControl.
            * @docs-private
            */
 
-          _this112.focused = false;
+          _this119.focused = false;
           /**
            * Implemented as part of MatFormFieldControl.
            * @docs-private
            */
 
-          _this112.stateChanges = new rxjs__WEBPACK_IMPORTED_MODULE_7__["Subject"]();
+          _this119.stateChanges = new rxjs__WEBPACK_IMPORTED_MODULE_7__["Subject"]();
           /**
            * Implemented as part of MatFormFieldControl.
            * @docs-private
            */
 
-          _this112.controlType = 'mat-input';
+          _this119.controlType = 'mat-input';
           /**
            * Implemented as part of MatFormFieldControl.
            * @docs-private
            */
 
-          _this112.autofilled = false;
-          _this112._disabled = false;
-          _this112._required = false;
-          _this112._type = 'text';
-          _this112._readonly = false;
-          _this112._neverEmptyInputTypes = ['date', 'datetime', 'datetime-local', 'month', 'time', 'week'].filter(function (t) {
+          _this119.autofilled = false;
+          _this119._disabled = false;
+          _this119._required = false;
+          _this119._type = 'text';
+          _this119._readonly = false;
+          _this119._neverEmptyInputTypes = ['date', 'datetime', 'datetime-local', 'month', 'time', 'week'].filter(function (t) {
             return Object(_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_3__["getSupportedInputTypes"])().has(t);
           });
-          var element = _this112._elementRef.nativeElement;
+          var element = _this119._elementRef.nativeElement;
           var nodeName = element.nodeName.toLowerCase(); // If no input value accessor was explicitly specified, use the element as the input value
           // accessor.
 
-          _this112._inputValueAccessor = inputValueAccessor || element;
-          _this112._previousNativeValue = _this112.value; // Force setter to be called in case id was not specified.
+          _this119._inputValueAccessor = inputValueAccessor || element;
+          _this119._previousNativeValue = _this119.value; // Force setter to be called in case id was not specified.
 
-          _this112.id = _this112.id; // On some versions of iOS the caret gets stuck in the wrong place when holding down the delete
+          _this119.id = _this119.id; // On some versions of iOS the caret gets stuck in the wrong place when holding down the delete
           // key. In order to get around this we need to "jiggle" the caret loose. Since this bug only
           // exists on iOS, we only bother to install the listener on iOS.
 
@@ -15104,15 +15901,15 @@
             });
           }
 
-          _this112._isServer = !_this112._platform.isBrowser;
-          _this112._isNativeSelect = nodeName === 'select';
-          _this112._isTextarea = nodeName === 'textarea';
+          _this119._isServer = !_this119._platform.isBrowser;
+          _this119._isNativeSelect = nodeName === 'select';
+          _this119._isTextarea = nodeName === 'textarea';
 
-          if (_this112._isNativeSelect) {
-            _this112.controlType = element.multiple ? 'mat-native-select-multiple' : 'mat-native-select';
+          if (_this119._isNativeSelect) {
+            _this119.controlType = element.multiple ? 'mat-native-select-multiple' : 'mat-native-select';
           }
 
-          return _this112;
+          return _this119;
         }
         /**
          * Implemented as part of MatFormFieldControl.
@@ -15212,13 +16009,13 @@
         }, {
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            var _this113 = this;
+            var _this120 = this;
 
             if (this._platform.isBrowser) {
               this._autofillMonitor.monitor(this._elementRef.nativeElement).subscribe(function (event) {
-                _this113.autofilled = event.isAutofilled;
+                _this120.autofilled = event.isAutofilled;
 
-                _this113.stateChanges.next();
+                _this120.stateChanges.next();
               });
             }
           }
@@ -16145,7 +16942,7 @@
 
       var CloseScrollStrategy = /*#__PURE__*/function () {
         function CloseScrollStrategy(_scrollDispatcher, _ngZone, _viewportRuler, _config) {
-          var _this114 = this;
+          var _this121 = this;
 
           _classCallCheck(this, CloseScrollStrategy);
 
@@ -16157,11 +16954,11 @@
           /** Detaches the overlay ref and disables the scroll strategy. */
 
           this._detach = function () {
-            _this114.disable();
+            _this121.disable();
 
-            if (_this114._overlayRef.hasAttached()) {
-              _this114._ngZone.run(function () {
-                return _this114._overlayRef.detach();
+            if (_this121._overlayRef.hasAttached()) {
+              _this121._ngZone.run(function () {
+                return _this121._overlayRef.detach();
               });
             }
           };
@@ -16183,7 +16980,7 @@
         }, {
           key: "enable",
           value: function enable() {
-            var _this115 = this;
+            var _this122 = this;
 
             if (this._scrollSubscription) {
               return;
@@ -16194,12 +16991,12 @@
             if (this._config && this._config.threshold && this._config.threshold > 1) {
               this._initialScrollPosition = this._viewportRuler.getViewportScrollPosition().top;
               this._scrollSubscription = stream.subscribe(function () {
-                var scrollPosition = _this115._viewportRuler.getViewportScrollPosition().top;
+                var scrollPosition = _this122._viewportRuler.getViewportScrollPosition().top;
 
-                if (Math.abs(scrollPosition - _this115._initialScrollPosition) > _this115._config.threshold) {
-                  _this115._detach();
+                if (Math.abs(scrollPosition - _this122._initialScrollPosition) > _this122._config.threshold) {
+                  _this122._detach();
                 } else {
-                  _this115._overlayRef.updatePosition();
+                  _this122._overlayRef.updatePosition();
                 }
               });
             } else {
@@ -16348,20 +17145,20 @@
         }, {
           key: "enable",
           value: function enable() {
-            var _this116 = this;
+            var _this123 = this;
 
             if (!this._scrollSubscription) {
               var throttle = this._config ? this._config.scrollThrottle : 0;
               this._scrollSubscription = this._scrollDispatcher.scrolled(throttle).subscribe(function () {
-                _this116._overlayRef.updatePosition(); // TODO(crisbeto): make `close` on by default once all components can handle it.
+                _this123._overlayRef.updatePosition(); // TODO(crisbeto): make `close` on by default once all components can handle it.
 
 
-                if (_this116._config && _this116._config.autoClose) {
-                  var overlayRect = _this116._overlayRef.overlayElement.getBoundingClientRect();
+                if (_this123._config && _this123._config.autoClose) {
+                  var overlayRect = _this123._overlayRef.overlayElement.getBoundingClientRect();
 
-                  var _this116$_viewportRul = _this116._viewportRuler.getViewportSize(),
-                      width = _this116$_viewportRul.width,
-                      height = _this116$_viewportRul.height; // TODO(crisbeto): include all ancestor scroll containers here once
+                  var _this123$_viewportRul = _this123._viewportRuler.getViewportSize(),
+                      width = _this123$_viewportRul.width,
+                      height = _this123$_viewportRul.height; // TODO(crisbeto): include all ancestor scroll containers here once
                   // we have a way of exposing the trigger element to the scroll strategy.
 
 
@@ -16375,10 +17172,10 @@
                   }];
 
                   if (isElementScrolledOutsideView(overlayRect, parentRects)) {
-                    _this116.disable();
+                    _this123.disable();
 
-                    _this116._ngZone.run(function () {
-                      return _this116._overlayRef.detach();
+                    _this123._ngZone.run(function () {
+                      return _this123._overlayRef.detach();
                     });
                   }
                 }
@@ -16423,7 +17220,7 @@
 
 
       var ScrollStrategyOptions = function ScrollStrategyOptions(_scrollDispatcher, _viewportRuler, _ngZone, document) {
-        var _this117 = this;
+        var _this124 = this;
 
         _classCallCheck(this, ScrollStrategyOptions);
 
@@ -16442,13 +17239,13 @@
 
 
         this.close = function (config) {
-          return new CloseScrollStrategy(_this117._scrollDispatcher, _this117._ngZone, _this117._viewportRuler, config);
+          return new CloseScrollStrategy(_this124._scrollDispatcher, _this124._ngZone, _this124._viewportRuler, config);
         };
         /** Block scrolling. */
 
 
         this.block = function () {
-          return new BlockScrollStrategy(_this117._viewportRuler, _this117._document);
+          return new BlockScrollStrategy(_this124._viewportRuler, _this124._document);
         };
         /**
          * Update the overlay's position on scroll.
@@ -16458,7 +17255,7 @@
 
 
         this.reposition = function (config) {
-          return new RepositionScrollStrategy(_this117._scrollDispatcher, _this117._viewportRuler, _this117._ngZone, config);
+          return new RepositionScrollStrategy(_this124._scrollDispatcher, _this124._viewportRuler, _this124._ngZone, config);
         };
 
         this._document = document;
@@ -16800,18 +17597,18 @@
       var OverlayKeyboardDispatcher = /*#__PURE__*/function (_BaseOverlayDispatche) {
         _inherits(OverlayKeyboardDispatcher, _BaseOverlayDispatche);
 
-        var _super17 = _createSuper(OverlayKeyboardDispatcher);
+        var _super18 = _createSuper(OverlayKeyboardDispatcher);
 
         function OverlayKeyboardDispatcher(document) {
-          var _this118;
+          var _this125;
 
           _classCallCheck(this, OverlayKeyboardDispatcher);
 
-          _this118 = _super17.call(this, document);
+          _this125 = _super18.call(this, document);
           /** Keyboard event listener that will be attached to the body. */
 
-          _this118._keydownListener = function (event) {
-            var overlays = _this118._attachedOverlays;
+          _this125._keydownListener = function (event) {
+            var overlays = _this125._attachedOverlays;
 
             for (var i = overlays.length - 1; i > -1; i--) {
               // Dispatch the keydown event to the top overlay which has subscribers to its keydown events.
@@ -16828,7 +17625,7 @@
             }
           };
 
-          return _this118;
+          return _this125;
         }
         /** Add a new overlay to the list of attached overlay refs. */
 
@@ -16917,25 +17714,25 @@
       var OverlayOutsideClickDispatcher = /*#__PURE__*/function (_BaseOverlayDispatche2) {
         _inherits(OverlayOutsideClickDispatcher, _BaseOverlayDispatche2);
 
-        var _super18 = _createSuper(OverlayOutsideClickDispatcher);
+        var _super19 = _createSuper(OverlayOutsideClickDispatcher);
 
         function OverlayOutsideClickDispatcher(document, _platform) {
-          var _this119;
+          var _this126;
 
           _classCallCheck(this, OverlayOutsideClickDispatcher);
 
-          _this119 = _super18.call(this, document);
-          _this119._platform = _platform;
-          _this119._cursorStyleIsSet = false;
+          _this126 = _super19.call(this, document);
+          _this126._platform = _platform;
+          _this126._cursorStyleIsSet = false;
           /** Click event listener that will be attached to the body propagate phase. */
 
-          _this119._clickListener = function (event) {
+          _this126._clickListener = function (event) {
             // Get the target through the `composedPath` if possible to account for shadow DOM.
             var target = event.composedPath ? event.composedPath()[0] : event.target; // We copy the array because the original may be modified asynchronously if the
             // outsidePointerEvents listener decides to detach overlays resulting in index errors inside
             // the for loop.
 
-            var overlays = _this119._attachedOverlays.slice(); // Dispatch the mouse event to the top overlay which has subscribers to its mouse events.
+            var overlays = _this126._attachedOverlays.slice(); // Dispatch the mouse event to the top overlay which has subscribers to its mouse events.
             // We want to target all overlays for which the click could be considered as outside click.
             // As soon as we reach an overlay for which the click is not outside click we break off
             // the loop.
@@ -16958,7 +17755,7 @@
             }
           };
 
-          return _this119;
+          return _this126;
         }
         /** Add a new overlay to the list of attached overlay refs. */
 
@@ -17212,7 +18009,7 @@
 
       var OverlayRef = /*#__PURE__*/function () {
         function OverlayRef(_portalOutlet, _host, _pane, _config, _ngZone, _keyboardDispatcher, _document, _location, _outsideClickDispatcher) {
-          var _this120 = this;
+          var _this127 = this;
 
           _classCallCheck(this, OverlayRef);
 
@@ -17232,7 +18029,7 @@
           this._locationChanges = rxjs__WEBPACK_IMPORTED_MODULE_7__["Subscription"].EMPTY;
 
           this._backdropClickHandler = function (event) {
-            return _this120._backdropClick.next(event);
+            return _this127._backdropClick.next(event);
           };
           /** Stream of keydown events dispatched to this overlay. */
 
@@ -17287,7 +18084,7 @@
         }, {
           key: "attach",
           value: function attach(portal) {
-            var _this121 = this;
+            var _this128 = this;
 
             var attachResult = this._portalOutlet.attach(portal); // Update the pane element with the given configuration.
 
@@ -17315,8 +18112,8 @@
 
             this._ngZone.onStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["take"])(1)).subscribe(function () {
               // The overlay could've been detached before the zone has stabilized.
-              if (_this121.hasAttached()) {
-                _this121.updatePosition();
+              if (_this128.hasAttached()) {
+                _this128.updatePosition();
               }
             }); // Enable pointer events for the overlay pane element.
 
@@ -17339,7 +18136,7 @@
 
             if (this._config.disposeOnNavigation) {
               this._locationChanges = this._location.subscribe(function () {
-                return _this121.dispose();
+                return _this128.dispose();
               });
             }
 
@@ -17621,7 +18418,7 @@
         }, {
           key: "_attachBackdrop",
           value: function _attachBackdrop() {
-            var _this122 = this;
+            var _this129 = this;
 
             var showingClass = 'cdk-overlay-backdrop-showing';
             this._backdropElement = this._document.createElement('div');
@@ -17644,8 +18441,8 @@
             if (typeof requestAnimationFrame !== 'undefined') {
               this._ngZone.runOutsideAngular(function () {
                 requestAnimationFrame(function () {
-                  if (_this122._backdropElement) {
-                    _this122._backdropElement.classList.add(showingClass);
+                  if (_this129._backdropElement) {
+                    _this129._backdropElement.classList.add(showingClass);
                   }
                 });
               });
@@ -17673,7 +18470,7 @@
         }, {
           key: "detachBackdrop",
           value: function detachBackdrop() {
-            var _this123 = this;
+            var _this130 = this;
 
             var backdropToDetach = this._backdropElement;
 
@@ -17686,7 +18483,7 @@
             var finishDetach = function finishDetach() {
               // It may not be attached to anything in certain cases (e.g. unit tests).
               if (backdropToDetach) {
-                backdropToDetach.removeEventListener('click', _this123._backdropClickHandler);
+                backdropToDetach.removeEventListener('click', _this130._backdropClickHandler);
                 backdropToDetach.removeEventListener('transitionend', finishDetach);
 
                 if (backdropToDetach.parentNode) {
@@ -17697,12 +18494,12 @@
               // is still the same instance that we started to remove.
 
 
-              if (_this123._backdropElement == backdropToDetach) {
-                _this123._backdropElement = null;
+              if (_this130._backdropElement == backdropToDetach) {
+                _this130._backdropElement = null;
               }
 
-              if (_this123._config.backdropClass) {
-                _this123._toggleClasses(backdropToDetach, _this123._config.backdropClass, false);
+              if (_this130._config.backdropClass) {
+                _this130._toggleClasses(backdropToDetach, _this130._config.backdropClass, false);
               }
 
               clearTimeout(timeoutId);
@@ -17743,7 +18540,7 @@
         }, {
           key: "_detachContentWhenStable",
           value: function _detachContentWhenStable() {
-            var _this124 = this;
+            var _this131 = this;
 
             // Normally we wouldn't have to explicitly run this outside the `NgZone`, however
             // if the consumer is using `zone-patch-rxjs`, the `Subscription.unsubscribe` call will
@@ -17752,18 +18549,18 @@
               // We can't remove the host here immediately, because the overlay pane's content
               // might still be animating. This stream helps us avoid interrupting the animation
               // by waiting for the pane to become empty.
-              var subscription = _this124._ngZone.onStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["takeUntil"])(Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["merge"])(_this124._attachments, _this124._detachments))).subscribe(function () {
+              var subscription = _this131._ngZone.onStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["takeUntil"])(Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["merge"])(_this131._attachments, _this131._detachments))).subscribe(function () {
                 // Needs a couple of checks for the pane and host, because
                 // they may have been removed by the time the zone stabilizes.
-                if (!_this124._pane || !_this124._host || _this124._pane.children.length === 0) {
-                  if (_this124._pane && _this124._config.panelClass) {
-                    _this124._toggleClasses(_this124._pane, _this124._config.panelClass, false);
+                if (!_this131._pane || !_this131._host || _this131._pane.children.length === 0) {
+                  if (_this131._pane && _this131._config.panelClass) {
+                    _this131._toggleClasses(_this131._pane, _this131._config.panelClass, false);
                   }
 
-                  if (_this124._host && _this124._host.parentElement) {
-                    _this124._previousHostParent = _this124._host.parentElement;
+                  if (_this131._host && _this131._host.parentElement) {
+                    _this131._previousHostParent = _this131._host.parentElement;
 
-                    _this124._previousHostParent.removeChild(_this124._host);
+                    _this131._previousHostParent.removeChild(_this131._host);
                   }
 
                   subscription.unsubscribe();
@@ -17886,7 +18683,7 @@
         }, {
           key: "attach",
           value: function attach(overlayRef) {
-            var _this125 = this;
+            var _this132 = this;
 
             if (this._overlayRef && overlayRef !== this._overlayRef && (typeof ngDevMode === 'undefined' || ngDevMode)) {
               throw Error('This position strategy is already attached to an overlay');
@@ -17908,9 +18705,9 @@
               // When the window is resized, we want to trigger the next reposition as if it
               // was an initial render, in order for the strategy to pick a new optimal position,
               // otherwise position locking will cause it to stay at the old one.
-              _this125._isInitialRender = true;
+              _this132._isInitialRender = true;
 
-              _this125.apply();
+              _this132.apply();
             });
           }
           /**
@@ -17965,12 +18762,12 @@
             var fallback; // Go through each of the preferred positions looking for a good fit.
             // If a good fit is found, it will be applied immediately.
 
-            var _iterator = _createForOfIteratorHelper(this._preferredPositions),
-                _step;
+            var _iterator3 = _createForOfIteratorHelper(this._preferredPositions),
+                _step3;
 
             try {
-              for (_iterator.s(); !(_step = _iterator.n()).done;) {
-                var pos = _step.value;
+              for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+                var pos = _step3.value;
 
                 // Get the exact (x, y) coordinate for the point-of-origin on the origin element.
                 var originPoint = this._getOriginPoint(originRect, pos); // From that point-of-origin, get the exact (x, y) coordinate for the top-left corner of the
@@ -18022,21 +18819,21 @@
               // one that has the greatest area available modified by the position's weight
 
             } catch (err) {
-              _iterator.e(err);
+              _iterator3.e(err);
             } finally {
-              _iterator.f();
+              _iterator3.f();
             }
 
             if (flexibleFits.length) {
               var bestFit = null;
               var bestScore = -1;
 
-              var _iterator2 = _createForOfIteratorHelper(flexibleFits),
-                  _step2;
+              var _iterator4 = _createForOfIteratorHelper(flexibleFits),
+                  _step4;
 
               try {
-                for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-                  var fit = _step2.value;
+                for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+                  var fit = _step4.value;
                   var score = fit.boundingBoxRect.width * fit.boundingBoxRect.height * (fit.position.weight || 1);
 
                   if (score > bestScore) {
@@ -18045,9 +18842,9 @@
                   }
                 }
               } catch (err) {
-                _iterator2.e(err);
+                _iterator4.e(err);
               } finally {
-                _iterator2.f();
+                _iterator4.f();
               }
 
               this._isPushed = false;
@@ -18873,8 +19670,8 @@
         }, {
           key: "_subtractOverflows",
           value: function _subtractOverflows(length) {
-            for (var _len = arguments.length, overflows = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-              overflows[_key - 1] = arguments[_key];
+            for (var _len3 = arguments.length, overflows = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
+              overflows[_key3 - 1] = arguments[_key3];
             }
 
             return overflows.reduce(function (currentValue, currentOverflow) {
@@ -18957,14 +19754,14 @@
         }, {
           key: "_addPanelClasses",
           value: function _addPanelClasses(cssClasses) {
-            var _this126 = this;
+            var _this133 = this;
 
             if (this._pane) {
               Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_5__["coerceArray"])(cssClasses).forEach(function (cssClass) {
-                if (cssClass !== '' && _this126._appliedPanelClasses.indexOf(cssClass) === -1) {
-                  _this126._appliedPanelClasses.push(cssClass);
+                if (cssClass !== '' && _this133._appliedPanelClasses.indexOf(cssClass) === -1) {
+                  _this133._appliedPanelClasses.push(cssClass);
 
-                  _this126._pane.classList.add(cssClass);
+                  _this133._pane.classList.add(cssClass);
                 }
               });
             }
@@ -18974,11 +19771,11 @@
         }, {
           key: "_clearPanelClasses",
           value: function _clearPanelClasses() {
-            var _this127 = this;
+            var _this134 = this;
 
             if (this._pane) {
               this._appliedPanelClasses.forEach(function (cssClass) {
-                _this127._pane.classList.remove(cssClass);
+                _this134._pane.classList.remove(cssClass);
               });
 
               this._appliedPanelClasses = [];
@@ -20101,7 +20898,7 @@
         }, {
           key: "_createOverlay",
           value: function _createOverlay() {
-            var _this128 = this;
+            var _this135 = this;
 
             if (!this.positions || !this.positions.length) {
               this.positions = defaultPositionList;
@@ -20110,23 +20907,23 @@
             var overlayRef = this._overlayRef = this._overlay.create(this._buildConfig());
 
             this._attachSubscription = overlayRef.attachments().subscribe(function () {
-              return _this128.attach.emit();
+              return _this135.attach.emit();
             });
             this._detachSubscription = overlayRef.detachments().subscribe(function () {
-              return _this128.detach.emit();
+              return _this135.detach.emit();
             });
             overlayRef.keydownEvents().subscribe(function (event) {
-              _this128.overlayKeydown.next(event);
+              _this135.overlayKeydown.next(event);
 
-              if (event.keyCode === _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_9__["ESCAPE"] && !_this128.disableClose && !Object(_angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_9__["hasModifierKey"])(event)) {
+              if (event.keyCode === _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_9__["ESCAPE"] && !_this135.disableClose && !Object(_angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_9__["hasModifierKey"])(event)) {
                 event.preventDefault();
 
-                _this128._detachOverlay();
+                _this135._detachOverlay();
               }
             });
 
             this._overlayRef.outsidePointerEvents().subscribe(function (event) {
-              _this128.overlayOutsideClick.next(event);
+              _this135.overlayOutsideClick.next(event);
             });
           }
           /** Builds the overlay config based on the directive's inputs */
@@ -20174,7 +20971,7 @@
         }, {
           key: "_updatePositionStrategy",
           value: function _updatePositionStrategy(positionStrategy) {
-            var _this129 = this;
+            var _this136 = this;
 
             var positions = this.positions.map(function (currentPosition) {
               return {
@@ -20182,8 +20979,8 @@
                 originY: currentPosition.originY,
                 overlayX: currentPosition.overlayX,
                 overlayY: currentPosition.overlayY,
-                offsetX: currentPosition.offsetX || _this129.offsetX,
-                offsetY: currentPosition.offsetY || _this129.offsetY,
+                offsetX: currentPosition.offsetX || _this136.offsetX,
+                offsetY: currentPosition.offsetY || _this136.offsetY,
                 panelClass: currentPosition.panelClass || undefined
               };
             });
@@ -20205,7 +21002,7 @@
         }, {
           key: "_attachOverlay",
           value: function _attachOverlay() {
-            var _this130 = this;
+            var _this137 = this;
 
             if (!this._overlayRef) {
               this._createOverlay();
@@ -20220,7 +21017,7 @@
 
             if (this.hasBackdrop) {
               this._backdropSubscription = this._overlayRef.backdropClick().subscribe(function (event) {
-                _this130.backdropClick.emit(event);
+                _this137.backdropClick.emit(event);
               });
             } else {
               this._backdropSubscription.unsubscribe();
@@ -20232,12 +21029,12 @@
 
             if (this.positionChange.observers.length > 0) {
               this._positionSubscription = this._position.positionChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["takeWhile"])(function () {
-                return _this130.positionChange.observers.length > 0;
+                return _this137.positionChange.observers.length > 0;
               })).subscribe(function (position) {
-                _this130.positionChange.emit(position);
+                _this137.positionChange.emit(position);
 
-                if (_this130.positionChange.observers.length === 0) {
-                  _this130._positionSubscription.unsubscribe();
+                if (_this137.positionChange.observers.length === 0) {
+                  _this137._positionSubscription.unsubscribe();
                 }
               });
             }
@@ -20651,12 +21448,12 @@
       var FullscreenOverlayContainer = /*#__PURE__*/function (_OverlayContainer) {
         _inherits(FullscreenOverlayContainer, _OverlayContainer);
 
-        var _super19 = _createSuper(FullscreenOverlayContainer);
+        var _super20 = _createSuper(FullscreenOverlayContainer);
 
         function FullscreenOverlayContainer(_document, platform) {
           _classCallCheck(this, FullscreenOverlayContainer);
 
-          return _super19.call(this, _document, platform);
+          return _super20.call(this, _document, platform);
         }
 
         _createClass(FullscreenOverlayContainer, [{
@@ -20671,14 +21468,14 @@
         }, {
           key: "_createContainer",
           value: function _createContainer() {
-            var _this131 = this;
+            var _this138 = this;
 
             _get(_getPrototypeOf(FullscreenOverlayContainer.prototype), "_createContainer", this).call(this);
 
             this._adjustParentForFullscreenChange();
 
             this._addFullscreenChangeListener(function () {
-              return _this131._adjustParentForFullscreenChange();
+              return _this138._adjustParentForFullscreenChange();
             });
           }
         }, {
@@ -20796,6 +21593,2446 @@
        * Generated bundle index. Do not edit.
        */
       //# sourceMappingURL=overlay.js.map
+
+      /***/
+
+    },
+
+    /***/
+    "vxfF":
+    /*!**********************************************************************!*\
+      !*** ./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/scrolling.js ***!
+      \**********************************************************************/
+
+    /*! exports provided: CdkFixedSizeVirtualScroll, CdkScrollable, CdkScrollableModule, CdkVirtualForOf, CdkVirtualScrollViewport, DEFAULT_RESIZE_TIME, DEFAULT_SCROLL_TIME, FixedSizeVirtualScrollStrategy, ScrollDispatcher, ScrollingModule, VIRTUAL_SCROLL_STRATEGY, ViewportRuler, _fixedSizeVirtualScrollStrategyFactory */
+
+    /***/
+    function vxfF(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "CdkFixedSizeVirtualScroll", function () {
+        return CdkFixedSizeVirtualScroll;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "CdkScrollable", function () {
+        return CdkScrollable;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "CdkScrollableModule", function () {
+        return CdkScrollableModule;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "CdkVirtualForOf", function () {
+        return CdkVirtualForOf;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "CdkVirtualScrollViewport", function () {
+        return CdkVirtualScrollViewport;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "DEFAULT_RESIZE_TIME", function () {
+        return DEFAULT_RESIZE_TIME;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "DEFAULT_SCROLL_TIME", function () {
+        return DEFAULT_SCROLL_TIME;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "FixedSizeVirtualScrollStrategy", function () {
+        return FixedSizeVirtualScrollStrategy;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ScrollDispatcher", function () {
+        return ScrollDispatcher;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ScrollingModule", function () {
+        return ScrollingModule;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "VIRTUAL_SCROLL_STRATEGY", function () {
+        return VIRTUAL_SCROLL_STRATEGY;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ViewportRuler", function () {
+        return ViewportRuler;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "_fixedSizeVirtualScrollStrategyFactory", function () {
+        return _fixedSizeVirtualScrollStrategyFactory;
+      });
+      /* harmony import */
+
+
+      var _angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/cdk/coercion */
+      "8LU1");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! rxjs */
+      "qCKp");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! rxjs/operators */
+      "kU1M");
+      /* harmony import */
+
+
+      var _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! @angular/cdk/platform */
+      "nLfN");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! @angular/common */
+      "ofXK");
+      /* harmony import */
+
+
+      var _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! @angular/cdk/bidi */
+      "cH1L");
+      /* harmony import */
+
+
+      var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @angular/cdk/collections */
+      "0EQZ");
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /** The injection token used to specify the virtual scrolling strategy. */
+
+
+      var _c0 = ["contentWrapper"];
+      var _c1 = ["*"];
+      var VIRTUAL_SCROLL_STRATEGY = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["InjectionToken"]('VIRTUAL_SCROLL_STRATEGY');
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /** Virtual scrolling strategy for lists with items of known fixed size. */
+
+      var FixedSizeVirtualScrollStrategy = /*#__PURE__*/function () {
+        /**
+         * @param itemSize The size of the items in the virtually scrolling list.
+         * @param minBufferPx The minimum amount of buffer (in pixels) before needing to render more
+         * @param maxBufferPx The amount of buffer (in pixels) to render when rendering more.
+         */
+        function FixedSizeVirtualScrollStrategy(itemSize, minBufferPx, maxBufferPx) {
+          _classCallCheck(this, FixedSizeVirtualScrollStrategy);
+
+          this._scrolledIndexChange = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          /** @docs-private Implemented as part of VirtualScrollStrategy. */
+
+          this.scrolledIndexChange = this._scrolledIndexChange.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["distinctUntilChanged"])());
+          /** The attached viewport. */
+
+          this._viewport = null;
+          this._itemSize = itemSize;
+          this._minBufferPx = minBufferPx;
+          this._maxBufferPx = maxBufferPx;
+        }
+        /**
+         * Attaches this scroll strategy to a viewport.
+         * @param viewport The viewport to attach this strategy to.
+         */
+
+
+        _createClass(FixedSizeVirtualScrollStrategy, [{
+          key: "attach",
+          value: function attach(viewport) {
+            this._viewport = viewport;
+
+            this._updateTotalContentSize();
+
+            this._updateRenderedRange();
+          }
+          /** Detaches this scroll strategy from the currently attached viewport. */
+
+        }, {
+          key: "detach",
+          value: function detach() {
+            this._scrolledIndexChange.complete();
+
+            this._viewport = null;
+          }
+          /**
+           * Update the item size and buffer size.
+           * @param itemSize The size of the items in the virtually scrolling list.
+           * @param minBufferPx The minimum amount of buffer (in pixels) before needing to render more
+           * @param maxBufferPx The amount of buffer (in pixels) to render when rendering more.
+           */
+
+        }, {
+          key: "updateItemAndBufferSize",
+          value: function updateItemAndBufferSize(itemSize, minBufferPx, maxBufferPx) {
+            if (maxBufferPx < minBufferPx && (typeof ngDevMode === 'undefined' || ngDevMode)) {
+              throw Error('CDK virtual scroll: maxBufferPx must be greater than or equal to minBufferPx');
+            }
+
+            this._itemSize = itemSize;
+            this._minBufferPx = minBufferPx;
+            this._maxBufferPx = maxBufferPx;
+
+            this._updateTotalContentSize();
+
+            this._updateRenderedRange();
+          }
+          /** @docs-private Implemented as part of VirtualScrollStrategy. */
+
+        }, {
+          key: "onContentScrolled",
+          value: function onContentScrolled() {
+            this._updateRenderedRange();
+          }
+          /** @docs-private Implemented as part of VirtualScrollStrategy. */
+
+        }, {
+          key: "onDataLengthChanged",
+          value: function onDataLengthChanged() {
+            this._updateTotalContentSize();
+
+            this._updateRenderedRange();
+          }
+          /** @docs-private Implemented as part of VirtualScrollStrategy. */
+
+        }, {
+          key: "onContentRendered",
+          value: function onContentRendered() {}
+          /** @docs-private Implemented as part of VirtualScrollStrategy. */
+
+        }, {
+          key: "onRenderedOffsetChanged",
+          value: function onRenderedOffsetChanged() {}
+          /**
+           * Scroll to the offset for the given index.
+           * @param index The index of the element to scroll to.
+           * @param behavior The ScrollBehavior to use when scrolling.
+           */
+
+        }, {
+          key: "scrollToIndex",
+          value: function scrollToIndex(index, behavior) {
+            if (this._viewport) {
+              this._viewport.scrollToOffset(index * this._itemSize, behavior);
+            }
+          }
+          /** Update the viewport's total content size. */
+
+        }, {
+          key: "_updateTotalContentSize",
+          value: function _updateTotalContentSize() {
+            if (!this._viewport) {
+              return;
+            }
+
+            this._viewport.setTotalContentSize(this._viewport.getDataLength() * this._itemSize);
+          }
+          /** Update the viewport's rendered range. */
+
+        }, {
+          key: "_updateRenderedRange",
+          value: function _updateRenderedRange() {
+            if (!this._viewport) {
+              return;
+            }
+
+            var renderedRange = this._viewport.getRenderedRange();
+
+            var newRange = {
+              start: renderedRange.start,
+              end: renderedRange.end
+            };
+
+            var viewportSize = this._viewport.getViewportSize();
+
+            var dataLength = this._viewport.getDataLength();
+
+            var scrollOffset = this._viewport.measureScrollOffset(); // Prevent NaN as result when dividing by zero.
+
+
+            var firstVisibleIndex = this._itemSize > 0 ? scrollOffset / this._itemSize : 0; // If user scrolls to the bottom of the list and data changes to a smaller list
+
+            if (newRange.end > dataLength) {
+              // We have to recalculate the first visible index based on new data length and viewport size.
+              var maxVisibleItems = Math.ceil(viewportSize / this._itemSize);
+              var newVisibleIndex = Math.max(0, Math.min(firstVisibleIndex, dataLength - maxVisibleItems)); // If first visible index changed we must update scroll offset to handle start/end buffers
+              // Current range must also be adjusted to cover the new position (bottom of new list).
+
+              if (firstVisibleIndex != newVisibleIndex) {
+                firstVisibleIndex = newVisibleIndex;
+                scrollOffset = newVisibleIndex * this._itemSize;
+                newRange.start = Math.floor(firstVisibleIndex);
+              }
+
+              newRange.end = Math.max(0, Math.min(dataLength, newRange.start + maxVisibleItems));
+            }
+
+            var startBuffer = scrollOffset - newRange.start * this._itemSize;
+
+            if (startBuffer < this._minBufferPx && newRange.start != 0) {
+              var expandStart = Math.ceil((this._maxBufferPx - startBuffer) / this._itemSize);
+              newRange.start = Math.max(0, newRange.start - expandStart);
+              newRange.end = Math.min(dataLength, Math.ceil(firstVisibleIndex + (viewportSize + this._minBufferPx) / this._itemSize));
+            } else {
+              var endBuffer = newRange.end * this._itemSize - (scrollOffset + viewportSize);
+
+              if (endBuffer < this._minBufferPx && newRange.end != dataLength) {
+                var expandEnd = Math.ceil((this._maxBufferPx - endBuffer) / this._itemSize);
+
+                if (expandEnd > 0) {
+                  newRange.end = Math.min(dataLength, newRange.end + expandEnd);
+                  newRange.start = Math.max(0, Math.floor(firstVisibleIndex - this._minBufferPx / this._itemSize));
+                }
+              }
+            }
+
+            this._viewport.setRenderedRange(newRange);
+
+            this._viewport.setRenderedContentOffset(this._itemSize * newRange.start);
+
+            this._scrolledIndexChange.next(Math.floor(firstVisibleIndex));
+          }
+        }]);
+
+        return FixedSizeVirtualScrollStrategy;
+      }();
+      /**
+       * Provider factory for `FixedSizeVirtualScrollStrategy` that simply extracts the already created
+       * `FixedSizeVirtualScrollStrategy` from the given directive.
+       * @param fixedSizeDir The instance of `CdkFixedSizeVirtualScroll` to extract the
+       *     `FixedSizeVirtualScrollStrategy` from.
+       */
+
+
+      function _fixedSizeVirtualScrollStrategyFactory(fixedSizeDir) {
+        return fixedSizeDir._scrollStrategy;
+      }
+      /** A virtual scroll strategy that supports fixed-size items. */
+
+
+      var CdkFixedSizeVirtualScroll = /*#__PURE__*/function () {
+        function CdkFixedSizeVirtualScroll() {
+          _classCallCheck(this, CdkFixedSizeVirtualScroll);
+
+          this._itemSize = 20;
+          this._minBufferPx = 100;
+          this._maxBufferPx = 200;
+          /** The scroll strategy used by this directive. */
+
+          this._scrollStrategy = new FixedSizeVirtualScrollStrategy(this.itemSize, this.minBufferPx, this.maxBufferPx);
+        }
+        /** The size of the items in the list (in pixels). */
+
+
+        _createClass(CdkFixedSizeVirtualScroll, [{
+          key: "itemSize",
+          get: function get() {
+            return this._itemSize;
+          },
+          set: function set(value) {
+            this._itemSize = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_0__["coerceNumberProperty"])(value);
+          }
+          /**
+           * The minimum amount of buffer rendered beyond the viewport (in pixels).
+           * If the amount of buffer dips below this number, more items will be rendered. Defaults to 100px.
+           */
+
+        }, {
+          key: "minBufferPx",
+          get: function get() {
+            return this._minBufferPx;
+          },
+          set: function set(value) {
+            this._minBufferPx = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_0__["coerceNumberProperty"])(value);
+          }
+          /**
+           * The number of pixels worth of buffer to render for when rendering new items. Defaults to 200px.
+           */
+
+        }, {
+          key: "maxBufferPx",
+          get: function get() {
+            return this._maxBufferPx;
+          },
+          set: function set(value) {
+            this._maxBufferPx = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_0__["coerceNumberProperty"])(value);
+          }
+        }, {
+          key: "ngOnChanges",
+          value: function ngOnChanges() {
+            this._scrollStrategy.updateItemAndBufferSize(this.itemSize, this.minBufferPx, this.maxBufferPx);
+          }
+        }]);
+
+        return CdkFixedSizeVirtualScroll;
+      }();
+
+      CdkFixedSizeVirtualScroll.ɵfac = function CdkFixedSizeVirtualScroll_Factory(t) {
+        return new (t || CdkFixedSizeVirtualScroll)();
+      };
+
+      CdkFixedSizeVirtualScroll.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+        type: CdkFixedSizeVirtualScroll,
+        selectors: [["cdk-virtual-scroll-viewport", "itemSize", ""]],
+        inputs: {
+          itemSize: "itemSize",
+          minBufferPx: "minBufferPx",
+          maxBufferPx: "maxBufferPx"
+        },
+        features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵProvidersFeature"]([{
+          provide: VIRTUAL_SCROLL_STRATEGY,
+          useFactory: _fixedSizeVirtualScrollStrategyFactory,
+          deps: [Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(function () {
+            return CdkFixedSizeVirtualScroll;
+          })]
+        }]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]]
+      });
+      CdkFixedSizeVirtualScroll.propDecorators = {
+        itemSize: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        minBufferPx: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        maxBufferPx: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }]
+      };
+
+      (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](CdkFixedSizeVirtualScroll, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+          args: [{
+            selector: 'cdk-virtual-scroll-viewport[itemSize]',
+            providers: [{
+              provide: VIRTUAL_SCROLL_STRATEGY,
+              useFactory: _fixedSizeVirtualScrollStrategyFactory,
+              deps: [Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(function () {
+                return CdkFixedSizeVirtualScroll;
+              })]
+            }]
+          }]
+        }], function () {
+          return [];
+        }, {
+          itemSize: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          minBufferPx: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          maxBufferPx: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }]
+        });
+      })();
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /** Time in ms to throttle the scrolling events by default. */
+
+
+      var DEFAULT_SCROLL_TIME = 20;
+      /**
+       * Service contained all registered Scrollable references and emits an event when any one of the
+       * Scrollable references emit a scrolled event.
+       */
+
+      var ScrollDispatcher = /*#__PURE__*/function () {
+        function ScrollDispatcher(_ngZone, _platform, document) {
+          _classCallCheck(this, ScrollDispatcher);
+
+          this._ngZone = _ngZone;
+          this._platform = _platform;
+          /** Subject for notifying that a registered scrollable reference element has been scrolled. */
+
+          this._scrolled = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          /** Keeps track of the global `scroll` and `resize` subscriptions. */
+
+          this._globalSubscription = null;
+          /** Keeps track of the amount of subscriptions to `scrolled`. Used for cleaning up afterwards. */
+
+          this._scrolledCount = 0;
+          /**
+           * Map of all the scrollable references that are registered with the service and their
+           * scroll event subscriptions.
+           */
+
+          this.scrollContainers = new Map();
+          this._document = document;
+        }
+        /**
+         * Registers a scrollable instance with the service and listens for its scrolled events. When the
+         * scrollable is scrolled, the service emits the event to its scrolled observable.
+         * @param scrollable Scrollable instance to be registered.
+         */
+
+
+        _createClass(ScrollDispatcher, [{
+          key: "register",
+          value: function register(scrollable) {
+            var _this139 = this;
+
+            if (!this.scrollContainers.has(scrollable)) {
+              this.scrollContainers.set(scrollable, scrollable.elementScrolled().subscribe(function () {
+                return _this139._scrolled.next(scrollable);
+              }));
+            }
+          }
+          /**
+           * Deregisters a Scrollable reference and unsubscribes from its scroll event observable.
+           * @param scrollable Scrollable instance to be deregistered.
+           */
+
+        }, {
+          key: "deregister",
+          value: function deregister(scrollable) {
+            var scrollableReference = this.scrollContainers.get(scrollable);
+
+            if (scrollableReference) {
+              scrollableReference.unsubscribe();
+              this.scrollContainers["delete"](scrollable);
+            }
+          }
+          /**
+           * Returns an observable that emits an event whenever any of the registered Scrollable
+           * references (or window, document, or body) fire a scrolled event. Can provide a time in ms
+           * to override the default "throttle" time.
+           *
+           * **Note:** in order to avoid hitting change detection for every scroll event,
+           * all of the events emitted from this stream will be run outside the Angular zone.
+           * If you need to update any data bindings as a result of a scroll event, you have
+           * to run the callback using `NgZone.run`.
+           */
+
+        }, {
+          key: "scrolled",
+          value: function scrolled() {
+            var _this140 = this;
+
+            var auditTimeInMs = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : DEFAULT_SCROLL_TIME;
+
+            if (!this._platform.isBrowser) {
+              return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])();
+            }
+
+            return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
+              if (!_this140._globalSubscription) {
+                _this140._addGlobalListener();
+              } // In the case of a 0ms delay, use an observable without auditTime
+              // since it does add a perceptible delay in processing overhead.
+
+
+              var subscription = auditTimeInMs > 0 ? _this140._scrolled.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["auditTime"])(auditTimeInMs)).subscribe(observer) : _this140._scrolled.subscribe(observer);
+              _this140._scrolledCount++;
+              return function () {
+                subscription.unsubscribe();
+                _this140._scrolledCount--;
+
+                if (!_this140._scrolledCount) {
+                  _this140._removeGlobalListener();
+                }
+              };
+            });
+          }
+        }, {
+          key: "ngOnDestroy",
+          value: function ngOnDestroy() {
+            var _this141 = this;
+
+            this._removeGlobalListener();
+
+            this.scrollContainers.forEach(function (_, container) {
+              return _this141.deregister(container);
+            });
+
+            this._scrolled.complete();
+          }
+          /**
+           * Returns an observable that emits whenever any of the
+           * scrollable ancestors of an element are scrolled.
+           * @param elementOrElementRef Element whose ancestors to listen for.
+           * @param auditTimeInMs Time to throttle the scroll events.
+           */
+
+        }, {
+          key: "ancestorScrolled",
+          value: function ancestorScrolled(elementOrElementRef, auditTimeInMs) {
+            var ancestors = this.getAncestorScrollContainers(elementOrElementRef);
+            return this.scrolled(auditTimeInMs).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(function (target) {
+              return !target || ancestors.indexOf(target) > -1;
+            }));
+          }
+          /** Returns all registered Scrollables that contain the provided element. */
+
+        }, {
+          key: "getAncestorScrollContainers",
+          value: function getAncestorScrollContainers(elementOrElementRef) {
+            var _this142 = this;
+
+            var scrollingContainers = [];
+            this.scrollContainers.forEach(function (_subscription, scrollable) {
+              if (_this142._scrollableContainsElement(scrollable, elementOrElementRef)) {
+                scrollingContainers.push(scrollable);
+              }
+            });
+            return scrollingContainers;
+          }
+          /** Use defaultView of injected document if available or fallback to global window reference */
+
+        }, {
+          key: "_getWindow",
+          value: function _getWindow() {
+            return this._document.defaultView || window;
+          }
+          /** Returns true if the element is contained within the provided Scrollable. */
+
+        }, {
+          key: "_scrollableContainsElement",
+          value: function _scrollableContainsElement(scrollable, elementOrElementRef) {
+            var element = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_0__["coerceElement"])(elementOrElementRef);
+            var scrollableElement = scrollable.getElementRef().nativeElement; // Traverse through the element parents until we reach null, checking if any of the elements
+            // are the scrollable's element.
+
+            do {
+              if (element == scrollableElement) {
+                return true;
+              }
+            } while (element = element.parentElement);
+
+            return false;
+          }
+          /** Sets up the global scroll listeners. */
+
+        }, {
+          key: "_addGlobalListener",
+          value: function _addGlobalListener() {
+            var _this143 = this;
+
+            this._globalSubscription = this._ngZone.runOutsideAngular(function () {
+              var window = _this143._getWindow();
+
+              return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["fromEvent"])(window.document, 'scroll').subscribe(function () {
+                return _this143._scrolled.next();
+              });
+            });
+          }
+          /** Cleans up the global scroll listener. */
+
+        }, {
+          key: "_removeGlobalListener",
+          value: function _removeGlobalListener() {
+            if (this._globalSubscription) {
+              this._globalSubscription.unsubscribe();
+
+              this._globalSubscription = null;
+            }
+          }
+        }]);
+
+        return ScrollDispatcher;
+      }();
+
+      ScrollDispatcher.ɵfac = function ScrollDispatcher_Factory(t) {
+        return new (t || ScrollDispatcher)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__["Platform"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common__WEBPACK_IMPORTED_MODULE_5__["DOCUMENT"], 8));
+      };
+
+      ScrollDispatcher.ɵprov = Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"])({
+        factory: function ScrollDispatcher_Factory() {
+          return new ScrollDispatcher(Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"])(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"])(_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__["Platform"]), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"])(_angular_common__WEBPACK_IMPORTED_MODULE_5__["DOCUMENT"], 8));
+        },
+        token: ScrollDispatcher,
+        providedIn: "root"
+      });
+
+      ScrollDispatcher.ctorParameters = function () {
+        return [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+        }, {
+          type: _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__["Platform"]
+        }, {
+          type: undefined,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
+            args: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["DOCUMENT"]]
+          }]
+        }];
+      };
+
+      (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](ScrollDispatcher, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+          }, {
+            type: _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__["Platform"]
+          }, {
+            type: undefined,
+            decorators: [{
+              type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"]
+            }, {
+              type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
+              args: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["DOCUMENT"]]
+            }]
+          }];
+        }, null);
+      })();
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /**
+       * Sends an event when the directive's element is scrolled. Registers itself with the
+       * ScrollDispatcher service to include itself as part of its collection of scrolling events that it
+       * can be listened to through the service.
+       */
+
+
+      var CdkScrollable = /*#__PURE__*/function () {
+        function CdkScrollable(elementRef, scrollDispatcher, ngZone, dir) {
+          var _this144 = this;
+
+          _classCallCheck(this, CdkScrollable);
+
+          this.elementRef = elementRef;
+          this.scrollDispatcher = scrollDispatcher;
+          this.ngZone = ngZone;
+          this.dir = dir;
+          this._destroyed = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          this._elementScrolled = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
+            return _this144.ngZone.runOutsideAngular(function () {
+              return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["fromEvent"])(_this144.elementRef.nativeElement, 'scroll').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["takeUntil"])(_this144._destroyed)).subscribe(observer);
+            });
+          });
+        }
+
+        _createClass(CdkScrollable, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.scrollDispatcher.register(this);
+          }
+        }, {
+          key: "ngOnDestroy",
+          value: function ngOnDestroy() {
+            this.scrollDispatcher.deregister(this);
+
+            this._destroyed.next();
+
+            this._destroyed.complete();
+          }
+          /** Returns observable that emits when a scroll event is fired on the host element. */
+
+        }, {
+          key: "elementScrolled",
+          value: function elementScrolled() {
+            return this._elementScrolled;
+          }
+          /** Gets the ElementRef for the viewport. */
+
+        }, {
+          key: "getElementRef",
+          value: function getElementRef() {
+            return this.elementRef;
+          }
+          /**
+           * Scrolls to the specified offsets. This is a normalized version of the browser's native scrollTo
+           * method, since browsers are not consistent about what scrollLeft means in RTL. For this method
+           * left and right always refer to the left and right side of the scrolling container irrespective
+           * of the layout direction. start and end refer to left and right in an LTR context and vice-versa
+           * in an RTL context.
+           * @param options specified the offsets to scroll to.
+           */
+
+        }, {
+          key: "scrollTo",
+          value: function scrollTo(options) {
+            var el = this.elementRef.nativeElement;
+            var isRtl = this.dir && this.dir.value == 'rtl'; // Rewrite start & end offsets as right or left offsets.
+
+            if (options.left == null) {
+              options.left = isRtl ? options.end : options.start;
+            }
+
+            if (options.right == null) {
+              options.right = isRtl ? options.start : options.end;
+            } // Rewrite the bottom offset as a top offset.
+
+
+            if (options.bottom != null) {
+              options.top = el.scrollHeight - el.clientHeight - options.bottom;
+            } // Rewrite the right offset as a left offset.
+
+
+            if (isRtl && Object(_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__["getRtlScrollAxisType"])() != 0
+            /* NORMAL */
+            ) {
+                if (options.left != null) {
+                  options.right = el.scrollWidth - el.clientWidth - options.left;
+                }
+
+                if (Object(_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__["getRtlScrollAxisType"])() == 2
+                /* INVERTED */
+                ) {
+                    options.left = options.right;
+                  } else if (Object(_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__["getRtlScrollAxisType"])() == 1
+                /* NEGATED */
+                ) {
+                    options.left = options.right ? -options.right : options.right;
+                  }
+              } else {
+              if (options.right != null) {
+                options.left = el.scrollWidth - el.clientWidth - options.right;
+              }
+            }
+
+            this._applyScrollToOptions(options);
+          }
+        }, {
+          key: "_applyScrollToOptions",
+          value: function _applyScrollToOptions(options) {
+            var el = this.elementRef.nativeElement;
+
+            if (Object(_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__["supportsScrollBehavior"])()) {
+              el.scrollTo(options);
+            } else {
+              if (options.top != null) {
+                el.scrollTop = options.top;
+              }
+
+              if (options.left != null) {
+                el.scrollLeft = options.left;
+              }
+            }
+          }
+          /**
+           * Measures the scroll offset relative to the specified edge of the viewport. This method can be
+           * used instead of directly checking scrollLeft or scrollTop, since browsers are not consistent
+           * about what scrollLeft means in RTL. The values returned by this method are normalized such that
+           * left and right always refer to the left and right side of the scrolling container irrespective
+           * of the layout direction. start and end refer to left and right in an LTR context and vice-versa
+           * in an RTL context.
+           * @param from The edge to measure from.
+           */
+
+        }, {
+          key: "measureScrollOffset",
+          value: function measureScrollOffset(from) {
+            var LEFT = 'left';
+            var RIGHT = 'right';
+            var el = this.elementRef.nativeElement;
+
+            if (from == 'top') {
+              return el.scrollTop;
+            }
+
+            if (from == 'bottom') {
+              return el.scrollHeight - el.clientHeight - el.scrollTop;
+            } // Rewrite start & end as left or right offsets.
+
+
+            var isRtl = this.dir && this.dir.value == 'rtl';
+
+            if (from == 'start') {
+              from = isRtl ? RIGHT : LEFT;
+            } else if (from == 'end') {
+              from = isRtl ? LEFT : RIGHT;
+            }
+
+            if (isRtl && Object(_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__["getRtlScrollAxisType"])() == 2
+            /* INVERTED */
+            ) {
+                // For INVERTED, scrollLeft is (scrollWidth - clientWidth) when scrolled all the way left and
+                // 0 when scrolled all the way right.
+                if (from == LEFT) {
+                  return el.scrollWidth - el.clientWidth - el.scrollLeft;
+                } else {
+                  return el.scrollLeft;
+                }
+              } else if (isRtl && Object(_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__["getRtlScrollAxisType"])() == 1
+            /* NEGATED */
+            ) {
+                // For NEGATED, scrollLeft is -(scrollWidth - clientWidth) when scrolled all the way left and
+                // 0 when scrolled all the way right.
+                if (from == LEFT) {
+                  return el.scrollLeft + el.scrollWidth - el.clientWidth;
+                } else {
+                  return -el.scrollLeft;
+                }
+              } else {
+              // For NORMAL, as well as non-RTL contexts, scrollLeft is 0 when scrolled all the way left and
+              // (scrollWidth - clientWidth) when scrolled all the way right.
+              if (from == LEFT) {
+                return el.scrollLeft;
+              } else {
+                return el.scrollWidth - el.clientWidth - el.scrollLeft;
+              }
+            }
+          }
+        }]);
+
+        return CdkScrollable;
+      }();
+
+      CdkScrollable.ɵfac = function CdkScrollable_Factory(t) {
+        return new (t || CdkScrollable)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](ScrollDispatcher), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_6__["Directionality"], 8));
+      };
+
+      CdkScrollable.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+        type: CdkScrollable,
+        selectors: [["", "cdk-scrollable", ""], ["", "cdkScrollable", ""]]
+      });
+
+      CdkScrollable.ctorParameters = function () {
+        return [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+        }, {
+          type: ScrollDispatcher
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+        }, {
+          type: _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_6__["Directionality"],
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"]
+          }]
+        }];
+      };
+
+      (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](CdkScrollable, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+          args: [{
+            selector: '[cdk-scrollable], [cdkScrollable]'
+          }]
+        }], function () {
+          return [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+          }, {
+            type: ScrollDispatcher
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+          }, {
+            type: _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_6__["Directionality"],
+            decorators: [{
+              type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"]
+            }]
+          }];
+        }, null);
+      })();
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /** Time in ms to throttle the resize events by default. */
+
+
+      var DEFAULT_RESIZE_TIME = 20;
+      /**
+       * Simple utility for getting the bounds of the browser viewport.
+       * @docs-private
+       */
+
+      var ViewportRuler = /*#__PURE__*/function () {
+        function ViewportRuler(_platform, ngZone, document) {
+          var _this145 = this;
+
+          _classCallCheck(this, ViewportRuler);
+
+          this._platform = _platform;
+          /** Stream of viewport change events. */
+
+          this._change = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          /** Event listener that will be used to handle the viewport change events. */
+
+          this._changeListener = function (event) {
+            _this145._change.next(event);
+          };
+
+          this._document = document;
+          ngZone.runOutsideAngular(function () {
+            if (_platform.isBrowser) {
+              var _window = _this145._getWindow(); // Note that bind the events ourselves, rather than going through something like RxJS's
+              // `fromEvent` so that we can ensure that they're bound outside of the NgZone.
+
+
+              _window.addEventListener('resize', _this145._changeListener);
+
+              _window.addEventListener('orientationchange', _this145._changeListener);
+            } // We don't need to keep track of the subscription,
+            // because we complete the `change` stream on destroy.
+
+
+            _this145.change().subscribe(function () {
+              return _this145._updateViewportSize();
+            });
+          });
+        }
+
+        _createClass(ViewportRuler, [{
+          key: "ngOnDestroy",
+          value: function ngOnDestroy() {
+            if (this._platform.isBrowser) {
+              var _window2 = this._getWindow();
+
+              _window2.removeEventListener('resize', this._changeListener);
+
+              _window2.removeEventListener('orientationchange', this._changeListener);
+            }
+
+            this._change.complete();
+          }
+          /** Returns the viewport's width and height. */
+
+        }, {
+          key: "getViewportSize",
+          value: function getViewportSize() {
+            if (!this._viewportSize) {
+              this._updateViewportSize();
+            }
+
+            var output = {
+              width: this._viewportSize.width,
+              height: this._viewportSize.height
+            }; // If we're not on a browser, don't cache the size since it'll be mocked out anyway.
+
+            if (!this._platform.isBrowser) {
+              this._viewportSize = null;
+            }
+
+            return output;
+          }
+          /** Gets a ClientRect for the viewport's bounds. */
+
+        }, {
+          key: "getViewportRect",
+          value: function getViewportRect() {
+            // Use the document element's bounding rect rather than the window scroll properties
+            // (e.g. pageYOffset, scrollY) due to in issue in Chrome and IE where window scroll
+            // properties and client coordinates (boundingClientRect, clientX/Y, etc.) are in different
+            // conceptual viewports. Under most circumstances these viewports are equivalent, but they
+            // can disagree when the page is pinch-zoomed (on devices that support touch).
+            // See https://bugs.chromium.org/p/chromium/issues/detail?id=489206#c4
+            // We use the documentElement instead of the body because, by default (without a css reset)
+            // browsers typically give the document body an 8px margin, which is not included in
+            // getBoundingClientRect().
+            var scrollPosition = this.getViewportScrollPosition();
+
+            var _this$getViewportSize = this.getViewportSize(),
+                width = _this$getViewportSize.width,
+                height = _this$getViewportSize.height;
+
+            return {
+              top: scrollPosition.top,
+              left: scrollPosition.left,
+              bottom: scrollPosition.top + height,
+              right: scrollPosition.left + width,
+              height: height,
+              width: width
+            };
+          }
+          /** Gets the (top, left) scroll position of the viewport. */
+
+        }, {
+          key: "getViewportScrollPosition",
+          value: function getViewportScrollPosition() {
+            // While we can get a reference to the fake document
+            // during SSR, it doesn't have getBoundingClientRect.
+            if (!this._platform.isBrowser) {
+              return {
+                top: 0,
+                left: 0
+              };
+            } // The top-left-corner of the viewport is determined by the scroll position of the document
+            // body, normally just (scrollLeft, scrollTop). However, Chrome and Firefox disagree about
+            // whether `document.body` or `document.documentElement` is the scrolled element, so reading
+            // `scrollTop` and `scrollLeft` is inconsistent. However, using the bounding rect of
+            // `document.documentElement` works consistently, where the `top` and `left` values will
+            // equal negative the scroll position.
+
+
+            var document = this._document;
+
+            var window = this._getWindow();
+
+            var documentElement = document.documentElement;
+            var documentRect = documentElement.getBoundingClientRect();
+            var top = -documentRect.top || document.body.scrollTop || window.scrollY || documentElement.scrollTop || 0;
+            var left = -documentRect.left || document.body.scrollLeft || window.scrollX || documentElement.scrollLeft || 0;
+            return {
+              top: top,
+              left: left
+            };
+          }
+          /**
+           * Returns a stream that emits whenever the size of the viewport changes.
+           * @param throttleTime Time in milliseconds to throttle the stream.
+           */
+
+        }, {
+          key: "change",
+          value: function change() {
+            var throttleTime = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : DEFAULT_RESIZE_TIME;
+            return throttleTime > 0 ? this._change.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["auditTime"])(throttleTime)) : this._change;
+          }
+          /** Use defaultView of injected document if available or fallback to global window reference */
+
+        }, {
+          key: "_getWindow",
+          value: function _getWindow() {
+            return this._document.defaultView || window;
+          }
+          /** Updates the cached viewport size. */
+
+        }, {
+          key: "_updateViewportSize",
+          value: function _updateViewportSize() {
+            var window = this._getWindow();
+
+            this._viewportSize = this._platform.isBrowser ? {
+              width: window.innerWidth,
+              height: window.innerHeight
+            } : {
+              width: 0,
+              height: 0
+            };
+          }
+        }]);
+
+        return ViewportRuler;
+      }();
+
+      ViewportRuler.ɵfac = function ViewportRuler_Factory(t) {
+        return new (t || ViewportRuler)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__["Platform"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common__WEBPACK_IMPORTED_MODULE_5__["DOCUMENT"], 8));
+      };
+
+      ViewportRuler.ɵprov = Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"])({
+        factory: function ViewportRuler_Factory() {
+          return new ViewportRuler(Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"])(_angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__["Platform"]), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"])(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"])(_angular_common__WEBPACK_IMPORTED_MODULE_5__["DOCUMENT"], 8));
+        },
+        token: ViewportRuler,
+        providedIn: "root"
+      });
+
+      ViewportRuler.ctorParameters = function () {
+        return [{
+          type: _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__["Platform"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+        }, {
+          type: undefined,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
+            args: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["DOCUMENT"]]
+          }]
+        }];
+      };
+
+      (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](ViewportRuler, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [{
+            type: _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__["Platform"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+          }, {
+            type: undefined,
+            decorators: [{
+              type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"]
+            }, {
+              type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
+              args: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["DOCUMENT"]]
+            }]
+          }];
+        }, null);
+      })();
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /** Checks if the given ranges are equal. */
+
+
+      function rangesEqual(r1, r2) {
+        return r1.start == r2.start && r1.end == r2.end;
+      }
+      /**
+       * Scheduler to be used for scroll events. Needs to fall back to
+       * something that doesn't rely on requestAnimationFrame on environments
+       * that don't support it (e.g. server-side rendering).
+       */
+
+
+      var SCROLL_SCHEDULER = typeof requestAnimationFrame !== 'undefined' ? rxjs__WEBPACK_IMPORTED_MODULE_2__["animationFrameScheduler"] : rxjs__WEBPACK_IMPORTED_MODULE_2__["asapScheduler"];
+      /** A viewport that virtualizes its scrolling with the help of `CdkVirtualForOf`. */
+
+      var CdkVirtualScrollViewport = /*#__PURE__*/function (_CdkScrollable) {
+        _inherits(CdkVirtualScrollViewport, _CdkScrollable);
+
+        var _super21 = _createSuper(CdkVirtualScrollViewport);
+
+        function CdkVirtualScrollViewport(elementRef, _changeDetectorRef, ngZone, _scrollStrategy, dir, scrollDispatcher, viewportRuler) {
+          var _this146;
+
+          _classCallCheck(this, CdkVirtualScrollViewport);
+
+          _this146 = _super21.call(this, elementRef, scrollDispatcher, ngZone, dir);
+          _this146.elementRef = elementRef;
+          _this146._changeDetectorRef = _changeDetectorRef;
+          _this146._scrollStrategy = _scrollStrategy;
+          /** Emits when the viewport is detached from a CdkVirtualForOf. */
+
+          _this146._detachedSubject = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          /** Emits when the rendered range changes. */
+
+          _this146._renderedRangeSubject = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          _this146._orientation = 'vertical'; // Note: we don't use the typical EventEmitter here because we need to subscribe to the scroll
+          // strategy lazily (i.e. only if the user is actually listening to the events). We do this because
+          // depending on how the strategy calculates the scrolled index, it may come at a cost to
+          // performance.
+
+          /** Emits when the index of the first element visible in the viewport changes. */
+
+          _this146.scrolledIndexChange = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
+            return _this146._scrollStrategy.scrolledIndexChange.subscribe(function (index) {
+              return Promise.resolve().then(function () {
+                return _this146.ngZone.run(function () {
+                  return observer.next(index);
+                });
+              });
+            });
+          });
+          /** A stream that emits whenever the rendered range changes. */
+
+          _this146.renderedRangeStream = _this146._renderedRangeSubject;
+          /**
+           * The total size of all content (in pixels), including content that is not currently rendered.
+           */
+
+          _this146._totalContentSize = 0;
+          /** A string representing the `style.width` property value to be used for the spacer element. */
+
+          _this146._totalContentWidth = '';
+          /** A string representing the `style.height` property value to be used for the spacer element. */
+
+          _this146._totalContentHeight = '';
+          /** The currently rendered range of indices. */
+
+          _this146._renderedRange = {
+            start: 0,
+            end: 0
+          };
+          /** The length of the data bound to this viewport (in number of items). */
+
+          _this146._dataLength = 0;
+          /** The size of the viewport (in pixels). */
+
+          _this146._viewportSize = 0;
+          /** The last rendered content offset that was set. */
+
+          _this146._renderedContentOffset = 0;
+          /**
+           * Whether the last rendered content offset was to the end of the content (and therefore needs to
+           * be rewritten as an offset to the start of the content).
+           */
+
+          _this146._renderedContentOffsetNeedsRewrite = false;
+          /** Whether there is a pending change detection cycle. */
+
+          _this146._isChangeDetectionPending = false;
+          /** A list of functions to run after the next change detection cycle. */
+
+          _this146._runAfterChangeDetection = [];
+          /** Subscription to changes in the viewport size. */
+
+          _this146._viewportChanges = rxjs__WEBPACK_IMPORTED_MODULE_2__["Subscription"].EMPTY;
+
+          if (!_scrollStrategy && (typeof ngDevMode === 'undefined' || ngDevMode)) {
+            throw Error('Error: cdk-virtual-scroll-viewport requires the "itemSize" property to be set.');
+          }
+
+          _this146._viewportChanges = viewportRuler.change().subscribe(function () {
+            _this146.checkViewportSize();
+          });
+          return _this146;
+        }
+        /** The direction the viewport scrolls. */
+
+
+        _createClass(CdkVirtualScrollViewport, [{
+          key: "orientation",
+          get: function get() {
+            return this._orientation;
+          },
+          set: function set(orientation) {
+            if (this._orientation !== orientation) {
+              this._orientation = orientation;
+
+              this._calculateSpacerSize();
+            }
+          }
+        }, {
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            var _this147 = this;
+
+            _get(_getPrototypeOf(CdkVirtualScrollViewport.prototype), "ngOnInit", this).call(this); // It's still too early to measure the viewport at this point. Deferring with a promise allows
+            // the Viewport to be rendered with the correct size before we measure. We run this outside the
+            // zone to avoid causing more change detection cycles. We handle the change detection loop
+            // ourselves instead.
+
+
+            this.ngZone.runOutsideAngular(function () {
+              return Promise.resolve().then(function () {
+                _this147._measureViewportSize();
+
+                _this147._scrollStrategy.attach(_this147);
+
+                _this147.elementScrolled().pipe( // Start off with a fake scroll event so we properly detect our initial position.
+                Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["startWith"])(null), // Collect multiple events into one until the next animation frame. This way if
+                // there are multiple scroll events in the same frame we only need to recheck
+                // our layout once.
+                Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["auditTime"])(0, SCROLL_SCHEDULER)).subscribe(function () {
+                  return _this147._scrollStrategy.onContentScrolled();
+                });
+
+                _this147._markChangeDetectionNeeded();
+              });
+            });
+          }
+        }, {
+          key: "ngOnDestroy",
+          value: function ngOnDestroy() {
+            this.detach();
+
+            this._scrollStrategy.detach(); // Complete all subjects
+
+
+            this._renderedRangeSubject.complete();
+
+            this._detachedSubject.complete();
+
+            this._viewportChanges.unsubscribe();
+
+            _get(_getPrototypeOf(CdkVirtualScrollViewport.prototype), "ngOnDestroy", this).call(this);
+          }
+          /** Attaches a `CdkVirtualScrollRepeater` to this viewport. */
+
+        }, {
+          key: "attach",
+          value: function attach(forOf) {
+            var _this148 = this;
+
+            if (this._forOf && (typeof ngDevMode === 'undefined' || ngDevMode)) {
+              throw Error('CdkVirtualScrollViewport is already attached.');
+            } // Subscribe to the data stream of the CdkVirtualForOf to keep track of when the data length
+            // changes. Run outside the zone to avoid triggering change detection, since we're managing the
+            // change detection loop ourselves.
+
+
+            this.ngZone.runOutsideAngular(function () {
+              _this148._forOf = forOf;
+
+              _this148._forOf.dataStream.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["takeUntil"])(_this148._detachedSubject)).subscribe(function (data) {
+                var newLength = data.length;
+
+                if (newLength !== _this148._dataLength) {
+                  _this148._dataLength = newLength;
+
+                  _this148._scrollStrategy.onDataLengthChanged();
+                }
+
+                _this148._doChangeDetection();
+              });
+            });
+          }
+          /** Detaches the current `CdkVirtualForOf`. */
+
+        }, {
+          key: "detach",
+          value: function detach() {
+            this._forOf = null;
+
+            this._detachedSubject.next();
+          }
+          /** Gets the length of the data bound to this viewport (in number of items). */
+
+        }, {
+          key: "getDataLength",
+          value: function getDataLength() {
+            return this._dataLength;
+          }
+          /** Gets the size of the viewport (in pixels). */
+
+        }, {
+          key: "getViewportSize",
+          value: function getViewportSize() {
+            return this._viewportSize;
+          } // TODO(mmalerba): This is technically out of sync with what's really rendered until a render
+          // cycle happens. I'm being careful to only call it after the render cycle is complete and before
+          // setting it to something else, but its error prone and should probably be split into
+          // `pendingRange` and `renderedRange`, the latter reflecting whats actually in the DOM.
+
+          /** Get the current rendered range of items. */
+
+        }, {
+          key: "getRenderedRange",
+          value: function getRenderedRange() {
+            return this._renderedRange;
+          }
+          /**
+           * Sets the total size of all content (in pixels), including content that is not currently
+           * rendered.
+           */
+
+        }, {
+          key: "setTotalContentSize",
+          value: function setTotalContentSize(size) {
+            if (this._totalContentSize !== size) {
+              this._totalContentSize = size;
+
+              this._calculateSpacerSize();
+
+              this._markChangeDetectionNeeded();
+            }
+          }
+          /** Sets the currently rendered range of indices. */
+
+        }, {
+          key: "setRenderedRange",
+          value: function setRenderedRange(range) {
+            var _this149 = this;
+
+            if (!rangesEqual(this._renderedRange, range)) {
+              this._renderedRangeSubject.next(this._renderedRange = range);
+
+              this._markChangeDetectionNeeded(function () {
+                return _this149._scrollStrategy.onContentRendered();
+              });
+            }
+          }
+          /**
+           * Gets the offset from the start of the viewport to the start of the rendered data (in pixels).
+           */
+
+        }, {
+          key: "getOffsetToRenderedContentStart",
+          value: function getOffsetToRenderedContentStart() {
+            return this._renderedContentOffsetNeedsRewrite ? null : this._renderedContentOffset;
+          }
+          /**
+           * Sets the offset from the start of the viewport to either the start or end of the rendered data
+           * (in pixels).
+           */
+
+        }, {
+          key: "setRenderedContentOffset",
+          value: function setRenderedContentOffset(offset) {
+            var _this150 = this;
+
+            var to = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'to-start';
+            // For a horizontal viewport in a right-to-left language we need to translate along the x-axis
+            // in the negative direction.
+            var isRtl = this.dir && this.dir.value == 'rtl';
+            var isHorizontal = this.orientation == 'horizontal';
+            var axis = isHorizontal ? 'X' : 'Y';
+            var axisDirection = isHorizontal && isRtl ? -1 : 1;
+            var transform = "translate".concat(axis, "(").concat(Number(axisDirection * offset), "px)");
+            this._renderedContentOffset = offset;
+
+            if (to === 'to-end') {
+              transform += " translate".concat(axis, "(-100%)"); // The viewport should rewrite this as a `to-start` offset on the next render cycle. Otherwise
+              // elements will appear to expand in the wrong direction (e.g. `mat-expansion-panel` would
+              // expand upward).
+
+              this._renderedContentOffsetNeedsRewrite = true;
+            }
+
+            if (this._renderedContentTransform != transform) {
+              // We know this value is safe because we parse `offset` with `Number()` before passing it
+              // into the string.
+              this._renderedContentTransform = transform;
+
+              this._markChangeDetectionNeeded(function () {
+                if (_this150._renderedContentOffsetNeedsRewrite) {
+                  _this150._renderedContentOffset -= _this150.measureRenderedContentSize();
+                  _this150._renderedContentOffsetNeedsRewrite = false;
+
+                  _this150.setRenderedContentOffset(_this150._renderedContentOffset);
+                } else {
+                  _this150._scrollStrategy.onRenderedOffsetChanged();
+                }
+              });
+            }
+          }
+          /**
+           * Scrolls to the given offset from the start of the viewport. Please note that this is not always
+           * the same as setting `scrollTop` or `scrollLeft`. In a horizontal viewport with right-to-left
+           * direction, this would be the equivalent of setting a fictional `scrollRight` property.
+           * @param offset The offset to scroll to.
+           * @param behavior The ScrollBehavior to use when scrolling. Default is behavior is `auto`.
+           */
+
+        }, {
+          key: "scrollToOffset",
+          value: function scrollToOffset(offset) {
+            var behavior = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'auto';
+            var options = {
+              behavior: behavior
+            };
+
+            if (this.orientation === 'horizontal') {
+              options.start = offset;
+            } else {
+              options.top = offset;
+            }
+
+            this.scrollTo(options);
+          }
+          /**
+           * Scrolls to the offset for the given index.
+           * @param index The index of the element to scroll to.
+           * @param behavior The ScrollBehavior to use when scrolling. Default is behavior is `auto`.
+           */
+
+        }, {
+          key: "scrollToIndex",
+          value: function scrollToIndex(index) {
+            var behavior = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'auto';
+
+            this._scrollStrategy.scrollToIndex(index, behavior);
+          }
+          /**
+           * Gets the current scroll offset from the start of the viewport (in pixels).
+           * @param from The edge to measure the offset from. Defaults to 'top' in vertical mode and 'start'
+           *     in horizontal mode.
+           */
+
+        }, {
+          key: "measureScrollOffset",
+          value: function measureScrollOffset(from) {
+            return from ? _get(_getPrototypeOf(CdkVirtualScrollViewport.prototype), "measureScrollOffset", this).call(this, from) : _get(_getPrototypeOf(CdkVirtualScrollViewport.prototype), "measureScrollOffset", this).call(this, this.orientation === 'horizontal' ? 'start' : 'top');
+          }
+          /** Measure the combined size of all of the rendered items. */
+
+        }, {
+          key: "measureRenderedContentSize",
+          value: function measureRenderedContentSize() {
+            var contentEl = this._contentWrapper.nativeElement;
+            return this.orientation === 'horizontal' ? contentEl.offsetWidth : contentEl.offsetHeight;
+          }
+          /**
+           * Measure the total combined size of the given range. Throws if the range includes items that are
+           * not rendered.
+           */
+
+        }, {
+          key: "measureRangeSize",
+          value: function measureRangeSize(range) {
+            if (!this._forOf) {
+              return 0;
+            }
+
+            return this._forOf.measureRangeSize(range, this.orientation);
+          }
+          /** Update the viewport dimensions and re-render. */
+
+        }, {
+          key: "checkViewportSize",
+          value: function checkViewportSize() {
+            // TODO: Cleanup later when add logic for handling content resize
+            this._measureViewportSize();
+
+            this._scrollStrategy.onDataLengthChanged();
+          }
+          /** Measure the viewport size. */
+
+        }, {
+          key: "_measureViewportSize",
+          value: function _measureViewportSize() {
+            var viewportEl = this.elementRef.nativeElement;
+            this._viewportSize = this.orientation === 'horizontal' ? viewportEl.clientWidth : viewportEl.clientHeight;
+          }
+          /** Queue up change detection to run. */
+
+        }, {
+          key: "_markChangeDetectionNeeded",
+          value: function _markChangeDetectionNeeded(runAfter) {
+            var _this151 = this;
+
+            if (runAfter) {
+              this._runAfterChangeDetection.push(runAfter);
+            } // Use a Promise to batch together calls to `_doChangeDetection`. This way if we set a bunch of
+            // properties sequentially we only have to run `_doChangeDetection` once at the end.
+
+
+            if (!this._isChangeDetectionPending) {
+              this._isChangeDetectionPending = true;
+              this.ngZone.runOutsideAngular(function () {
+                return Promise.resolve().then(function () {
+                  _this151._doChangeDetection();
+                });
+              });
+            }
+          }
+          /** Run change detection. */
+
+        }, {
+          key: "_doChangeDetection",
+          value: function _doChangeDetection() {
+            var _this152 = this;
+
+            this._isChangeDetectionPending = false; // Apply the content transform. The transform can't be set via an Angular binding because
+            // bypassSecurityTrustStyle is banned in Google. However the value is safe, it's composed of
+            // string literals, a variable that can only be 'X' or 'Y', and user input that is run through
+            // the `Number` function first to coerce it to a numeric value.
+
+            this._contentWrapper.nativeElement.style.transform = this._renderedContentTransform; // Apply changes to Angular bindings. Note: We must call `markForCheck` to run change detection
+            // from the root, since the repeated items are content projected in. Calling `detectChanges`
+            // instead does not properly check the projected content.
+
+            this.ngZone.run(function () {
+              return _this152._changeDetectorRef.markForCheck();
+            });
+            var runAfterChangeDetection = this._runAfterChangeDetection;
+            this._runAfterChangeDetection = [];
+
+            var _iterator5 = _createForOfIteratorHelper(runAfterChangeDetection),
+                _step5;
+
+            try {
+              for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
+                var fn = _step5.value;
+                fn();
+              }
+            } catch (err) {
+              _iterator5.e(err);
+            } finally {
+              _iterator5.f();
+            }
+          }
+          /** Calculates the `style.width` and `style.height` for the spacer element. */
+
+        }, {
+          key: "_calculateSpacerSize",
+          value: function _calculateSpacerSize() {
+            this._totalContentHeight = this.orientation === 'horizontal' ? '' : "".concat(this._totalContentSize, "px");
+            this._totalContentWidth = this.orientation === 'horizontal' ? "".concat(this._totalContentSize, "px") : '';
+          }
+        }]);
+
+        return CdkVirtualScrollViewport;
+      }(CdkScrollable);
+
+      CdkVirtualScrollViewport.ɵfac = function CdkVirtualScrollViewport_Factory(t) {
+        return new (t || CdkVirtualScrollViewport)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](VIRTUAL_SCROLL_STRATEGY, 8), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_6__["Directionality"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](ScrollDispatcher), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](ViewportRuler));
+      };
+
+      CdkVirtualScrollViewport.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+        type: CdkVirtualScrollViewport,
+        selectors: [["cdk-virtual-scroll-viewport"]],
+        viewQuery: function CdkVirtualScrollViewport_Query(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c0, 3);
+          }
+
+          if (rf & 2) {
+            var _t;
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx._contentWrapper = _t.first);
+          }
+        },
+        hostAttrs: [1, "cdk-virtual-scroll-viewport"],
+        hostVars: 4,
+        hostBindings: function CdkVirtualScrollViewport_HostBindings(rf, ctx) {
+          if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("cdk-virtual-scroll-orientation-horizontal", ctx.orientation === "horizontal")("cdk-virtual-scroll-orientation-vertical", ctx.orientation !== "horizontal");
+          }
+        },
+        inputs: {
+          orientation: "orientation"
+        },
+        outputs: {
+          scrolledIndexChange: "scrolledIndexChange"
+        },
+        features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵProvidersFeature"]([{
+          provide: CdkScrollable,
+          useExisting: CdkVirtualScrollViewport
+        }]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵInheritDefinitionFeature"]],
+        ngContentSelectors: _c1,
+        decls: 4,
+        vars: 4,
+        consts: [[1, "cdk-virtual-scroll-content-wrapper"], ["contentWrapper", ""], [1, "cdk-virtual-scroll-spacer"]],
+        template: function CdkVirtualScrollViewport_Template(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵprojectionDef"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0, 1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵprojection"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "div", 2);
+          }
+
+          if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵstyleProp"]("width", ctx._totalContentWidth)("height", ctx._totalContentHeight);
+          }
+        },
+        styles: ["cdk-virtual-scroll-viewport{display:block;position:relative;overflow:auto;contain:strict;transform:translateZ(0);will-change:scroll-position;-webkit-overflow-scrolling:touch}.cdk-virtual-scroll-content-wrapper{position:absolute;top:0;left:0;contain:content}[dir=rtl] .cdk-virtual-scroll-content-wrapper{right:0;left:auto}.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper{min-height:100%}.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>dl:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>ol:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>table:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>ul:not([cdkVirtualFor]){padding-left:0;padding-right:0;margin-left:0;margin-right:0;border-left-width:0;border-right-width:0;outline:none}.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper{min-width:100%}.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>dl:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>ol:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>table:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>ul:not([cdkVirtualFor]){padding-top:0;padding-bottom:0;margin-top:0;margin-bottom:0;border-top-width:0;border-bottom-width:0;outline:none}.cdk-virtual-scroll-spacer{position:absolute;top:0;left:0;height:1px;width:1px;transform-origin:0 0}[dir=rtl] .cdk-virtual-scroll-spacer{right:0;left:auto;transform-origin:100% 0}\n"],
+        encapsulation: 2,
+        changeDetection: 0
+      });
+
+      CdkVirtualScrollViewport.ctorParameters = function () {
+        return [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+        }, {
+          type: undefined,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
+            args: [VIRTUAL_SCROLL_STRATEGY]
+          }]
+        }, {
+          type: _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_6__["Directionality"],
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"]
+          }]
+        }, {
+          type: ScrollDispatcher
+        }, {
+          type: ViewportRuler
+        }];
+      };
+
+      CdkVirtualScrollViewport.propDecorators = {
+        orientation: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        scrolledIndexChange: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        _contentWrapper: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
+          args: ['contentWrapper', {
+            "static": true
+          }]
+        }]
+      };
+
+      (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](CdkVirtualScrollViewport, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+          args: [{
+            selector: 'cdk-virtual-scroll-viewport',
+            template: "<!--\n  Wrap the rendered content in an element that will be used to offset it based on the scroll\n  position.\n-->\n<div #contentWrapper class=\"cdk-virtual-scroll-content-wrapper\">\n  <ng-content></ng-content>\n</div>\n<!--\n  Spacer used to force the scrolling container to the correct size for the *total* number of items\n  so that the scrollbar captures the size of the entire data set.\n-->\n<div class=\"cdk-virtual-scroll-spacer\"\n     [style.width]=\"_totalContentWidth\" [style.height]=\"_totalContentHeight\"></div>\n",
+            host: {
+              'class': 'cdk-virtual-scroll-viewport',
+              '[class.cdk-virtual-scroll-orientation-horizontal]': 'orientation === "horizontal"',
+              '[class.cdk-virtual-scroll-orientation-vertical]': 'orientation !== "horizontal"'
+            },
+            encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
+            changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectionStrategy"].OnPush,
+            providers: [{
+              provide: CdkScrollable,
+              useExisting: CdkVirtualScrollViewport
+            }],
+            styles: ["cdk-virtual-scroll-viewport{display:block;position:relative;overflow:auto;contain:strict;transform:translateZ(0);will-change:scroll-position;-webkit-overflow-scrolling:touch}.cdk-virtual-scroll-content-wrapper{position:absolute;top:0;left:0;contain:content}[dir=rtl] .cdk-virtual-scroll-content-wrapper{right:0;left:auto}.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper{min-height:100%}.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>dl:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>ol:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>table:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>ul:not([cdkVirtualFor]){padding-left:0;padding-right:0;margin-left:0;margin-right:0;border-left-width:0;border-right-width:0;outline:none}.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper{min-width:100%}.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>dl:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>ol:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>table:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>ul:not([cdkVirtualFor]){padding-top:0;padding-bottom:0;margin-top:0;margin-bottom:0;border-top-width:0;border-bottom-width:0;outline:none}.cdk-virtual-scroll-spacer{position:absolute;top:0;left:0;height:1px;width:1px;transform-origin:0 0}[dir=rtl] .cdk-virtual-scroll-spacer{right:0;left:auto;transform-origin:100% 0}\n"]
+          }]
+        }], function () {
+          return [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+          }, {
+            type: undefined,
+            decorators: [{
+              type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"]
+            }, {
+              type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
+              args: [VIRTUAL_SCROLL_STRATEGY]
+            }]
+          }, {
+            type: _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_6__["Directionality"],
+            decorators: [{
+              type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"]
+            }]
+          }, {
+            type: ScrollDispatcher
+          }, {
+            type: ViewportRuler
+          }];
+        }, {
+          scrolledIndexChange: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+          }],
+          orientation: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          _contentWrapper: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
+            args: ['contentWrapper', {
+              "static": true
+            }]
+          }]
+        });
+      })();
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /** Helper to extract the offset of a DOM Node in a certain direction. */
+
+
+      function getOffset(orientation, direction, node) {
+        var el = node;
+
+        if (!el.getBoundingClientRect) {
+          return 0;
+        }
+
+        var rect = el.getBoundingClientRect();
+
+        if (orientation === 'horizontal') {
+          return direction === 'start' ? rect.left : rect.right;
+        }
+
+        return direction === 'start' ? rect.top : rect.bottom;
+      }
+      /**
+       * A directive similar to `ngForOf` to be used for rendering data inside a virtual scrolling
+       * container.
+       */
+
+
+      var CdkVirtualForOf = /*#__PURE__*/function () {
+        function CdkVirtualForOf(
+        /** The view container to add items to. */
+        _viewContainerRef,
+        /** The template to use when stamping out new items. */
+        _template,
+        /** The set of available differs. */
+        _differs,
+        /** The strategy used to render items in the virtual scroll viewport. */
+        _viewRepeater,
+        /** The virtual scrolling viewport that these items are being rendered in. */
+        _viewport, ngZone) {
+          var _this153 = this;
+
+          _classCallCheck(this, CdkVirtualForOf);
+
+          this._viewContainerRef = _viewContainerRef;
+          this._template = _template;
+          this._differs = _differs;
+          this._viewRepeater = _viewRepeater;
+          this._viewport = _viewport;
+          /** Emits when the rendered view of the data changes. */
+
+          this.viewChange = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          /** Subject that emits when a new DataSource instance is given. */
+
+          this._dataSourceChanges = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          /** Emits whenever the data in the current DataSource changes. */
+
+          this.dataStream = this._dataSourceChanges.pipe( // Start off with null `DataSource`.
+          Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["startWith"])(null), // Bundle up the previous and current data sources so we can work with both.
+          Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["pairwise"])(), // Use `_changeDataSource` to disconnect from the previous data source and connect to the
+          // new one, passing back a stream of data changes which we run through `switchMap` to give
+          // us a data stream that emits the latest data from whatever the current `DataSource` is.
+          Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function (_ref8) {
+            var _ref9 = _slicedToArray(_ref8, 2),
+                prev = _ref9[0],
+                cur = _ref9[1];
+
+            return _this153._changeDataSource(prev, cur);
+          }), // Replay the last emitted data when someone subscribes.
+          Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["shareReplay"])(1));
+          /** The differ used to calculate changes to the data. */
+
+          this._differ = null;
+          /** Whether the rendered data should be updated during the next ngDoCheck cycle. */
+
+          this._needsUpdate = false;
+          this._destroyed = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          this.dataStream.subscribe(function (data) {
+            _this153._data = data;
+
+            _this153._onRenderedDataChange();
+          });
+
+          this._viewport.renderedRangeStream.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["takeUntil"])(this._destroyed)).subscribe(function (range) {
+            _this153._renderedRange = range;
+            ngZone.run(function () {
+              return _this153.viewChange.next(_this153._renderedRange);
+            });
+
+            _this153._onRenderedDataChange();
+          });
+
+          this._viewport.attach(this);
+        }
+        /** The DataSource to display. */
+
+
+        _createClass(CdkVirtualForOf, [{
+          key: "cdkVirtualForOf",
+          get: function get() {
+            return this._cdkVirtualForOf;
+          },
+          set: function set(value) {
+            this._cdkVirtualForOf = value;
+
+            if (Object(_angular_cdk_collections__WEBPACK_IMPORTED_MODULE_7__["isDataSource"])(value)) {
+              this._dataSourceChanges.next(value);
+            } else {
+              // If value is an an NgIterable, convert it to an array.
+              this._dataSourceChanges.next(new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_7__["ArrayDataSource"](Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["isObservable"])(value) ? value : Array.from(value || [])));
+            }
+          }
+          /**
+           * The `TrackByFunction` to use for tracking changes. The `TrackByFunction` takes the index and
+           * the item and produces a value to be used as the item's identity when tracking changes.
+           */
+
+        }, {
+          key: "cdkVirtualForTrackBy",
+          get: function get() {
+            return this._cdkVirtualForTrackBy;
+          },
+          set: function set(fn) {
+            var _this154 = this;
+
+            this._needsUpdate = true;
+            this._cdkVirtualForTrackBy = fn ? function (index, item) {
+              return fn(index + (_this154._renderedRange ? _this154._renderedRange.start : 0), item);
+            } : undefined;
+          }
+          /** The template used to stamp out new elements. */
+
+        }, {
+          key: "cdkVirtualForTemplate",
+          set: function set(value) {
+            if (value) {
+              this._needsUpdate = true;
+              this._template = value;
+            }
+          }
+          /**
+           * The size of the cache used to store templates that are not being used for re-use later.
+           * Setting the cache size to `0` will disable caching. Defaults to 20 templates.
+           */
+
+        }, {
+          key: "cdkVirtualForTemplateCacheSize",
+          get: function get() {
+            return this._viewRepeater.viewCacheSize;
+          },
+          set: function set(size) {
+            this._viewRepeater.viewCacheSize = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_0__["coerceNumberProperty"])(size);
+          }
+          /**
+           * Measures the combined size (width for horizontal orientation, height for vertical) of all items
+           * in the specified range. Throws an error if the range includes items that are not currently
+           * rendered.
+           */
+
+        }, {
+          key: "measureRangeSize",
+          value: function measureRangeSize(range, orientation) {
+            if (range.start >= range.end) {
+              return 0;
+            }
+
+            if ((range.start < this._renderedRange.start || range.end > this._renderedRange.end) && (typeof ngDevMode === 'undefined' || ngDevMode)) {
+              throw Error("Error: attempted to measure an item that isn't rendered.");
+            } // The index into the list of rendered views for the first item in the range.
+
+
+            var renderedStartIndex = range.start - this._renderedRange.start; // The length of the range we're measuring.
+
+            var rangeLen = range.end - range.start; // Loop over all the views, find the first and land node and compute the size by subtracting
+            // the top of the first node from the bottom of the last one.
+
+            var firstNode;
+            var lastNode; // Find the first node by starting from the beginning and going forwards.
+
+            for (var i = 0; i < rangeLen; i++) {
+              var view = this._viewContainerRef.get(i + renderedStartIndex);
+
+              if (view && view.rootNodes.length) {
+                firstNode = lastNode = view.rootNodes[0];
+                break;
+              }
+            } // Find the last node by starting from the end and going backwards.
+
+
+            for (var _i4 = rangeLen - 1; _i4 > -1; _i4--) {
+              var _view = this._viewContainerRef.get(_i4 + renderedStartIndex);
+
+              if (_view && _view.rootNodes.length) {
+                lastNode = _view.rootNodes[_view.rootNodes.length - 1];
+                break;
+              }
+            }
+
+            return firstNode && lastNode ? getOffset(orientation, 'end', lastNode) - getOffset(orientation, 'start', firstNode) : 0;
+          }
+        }, {
+          key: "ngDoCheck",
+          value: function ngDoCheck() {
+            if (this._differ && this._needsUpdate) {
+              // TODO(mmalerba): We should differentiate needs update due to scrolling and a new portion of
+              // this list being rendered (can use simpler algorithm) vs needs update due to data actually
+              // changing (need to do this diff).
+              var changes = this._differ.diff(this._renderedItems);
+
+              if (!changes) {
+                this._updateContext();
+              } else {
+                this._applyChanges(changes);
+              }
+
+              this._needsUpdate = false;
+            }
+          }
+        }, {
+          key: "ngOnDestroy",
+          value: function ngOnDestroy() {
+            this._viewport.detach();
+
+            this._dataSourceChanges.next(undefined);
+
+            this._dataSourceChanges.complete();
+
+            this.viewChange.complete();
+
+            this._destroyed.next();
+
+            this._destroyed.complete();
+
+            this._viewRepeater.detach();
+          }
+          /** React to scroll state changes in the viewport. */
+
+        }, {
+          key: "_onRenderedDataChange",
+          value: function _onRenderedDataChange() {
+            var _this155 = this;
+
+            if (!this._renderedRange) {
+              return;
+            }
+
+            this._renderedItems = this._data.slice(this._renderedRange.start, this._renderedRange.end);
+
+            if (!this._differ) {
+              // Use a wrapper function for the `trackBy` so any new values are
+              // picked up automatically without having to recreate the differ.
+              this._differ = this._differs.find(this._renderedItems).create(function (index, item) {
+                return _this155.cdkVirtualForTrackBy ? _this155.cdkVirtualForTrackBy(index, item) : item;
+              });
+            }
+
+            this._needsUpdate = true;
+          }
+          /** Swap out one `DataSource` for another. */
+
+        }, {
+          key: "_changeDataSource",
+          value: function _changeDataSource(oldDs, newDs) {
+            if (oldDs) {
+              oldDs.disconnect(this);
+            }
+
+            this._needsUpdate = true;
+            return newDs ? newDs.connect(this) : Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])();
+          }
+          /** Update the `CdkVirtualForOfContext` for all views. */
+
+        }, {
+          key: "_updateContext",
+          value: function _updateContext() {
+            var count = this._data.length;
+            var i = this._viewContainerRef.length;
+
+            while (i--) {
+              var view = this._viewContainerRef.get(i);
+
+              view.context.index = this._renderedRange.start + i;
+              view.context.count = count;
+
+              this._updateComputedContextProperties(view.context);
+
+              view.detectChanges();
+            }
+          }
+          /** Apply changes to the DOM. */
+
+        }, {
+          key: "_applyChanges",
+          value: function _applyChanges(changes) {
+            var _this156 = this;
+
+            this._viewRepeater.applyChanges(changes, this._viewContainerRef, function (record, _adjustedPreviousIndex, currentIndex) {
+              return _this156._getEmbeddedViewArgs(record, currentIndex);
+            }, function (record) {
+              return record.item;
+            }); // Update $implicit for any items that had an identity change.
+
+
+            changes.forEachIdentityChange(function (record) {
+              var view = _this156._viewContainerRef.get(record.currentIndex);
+
+              view.context.$implicit = record.item;
+            }); // Update the context variables on all items.
+
+            var count = this._data.length;
+            var i = this._viewContainerRef.length;
+
+            while (i--) {
+              var view = this._viewContainerRef.get(i);
+
+              view.context.index = this._renderedRange.start + i;
+              view.context.count = count;
+
+              this._updateComputedContextProperties(view.context);
+            }
+          }
+          /** Update the computed properties on the `CdkVirtualForOfContext`. */
+
+        }, {
+          key: "_updateComputedContextProperties",
+          value: function _updateComputedContextProperties(context) {
+            context.first = context.index === 0;
+            context.last = context.index === context.count - 1;
+            context.even = context.index % 2 === 0;
+            context.odd = !context.even;
+          }
+        }, {
+          key: "_getEmbeddedViewArgs",
+          value: function _getEmbeddedViewArgs(record, index) {
+            // Note that it's important that we insert the item directly at the proper index,
+            // rather than inserting it and the moving it in place, because if there's a directive
+            // on the same node that injects the `ViewContainerRef`, Angular will insert another
+            // comment node which can throw off the move when it's being repeated for all items.
+            return {
+              templateRef: this._template,
+              context: {
+                $implicit: record.item,
+                // It's guaranteed that the iterable is not "undefined" or "null" because we only
+                // generate views for elements if the "cdkVirtualForOf" iterable has elements.
+                cdkVirtualForOf: this._cdkVirtualForOf,
+                index: -1,
+                count: -1,
+                first: false,
+                last: false,
+                odd: false,
+                even: false
+              },
+              index: index
+            };
+          }
+        }]);
+
+        return CdkVirtualForOf;
+      }();
+
+      CdkVirtualForOf.ɵfac = function CdkVirtualForOf_Factory(t) {
+        return new (t || CdkVirtualForOf)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_cdk_collections__WEBPACK_IMPORTED_MODULE_7__["_VIEW_REPEATER_STRATEGY"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](CdkVirtualScrollViewport, 4), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]));
+      };
+
+      CdkVirtualForOf.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+        type: CdkVirtualForOf,
+        selectors: [["", "cdkVirtualFor", "", "cdkVirtualForOf", ""]],
+        inputs: {
+          cdkVirtualForOf: "cdkVirtualForOf",
+          cdkVirtualForTrackBy: "cdkVirtualForTrackBy",
+          cdkVirtualForTemplate: "cdkVirtualForTemplate",
+          cdkVirtualForTemplateCacheSize: "cdkVirtualForTemplateCacheSize"
+        },
+        features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵProvidersFeature"]([{
+          provide: _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_7__["_VIEW_REPEATER_STRATEGY"],
+          useClass: _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_7__["_RecycleViewRepeaterStrategy"]
+        }])]
+      });
+
+      CdkVirtualForOf.ctorParameters = function () {
+        return [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]
+        }, {
+          type: _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_7__["_RecycleViewRepeaterStrategy"],
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
+            args: [_angular_cdk_collections__WEBPACK_IMPORTED_MODULE_7__["_VIEW_REPEATER_STRATEGY"]]
+          }]
+        }, {
+          type: CdkVirtualScrollViewport,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["SkipSelf"]
+          }]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+        }];
+      };
+
+      CdkVirtualForOf.propDecorators = {
+        cdkVirtualForOf: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        cdkVirtualForTrackBy: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        cdkVirtualForTemplate: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        cdkVirtualForTemplateCacheSize: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }]
+      };
+
+      (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](CdkVirtualForOf, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+          args: [{
+            selector: '[cdkVirtualFor][cdkVirtualForOf]',
+            providers: [{
+              provide: _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_7__["_VIEW_REPEATER_STRATEGY"],
+              useClass: _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_7__["_RecycleViewRepeaterStrategy"]
+            }]
+          }]
+        }], function () {
+          return [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["IterableDiffers"]
+          }, {
+            type: _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_7__["_RecycleViewRepeaterStrategy"],
+            decorators: [{
+              type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
+              args: [_angular_cdk_collections__WEBPACK_IMPORTED_MODULE_7__["_VIEW_REPEATER_STRATEGY"]]
+            }]
+          }, {
+            type: CdkVirtualScrollViewport,
+            decorators: [{
+              type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["SkipSelf"]
+            }]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+          }];
+        }, {
+          cdkVirtualForOf: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          cdkVirtualForTrackBy: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          cdkVirtualForTemplate: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          cdkVirtualForTemplateCacheSize: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }]
+        });
+      })();
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+
+      var CdkScrollableModule = function CdkScrollableModule() {
+        _classCallCheck(this, CdkScrollableModule);
+      };
+
+      CdkScrollableModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
+        type: CdkScrollableModule
+      });
+      CdkScrollableModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
+        factory: function CdkScrollableModule_Factory(t) {
+          return new (t || CdkScrollableModule)();
+        }
+      });
+
+      (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](CdkScrollableModule, {
+          declarations: [CdkScrollable],
+          exports: [CdkScrollable]
+        });
+      })();
+
+      (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](CdkScrollableModule, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
+          args: [{
+            exports: [CdkScrollable],
+            declarations: [CdkScrollable]
+          }]
+        }], null, null);
+      })();
+      /**
+       * @docs-primary-export
+       */
+
+
+      var ScrollingModule = function ScrollingModule() {
+        _classCallCheck(this, ScrollingModule);
+      };
+
+      ScrollingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
+        type: ScrollingModule
+      });
+      ScrollingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
+        factory: function ScrollingModule_Factory(t) {
+          return new (t || ScrollingModule)();
+        },
+        imports: [[_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_6__["BidiModule"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__["PlatformModule"], CdkScrollableModule], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_6__["BidiModule"], CdkScrollableModule]
+      });
+
+      (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](ScrollingModule, {
+          declarations: function declarations() {
+            return [CdkFixedSizeVirtualScroll, CdkVirtualForOf, CdkVirtualScrollViewport];
+          },
+          imports: function imports() {
+            return [_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_6__["BidiModule"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__["PlatformModule"], CdkScrollableModule];
+          },
+          exports: function exports() {
+            return [_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_6__["BidiModule"], CdkScrollableModule, CdkFixedSizeVirtualScroll, CdkVirtualForOf, CdkVirtualScrollViewport];
+          }
+        });
+      })();
+
+      (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](ScrollingModule, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
+          args: [{
+            imports: [_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_6__["BidiModule"], _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_4__["PlatformModule"], CdkScrollableModule],
+            exports: [_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_6__["BidiModule"], CdkScrollableModule, CdkFixedSizeVirtualScroll, CdkVirtualForOf, CdkVirtualScrollViewport],
+            declarations: [CdkFixedSizeVirtualScroll, CdkVirtualForOf, CdkVirtualScrollViewport]
+          }]
+        }], null, null);
+      })();
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /**
+       * @license
+       * Copyright Google LLC All Rights Reserved.
+       *
+       * Use of this source code is governed by an MIT-style license that can be
+       * found in the LICENSE file at https://angular.io/license
+       */
+
+      /**
+       * Generated bundle index. Do not edit.
+       */
+      //# sourceMappingURL=scrolling.js.map
 
       /***/
 
@@ -21280,14 +24517,14 @@
         _createClass(RequestOfferComponent, [{
           key: "send",
           value: function send() {
-            var _this132 = this;
+            var _this157 = this;
 
             emailjs_com__WEBPACK_IMPORTED_MODULE_1___default.a.send('scheibentoenungschmieder_gmail_com', 'template_Wp2KjJzW', this.form.getRawValue(), 'user_8Nd8UvpLBCk3z2Q2kIBhc').then(function (response) {
-              _this132.form.reset();
+              _this157.form.reset();
 
-              _this132.success = true;
+              _this157.success = true;
             }, function (err) {
-              return _this132.error = err;
+              return _this157.error = err;
             });
           }
         }]);
