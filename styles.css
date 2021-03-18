@@ -3382,13 +3382,13 @@ textarea.form-control {
 .section {
   padding: 70px 0;
   position: relative;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .section-with-space {
   padding: 60px 0;
 }
 .section-gray {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
 }
 .section-nude {
   background-color: #FFFCF5;
@@ -3398,7 +3398,7 @@ textarea.form-control {
   color: #FFFFFF;
 }
 .section-brown {
-  background-color: #A59E94;
+  background-color: #a59e94;
   color: #FFFFFF;
 }
 .section-light-blue {
@@ -3410,7 +3410,7 @@ textarea.form-control {
   color: #FFFFFF;
 }
 .section-dark {
-  background-color: #0b1011;
+  background-color: #191918;
 }
 .section-image,
 .section-gold,

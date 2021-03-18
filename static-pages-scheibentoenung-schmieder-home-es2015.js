@@ -39,21 +39,51 @@ function HomeComponent_ng_container_52_Template(rf, ctx) { if (rf & 1) {
 class HomeComponent {
     constructor() {
         this.sliderImages = [
-            { src: '/assets/img/home/slider/1.jpeg', description: 'TODO' },
-            { src: '/assets/img/home/slider/2.jpeg', description: 'TODO' },
-            { src: '/assets/img/home/slider/3.jpeg', description: 'TODO' },
-            { src: '/assets/img/home/slider/4.jpeg', description: 'TODO' },
-            { src: '/assets/img/home/slider/5.jpeg', description: 'TODO' },
-            { src: '/assets/img/home/slider/6.jpeg', description: 'TODO' },
-            { src: '/assets/img/home/slider/7.jpeg', description: 'TODO' },
-            { src: '/assets/img/home/slider/8.jpeg', description: 'TODO' },
-            { src: '/assets/img/home/slider/9.jpeg', description: 'TODO' },
-            { src: '/assets/img/home/slider/10.jpeg', description: 'TODO' },
+            {
+                src: '/assets/img/home/slider/1.jpeg',
+                description: 'Folierung der Motorhaube mit Carbonfolie',
+            },
+            {
+                src: '/assets/img/home/slider/2.jpeg',
+                description: 'Teilfolierung mit Schwarz Metallic',
+            },
+            {
+                src: '/assets/img/home/slider/3.jpeg',
+                description: 'Scheibentönung mit Regular Black 6%',
+            },
+            {
+                src: '/assets/img/home/slider/4.jpeg',
+                description: 'Scheibentönung mit Regular Black 6%',
+            },
+            {
+                src: '/assets/img/home/slider/5.jpeg',
+                description: 'Scheibentönung mit Regular Black 6%',
+            },
+            {
+                src: '/assets/img/home/slider/6.jpeg',
+                description: 'Scheibentönung mit Superior Black 6%',
+            },
+            {
+                src: '/assets/img/home/slider/7.jpeg',
+                description: 'Scheibentönung mit Regular Anthracite 20%',
+            },
+            {
+                src: '/assets/img/home/slider/8.jpeg',
+                description: 'Folierung von 4 Radkappen in Schwarz',
+            },
+            {
+                src: '/assets/img/home/slider/9.jpeg',
+                description: 'Scheibentönung in Regular Black 6%',
+            },
+            {
+                src: '/assets/img/home/slider/10.jpeg',
+                description: 'Scheibentönung in Premium Black 6%',
+            },
         ];
     }
 }
 HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(); };
-HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["scheibentoenung-schmieder-home"]], decls: 53, vars: 1, consts: [[1, "main"], [1, "text-center"], [1, "container"], [1, "row"], [1, "col-md-8", "mr-auto", "ml-auto"], [1, "title"], [1, "description"], [1, "col-md-6"], [1, "card"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/lack.jpg", 1, "card-img-top"], [1, "card-body"], [1, "card-title"], ["routerLink", "/lackschutz", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/rain.png", 1, "card-img-top"], ["routerLink", "/folien", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/teilfolierung.jpg", 1, "card-img-top"], ["routerLink", "/car-wrapping", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/questions.png", 1, "card-img-top"], ["href", "/fragen", 1, "btn", "btn-link", "btn-danger"], [1, "section"], [1, "col-md-12", "mr-auto", "ml-auto"], [1, "card", "page-carousel"], [4, "ngFor", "ngForOf"], ["ngbSlide", ""], [1, "slider-image", 3, "src", "alt"], [1, "carousel-caption"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
+HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["scheibentoenung-schmieder-home"]], decls: 53, vars: 1, consts: [[1, "main"], [1, "text-center"], [1, "container"], [1, "row"], [1, "col-md-8", "mr-auto", "ml-auto"], [1, "title"], [1, "description"], [1, "section"], [1, "col-md-6"], [1, "card"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/lack.jpg", 1, "card-img-top"], [1, "card-body"], [1, "card-title"], ["routerLink", "/lackschutz", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/rain.png", 1, "card-img-top"], ["routerLink", "/folien", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/teilfolierung.jpg", 1, "card-img-top"], ["routerLink", "/car-wrapping", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/questions.png", 1, "card-img-top"], ["href", "/fragen", 1, "btn", "btn-link", "btn-danger"], [1, "col-md-12", "mr-auto", "ml-auto"], [1, "card", "page-carousel"], [4, "ngFor", "ngForOf"], ["ngbSlide", ""], [1, "slider-image", 3, "src", "alt"], [1, "carousel-caption"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -68,30 +98,32 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](11, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "img", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "h4", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "img", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "h4", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, " Der perfekte Lackschutz f\u00FCr ihr Fahrzeug ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "a", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "a", 13);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, " Lackschutz ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "img", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "h4", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "img", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "h4", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, " Professioneller Einbau von Sonnenschutzfolie ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "a", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "a", 15);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, " Scheibent\u00F6nung ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -99,27 +131,27 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "div", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](32, "img", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "h4", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](32, "img", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "h4", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, "Car Wrapping");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "a", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "a", 17);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, " Fahrzeugfolierung / Teilfolierung ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "div", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](40, "img", 17);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "h4", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "div", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](40, "img", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "h4", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, "H\u00E4ufige Fragen");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "a", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "a", 19);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, " Fragen ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -128,7 +160,7 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "div", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "div", 7);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "div", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "div", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "div", 20);
@@ -145,7 +177,7 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](52);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.sliderImages);
-    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbCarousel"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbSlide"]], styles: [".card[_ngcontent-%COMP%]    > img[_ngcontent-%COMP%] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  height: 337px;\n}\n\n.slider-image[_ngcontent-%COMP%] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  height: 400px;\n  width: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uL2hvbWUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxvQkFBQTtLQUFBLGlCQUFBO0VBQ0EsYUFBQTtBQUNGOztBQUNBO0VBQ0Usb0JBQUE7S0FBQSxpQkFBQTtFQUNBLGFBQUE7RUFDQSxXQUFBO0FBRUYiLCJmaWxlIjoiaG9tZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYXJkID4gaW1nIHtcbiAgb2JqZWN0LWZpdDogY292ZXI7XG4gIGhlaWdodDogMzM3cHg7XG59XG4uc2xpZGVyLWltYWdlIHtcbiAgb2JqZWN0LWZpdDogY292ZXI7XG4gIGhlaWdodDogNDAwcHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuIl19 */"] });
+    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbCarousel"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbSlide"]], styles: [".card[_ngcontent-%COMP%]    > img[_ngcontent-%COMP%] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  height: 337px;\n}\n\n.slider-image[_ngcontent-%COMP%] {\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uL2hvbWUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxvQkFBQTtLQUFBLGlCQUFBO0VBQ0EsYUFBQTtBQUNGOztBQUNBO0VBQ0Usb0JBQUE7S0FBQSxpQkFBQTtBQUVGIiwiZmlsZSI6ImhvbWUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FyZCA+IGltZyB7XG4gIG9iamVjdC1maXQ6IGNvdmVyO1xuICBoZWlnaHQ6IDMzN3B4O1xufVxuLnNsaWRlci1pbWFnZSB7XG4gIG9iamVjdC1maXQ6IGNvdmVyO1xufVxuIl19 */"] });
 
 
 /***/ }),
