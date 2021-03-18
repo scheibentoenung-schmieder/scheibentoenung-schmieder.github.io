@@ -19,8 +19,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function HomeComponent_ng_container_52_ng_template_1_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "img", 24);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "img", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 26);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -33,7 +33,7 @@ function HomeComponent_ng_container_52_ng_template_1_Template(rf, ctx) { if (rf 
 } }
 function HomeComponent_ng_container_52_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, HomeComponent_ng_container_52_ng_template_1_Template, 4, 3, "ng-template", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, HomeComponent_ng_container_52_ng_template_1_Template, 4, 3, "ng-template", 24);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
 } }
 class HomeComponent {
@@ -83,7 +83,7 @@ class HomeComponent {
     }
 }
 HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(); };
-HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["scheibentoenung-schmieder-home"]], decls: 53, vars: 1, consts: [[1, "main"], [1, "text-center"], [1, "container"], [1, "row"], [1, "col-md-8", "mr-auto", "ml-auto"], [1, "title"], [1, "description"], [1, "section"], [1, "col-md-6"], [1, "card"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/lack.jpg", 1, "card-img-top"], [1, "card-body"], [1, "card-title"], ["routerLink", "/lackschutz", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/rain.png", 1, "card-img-top"], ["routerLink", "/folien", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/teilfolierung.jpg", 1, "card-img-top"], ["routerLink", "/car-wrapping", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/questions.png", 1, "card-img-top"], ["href", "/fragen", 1, "btn", "btn-link", "btn-danger"], [1, "col-md-12", "mr-auto", "ml-auto"], [1, "card", "page-carousel"], [4, "ngFor", "ngForOf"], ["ngbSlide", ""], [1, "slider-image", 3, "src", "alt"], [1, "carousel-caption"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
+HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["scheibentoenung-schmieder-home"]], decls: 53, vars: 1, consts: [[1, "main"], [1, "text-center"], [1, "container"], [1, "row"], [1, "col-md-8", "mr-auto", "ml-auto"], [1, "title"], [1, "description"], [1, "section", "text-center"], [1, "col-md-6"], [1, "card"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/lack.jpg", 1, "card-img-top"], [1, "card-body"], [1, "card-title"], ["routerLink", "/lackschutz", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/rain.png", 1, "card-img-top"], ["routerLink", "/folien", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/teilfolierung.jpg", 1, "card-img-top"], ["routerLink", "/car-wrapping", 1, "btn", "btn-link", "btn-danger"], ["alt", "Card image cap", "width", "100%", "height", "337px", "src", "/assets/img/home/questions.png", 1, "card-img-top"], ["href", "/fragen", 1, "btn", "btn-link", "btn-danger"], [1, "section"], [1, "col-md-12", "mr-auto", "ml-auto"], [1, "card", "page-carousel"], [4, "ngFor", "ngForOf"], ["ngbSlide", ""], [1, "slider-image", 3, "src", "alt"], [1, "carousel-caption"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -160,13 +160,13 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "div", 20);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "div", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "div", 20);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "div", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "div", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "div", 22);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "ngb-carousel");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](52, HomeComponent_ng_container_52_Template, 2, 0, "ng-container", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](52, HomeComponent_ng_container_52_Template, 2, 0, "ng-container", 23);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
