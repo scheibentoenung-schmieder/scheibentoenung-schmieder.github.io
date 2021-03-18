@@ -1249,13 +1249,13 @@
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerStart"](0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "div", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "div", 3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](2, "div", 5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](2, "div", 4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "div", 6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "div", 5);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](4, "div", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](4, "div", 6);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](5, "h1");
 
@@ -1395,9 +1395,9 @@
       AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
         type: AppComponent,
         selectors: [["scheibentoenung-schmieder-root"]],
-        decls: 8,
-        vars: 26,
-        consts: [["title", "Scheibent\xF6nung Schmieder", "logo", "/assets/img/logo.png", 3, "links", "forceVisible", "socialMedia"], [4, "ngIf"], [1, "content"], [3, "links"], ["data-parallax", "true", 1, "page-header"], [1, "filter"], [1, "title-brand"], [1, "presentation-title"]],
+        decls: 6,
+        vars: 22,
+        consts: [["title", "Scheibent\xF6nung Schmieder", "logo", "/assets/img/logo.png", 3, "links", "forceVisible", "socialMedia"], [4, "ngIf"], [3, "links"], ["data-parallax", "true", 1, "page-header"], [1, "filter"], [1, "title-brand"], [1, "presentation-title"]],
         template: function AppComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "app-navbar", 0);
@@ -1408,35 +1408,24 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipe"](3, "async");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](4, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](4, "router-outlet");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipe"](5, "async");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](6, "router-outlet");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](7, "app-footer", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](5, "app-footer", 2);
           }
 
           if (rf & 2) {
             var tmp_1_0 = null;
             var tmp_3_0 = null;
-            var tmp_4_0 = null;
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("links", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction2"](15, _c2, _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](13, _c0), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](14, _c1)))("forceVisible", !((tmp_1_0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind1"](1, 7, ctx.meta$)) == null ? null : tmp_1_0.cover))("socialMedia", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](18, _c4));
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", (tmp_3_0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind1"](3, 9, ctx.meta$)) == null ? null : tmp_3_0.cover);
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("links", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction2"](11, _c2, _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](9, _c0), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](10, _c1)))("forceVisible", !((tmp_1_0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind1"](1, 5, ctx.meta$)) == null ? null : tmp_1_0.cover))("socialMedia", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](14, _c4));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵclassProp"]("margin-header", !((tmp_4_0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind1"](5, 11, ctx.meta$)) == null ? null : tmp_4_0.cover));
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", (tmp_3_0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind1"](3, 7, ctx.meta$)) == null ? null : tmp_3_0.cover);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("links", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction3"](22, _c8, _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](19, _c5), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](20, _c6), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](21, _c7)));
+            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("links", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction3"](18, _c8, _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](15, _c5), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](16, _c6), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](17, _c7)));
           }
         },
         directives: [_libs_shared_ui_paper_kit_src_lib_components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_4__["NavbarComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterOutlet"], _libs_shared_ui_paper_kit_src_lib_components_footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"]],
