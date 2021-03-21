@@ -140,7 +140,7 @@ function FolienComponent_ng_template_2_Template(rf, ctx) { if (rf & 1) {
 class FolienComponent {
     constructor(activeRouter) {
         this.activeRouter = activeRouter;
-        this.folien = { regular: _folien__WEBPACK_IMPORTED_MODULE_1__["regular"], premium: _folien__WEBPACK_IMPORTED_MODULE_1__["premium"], superior: _folien__WEBPACK_IMPORTED_MODULE_1__["superior"], secure: _folien__WEBPACK_IMPORTED_MODULE_1__["secure"] };
+        this.folien = { regular: _folien__WEBPACK_IMPORTED_MODULE_1__["regular"], premium: _folien__WEBPACK_IMPORTED_MODULE_1__["premium"], superior: _folien__WEBPACK_IMPORTED_MODULE_1__["superior"] };
     }
 }
 FolienComponent.ɵfac = function FolienComponent_Factory(t) { return new (t || FolienComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"])); };
@@ -205,12 +205,19 @@ const folienRoutes = [
         path: ':type',
         component: _components_folien_selection_folien_selection_component__WEBPACK_IMPORTED_MODULE_4__["FolienSelectionComponent"],
         data: {
-            title: 'Folien',
+            title: 'Scheibentönung',
+            description: 'Scheibentönung aller Fahrzeugscheiben zum Schutz vor UV-Strahlung, optischer Individualisierung Ihres Fahrzeuges und gegen aufheizen des Fahrzeuginnenraumes.',
+            keywords: 'Scheibentönung, Folie, Scheiben tönen, Tönungsfolie, UV-Schutz, Hitzeschutz, Fahrzeug, Fahrzeugscheiben',
         },
         children: [
             {
                 path: '',
                 component: _components_folie_folien_component__WEBPACK_IMPORTED_MODULE_3__["FolienComponent"],
+                data: {
+                    title: 'Scheibentönung',
+                    description: 'Scheibentönung aller Fahrzeugscheiben zum Schutz vor UV-Strahlung, optischer Individualisierung Ihres Fahrzeuges und gegen aufheizen des Fahrzeuginnenraumes.',
+                    keywords: 'Scheibentönung, Folie, Scheiben tönen, Tönungsfolie, UV-Schutz, Hitzeschutz, Fahrzeug, Fahrzeugscheiben',
+                },
             },
         ],
     },
@@ -233,7 +240,7 @@ FolienModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjec
 /*!**********************************************************************************!*\
   !*** ./libs/scheibentoenung-schmieder/folien/src/lib/components/folie/folien.ts ***!
   \**********************************************************************************/
-/*! exports provided: regular, premium, superior, secure */
+/*! exports provided: regular, premium, superior */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -241,7 +248,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "regular", function() { return regular; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "premium", function() { return premium; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "superior", function() { return superior; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "secure", function() { return secure; });
 const regular = [
     {
         headline: 'Regular Black 6%',
@@ -546,59 +552,21 @@ const superior = [
         hitze: 46,
         uv: 99,
     },
-];
-const secure = [
     {
-        headline: 'Secure Clear 89%',
-        images: ['/assets/img/folien/AG-SS90_thumb.jpg'],
+        headline: 'Superior Silicium 70%',
+        images: ['/assets/img/folien/superior-selicium.png'],
         technicalDescription: [
-            '1-lagiger Folienaufbau',
-            'nicht metallisiert',
+            '2-lagiger Folienaufbau',
+            'Keramik Beschichtung',
             'extra gehärtete Kratzschutzschicht',
-            'Dicke ohne Liner 0,110mm',
-            'Garantie 5 Jahre',
-            'sehr hohe Lichtdurchlässigkeit',
-            'perfekte Transparenz',
-            'extrem reißfeste Polyesterfolie',
-            'einbruchhemmend',
-            'verstärkte Splitterbindung bei Glasbruch',
-            'auch für vordere Scheiben bei Klarglas genehmigt (DE) (Gesamtlichtdurchlässigkeit von Glas + Folie < 70%)',
-        ],
-        licht: 89,
-        hitze: 16,
-        uv: 97,
-    },
-    {
-        headline: 'Secure Green Style Dark 13%',
-        images: ['/assets/img/folien/AG-X13_thumb.jpg'],
-        technicalDescription: [
-            '3-lagiger Folienaufbau',
-            'Alu-Bedampfung / Metallisierung',
-            'extra gehärtete Kratzschutzschicht',
-            'Dicke ohne Liner 0,050 mm',
-            'dunkelgraue Tönung mit Grünstich, gute Durchsicht von innen, erschwerter Einblick von außen',
+            'Dicke ohne Liner 0,045mm',
+            'Garantie 15 Jahre',
+            'leichte Tönung',
+            'perfekte Durchsicht von innen, guter Einblick von außen',
             'Splitterschutz',
-            'langer Anwendungszeitraum: 7 Jahre -Sonnenbrilleneffekt durch Ray-Green-Einfärbung',
         ],
-        licht: 13,
-        hitze: 48,
-        uv: 99,
-    },
-    {
-        headline: 'Green Style 30%',
-        images: ['/assets/img/folien/AG-X30_thumb.jpg'],
-        technicalDescription: [
-            '3-lagiger Folienaufbau',
-            'Alu-Bedampfung / Metallisierung',
-            'extra gehärtete Kratzschutzschicht',
-            'Dicke ohne Liner 0,050 mm',
-            'hellgrüne Tönung, sehr gute Durchsicht von innen, guter Einblick von außen',
-            'Splitterschutz',
-            'Blendschutz',
-            'langer Anwendungszeitraum: 7 Jahre',
-        ],
-        licht: 30,
-        hitze: 56,
+        licht: 70,
+        hitze: 46,
         uv: 99,
     },
 ];
@@ -632,9 +600,6 @@ function FolienSelectionComponent_ng_template_20_Template(rf, ctx) { if (rf & 1)
 function FolienSelectionComponent_ng_template_24_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "router-outlet");
 } }
-function FolienSelectionComponent_ng_template_28_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "router-outlet");
-} }
 class FolienSelectionComponent {
     constructor(active) {
         this.active = active;
@@ -645,7 +610,7 @@ class FolienSelectionComponent {
     }
 }
 FolienSelectionComponent.ɵfac = function FolienSelectionComponent_Factory(t) { return new (t || FolienSelectionComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"])); };
-FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: FolienSelectionComponent, selectors: [["scheibentoenung-schmieder-folien"]], decls: 30, vars: 6, consts: [[1, "section", "profile-content"], [1, "container"], [1, "row"], [1, "col-md-12", "ml-auto", "mr-auto"], [1, "text-center"], ["src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/tuevsiegel.jpg", 1, "card-avatar", 2, "width", "100px"], [1, "nav-tabs-navigation"], [1, "nav-tabs-wrapper"], ["ngbNav", "", 1, "nav-tabs", 3, "activeId", "activeIdChange"], ["nav", "ngbNav"], [3, "ngbNavItem"], ["ngbNavLink", "", "routerLink", "/folien/regular"], ["ngbNavContent", ""], ["ngbNavLink", "", "routerLink", "/folien/premium"], ["ngbNavLink", "", "routerLink", "/folien/superior"], ["ngbNavLink", "", "routerLink", "/folien/secure"], [3, "ngbNavOutlet"]], template: function FolienSelectionComponent_Template(rf, ctx) { if (rf & 1) {
+FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: FolienSelectionComponent, selectors: [["scheibentoenung-schmieder-folien"]], decls: 26, vars: 5, consts: [[1, "section", "profile-content"], [1, "container"], [1, "row"], [1, "col-md-12", "ml-auto", "mr-auto"], [1, "text-center"], ["src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/tuevsiegel.jpg", 1, "card-avatar", 2, "width", "100px"], [1, "nav-tabs-navigation"], [1, "nav-tabs-wrapper"], ["ngbNav", "", 1, "nav-tabs", 3, "activeId", "activeIdChange"], ["nav", "ngbNav"], [3, "ngbNavItem"], ["ngbNavLink", "", "routerLink", "/folien/regular"], ["ngbNavContent", ""], ["ngbNavLink", "", "routerLink", "/folien/premium"], ["ngbNavLink", "", "routerLink", "/folien/superior"], [3, "ngbNavOutlet"]], template: function FolienSelectionComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 2);
@@ -680,14 +645,8 @@ FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵ�
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, FolienSelectionComponent_ng_template_24_Template, 1, 0, "ng-template", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](25, "li", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](26, "a", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](27, "Secure");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](28, FolienSelectionComponent_ng_template_28_Template, 1, 0, "ng-template", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](29, "div", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](25, "div", 15);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -703,8 +662,6 @@ FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵ�
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "premium");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "superior");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "secure");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavOutlet", _r0);
     } }, directives: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNav"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNavItem"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNavLink"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterLinkWithHref"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNavContent"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNavOutlet"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterOutlet"]], styles: [".nav-tabs {\n  justify-content: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uL2ZvbGllbi1zZWxlY3Rpb24uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSx1QkFBQTtBQUNGIiwiZmlsZSI6ImZvbGllbi1zZWxlY3Rpb24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubmF2LXRhYnMge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn1cbiJdfQ== */"], encapsulation: 2 });

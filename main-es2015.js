@@ -646,9 +646,10 @@ class AppComponent {
         this.data$ = this.routerHelperService.data$;
     }
     ngOnInit() {
-        this.meta$.subscribe(({ title, description, cover }) => {
+        this.meta$.subscribe(({ title, description, keywords }) => {
             this.titleService.setTitle(title);
             this.metaService.updateTag({ name: 'description', content: description });
+            this.metaService.updateTag({ name: 'keywords', content: keywords });
             this.metaService.updateTag({
                 property: 'og:description',
                 content: description,

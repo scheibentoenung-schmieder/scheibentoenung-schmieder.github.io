@@ -211,6 +211,7 @@ const routes = [
             fullSize: true,
             title: 'Scheibentönung Schmieder',
             description: 'Scheibentönung in Chemnitz, Limbach und Umgebung',
+            keyword: 'Fahrzeugfolierung Scheibentönung',
         },
     },
 ];

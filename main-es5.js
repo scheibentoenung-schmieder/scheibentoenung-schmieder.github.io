@@ -1358,13 +1358,18 @@
             this.meta$.subscribe(function (_ref2) {
               var title = _ref2.title,
                   description = _ref2.description,
-                  cover = _ref2.cover;
+                  keywords = _ref2.keywords;
 
               _this3.titleService.setTitle(title);
 
               _this3.metaService.updateTag({
                 name: 'description',
                 content: description
+              });
+
+              _this3.metaService.updateTag({
+                name: 'keywords',
+                content: keywords
               });
 
               _this3.metaService.updateTag({
