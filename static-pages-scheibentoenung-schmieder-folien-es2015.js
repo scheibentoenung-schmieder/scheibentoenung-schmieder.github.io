@@ -42,10 +42,9 @@ function FolienComponent_ng_container_1_div_2_li_13_Template(rf, ctx) { if (rf &
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", description_r11, " ");
 } }
-const _c0 = function (a0) { return [a0, "/assets/img/folien/3.jpeg", "/assets/img/folien/7.jpeg"]; };
-const _c1 = function (a0) { return { percent: a0, name: "Licht" }; };
-const _c2 = function (a0) { return { percent: a0, name: "Hitze" }; };
-const _c3 = function (a0) { return { percent: a0, name: "UV" }; };
+const _c0 = function (a0) { return { percent: a0, name: "Licht" }; };
+const _c1 = function (a0) { return { percent: a0, name: "Hitze" }; };
+const _c2 = function (a0) { return { percent: a0, name: "UV" }; };
 function FolienComponent_ng_container_1_div_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 5);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "div", 6);
@@ -92,22 +91,22 @@ function FolienComponent_ng_container_1_div_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("interval", 0);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](10, _c0, folie_r5.image));
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", folie_r5.images);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](folie_r5.headline);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](5);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", folie_r5.technicalDescription);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r1)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](12, _c1, folie_r5.licht));
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r1)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](10, _c0, folie_r5.licht));
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r1)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](14, _c2, folie_r5.hitze));
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r1)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](12, _c1, folie_r5.hitze));
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r1)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](16, _c3, folie_r5.uv));
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r1)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](14, _c2, folie_r5.uv));
 } }
 function FolienComponent_ng_container_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerStart"](0);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "div", 3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, FolienComponent_ng_container_1_div_2_Template, 23, 18, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, FolienComponent_ng_container_1_div_2_Template, 23, 16, "div", 4);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerEnd"]();
 } if (rf & 2) {
@@ -246,7 +245,7 @@ __webpack_require__.r(__webpack_exports__);
 const regular = [
     {
         headline: 'Regular Black 6%',
-        image: '/assets/img/folien/AG-R05_thumb.jpg',
+        images: ['/assets/img/folien/AG-R05_thumb.jpg'],
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'nicht metallisiert',
@@ -263,7 +262,7 @@ const regular = [
     },
     {
         headline: 'Regular Graphite 15%',
-        image: '/assets/img/folien/AG-R20_thumb.jpg',
+        images: ['/assets/img/folien/AG-R20_thumb.jpg'],
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'nicht metallisiert',
@@ -281,7 +280,11 @@ const regular = [
     },
     {
         headline: 'Regular Anthracite 20%',
-        image: '/assets/img/folien/AG-R15_thumb.jpg',
+        images: [
+            '/assets/img/folien/regular-anthracite-20-heck.jpeg',
+            '/assets/img/folien/regular-anthracite-20-side.jpeg',
+            '/assets/img/folien/regular-anthracite-20-door.jpeg',
+        ],
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'nicht metallisiert',
@@ -299,7 +302,7 @@ const regular = [
     },
     {
         headline: 'Regular Titan 35%',
-        image: '/assets/img/folien/AG-R35_thumb.jpg',
+        images: ['/assets/img/folien/AG-R35_thumb.jpg'],
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'nicht metallisiert',
@@ -317,7 +320,7 @@ const regular = [
     },
     {
         headline: 'Regular Silver 52%',
-        image: '/assets/img/folien/AG-R50_thumb.jpg',
+        images: ['/assets/img/folien/AG-R50_thumb.jpg'],
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'nicht metallisiert',
@@ -336,7 +339,7 @@ const regular = [
 const premium = [
     {
         headline: 'Super Dark 3%',
-        image: '/assets/img/folien/super-dark.jpg',
+        images: ['/assets/img/folien/super-dark.jpg'],
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'metallisiert',
@@ -354,7 +357,7 @@ const premium = [
     },
     {
         headline: 'Premium Black 5%',
-        image: '/assets/img/folien/AG-P05_thumb.jpg',
+        images: ['/assets/img/folien/AG-P05_thumb.jpg'],
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'metallisiert',
@@ -372,7 +375,7 @@ const premium = [
     },
     {
         headline: 'Premium Graphite 15%',
-        image: '/assets/img/folien/AG-P15_thumb.jpg',
+        images: ['/assets/img/folien/AG-P15_thumb.jpg'],
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'metallisiert',
@@ -390,7 +393,7 @@ const premium = [
     },
     {
         headline: 'Premium Anthracite 20%',
-        image: '/assets/img/folien/AG-P20_thumb.jpg',
+        images: ['/assets/img/folien/AG-P20_thumb.jpg'],
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'metallisiert',
@@ -409,7 +412,7 @@ const premium = [
     },
     {
         headline: 'Premium Titan 36%',
-        image: '/assets/img/folien/AG-P35_thumb.jpg',
+        images: ['/assets/img/folien/AG-P35_thumb.jpg'],
         technicalDescription: [
             '-2-lagiger Folienaufbau',
             'metallisiert',
@@ -427,7 +430,7 @@ const premium = [
     },
     {
         headline: 'Premium Silver 55%',
-        image: '/assets/img/folien/AG-P50_thumb.jpg',
+        images: ['/assets/img/folien/AG-P50_thumb.jpg'],
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'metallisiert',
@@ -446,7 +449,7 @@ const premium = [
 const superior = [
     {
         headline: 'Superior Black 5%',
-        image: '/assets/img/folien/AG-S05_thumb.jpg',
+        images: ['/assets/img/folien/AG-S05_thumb.jpg'],
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'Keramik Beschichtung',
@@ -463,7 +466,7 @@ const superior = [
     },
     {
         headline: 'Superior Graphite 15%',
-        image: '/assets/img/folien/AG-S15_thumb.jpg',
+        images: ['/assets/img/folien/AG-S15_thumb.jpg'],
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'Keramik Beschichtung',
@@ -480,7 +483,7 @@ const superior = [
     },
     {
         headline: 'Superior Anthracite 23%',
-        image: '/assets/img/folien/superior-anthracite.jpg',
+        images: ['/assets/img/folien/superior-anthracite.jpg'],
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'Keramik Beschichtung',
@@ -496,7 +499,7 @@ const superior = [
     },
     {
         headline: 'Superior Titan 38%',
-        image: '/assets/img/folien/AG-S35_thumb.jpg',
+        images: ['/assets/img/folien/AG-S35_thumb.jpg'],
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'Keramik Beschichtung',
@@ -512,7 +515,7 @@ const superior = [
     },
     {
         headline: 'Superior platin 35%',
-        image: '/assets/img/folien/AG-S50_thumb.jpg',
+        images: ['/assets/img/folien/AG-S50_thumb.jpg'],
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'Keramik Beschichtung',
@@ -528,7 +531,7 @@ const superior = [
     },
     {
         headline: 'Superior Silver 52%',
-        image: '/assets/img/folien/AG-S50_thumb.jpg',
+        images: ['/assets/img/folien/AG-S50_thumb.jpg'],
         technicalDescription: [
             '2-lagiger Folienaufbau',
             'Keramik Beschichtung',
@@ -547,7 +550,7 @@ const superior = [
 const secure = [
     {
         headline: 'Secure Clear 89%',
-        image: '/assets/img/folien/AG-SS90_thumb.jpg',
+        images: ['/assets/img/folien/AG-SS90_thumb.jpg'],
         technicalDescription: [
             '1-lagiger Folienaufbau',
             'nicht metallisiert',
@@ -567,7 +570,7 @@ const secure = [
     },
     {
         headline: 'Secure Green Style Dark 13%',
-        image: '/assets/img/folien/AG-X13_thumb.jpg',
+        images: ['/assets/img/folien/AG-X13_thumb.jpg'],
         technicalDescription: [
             '3-lagiger Folienaufbau',
             'Alu-Bedampfung / Metallisierung',
@@ -583,7 +586,7 @@ const secure = [
     },
     {
         headline: 'Green Style 30%',
-        image: '/assets/img/folien/AG-X30_thumb.jpg',
+        images: ['/assets/img/folien/AG-X30_thumb.jpg'],
         technicalDescription: [
             '3-lagiger Folienaufbau',
             'Alu-Bedampfung / Metallisierung',

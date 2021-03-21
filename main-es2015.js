@@ -653,10 +653,6 @@ class AppComponent {
                 property: 'og:description',
                 content: description,
             });
-            this.metaService.updateTag({
-                property: 'og:image',
-                content: '/assets/img/cover/' + cover,
-            });
             this.metaService.updateTag({ property: 'og:title', content: title });
         });
     }

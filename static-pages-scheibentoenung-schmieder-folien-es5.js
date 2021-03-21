@@ -99,24 +99,20 @@
       }
 
       var _c0 = function _c0(a0) {
-        return [a0, "/assets/img/folien/3.jpeg", "/assets/img/folien/7.jpeg"];
-      };
-
-      var _c1 = function _c1(a0) {
         return {
           percent: a0,
           name: "Licht"
         };
       };
 
-      var _c2 = function _c2(a0) {
+      var _c1 = function _c1(a0) {
         return {
           percent: a0,
           name: "Hitze"
         };
       };
 
-      var _c3 = function _c3(a0) {
+      var _c2 = function _c2(a0) {
         return {
           percent: a0,
           name: "UV"
@@ -215,7 +211,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](10, _c0, folie_r5.image));
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", folie_r5.images);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](4);
 
@@ -227,15 +223,15 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](5);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r1)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](12, _c1, folie_r5.licht));
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r1)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](10, _c0, folie_r5.licht));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r1)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](14, _c2, folie_r5.hitze));
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r1)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](12, _c1, folie_r5.hitze));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r1)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](16, _c3, folie_r5.uv));
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r1)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](14, _c2, folie_r5.uv));
         }
       }
 
@@ -245,7 +241,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "div", 3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, FolienComponent_ng_container_1_div_2_Template, 23, 18, "div", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, FolienComponent_ng_container_1_div_2_Template, 23, 16, "div", 4);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
@@ -528,35 +524,35 @@
 
       var regular = [{
         headline: 'Regular Black 6%',
-        image: '/assets/img/folien/AG-R05_thumb.jpg',
+        images: ['/assets/img/folien/AG-R05_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'tiefschwarze Tönung, relativ gute Durchsicht von innen, kaum Einblick von außen', 'Splitterschutz', 'Blendschutz'],
         licht: 6,
         hitze: 50,
         uv: 99
       }, {
         headline: 'Regular Graphite 15%',
-        image: '/assets/img/folien/AG-R20_thumb.jpg',
+        images: ['/assets/img/folien/AG-R20_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'grau-schwarze Tönung', 'relativ gute Durchsicht von innen, erschwerter Einblick von außen', 'Splitterschutz', 'Blendschutz'],
         licht: 15,
         hitze: 44,
         uv: 99
       }, {
         headline: 'Regular Anthracite 20%',
-        image: '/assets/img/folien/AG-R15_thumb.jpg',
+        images: ['/assets/img/folien/regular-anthracite-20-heck.jpeg', '/assets/img/folien/regular-anthracite-20-side.jpeg', '/assets/img/folien/regular-anthracite-20-door.jpeg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'dunkelgraue Tönung', 'gute Durchsicht von innen, erschwerter Einblick von außen', 'Splitterschutz', 'leichter Blendschutz '],
         licht: 20,
         hitze: 38,
         uv: 99
       }, {
         headline: 'Regular Titan 35%',
-        image: '/assets/img/folien/AG-R35_thumb.jpg',
+        images: ['/assets/img/folien/AG-R35_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'hellgraue Tönung', 'gute Durchsicht von innen, relativ guter Einblick von außen', 'Splitterschutz', 'Blendschutz'],
         licht: 35,
         hitze: 38,
         uv: 99
       }, {
         headline: 'Regular Silver 52%',
-        image: '/assets/img/folien/AG-R50_thumb.jpg',
+        images: ['/assets/img/folien/AG-R50_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'leichte Tönung', 'perfekte Durchsicht von innen, guter Einblick von außen', 'Splitterschutz'],
         licht: 52,
         hitze: 34,
@@ -564,42 +560,42 @@
       }];
       var premium = [{
         headline: 'Super Dark 3%',
-        image: '/assets/img/folien/super-dark.jpg',
+        images: ['/assets/img/folien/super-dark.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'tiefschwarze Tönung (dunkelste Tönungsstufe), annähernd blickdicht von außen', 'Splitterschutz', 'Blendschutz', 'erhöhte Hitzereduktion durch Metallisierung '],
         licht: 3,
         hitze: 70,
         uv: 99
       }, {
         headline: 'Premium Black 5%',
-        image: '/assets/img/folien/AG-P05_thumb.jpg',
+        images: ['/assets/img/folien/AG-P05_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'tiefschwarze Tönung, relativ gute Durchsicht von innen, kaum Einblick von außen', 'Splitterschutz', 'Blendschutz', 'erhöhte Hitzereduktion durch Metallisierung '],
         licht: 5,
         hitze: 60,
         uv: 99
       }, {
         headline: 'Premium Graphite 15%',
-        image: '/assets/img/folien/AG-P15_thumb.jpg',
+        images: ['/assets/img/folien/AG-P15_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'grau-schwarze Tönung, relativ gute Durchsicht von innen, erschwerter Einblick von außen', 'Splitterschutz', 'Blendschutz', 'erhöhte Hitzereduktion durch Metallisierung'],
         licht: 15,
         hitze: 56,
         uv: 99
       }, {
         headline: 'Premium Anthracite 20%',
-        image: '/assets/img/folien/AG-P20_thumb.jpg',
+        images: ['/assets/img/folien/AG-P20_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'dunkelgraue Tönung', 'gute Durchsicht von innen, erschwerter Einblick von außen', 'Splitterschutz', 'Blendschutz', 'erhöhte Hitzereduktion durch Metallisierung'],
         licht: 20,
         hitze: 53,
         uv: 99
       }, {
         headline: 'Premium Titan 36%',
-        image: '/assets/img/folien/AG-P35_thumb.jpg',
+        images: ['/assets/img/folien/AG-P35_thumb.jpg'],
         technicalDescription: ['-2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'hellgraue Tönung, sehr gute Durchsicht von innen, relativ guter Einblick von außen', 'Splitterschutz', 'leichter Blendschutz', 'erhöhte Hitzereduktion durch Metallisierung'],
         licht: 36,
         hitze: 51,
         uv: 99
       }, {
         headline: 'Premium Silver 55%',
-        image: '/assets/img/folien/AG-P50_thumb.jpg',
+        images: ['/assets/img/folien/AG-P50_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'leichte Tönung, perfekte Durchsicht von innen, guter Einblick von außen', 'Splitterschutz', 'erhöhte Hitzereduktion durch Metallisierung'],
         licht: 55,
         hitze: 42,
@@ -607,42 +603,42 @@
       }];
       var superior = [{
         headline: 'Superior Black 5%',
-        image: '/assets/img/folien/AG-S05_thumb.jpg',
+        images: ['/assets/img/folien/AG-S05_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'tiefschwarze Tönung, relativ gute Durchsicht von innen, kaum Einblick von außen', 'Splitterschutz', 'Blendschutz'],
         licht: 5,
         hitze: 76,
         uv: 99
       }, {
         headline: 'Superior Graphite 15%',
-        image: '/assets/img/folien/AG-S15_thumb.jpg',
+        images: ['/assets/img/folien/AG-S15_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'schwarze Tönung, relativ gute Durchsicht von innen, kaum Einblick von außen', 'Splitterschutz', 'Blendschutz'],
         licht: 15,
         hitze: 64,
         uv: 99
       }, {
         headline: 'Superior Anthracite 23%',
-        image: '/assets/img/folien/superior-anthracite.jpg',
+        images: ['/assets/img/folien/superior-anthracite.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'dunkelgraue Tönung, erschwerte Durchsicht von innen, kaum Einblick von außen', 'Splitterschutz'],
         licht: 23,
         hitze: 58,
         uv: 99
       }, {
         headline: 'Superior Titan 38%',
-        image: '/assets/img/folien/AG-S35_thumb.jpg',
+        images: ['/assets/img/folien/AG-S35_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'hellgraue Tönung, sehr gute Durchsicht von innen, relativ guter Einblick von außen', 'Splitterschutz'],
         licht: 38,
         hitze: 51,
         uv: 99
       }, {
         headline: 'Superior platin 35%',
-        image: '/assets/img/folien/AG-S50_thumb.jpg',
+        images: ['/assets/img/folien/AG-S50_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'hellgraue Tönung, sehr gute Durchsicht von innen, relativ guter Einblick von außen', 'Splitterschutz'],
         licht: 35,
         hitze: 58,
         uv: 99
       }, {
         headline: 'Superior Silver 52%',
-        image: '/assets/img/folien/AG-S50_thumb.jpg',
+        images: ['/assets/img/folien/AG-S50_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'leichte Tönung', 'perfekte Durchsicht von innen, guter Einblick von außen', 'Splitterschutz'],
         licht: 52,
         hitze: 46,
@@ -650,21 +646,21 @@
       }];
       var secure = [{
         headline: 'Secure Clear 89%',
-        image: '/assets/img/folien/AG-SS90_thumb.jpg',
+        images: ['/assets/img/folien/AG-SS90_thumb.jpg'],
         technicalDescription: ['1-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,110mm', 'Garantie 5 Jahre', 'sehr hohe Lichtdurchlässigkeit', 'perfekte Transparenz', 'extrem reißfeste Polyesterfolie', 'einbruchhemmend', 'verstärkte Splitterbindung bei Glasbruch', 'auch für vordere Scheiben bei Klarglas genehmigt (DE) (Gesamtlichtdurchlässigkeit von Glas + Folie < 70%)'],
         licht: 89,
         hitze: 16,
         uv: 97
       }, {
         headline: 'Secure Green Style Dark 13%',
-        image: '/assets/img/folien/AG-X13_thumb.jpg',
+        images: ['/assets/img/folien/AG-X13_thumb.jpg'],
         technicalDescription: ['3-lagiger Folienaufbau', 'Alu-Bedampfung / Metallisierung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,050 mm', 'dunkelgraue Tönung mit Grünstich, gute Durchsicht von innen, erschwerter Einblick von außen', 'Splitterschutz', 'langer Anwendungszeitraum: 7 Jahre -Sonnenbrilleneffekt durch Ray-Green-Einfärbung'],
         licht: 13,
         hitze: 48,
         uv: 99
       }, {
         headline: 'Green Style 30%',
-        image: '/assets/img/folien/AG-X30_thumb.jpg',
+        images: ['/assets/img/folien/AG-X30_thumb.jpg'],
         technicalDescription: ['3-lagiger Folienaufbau', 'Alu-Bedampfung / Metallisierung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,050 mm', 'hellgrüne Tönung, sehr gute Durchsicht von innen, guter Einblick von außen', 'Splitterschutz', 'Blendschutz', 'langer Anwendungszeitraum: 7 Jahre'],
         licht: 30,
         hitze: 56,

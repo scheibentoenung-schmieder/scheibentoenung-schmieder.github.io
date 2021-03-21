@@ -1373,11 +1373,6 @@
               });
 
               _this3.metaService.updateTag({
-                property: 'og:image',
-                content: '/assets/img/cover/' + cover
-              });
-
-              _this3.metaService.updateTag({
                 property: 'og:title',
                 content: title
               });
