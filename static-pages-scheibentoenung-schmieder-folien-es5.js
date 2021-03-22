@@ -308,7 +308,6 @@
         this.activeRouter = activeRouter;
         this.folien = {
           regular: _folien__WEBPACK_IMPORTED_MODULE_1__["regular"],
-          premium: _folien__WEBPACK_IMPORTED_MODULE_1__["premium"],
           superior: _folien__WEBPACK_IMPORTED_MODULE_1__["superior"]
         };
       };
@@ -496,7 +495,7 @@
       !*** ./libs/scheibentoenung-schmieder/folien/src/lib/components/folie/folien.ts ***!
       \**********************************************************************************/
 
-    /*! exports provided: regular, premium, superior */
+    /*! exports provided: regular, superior */
 
     /***/
     function ga6W(module, __webpack_exports__, __webpack_require__) {
@@ -508,12 +507,6 @@
 
       __webpack_require__.d(__webpack_exports__, "regular", function () {
         return regular;
-      });
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "premium", function () {
-        return premium;
       });
       /* harmony export (binding) */
 
@@ -556,49 +549,6 @@
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'leichte Tönung', 'perfekte Durchsicht von innen, guter Einblick von außen', 'Splitterschutz'],
         licht: 52,
         hitze: 34,
-        uv: 99
-      }];
-      var premium = [{
-        headline: 'Super Dark 3%',
-        images: ['/assets/img/folien/super-dark.jpg'],
-        technicalDescription: ['2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'tiefschwarze Tönung (dunkelste Tönungsstufe), annähernd blickdicht von außen', 'Splitterschutz', 'Blendschutz', 'erhöhte Hitzereduktion durch Metallisierung '],
-        licht: 3,
-        hitze: 70,
-        uv: 99
-      }, {
-        headline: 'Premium Black 5%',
-        images: ['/assets/img/folien/AG-P05_thumb.jpg'],
-        technicalDescription: ['2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'tiefschwarze Tönung, relativ gute Durchsicht von innen, kaum Einblick von außen', 'Splitterschutz', 'Blendschutz', 'erhöhte Hitzereduktion durch Metallisierung '],
-        licht: 5,
-        hitze: 60,
-        uv: 99
-      }, {
-        headline: 'Premium Graphite 15%',
-        images: ['/assets/img/folien/AG-P15_thumb.jpg'],
-        technicalDescription: ['2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'grau-schwarze Tönung, relativ gute Durchsicht von innen, erschwerter Einblick von außen', 'Splitterschutz', 'Blendschutz', 'erhöhte Hitzereduktion durch Metallisierung'],
-        licht: 15,
-        hitze: 56,
-        uv: 99
-      }, {
-        headline: 'Premium Anthracite 20%',
-        images: ['/assets/img/folien/AG-P20_thumb.jpg'],
-        technicalDescription: ['2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'dunkelgraue Tönung', 'gute Durchsicht von innen, erschwerter Einblick von außen', 'Splitterschutz', 'Blendschutz', 'erhöhte Hitzereduktion durch Metallisierung'],
-        licht: 20,
-        hitze: 53,
-        uv: 99
-      }, {
-        headline: 'Premium Titan 36%',
-        images: ['/assets/img/folien/AG-P35_thumb.jpg'],
-        technicalDescription: ['-2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'hellgraue Tönung, sehr gute Durchsicht von innen, relativ guter Einblick von außen', 'Splitterschutz', 'leichter Blendschutz', 'erhöhte Hitzereduktion durch Metallisierung'],
-        licht: 36,
-        hitze: 51,
-        uv: 99
-      }, {
-        headline: 'Premium Silver 55%',
-        images: ['/assets/img/folien/AG-P50_thumb.jpg'],
-        technicalDescription: ['2-lagiger Folienaufbau', 'metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 12 Jahre', 'leichte Tönung, perfekte Durchsicht von innen, guter Einblick von außen', 'Splitterschutz', 'erhöhte Hitzereduktion durch Metallisierung'],
-        licht: 55,
-        hitze: 42,
         uv: 99
       }];
       var superior = [{
@@ -692,19 +642,13 @@
       /*! @ng-bootstrap/ng-bootstrap */
       "1kSV");
 
-      function FolienSelectionComponent_ng_template_16_Template(rf, ctx) {
+      function FolienSelectionComponent_ng_template_15_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "router-outlet");
         }
       }
 
-      function FolienSelectionComponent_ng_template_20_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "router-outlet");
-        }
-      }
-
-      function FolienSelectionComponent_ng_template_24_Template(rf, ctx) {
+      function FolienSelectionComponent_ng_template_19_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "router-outlet");
         }
@@ -735,9 +679,9 @@
       FolienSelectionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
         type: FolienSelectionComponent,
         selectors: [["scheibentoenung-schmieder-folien"]],
-        decls: 26,
-        vars: 5,
-        consts: [[1, "section", "profile-content"], [1, "container"], [1, "row"], [1, "col-md-12", "ml-auto", "mr-auto"], [1, "text-center"], ["src", "https://img.webme.com/pic/s/scheibentoenung-schmieder/tuevsiegel.jpg", 1, "card-avatar", 2, "width", "100px"], [1, "nav-tabs-navigation"], [1, "nav-tabs-wrapper"], ["ngbNav", "", 1, "nav-tabs", 3, "activeId", "activeIdChange"], ["nav", "ngbNav"], [3, "ngbNavItem"], ["ngbNavLink", "", "routerLink", "/folien/regular"], ["ngbNavContent", ""], ["ngbNavLink", "", "routerLink", "/folien/premium"], ["ngbNavLink", "", "routerLink", "/folien/superior"], [3, "ngbNavOutlet"]],
+        decls: 21,
+        vars: 4,
+        consts: [[1, "section", "profile-content"], [1, "container"], [1, "row"], [1, "col-md-12", "ml-auto", "mr-auto"], [1, "text-center"], [1, "nav-tabs-navigation"], [1, "nav-tabs-wrapper"], ["ngbNav", "", 1, "nav-tabs", 3, "activeId", "activeIdChange"], ["nav", "ngbNav"], [3, "ngbNavItem"], ["ngbNavLink", "", "routerLink", "/folien/regular"], ["ngbNavContent", ""], ["ngbNavLink", "", "routerLink", "/folien/superior"], [3, "ngbNavOutlet"]],
         template: function FolienSelectionComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
@@ -750,69 +694,55 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "p", 4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, " Mit CFC AutoGlasFolien entscheiden Sie sich f\xFCr absolute Spitzenprodukte! Unser gesamtes Foliensortiment steht f\xFCr h\xF6chste Qualit\xE4t und Farbstabilit\xE4t. Eine zus\xE4tzliche Kratzschutzschicht macht diese Funktionsfolien besonders langlebig und praktisch wartungsfrei. CFC AutoGlasFolien bieten eine Vielfalt an Farben und T\xF6nungsstufen, sowie unterschiedliche Materialaufbauten. Unsere Folien bestehen ausschlie\xDFlich aus durchgef\xE4rbten polyesterschichten. F\xFCr eine bessere \xDCbersicht haben wir unser breitgef\xE4chertes Sortiment in 4 Serien, welche sich in einzelne Spezifikationen unterscheiden, unterteilt. Auf s\xE4mtliche von uns verbauten Folien geben wir eine Gew\xE4hrleistung von 10 Jahren, auf Farbbest\xE4ndigkeit und Klebebest\xE4ndigkeit. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, " Mit unseren AutoGlasFolien entscheiden Sie sich f\xFCr absolute Spitzenprodukte! Unser gesamtes Foliensortiment steht f\xFCr h\xF6chste Qualit\xE4t und Farbstabilit\xE4t. Eine zus\xE4tzliche Kratzschutzschicht macht diese Funktionsfolien besonders langlebig und praktisch wartungsfrei.Unsere Folien bieten eine Vielfalt an Farben und T\xF6nungsstufen, sowie unterschiedliche Materialaufbauten.Alle Folien bestehen ausschlie\xDFlich aus durchgef\xE4rbten polyesterschichten. F\xFCr eine bessere \xDCbersicht haben wir unser Sortiment in 2 Serien, welche sich in einzelne Spezifikationen unterscheiden, unterteilt. ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](6, "img", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "p", 4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "p", 4);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8, " Jede, von uns verbaute, T\xF6nungsfolie ist T\xDCV frei. Sie erhalten lediglich eine ABG die Sie immer mitf\xFChren m\xFCssen. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, " Auf die Regular Serie gibt es eine Hersteller Garantie von 10 Jahren auf Farbbest\xE4ndigkeit und Klebebest\xE4ndigkeit. Jede, von uns verbaute, T\xF6nungsfolie ist T\xDCV frei. Sie erhalten lediglich eine ABG die Sie immer mitf\xFChren m\xFCssen. ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "div", 5);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "div", 6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "div", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "ul", 7, 8);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "ul", 8, 9);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("activeIdChange", function FolienSelectionComponent_Template_ul_activeIdChange_11_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("activeIdChange", function FolienSelectionComponent_Template_ul_activeIdChange_10_listener($event) {
               return ctx.activeFolie = $event;
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "li", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "li", 9);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "a", 11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "a", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](15, " Regular ");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](16, FolienSelectionComponent_ng_template_16_Template, 1, 0, "ng-template", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](14, " Regular ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "li", 10);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "a", 13);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](19, "Premium");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](15, FolienSelectionComponent_ng_template_15_Template, 1, 0, "ng-template", 11);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, FolienSelectionComponent_ng_template_20_Template, 1, 0, "ng-template", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](16, "li", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "a", 12);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](18, "Superior");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "li", 10);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "a", 14);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](23, "Superior");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, FolienSelectionComponent_ng_template_24_Template, 1, 0, "ng-template", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](19, FolienSelectionComponent_ng_template_19_Template, 1, 0, "ng-template", 11);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](25, "div", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](20, "div", 13);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -826,19 +756,15 @@
           }
 
           if (rf & 2) {
-            var _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵreference"](12);
+            var _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵreference"](11);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](10);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("activeId", ctx.activeFolie);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "regular");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngbNavItem", "premium");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
 
