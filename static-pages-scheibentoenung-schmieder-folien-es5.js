@@ -56,33 +56,53 @@
       /*! @ng-bootstrap/ng-bootstrap */
       "1kSV");
 
-      function FolienComponent_ng_container_1_div_2_ng_container_4_ng_template_1_Template(rf, ctx) {
+      function FolienComponent_p_3_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "img", 19);
-        }
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "p", 6);
 
-        if (rf & 2) {
-          var image_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]().$implicit;
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, " Die Regular Serie ist eine nicht metallisierende und nicht reflektierende Autofolie. Sie hat einen 2- lagigen PET-Folienaufbau mit bis zu 99% UV-Schutz und einer kratzfesten Oberfl\xE4chenbeschichtung. Signalfreundlich kompatibel mit allen GPS- und Funkstandards der neusten Generation ist die Regular Serie ebenfalls. ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("alt", image_r8)("src", image_r8, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"]);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         }
       }
 
-      function FolienComponent_ng_container_1_div_2_ng_container_4_Template(rf, ctx) {
+      function FolienComponent_p_4_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "p", 6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, " Mit der Superior Serie k\xF6nnen Sie eine erstklassige Keramikfolie erwerben. Durch ihre Nano Keramik Beschichtung weist diese Serie eine bestm\xF6gliche Hitzer\xFCckweisung auf. Sie hat einen 2- lagigen PET-Folienaufbau mit bis zu 99% UV-Schutz und einer kratzfesten Oberfl\xE4chenbeschichtung. Signalfreundlich kompatibel mit allen GPS- und Funkstandards der neusten Generation ist die Regular Serie ebenfalls. ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        }
+      }
+
+      function FolienComponent_ng_container_5_div_2_ng_container_4_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "img", 22);
+        }
+
+        if (rf & 2) {
+          var image_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]().$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("alt", image_r10)("src", image_r10, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"]);
+        }
+      }
+
+      function FolienComponent_ng_container_5_div_2_ng_container_4_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerStart"](0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, FolienComponent_ng_container_1_div_2_ng_container_4_ng_template_1_Template, 1, 2, "ng-template", 18);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, FolienComponent_ng_container_5_div_2_ng_container_4_ng_template_1_Template, 1, 2, "ng-template", 21);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerEnd"]();
         }
       }
 
-      function FolienComponent_ng_container_1_div_2_li_13_Template(rf, ctx) {
+      function FolienComponent_ng_container_5_div_2_li_13_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "li");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "i", 20);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "i", 23);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2);
 
@@ -90,11 +110,11 @@
         }
 
         if (rf & 2) {
-          var description_r11 = ctx.$implicit;
+          var description_r13 = ctx.$implicit;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", description_r11, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", description_r13, " ");
         }
       }
 
@@ -119,31 +139,31 @@
         };
       };
 
-      function FolienComponent_ng_container_1_div_2_Template(rf, ctx) {
+      function FolienComponent_ng_container_5_div_2_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "div", 6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "div", 9);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "div", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "div", 10);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "ngb-carousel", 8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "ngb-carousel", 11);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](4, FolienComponent_ng_container_1_div_2_ng_container_4_Template, 2, 0, "ng-container", 9);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](4, FolienComponent_ng_container_5_div_2_ng_container_4_Template, 2, 0, "ng-container", 12);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "div", 10);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "div", 13);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](6, "div", 11);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](6, "div", 14);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](7, "h5", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](7, "h5", 15);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](8);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](9, "div", 13);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](9, "div", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](10, "b");
 
@@ -151,9 +171,9 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](12, "ul", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](12, "ul", 17);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](13, FolienComponent_ng_container_1_div_2_li_13_Template, 3, 1, "li", 9);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](13, FolienComponent_ng_container_5_div_2_li_13_Template, 3, 1, "li", 12);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
@@ -163,25 +183,25 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](14, "hr");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](15, "div", 15);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](15, "div", 18);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](16, "div", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](16, "div", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](17, "div", 16);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](17, "div", 19);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainer"](18, 17);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](19, "div", 16);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainer"](20, 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainer"](18, 20);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](21, "div", 16);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](19, "div", 19);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainer"](22, 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainer"](20, 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](21, "div", 19);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainer"](22, 20);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
@@ -199,11 +219,11 @@
         }
 
         if (rf & 2) {
-          var folie_r5 = ctx.$implicit;
+          var folie_r7 = ctx.$implicit;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
 
-          var _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](3);
+          var _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](7);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
 
@@ -211,37 +231,37 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", folie_r5.images);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", folie_r7.images);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](folie_r5.headline);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](folie_r7.headline);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](5);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", folie_r5.technicalDescription);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", folie_r7.technicalDescription);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](5);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r1)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](10, _c0, folie_r5.licht));
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r3)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](10, _c0, folie_r7.licht));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r1)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](12, _c1, folie_r5.hitze));
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r3)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](12, _c1, folie_r7.hitze));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r1)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](14, _c2, folie_r5.uv));
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", _r3)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](14, _c2, folie_r7.uv));
         }
       }
 
-      function FolienComponent_ng_container_1_Template(rf, ctx) {
+      function FolienComponent_ng_container_5_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerStart"](0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "div", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "div", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, FolienComponent_ng_container_1_div_2_Template, 23, 16, "div", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, FolienComponent_ng_container_5_div_2_Template, 23, 16, "div", 7);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
@@ -249,15 +269,15 @@
         }
 
         if (rf & 2) {
-          var activeFolie_r3 = ctx.ngIf;
+          var activeFolie_r5 = ctx.ngIf;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", activeFolie_r3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", activeFolie_r5);
         }
       }
 
-      function FolienComponent_ng_template_2_Template(rf, ctx) {
+      function FolienComponent_ng_template_6_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div");
 
@@ -273,11 +293,11 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "div", 21);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "div", 24);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](6, "div", 22);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](6, "div", 25);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](7, "div", 23);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](7, "div", 26);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
@@ -285,20 +305,20 @@
         }
 
         if (rf & 2) {
-          var percent_r12 = ctx.percent;
-          var name_r13 = ctx.name;
+          var percent_r14 = ctx.percent;
+          var name_r15 = ctx.name;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵclassMap"]("c100 p" + percent_r12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵclassMap"]("c100 p" + percent_r14);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵclassProp"]("green", percent_r12 > 80)("orange", percent_r12 > 30 && percent_r12 < 80);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"]("", percent_r12, "% ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵclassProp"]("green", percent_r14 > 80)("orange", percent_r14 > 30 && percent_r14 < 80);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](name_r13);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"]("", percent_r14, "% ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](name_r15);
         }
       }
 
@@ -319,21 +339,41 @@
       FolienComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
         type: FolienComponent,
         selectors: [["scheibentoenung-schmieder-folien"]],
-        decls: 4,
-        vars: 1,
-        consts: [[1, "content"], [4, "ngIf"], ["percentIcon", ""], [1, "row"], ["class", "col-md-6", 4, "ngFor", "ngForOf"], [1, "col-md-6"], [1, "card", "card-product"], [1, "card-image", "page-carousel"], [3, "interval"], [4, "ngFor", "ngForOf"], [1, "card-body"], [1, ""], [1, "card-title"], [1, "card-description"], [1, "list-unstyled", "follows"], [1, "card-footer"], [1, "col-4"], [3, "ngTemplateOutlet", "ngTemplateOutletContext"], ["ngbSlide", ""], [1, "slider-image", 3, "alt", "src"], [1, "nc-icon", "nc-check-2", 2, "color", "#0d9814"], [1, "slice"], [1, "bar"], [1, "fill"]],
+        decls: 8,
+        vars: 3,
+        consts: [[1, "content"], [1, "row"], [1, "col-md-12", "ml-auto", "mr-auto"], ["class", "text-center", 4, "ngIf"], [4, "ngIf"], ["percentIcon", ""], [1, "text-center"], ["class", "col-md-6", 4, "ngFor", "ngForOf"], [1, "col-md-6"], [1, "card", "card-product"], [1, "card-image", "page-carousel"], [3, "interval"], [4, "ngFor", "ngForOf"], [1, "card-body"], [1, ""], [1, "card-title"], [1, "card-description"], [1, "list-unstyled", "follows"], [1, "card-footer"], [1, "col-4"], [3, "ngTemplateOutlet", "ngTemplateOutletContext"], ["ngbSlide", ""], [1, "slider-image", 3, "alt", "src"], [1, "nc-icon", "nc-check-2", 2, "color", "#0d9814"], [1, "slice"], [1, "bar"], [1, "fill"]],
         template: function FolienComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, FolienComponent_ng_container_1_Template, 3, 1, "ng-container", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "div", 1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "div", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](3, FolienComponent_p_3_Template, 2, 0, "p", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](4, FolienComponent_p_4_Template, 2, 0, "p", 3);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, FolienComponent_ng_template_2_Template, 8, 8, "ng-template", null, 2, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplateRefExtractor"]);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](5, FolienComponent_ng_container_5_Template, 3, 1, "ng-container", 4);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](6, FolienComponent_ng_template_6_Template, 8, 8, "ng-template", null, 5, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplateRefExtractor"]);
           }
 
           if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.activeRouter.snapshot.params.type === "regular");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.activeRouter.snapshot.params.type === "superior");
+
             _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.folien[ctx.activeRouter.snapshot.params.type]);
@@ -516,35 +556,35 @@
       });
 
       var regular = [{
-        headline: 'Regular Black 6%',
+        headline: 'Regular Black',
         images: ['/assets/img/folien/AG-R05_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'tiefschwarze Tönung, relativ gute Durchsicht von innen, kaum Einblick von außen', 'Splitterschutz', 'Blendschutz'],
         licht: 6,
         hitze: 50,
         uv: 99
       }, {
-        headline: 'Regular Graphite 15%',
+        headline: 'Regular Graphite',
         images: ['/assets/img/folien/AG-R20_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'grau-schwarze Tönung', 'relativ gute Durchsicht von innen, erschwerter Einblick von außen', 'Splitterschutz', 'Blendschutz'],
         licht: 15,
         hitze: 44,
         uv: 99
       }, {
-        headline: 'Regular Anthracite 20%',
+        headline: 'Regular Anthracite',
         images: ['/assets/img/folien/regular-anthracite-20-heck.jpeg', '/assets/img/folien/regular-anthracite-20-side.jpeg', '/assets/img/folien/regular-anthracite-20-door.jpeg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'dunkelgraue Tönung', 'gute Durchsicht von innen, erschwerter Einblick von außen', 'Splitterschutz', 'leichter Blendschutz '],
         licht: 20,
         hitze: 38,
         uv: 99
       }, {
-        headline: 'Regular Titan 35%',
+        headline: 'Regular Titan',
         images: ['/assets/img/folien/AG-R35_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'hellgraue Tönung', 'gute Durchsicht von innen, relativ guter Einblick von außen', 'Splitterschutz', 'Blendschutz'],
         licht: 35,
         hitze: 38,
         uv: 99
       }, {
-        headline: 'Regular Silver 52%',
+        headline: 'Regular Silver',
         images: ['/assets/img/folien/AG-R50_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'nicht metallisiert', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,046mm', 'Garantie 10 Jahre', 'leichte Tönung', 'perfekte Durchsicht von innen, guter Einblick von außen', 'Splitterschutz'],
         licht: 52,
@@ -552,49 +592,49 @@
         uv: 99
       }];
       var superior = [{
-        headline: 'Superior Black 5%',
+        headline: 'Superior Black',
         images: ['/assets/img/folien/AG-S05_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'tiefschwarze Tönung, relativ gute Durchsicht von innen, kaum Einblick von außen', 'Splitterschutz', 'Blendschutz'],
         licht: 5,
         hitze: 76,
         uv: 99
       }, {
-        headline: 'Superior Graphite 15%',
+        headline: 'Superior Graphite',
         images: ['/assets/img/folien/AG-S15_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'schwarze Tönung, relativ gute Durchsicht von innen, kaum Einblick von außen', 'Splitterschutz', 'Blendschutz'],
         licht: 15,
         hitze: 64,
         uv: 99
       }, {
-        headline: 'Superior Anthracite 23%',
+        headline: 'Superior Anthracite',
         images: ['/assets/img/folien/superior-anthracite.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'dunkelgraue Tönung, erschwerte Durchsicht von innen, kaum Einblick von außen', 'Splitterschutz'],
-        licht: 23,
-        hitze: 58,
+        licht: 20,
+        hitze: 60,
         uv: 99
       }, {
-        headline: 'Superior Titan 38%',
+        headline: 'Superior Titan',
         images: ['/assets/img/folien/AG-S35_thumb.jpg'],
-        technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'hellgraue Tönung, sehr gute Durchsicht von innen, relativ guter Einblick von außen', 'Splitterschutz'],
-        licht: 38,
-        hitze: 51,
-        uv: 99
-      }, {
-        headline: 'Superior platin 35%',
-        images: ['/assets/img/folien/AG-S50_thumb.jpg'],
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'hellgraue Tönung, sehr gute Durchsicht von innen, relativ guter Einblick von außen', 'Splitterschutz'],
         licht: 35,
         hitze: 58,
         uv: 99
       }, {
-        headline: 'Superior Silver 52%',
+        headline: 'Superior platin',
         images: ['/assets/img/folien/AG-S50_thumb.jpg'],
-        technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'leichte Tönung', 'perfekte Durchsicht von innen, guter Einblick von außen', 'Splitterschutz'],
-        licht: 52,
-        hitze: 46,
+        technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'hellgraue Tönung, sehr gute Durchsicht von innen, relativ guter Einblick von außen', 'Splitterschutz'],
+        licht: 40,
+        hitze: 56,
         uv: 99
       }, {
-        headline: 'Superior Silicium 70%',
+        headline: 'Superior Silver',
+        images: ['/assets/img/folien/AG-S50_thumb.jpg'],
+        technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'leichte Tönung', 'perfekte Durchsicht von innen, guter Einblick von außen', 'Splitterschutz'],
+        licht: 50,
+        hitze: 52,
+        uv: 99
+      }, {
+        headline: 'Superior Silicium',
         images: ['/assets/img/folien/superior-selicium.png'],
         technicalDescription: ['2-lagiger Folienaufbau', 'Keramik Beschichtung', 'extra gehärtete Kratzschutzschicht', 'Dicke ohne Liner 0,045mm', 'Garantie 15 Jahre', 'leichte Tönung', 'perfekte Durchsicht von innen, guter Einblick von außen', 'Splitterschutz'],
         licht: 70,
@@ -700,7 +740,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "p", 4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, " Auf die Regular Serie gibt es eine Hersteller Garantie von 10 Jahren auf Farbbest\xE4ndigkeit und Klebebest\xE4ndigkeit. Jede, von uns verbaute, T\xF6nungsfolie ist T\xDCV frei. Sie erhalten lediglich eine ABG die Sie immer mitf\xFChren m\xFCssen. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, " Auf die Regular sowie auf die Superior Serie gibt es eine Hersteller Garantie von 10 Jahren auf Farbbest\xE4ndigkeit und Klebebest\xE4ndigkeit. Jede, von uns verbaute, T\xF6nungsfolie ist T\xDCV frei. Sie erhalten lediglich eine ABG die Sie immer mitf\xFChren m\xFCssen. ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
